@@ -146,15 +146,6 @@
         marker: {color: hexToRgba(baseColor, op), size: 5},
         hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>{{ src_name }}<extra></extra>"
       });
-      {% if src_data.outliers %}
-      var outYears = {{ src_data.outliers | tojson }};
-      var outVals  = outYears.map(function(oy){ var idx=x.indexOf(oy); return idx>=0?y[idx]:null; });
-      traces.push({
-        x: outYears, y: outVals,
-        name: "outlier {{ src_name }}", mode: "markers", showlegend: false,
-        marker: {color:"#e53935", size:10, symbol:"x", line:{color:"#e53935",width:2}}
-      });
-      {% endif %}
     })();
     {% endfor %}
 

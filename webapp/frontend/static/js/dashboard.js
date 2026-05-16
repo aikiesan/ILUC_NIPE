@@ -123,23 +123,6 @@
           marker: { color: lineColor, size: 5 },
           hovertemplate: `<b>%{x}</b><br>%{y:,.1f} ha<br><i>${srcName}</i><extra></extra>`,
         });
-
-        // Outlier markers
-        if (src.outliers && src.outliers.length) {
-          const outYears = src.outliers;
-          const yearIdx  = src.years.reduce((m, y, i) => { m[y] = i; return m; }, {});
-          const outVals  = outYears.map(y => src.values[yearIdx[y]] ?? null);
-          traces.push({
-            x: outYears,
-            y: outVals,
-            type: 'scatter',
-            mode: 'markers',
-            name: `outlier (${srcName})`,
-            showlegend: false,
-            marker: { color: '#e53935', size: 11, symbol: 'x', line: { color: '#e53935', width: 2 } },
-            hovertemplate: `<b>%{x}</b> — outlier (${srcName})<extra></extra>`,
-          });
-        }
       });
 
     } else {

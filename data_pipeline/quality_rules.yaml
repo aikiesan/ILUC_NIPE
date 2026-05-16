@@ -3,8 +3,9 @@
 
 "1 - Culturas perenes":
   primary: pipeline_diagonal
-  fallback: ~
-  notes_primary: "MB Col.10 classes 46,47,48 — mapeamento satélite 30m"
+  fallback: conab_cafe
+  notes_primary: "MB Col.10 classes 46,47,48 — mapeamento satélite 30m (café, citrus, perenes)"
+  notes_fallback: "CONAB SerieHistoricaCafe — área plantada café por UF, alocada ao RGINT via proporção PAM milho"
 
 "2 - Soja":
   primary: conab_pam
@@ -16,13 +17,13 @@
   primary: pipeline_diagonal
   fallback: conab_pam
   notes_primary: "MB × pct_2a CONAB — produto do pipeline"
-  notes_fallback: "PAM milho total (sem split 1ª/2ª disponível 2008–2021)"
+  notes_fallback: "PAM milho RGINT × pct_2a por UF (LevantamentoGraos CONAB; total PAM onde split indisponível)"
 
 "4 - Milho 1ª safra":
   primary: pipeline_diagonal
   fallback: conab_pam
   notes_primary: "PAM milho × (1−pct_2a) — produto do pipeline"
-  notes_fallback: "PAM milho total (sem split 1ª/2ª disponível 2008–2021)"
+  notes_fallback: "PAM milho RGINT × (1−pct_2a) por UF (LevantamentoGraos CONAB; total PAM onde split indisponível)"
 
 "5 - Cana-de-açúcar":
   primary: pipeline_diagonal
