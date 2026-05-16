@@ -25,8 +25,35 @@
     'Pampa':         '#a8dadc',
   };
 
-  let currentData = null;
-  let activeClass = null;
+  // Visual style per data source
+  const SOURCE_STYLES = {
+    pipeline_diagonal: { dash: 'solid',   width: 2.5, opacity: 1.0   },
+    conab_pam:         { dash: 'dot',     width: 2.0, opacity: 0.80  },
+    lapig_vigor:       { dash: 'dashdot', width: 2.0, opacity: 0.80  },
+  };
+
+  let currentData     = null;   // raw API response
+  let currentFormat   = null;   // 'full' | 'simple'
+  let activeClass     = null;
+  let currentRgintId  = null;
+
+  // ── Colour helpers ──────────────────────────────────────────────────────
+
+  function hexToRgba(hex, alpha) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
+
+  function isLight(hex) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return (r * 299 + g * 587 + b * 114) / 1000 > 160;
+  }
+
+  // ── Tab bar ─────────────────────────────────────────────────────────────
 
   function buildTabs(classes) {
     const bar = document.getElementById('class-tabs');
@@ -36,7 +63,6 @@
       btn.className = 'tab-btn';
       btn.textContent = cls;
       btn.dataset.cls = cls;
-      const color = CLASS_COLORS[cls] || '#666';
       btn.addEventListener('click', () => selectTab(cls));
       bar.appendChild(btn);
     });
@@ -59,90 +85,148 @@
     plotTimeSeries(cls);
   }
 
-  function isLight(hex) {
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    return (r * 299 + g * 587 + b * 114) / 1000 > 160;
-  }
+  // ── Plotting ────────────────────────────────────────────────────────────
 
   function plotTimeSeries(cls) {
-    if (!currentData || !currentData[cls]) return;
-    const series = currentData[cls];
-    const years = Object.keys(series).map(Number).sort((a, b) => a - b);
-    const areas = years.map(y => series[y]);
-    const color = CLASS_COLORS[cls] || '#555';
-
-    const trace = {
-      x: years,
-      y: areas,
-      type: 'scatter',
-      mode: 'lines+markers',
-      line: { color, width: 2.5 },
-      marker: { color, size: 6 },
-      name: cls,
-      hovertemplate: '<b>%{x}</b><br>%{y:,.1f} ha<extra></extra>',
-    };
+    if (!currentData) return;
 
     const chartEl = document.getElementById('chart');
-    const chartH = Math.max(chartEl.clientHeight || 0, 320);
+    const chartH  = Math.max(chartEl.clientHeight || 0, 320);
+    const baseColor = CLASS_COLORS[cls] || '#555';
+
+    let traces = [];
+    let isMultiSource = false;
+
+    if (currentFormat === 'full') {
+      // ── Multi-source format ────────────────────────────────────────────
+      const classData = currentData.classes?.[cls];
+      if (!classData) return;
+
+      const sourceNames = Object.keys(classData);
+      isMultiSource = sourceNames.length > 1;
+
+      sourceNames.forEach((srcName, si) => {
+        const src   = classData[srcName];
+        const style = SOURCE_STYLES[srcName] || { dash: 'solid', width: 2, opacity: 0.8 };
+
+        // Slightly shift hue per source for readability
+        const opacity = style.opacity - si * 0.1;
+        const lineColor = hexToRgba(baseColor, Math.max(0.4, opacity));
+
+        traces.push({
+          x: src.years,
+          y: src.values,
+          type: 'scatter',
+          mode: 'lines+markers',
+          name: `${srcName}${src.quality === 'primary' ? ' ★' : ''}`,
+          line:   { color: lineColor, dash: style.dash, width: style.width },
+          marker: { color: lineColor, size: 5 },
+          hovertemplate: `<b>%{x}</b><br>%{y:,.1f} ha<br><i>${srcName}</i><extra></extra>`,
+        });
+
+        // Outlier markers
+        if (src.outliers && src.outliers.length) {
+          const outYears = src.outliers;
+          const yearIdx  = src.years.reduce((m, y, i) => { m[y] = i; return m; }, {});
+          const outVals  = outYears.map(y => src.values[yearIdx[y]] ?? null);
+          traces.push({
+            x: outYears,
+            y: outVals,
+            type: 'scatter',
+            mode: 'markers',
+            name: `outlier (${srcName})`,
+            showlegend: false,
+            marker: { color: '#e53935', size: 11, symbol: 'x', line: { color: '#e53935', width: 2 } },
+            hovertemplate: `<b>%{x}</b> — outlier (${srcName})<extra></extra>`,
+          });
+        }
+      });
+
+    } else {
+      // ── Simple / legacy format ({"2008": 123, ...}) ───────────────────
+      const series = currentData[cls];
+      if (!series) return;
+      const years = Object.keys(series).map(Number).sort((a, b) => a - b);
+      const areas = years.map(y => series[y]);
+
+      traces.push({
+        x: years,
+        y: areas,
+        type: 'scatter',
+        mode: 'lines+markers',
+        line:   { color: baseColor, width: 2.5 },
+        marker: { color: baseColor, size: 6 },
+        name: cls,
+        hovertemplate: '<b>%{x}</b><br>%{y:,.1f} ha<extra></extra>',
+      });
+    }
 
     const layout = {
-      title: { text: cls, font: { size: 14 }, x: 0.02 },
+      title: { text: cls, font: { size: 13 }, x: 0.02 },
       height: chartH,
       autosize: true,
-      xaxis: {
-        title: 'Ano',
-        tickmode: 'linear',
-        dtick: 1,
-        tickfont: { size: 11 },
-      },
-      yaxis: {
-        title: 'Área (ha)',
-        tickfont: { size: 11 },
-        tickformat: ',.0f',
-      },
-      margin: { t: 44, r: 20, b: 52, l: 80 },
+      xaxis: { title: 'Ano', tickmode: 'linear', dtick: 1, tickfont: { size: 10 } },
+      yaxis: { title: 'Área (ha)', tickfont: { size: 10 }, tickformat: ',.0f' },
+      margin: { t: 40, r: 16, b: isMultiSource ? 72 : 52, l: 80 },
       paper_bgcolor: '#fafaf8',
-      plot_bgcolor: '#fafaf8',
+      plot_bgcolor:  '#fafaf8',
       hovermode: 'x unified',
-      showlegend: false,
+      showlegend: isMultiSource,
+      legend: isMultiSource ? { orientation: 'h', y: -0.22, font: { size: 10 } } : {},
     };
 
-    const config = { responsive: true, displayModeBar: false };
-
-    Plotly.react('chart', [trace], layout, config);
+    Plotly.react('chart', traces, layout, { responsive: true, displayModeBar: false });
   }
 
+  // ── Load region (tries full endpoint first, falls back to simple) ───────
+
   window.loadRegion = function (rgintId, nome, uf, biome) {
-    fetch(`/api/rgint/${rgintId}`)
+    currentRgintId = rgintId;
+
+    // Update report link immediately (may 404 until pipeline runs)
+    const reportLink = document.getElementById('report-link');
+    reportLink.href = `/report/${rgintId}`;
+    reportLink.classList.remove('hidden');
+
+    fetch(`/api/rgint_full/${rgintId}`)
       .then(r => {
-        if (!r.ok) throw new Error(`RGINT ${rgintId} not found`);
+        if (!r.ok) throw new Error('no_full');
         return r.json();
       })
       .then(data => {
-        currentData = data;
-
-        // Update header badge
-        const badge = document.getElementById('region-badge');
-        document.getElementById('badge-name').textContent = `${rgintId} — ${nome}`;
-        document.getElementById('badge-biome').textContent = biome;
-        document.getElementById('badge-biome').style.background =
-          (BIOME_COLORS[biome] || '#555') + '99';
-        document.getElementById('badge-uf').textContent = uf;
-        badge.classList.remove('hidden');
-
-        // Show dashboard, hide welcome
-        document.getElementById('welcome').classList.add('hidden');
-        document.getElementById('dashboard-content').classList.remove('hidden');
-
-        const classes = Object.keys(data);
-        buildTabs(classes);
-
-        // Default to Soja if available, else first class
-        const defaultCls = classes.find(c => c.includes('Soja')) || classes[0];
-        selectTab(defaultCls);
+        currentData   = data;
+        currentFormat = 'full';
+        renderDashboard(rgintId, nome, uf, biome, Object.keys(data.classes));
       })
-      .catch(err => console.error('loadRegion error:', err));
+      .catch(() => {
+        // Fallback to original simple diagonal JSON
+        fetch(`/api/rgint/${rgintId}`)
+          .then(r => { if (!r.ok) throw new Error(`RGINT ${rgintId} not found`); return r.json(); })
+          .then(data => {
+            currentData   = data;
+            currentFormat = 'simple';
+            renderDashboard(rgintId, nome, uf, biome, Object.keys(data));
+          })
+          .catch(err => console.error('loadRegion error:', err));
+      });
   };
+
+  function renderDashboard(rgintId, nome, uf, biome, classes) {
+    // Header badge
+    const badge = document.getElementById('region-badge');
+    document.getElementById('badge-name').textContent = `${rgintId} — ${nome}`;
+    document.getElementById('badge-biome').textContent = biome;
+    document.getElementById('badge-biome').style.background = (BIOME_COLORS[biome] || '#555') + '99';
+    document.getElementById('badge-uf').textContent = uf;
+    badge.classList.remove('hidden');
+
+    // Show dashboard
+    document.getElementById('welcome').classList.add('hidden');
+    document.getElementById('dashboard-content').classList.remove('hidden');
+
+    buildTabs(classes);
+
+    const defaultCls = classes.find(c => c.includes('Soja')) || classes[0];
+    selectTab(defaultCls);
+  }
 })();

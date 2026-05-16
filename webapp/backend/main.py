@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, HTMLResponse
 from pathlib import Path
 import json
 
@@ -28,6 +28,33 @@ def get_rgint(rgint_id: str):
     with open(path, encoding="utf-8") as f:
         return JSONResponse(json.load(f))
 
+@app.get("/api/rgint_full/{rgint_id}")
+def get_rgint_full(rgint_id: str):
+    path = DATA / "rgint_full" / f"{rgint_id}.json"
+    if not path.exists():
+        return JSONResponse({"error": "Full data not generated yet — run pipeline 02_build_multisource_json.py"}, status_code=404)
+    with open(path, encoding="utf-8") as f:
+        return JSONResponse(json.load(f))
+
 @app.get("/api/geojson")
 def get_geojson():
     return FileResponse(DATA / "rgint_brasil.geojson", media_type="application/json")
+
+@app.get("/report/{rgint_id}")
+def get_report(rgint_id: str):
+    path = DATA / "html_reports" / f"{rgint_id}.html"
+    if not path.exists():
+        return HTMLResponse(
+            f"<h2>Relatório {rgint_id} não gerado.</h2><p>Execute <code>python 03_generate_reports.py</code> no diretório data_pipeline/.</p>",
+            status_code=404,
+        )
+    return HTMLResponse(path.read_text(encoding="utf-8"))
+
+@app.get("/api/pipeline_status")
+def pipeline_status():
+    full_dir     = DATA / "rgint_full"
+    reports_dir  = DATA / "html_reports"
+    return JSONResponse({
+        "rgint_full_count":     len(list(full_dir.glob("*.json")))    if full_dir.exists()    else 0,
+        "html_reports_count":   len(list(reports_dir.glob("*.html"))) if reports_dir.exists() else 0,
+    })

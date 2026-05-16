@@ -28,3 +28,8 @@ Thumbs.db
 
 # Docker volumes / local runtime
 *.pid
+
+# Generated pipeline outputs — run the pipeline scripts locally to rebuild
+webapp/data/rgint_full/
+webapp/data/html_reports/
+data_pipeline/processed/

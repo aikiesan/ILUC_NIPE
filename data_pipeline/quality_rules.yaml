@@ -1,0 +1,84 @@
+# Primary and fallback source per class.
+# quality: "primary" = recommended source | "fallback" = secondary/proxy
+
+"1 - Culturas perenes":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "MB Col.10 classes 46,47,48 — mapeamento satélite 30m"
+
+"2 - Soja":
+  primary: conab_pam
+  fallback: pipeline_diagonal
+  notes_primary: "PAM área plantada oficial alocada por RGINT"
+  notes_fallback: "MB Col.10 classe 39 × proporção CONAB (output pipeline)"
+
+"3 - Soja + Milho 2ª safra":
+  primary: pipeline_diagonal
+  fallback: conab_pam
+  notes_primary: "MB × pct_2a CONAB — produto do pipeline"
+  notes_fallback: "PAM milho total (sem split 1ª/2ª disponível 2008–2021)"
+
+"4 - Milho 1ª safra":
+  primary: pipeline_diagonal
+  fallback: conab_pam
+  notes_primary: "PAM milho × (1−pct_2a) — produto do pipeline"
+  notes_fallback: "PAM milho total (sem split 1ª/2ª disponível 2008–2021)"
+
+"5 - Cana-de-açúcar":
+  primary: pipeline_diagonal
+  fallback: conab_pam
+  notes_primary: "MB Col.10 classe 20 — mapeamento satélite"
+  notes_fallback: "PAM cana área plantada por RGINT"
+
+"6 - Outra agropecuária":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "MB Col.10 classes 40,41,62,21"
+
+"7 - Pastagem deg. média":
+  primary: pipeline_diagonal
+  fallback: lapig_vigor
+  notes_primary: "MB classe 15 × pct LAPIG Intermediário — produto pipeline"
+  notes_fallback: "LAPIG vigor Intermediário agregado municipio→RGINT (área bruta)"
+
+"8 - Pastagem deg. alta":
+  primary: pipeline_diagonal
+  fallback: lapig_vigor
+  notes_primary: "MB classe 15 × pct LAPIG Severa — produto pipeline"
+  notes_fallback: "LAPIG vigor Severa agregado municipio→RGINT (área bruta)"
+
+"9 - Pastagem deg. baixa":
+  primary: pipeline_diagonal
+  fallback: lapig_vigor
+  notes_primary: "MB classe 15 × pct LAPIG Ausente — produto pipeline"
+  notes_fallback: "LAPIG vigor Ausente agregado municipio→RGINT (área bruta)"
+
+"10 - Silvicultura":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "MB Col.10 classe 9"
+
+"11 - Veg. prim. florestal":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "pct_prim TerraClass × MB floresta (AMZ/CER); MB puro outros biomas"
+
+"12 - Veg. sec. florestal":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "pct_sec TerraClass × MB floresta (AMZ/CER); MB puro outros biomas"
+
+"13 - Veg. prim. não-florestal":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "pct_prim TerraClass × MB savana (AMZ/CER); MB puro outros biomas"
+
+"14 - Veg. sec. não-florestal":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "pct_sec TerraClass × MB savana (AMZ/CER); MB puro outros biomas"
+
+"15 - Outro":
+  primary: pipeline_diagonal
+  fallback: ~
+  notes_primary: "MB Col.10 classes 24,25,30,31,33,23 (urbano, água, mineração)"
