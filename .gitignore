@@ -1,6 +1,7 @@
-# Large raw data — do not commit xlsx matrices
+# Large raw data — do not commit xlsx matrices or large geodata
 ILUC_NIPE/01_Base_Matrices_RGINT/
 07_MATRIZES_15_CLASSES_FINAL/
+*.geojson
 
 # Python
 __pycache__/

@@ -84,8 +84,13 @@
       hovertemplate: '<b>%{x}</b><br>%{y:,.1f} ha<extra></extra>',
     };
 
+    const chartEl = document.getElementById('chart');
+    const chartH = Math.max(chartEl.clientHeight || 0, 320);
+
     const layout = {
       title: { text: cls, font: { size: 14 }, x: 0.02 },
+      height: chartH,
+      autosize: true,
       xaxis: {
         title: 'Ano',
         tickmode: 'linear',

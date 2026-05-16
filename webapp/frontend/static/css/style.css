@@ -127,11 +127,21 @@ main {
   font-weight: 600;
 }
 
+/* ── Dashboard content wrapper ───────────────────────────── */
+#dashboard-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
 /* ── Chart area ──────────────────────────────────────────── */
 #chart {
   flex: 1;
-  min-height: 0;
+  min-height: 320px;
   padding: 4px 8px;
+  overflow: hidden;
 }
 
 /* ── Leaflet overrides ───────────────────────────────────── */
