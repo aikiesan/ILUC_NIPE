@@ -1,0 +1,29 @@
+# Large raw data — do not commit xlsx matrices
+ILUC_NIPE/01_Base_Matrices_RGINT/
+07_MATRIZES_15_CLASSES_FINAL/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.log
+.venv/
+venv/
+
+# Spatial binary indexes
+*.sbn
+*.sbx
+*.lock
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Docker volumes / local runtime
+*.pid

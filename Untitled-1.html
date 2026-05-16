@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Matriz de Disponibilidade de Dados</title>
+<style>
+  /* Base Reset & Typography */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    color: #111;
+    background: #fff;
+    line-height: 1.3;
+  }
+
+  .wrap { 
+    padding: 1rem; 
+    max-width: 100%; 
+    margin: 0 auto;
+  }
+
+  /* Legend Styling */
+  .legend { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 16px; 
+    margin-bottom: 1rem; 
+    font-size: 11px; 
+    color: #444; 
+    justify-content: center;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; border: 0.5px solid rgba(0,0,0,0.1); }
+
+  /* Table Core */
+  table { 
+    border-collapse: collapse; 
+    width: 100%; 
+    font-size: 11px; 
+    table-layout: fixed; /* Forced layout for perfect grid */
+  }
+
+  /* Headers */
+  thead th { 
+    background: #f4f5f7; 
+    padding: 6px 2px; 
+    text-align: center; 
+    font-weight: 600; 
+    font-size: 10px; 
+    color: #333; 
+    border-bottom: 1.5px solid #ccc; 
+  }
+  
+  thead th.source-col { 
+    text-align: left; 
+    padding-left: 8px; 
+  }
+
+  /* Timeline Grid Lines */
+  th.yr-label { 
+    font-size: 10px; 
+    font-weight: 600; 
+    color: #444; 
+    border-left: 1px solid #e0e0e0; /* Vertical timeline guides */
+  }
+  td.cell { 
+    text-align: center; 
+    border-left: 1px solid #e0e0e0; /* Vertical timeline guides */
+  }
+  
+  /* Stronger separator between text and timeline */
+  th.yr-label:first-of-type, td.cell:first-of-type {
+    border-left: 2px solid #ccc;
+  }
+
+  /* Rows & Cells */
+  td { 
+    padding: 3px 2px; 
+    border-bottom: 1px solid #eaeaea; 
+    vertical-align: middle; 
+  }
+  tbody tr:nth-child(even) td { background-color: #fafafa; }
+  
+  td.source-col { 
+    padding-left: 8px; 
+    padding-right: 8px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  td.source-name { font-weight: 600; font-size: 11.5px; padding-top: 6px; border-bottom: none; }
+  td.source-sub { 
+    font-size: 9.5px; 
+    color: #666; 
+    padding-top: 1px; 
+    padding-bottom: 6px;
+    white-space: normal; 
+    line-height: 1.2;
+  }
+
+  /* Group Headers */
+  .group-row td { 
+    background: #e9ecef !important; 
+    font-weight: 700; 
+    font-size: 10.5px; 
+    color: #222; 
+    letter-spacing: 0.03em; 
+    text-transform: uppercase; 
+    padding: 6px 8px; 
+    border-top: 1.5px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: none !important; /* Override vertical guide for headers */
+  }
+
+  /* Status Pips (Markers) */
+  .pip { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 4px; 
+    font-size: 9.5px; 
+    font-weight: 700; 
+    width: 20px; /* Locked width so they center perfectly */
+    height: 16px; 
+    border: 0.5px solid rgba(0,0,0,0.05);
+    margin: 0 auto;
+  }
+
+  /* Colors */
+  .full     { background: #C0DD97; color: #27500A; }
+  .biennial { background: #B5D4F4; color: #0C447C; }
+  .limited  { background: #FAC775; color: #633806; }
+  .anchor   { background: #F4C0D1; color: #72243E; }
+  .none     { background: transparent; color: #aaa; font-size: 10px; border: none; font-weight: 400; }
+
+  /* Print Optimization */
+  @page {
+    size: A4 landscape;
+    margin: 12mm 15mm;
+  }
+
+  @media print {
+    body { 
+      -webkit-print-color-adjust: exact !important; 
+      print-color-adjust: exact !important; 
+      background: white;
+    }
+    .wrap { padding: 0; overflow: visible; }
+    tbody tr:hover td { background: inherit; } 
+    tr { page-break-inside: avoid; }
+    thead { display: table-header-group; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:#C0DD97;"></span>Cobertura anual completa</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#B5D4F4;"></span>Bienal (a cada 2 anos)</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#FAC775;"></span>Disponível / limitado</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#F4C0D1;"></span>Ponto de âncora</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#eaeaea;"></span>Não disponível</span>
+  </div>
+
+  <table>
+  <colgroup>
+    <col style="width: 28%;">
+    <col span="17" style="width: 4.23%;">
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th class="source-col" rowspan="2">Fonte / Variável</th>
+      <th colspan="17" style="border-bottom: 1px solid #ddd; padding-bottom: 4px; border-left: 2px solid #ccc;">Anos</th>
+    </tr>
+    <tr>
+      <th class="yr-label">08</th><th class="yr-label">09</th><th class="yr-label">10</th>
+      <th class="yr-label">11</th><th class="yr-label">12</th><th class="yr-label">13</th>
+      <th class="yr-label">14</th><th class="yr-label">15</th><th class="yr-label">16</th>
+      <th class="yr-label">17</th><th class="yr-label">18</th><th class="yr-label">19</th>
+      <th class="yr-label">20</th><th class="yr-label">21</th><th class="yr-label">22</th>
+      <th class="yr-label">23</th><th class="yr-label">24</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="group-row"><td colspan="18">Sensoriamento remoto — uso e cobertura do solo</td></tr>
+    <tr>
+      <td class="source-col source-name">MapBiomas Col. 10.1</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Cobertura + transições | 30 classes | 30m | Biomas Nacionais | 1985–2024</td></tr>
+
+    <tr>
+      <td class="source-col source-name">TerraClass — Amazônia</td>
+      <td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Uso pós-desmatamento | só áreas PRODES | bienal 2008–2022 | 9 estados</td></tr>
+
+    <tr>
+      <td class="source-col source-name">TerraClass — Cerrado</td>
+      <td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip biennial">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Bienal 2018–2024 | Sentinel-2 10m | Estados do Cerrado</td></tr>
+
+    <tr>
+      <td class="source-col source-name">PRODES — Amazônia</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Desmatamento corte raso | polígonos anuais | anual "ago→jul" | Amazônia Legal</td></tr>
+
+    <tr>
+      <td class="source-col source-name">PRODES — Cerrado</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Dados públicos robustos desde 2001 | corte raso apenas | Cerrado</td></tr>
+
+    <tr class="group-row"><td colspan="18">Produção agrícola — estatísticas oficiais</td></tr>
+    <tr>
+      <td class="source-col source-name">PAM/SIDRA — Culturas (Soja/Milho/Cana)</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Declaratório municipal | área plantada, colhida e produção | milho agrega 1ª+2ª safra</td></tr>
+
+    <tr>
+      <td class="source-col source-name">Censo Agropecuário</td>
+      <td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip anchor">C</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Âncora 2017 | uso do solo + estrutura fundiária | municipal</td></tr>
+
+    <tr>
+      <td class="source-col source-name">PPM/SIDRA — Pecuária</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Efetivo bovino, suíno, aves | municipal | proxy de pressão sobre pastagem</td></tr>
+
+    <tr class="group-row"><td colspan="18">Produção agrícola — fontes setoriais / privadas</td></tr>
+    <tr>
+      <td class="source-col source-name">CONAB — Safras (Soja/Milho/Cana)</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Estadual | mensal | única fonte que separa milho 1ª e 2ª safra | consolidação anual</td></tr>
+
+    <tr>
+      <td class="source-col source-name">ÚNICA / Unicadata — Cana</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Moagem + produção etanol/açúcar | quinzenal | Centro-Sul completo</td></tr>
+
+    <tr>
+      <td class="source-col source-name">ABIOVE — Soja</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Produção, exportação, esmagamento | estadual/nacional | dados de mercado</td></tr>
+
+    <tr class="group-row"><td colspan="18">Fundiário e ambiental</td></tr>
+    <tr>
+      <td class="source-col source-name">CAR / SICAR — Reserva Legal</td>
+      <td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip none">—</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Obrigatório a partir de 2013 | cobertura crescente | APP + RL + uso consolidado</td></tr>
+
+    <tr>
+      <td class="source-col source-name">SIGEF/INCRA — Fundiário</td>
+      <td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip limited">~</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">Polígonos de imóveis certificados | cobertura crescente | cadastro vigente (snapshot)</td></tr>
+
+    <tr class="group-row"><td colspan="18">Clima e covariáveis ambientais</td></tr>
+    <tr>
+      <td class="source-col source-name">CHIRPS — Precipitação</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">~5.5 km | mensal/pentadal | GEE: UCSB-CHG/CHIRPS | anomalias de precipitação</td></tr>
+
+    <tr>
+      <td class="source-col source-name">ERA5 — Temperatura / ET</td>
+      <td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td><td class="cell"><span class="pip full">✓</span></td>
+    </tr>
+    <tr><td class="source-col source-sub" colspan="18">~28 km | horário/mensal | Copernicus CDS | temperatura + déficit hídrico</td></tr>
+
+  </tbody>
+  </table>
+</div>
+
+</body>
+</html>

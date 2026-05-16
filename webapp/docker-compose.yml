@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  abiove-webapp:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data:ro
+    restart: unless-stopped
