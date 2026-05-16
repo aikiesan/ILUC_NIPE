@@ -21,7 +21,7 @@
     maxZoom: 19,
   }).addTo(map);
 
-  let activeLayer = null;
+  let selectedLayer = null;
 
   function style(feature) {
     const biome = feature.properties.biome || '';
@@ -37,9 +37,19 @@
     const biome = feature.properties.biome || '';
     return {
       fillColor: BIOME_COLORS[biome] || '#999',
-      fillOpacity: 0.85,
-      color: '#fff',
+      fillOpacity: 0.80,
+      color: '#ddd',
       weight: 2,
+    };
+  }
+
+  function selectedStyle(feature) {
+    const biome = feature.properties.biome || '';
+    return {
+      fillColor: BIOME_COLORS[biome] || '#999',
+      fillOpacity: 0.80,
+      color: '#f4a261',
+      weight: 3.5,
     };
   }
 
@@ -53,16 +63,16 @@
 
     layer.on({
       mouseover(e) {
-        if (e.target !== activeLayer) e.target.setStyle(highlightStyle(feature));
+        if (e.target !== selectedLayer) e.target.setStyle(highlightStyle(feature));
       },
       mouseout(e) {
-        if (e.target !== activeLayer) e.target.setStyle(style(feature));
+        if (e.target !== selectedLayer) e.target.setStyle(style(feature));
       },
       click(e) {
-        if (activeLayer) activeLayer.setStyle(style(activeLayer.feature));
-        activeLayer = e.target;
-        activeLayer.setStyle(highlightStyle(feature));
-        activeLayer.bringToFront();
+        if (selectedLayer) selectedLayer.setStyle(style(selectedLayer.feature));
+        selectedLayer = e.target;
+        selectedLayer.setStyle(selectedStyle(feature));
+        selectedLayer.bringToFront();
         window.loadRegion(rgint, nome_rgint, uf, biome);
       },
     });
@@ -96,10 +106,18 @@
         L.marker([lat, lng], { icon, interactive: false }).addTo(map);
       });
 
-      // Auto-load Cuiabá (5101) on start
+      // Auto-load Cuiabá (5101) on start with selection highlight
       const cuiaba = geojson.features.find(f => f.properties.rgint === '5101');
       if (cuiaba) {
         const { rgint, nome_rgint, uf, biome } = cuiaba.properties;
+        // Find its Leaflet layer and apply selectedStyle
+        geoLayer.eachLayer(lyr => {
+          if (lyr.feature.properties.rgint === rgint) {
+            selectedLayer = lyr;
+            lyr.setStyle(selectedStyle(cuiaba));
+            lyr.bringToFront();
+          }
+        });
         window.loadRegion(rgint, nome_rgint, uf, biome);
       }
     })

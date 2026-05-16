@@ -25,11 +25,12 @@
     'Pampa':         '#a8dadc',
   };
 
-  // Visual style per data source
-  const SOURCE_STYLES = {
-    pipeline_diagonal: { dash: 'solid',   width: 2.5, opacity: 1.0   },
-    conab_pam:         { dash: 'dot',     width: 2.0, opacity: 0.80  },
-    lapig_vigor:       { dash: 'dashdot', width: 2.0, opacity: 0.80  },
+  // Source metadata: label, fixed color (null = use class color), line style
+  const SOURCE_META = {
+    pipeline_diagonal: { label: 'Pipeline MB/TC', color: null,      dash: 'solid',   width: 3   },
+    conab_pam:         { label: 'PAM / IBGE',     color: '#1565C0', dash: 'dot',     width: 2   },
+    conab_cafe:        { label: 'CONAB Café',      color: '#E65100', dash: 'dashdot', width: 2   },
+    lapig_vigor:       { label: 'LAPIG Vigor',     color: '#2E7D32', dash: 'dash',    width: 2   },
   };
 
   let currentData     = null;   // raw API response
@@ -85,6 +86,33 @@
     plotTimeSeries(cls);
   }
 
+  // ── Source summary row ──────────────────────────────────────────────────
+
+  function updateSourceSummary(cls, classData) {
+    const el = document.getElementById('source-summary');
+    if (!el || !classData) { if (el) el.classList.add('hidden'); return; }
+
+    const sourceNames = Object.keys(classData);
+    if (sourceNames.length <= 1) { el.classList.add('hidden'); return; }
+
+    const baseColor = CLASS_COLORS[cls] || '#555';
+    const pills = sourceNames.map(srcName => {
+      const meta = SOURCE_META[srcName] || { label: srcName, color: null };
+      const src  = classData[srcName];
+      const dotColor = meta.color || baseColor;
+      const badge = src.quality === 'primary' ? ' ★' : ' ↩';
+      return `<span class="source-pill">` +
+        `<span class="source-dot" style="background:${dotColor}"></span>` +
+        `<span>${meta.label}${badge}</span>` +
+        `</span>`;
+    });
+
+    const years = classData[sourceNames[0]]?.years || [];
+    const yearRange = years.length ? `[${years[0]}–${years[years.length - 1]}]` : '';
+    el.innerHTML = pills.join('') + (yearRange ? `<span style="margin-left:auto;opacity:0.6">${yearRange}</span>` : '');
+    el.classList.remove('hidden');
+  }
+
   // ── Plotting ────────────────────────────────────────────────────────────
 
   function plotTimeSeries(cls) {
@@ -105,28 +133,31 @@
       const sourceNames = Object.keys(classData);
       isMultiSource = sourceNames.length > 1;
 
-      sourceNames.forEach((srcName, si) => {
-        const src   = classData[srcName];
-        const style = SOURCE_STYLES[srcName] || { dash: 'solid', width: 2, opacity: 0.8 };
+      updateSourceSummary(cls, classData);
 
-        // Slightly shift hue per source for readability
-        const opacity = style.opacity - si * 0.1;
-        const lineColor = hexToRgba(baseColor, Math.max(0.4, opacity));
+      sourceNames.forEach(srcName => {
+        const src  = classData[srcName];
+        const meta = SOURCE_META[srcName] || { label: srcName, color: null, dash: 'solid', width: 2 };
+        const lineColor = meta.color || baseColor;
+        const qualBadge = src.quality === 'primary' ? ' ★' : ' ↩';
 
         traces.push({
           x: src.years,
           y: src.values,
           type: 'scatter',
           mode: 'lines+markers',
-          name: `${srcName}${src.quality === 'primary' ? ' ★' : ''}`,
-          line:   { color: lineColor, dash: style.dash, width: style.width },
+          name: meta.label + qualBadge,
+          line:   { color: lineColor, dash: meta.dash, width: meta.width },
           marker: { color: lineColor, size: 5 },
-          hovertemplate: `<b>%{x}</b><br>%{y:,.1f} ha<br><i>${srcName}</i><extra></extra>`,
+          hovertemplate: `<b>%{x}</b><br>%{y:,.1f} ha<br><i>${meta.label}</i><extra></extra>`,
         });
       });
 
     } else {
       // ── Simple / legacy format ({"2008": 123, ...}) ───────────────────
+      const summaryEl = document.getElementById('source-summary');
+      if (summaryEl) summaryEl.classList.add('hidden');
+
       const series = currentData[cls];
       if (!series) return;
       const years = Object.keys(series).map(Number).sort((a, b) => a - b);
@@ -148,14 +179,14 @@
       title: { text: cls, font: { size: 13 }, x: 0.02 },
       height: chartH,
       autosize: true,
-      xaxis: { title: 'Ano', tickmode: 'linear', dtick: 1, tickfont: { size: 10 } },
+      xaxis: { title: 'Ano', tickmode: 'linear', dtick: 2, tickfont: { size: 10 } },
       yaxis: { title: 'Área (ha)', tickfont: { size: 10 }, tickformat: ',.0f' },
-      margin: { t: 40, r: 16, b: isMultiSource ? 72 : 52, l: 80 },
+      margin: { t: 40, r: isMultiSource ? 160 : 16, b: 52, l: 80 },
       paper_bgcolor: '#fafaf8',
       plot_bgcolor:  '#fafaf8',
       hovermode: 'x unified',
       showlegend: isMultiSource,
-      legend: isMultiSource ? { orientation: 'h', y: -0.22, font: { size: 10 } } : {},
+      legend: isMultiSource ? { orientation: 'v', x: 1.02, y: 1, font: { size: 10 } } : {},
     };
 
     Plotly.react('chart', traces, layout, { responsive: true, displayModeBar: false });
