@@ -27,10 +27,17 @@
 
   // Source metadata: label, fixed color (null = use class color), line style
   const SOURCE_META = {
-    pipeline_diagonal: { label: 'Pipeline MB/TC', color: null,      dash: 'solid',   width: 3   },
-    conab_pam:         { label: 'PAM / IBGE',     color: '#1565C0', dash: 'dot',     width: 2   },
-    conab_cafe:        { label: 'CONAB Café',      color: '#E65100', dash: 'dashdot', width: 2   },
-    lapig_vigor:       { label: 'LAPIG Vigor',     color: '#2E7D32', dash: 'dash',    width: 2   },
+    pipeline_diagonal:  { label: 'Pipeline MB/TC',       color: null,      dash: 'solid',   width: 3   },
+    conab_pam:          { label: 'PAM / IBGE',            color: '#1565C0', dash: 'dot',     width: 2   },
+    conab_cafe:         { label: 'CONAB Café',             color: '#E65100', dash: 'dashdot', width: 2   },
+    lapig_vigor:        { label: 'LAPIG Vigor',            color: '#2E7D32', dash: 'dash',    width: 2   },
+    mb_pastagem_total:  { label: 'MB Pastagem Total',     color: '#6A1B9A', dash: 'dot',     width: 1.5 },
+    mb_floresta_total:  { label: 'MB Floresta Total',     color: '#1B5E20', dash: 'dot',     width: 1.5 },
+    mb_savana_total:    { label: 'MB Savana Total',       color: '#827717', dash: 'dot',     width: 1.5 },
+    tc_pastagem:        { label: 'TC Pastagem',           color: '#CE93D8', dash: 'dash',    width: 1.5 },
+    tc_floresta_prim:   { label: 'TC Floresta Primária',  color: '#00695C', dash: 'dash',    width: 1.5 },
+    tc_floresta_sec:    { label: 'TC Floresta Sec.',      color: '#4CAF50', dash: 'dashdot', width: 1.5 },
+    tc_nao_florestal:   { label: 'TC Não-Florestal',     color: '#F9A825', dash: 'dash',    width: 1.5 },
   };
 
   let currentData     = null;   // raw API response

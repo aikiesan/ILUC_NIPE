@@ -170,4 +170,38 @@ if lev_path.exists():
 else:
     print(f"  AVISO: {lev_path} nao encontrado, pulando split de milho.")
 
+
+# ── E. CRUZAMENTO TC+MB — aggregate municipality -> RGINT ────────────────────
+print("Loading CRUZAMENTO_TC_MB_CORRETO_v3.csv ...")
+cruzamento_path = ILUC / "06_Reconciliation_Logic" / "CRUZAMENTO_TC_MB_CORRETO_v3.csv"
+if cruzamento_path.exists():
+    cruz = pd.read_csv(cruzamento_path, dtype={"CD_MUN": str})
+    cruz.columns = cruz.columns.str.strip()
+    cruz["CD_MUN"] = cruz["CD_MUN"].astype(str).str.zfill(7)
+    cruz = cruz.rename(columns={"CD_MUN": "CD_GEOCODI", "ANO": "year"})
+
+    lookup = load_lookup()
+    merged_c = cruz.merge(lookup[["CD_GEOCODI", "cod_rgint"]], on="CD_GEOCODI", how="left")
+    merged_c = merged_c.dropna(subset=["cod_rgint"])
+    merged_c["rgint_id"] = merged_c["cod_rgint"].astype(str).str.strip()
+
+    KEEP_COLS = [
+        "MB_Floresta_ha", "MB_Pastagem_ha", "MB_Savana_ha",
+        "Veg_Florestal_Primaria", "Veg_Florestal_Secundaria",
+        "Natural_Nao_Florestal", "Pastagem_Herbacea", "Pastagem_Arbustiva_Arborea",
+    ]
+    agg_cols = [c for c in KEEP_COLS if c in merged_c.columns]
+    cruzamento_rgint = (
+        merged_c.groupby(["rgint_id", "year"])[agg_cols]
+        .sum()
+        .reset_index()
+        .sort_values(["rgint_id", "year"])
+    )
+    cruzamento_rgint.to_csv(PROCESSED / "cruzamento_rgint.csv", index=False, encoding="utf-8")
+    print(f"  Columns: {agg_cols}")
+    print(f"  Saved {len(cruzamento_rgint):,} rows -> processed/cruzamento_rgint.csv")
+    print(f"  Anos: {sorted(cruzamento_rgint['year'].unique())}")
+else:
+    print(f"  AVISO: {cruzamento_path} nao encontrado, pulando cruzamento MB/TC.")
+
 print("\nDone. Run 02_build_multisource_json.py next.")
