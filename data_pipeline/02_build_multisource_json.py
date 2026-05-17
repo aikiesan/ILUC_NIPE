@@ -58,6 +58,15 @@ if milho_split_uf is not None:
 else:
     print("  AVISO: conab_milho_split_uf.csv nao encontrado — classes 3+4 usarao PAM total.")
 
+# Raw MB + TC aggregated to RGINT from CRUZAMENTO
+cruzamento_path = PROCESSED / "cruzamento_rgint.csv"
+cruzamento_rgint = pd.read_csv(cruzamento_path, dtype={"rgint_id": str}) if cruzamento_path.exists() else None
+if cruzamento_rgint is not None:
+    cruzamento_rgint["year"] = cruzamento_rgint["year"].astype(int)
+    print(f"  cruzamento MB/TC loaded: {len(cruzamento_rgint)} rows")
+else:
+    print("  AVISO: cruzamento_rgint.csv nao encontrado — fontes MB/TC raw nao disponiveis.")
+
 
 # ── Series helpers ───────────────────────────────────────────────────────────
 
@@ -97,6 +106,25 @@ def milho_split_series(rgint_id: str, uf: str, safra: str) -> list:
         else:
             result.append(round(v * (pct if safra == "2a" else (1 - pct)), 4))
     return result
+
+
+def cruzamento_series(rgint_id: str, col: str) -> list:
+    """Single column from cruzamento_rgint aggregated to RGINT level."""
+    if cruzamento_rgint is None or col not in cruzamento_rgint.columns:
+        return [None] * len(YEARS)
+    sub = cruzamento_rgint[cruzamento_rgint["rgint_id"] == rgint_id].set_index("year")
+    return _nan_to_none(sub[col].reindex(YEARS).tolist())
+
+
+def cruzamento_sum_series(rgint_id: str, cols: list) -> list:
+    """Sum multiple TC columns per year from cruzamento_rgint."""
+    if cruzamento_rgint is None:
+        return [None] * len(YEARS)
+    sub = cruzamento_rgint[cruzamento_rgint["rgint_id"] == rgint_id].set_index("year")
+    valid = [c for c in cols if c in sub.columns]
+    if not valid:
+        return [None] * len(YEARS)
+    return _nan_to_none(sub[valid].sum(axis=1).reindex(YEARS).tolist())
 
 
 def cafe_rgint_series(rgint_id: str, uf: str) -> list:
@@ -144,14 +172,28 @@ def cafe_rgint_series(rgint_id: str, uf: str) -> list:
 # ── Mapping: class name → extra sources to add ───────────────────────────────
 
 CLASS_EXTRA_SOURCES = {
-    "1 - Culturas perenes":      [("conab_cafe", None)],       # cafe, handled specially
-    "2 - Soja":                  [("conab_pam",  "soja")],
-    "3 - Soja + Milho 2ª safra": [("conab_pam",  "milho_2a")], # uses split
-    "4 - Milho 1ª safra":        [("conab_pam",  "milho_1a")], # uses split
-    "5 - Cana-de-açúcar":        [("conab_pam",  "cana")],
-    "7 - Pastagem deg. média":   [("lapig_vigor", "Intermediário")],
-    "8 - Pastagem deg. alta":    [("lapig_vigor", "Severa")],
-    "9 - Pastagem deg. baixa":   [("lapig_vigor", "Ausente")],
+    "1 - Culturas perenes":          [("conab_cafe",        None)],
+    "2 - Soja":                      [("conab_pam",         "soja")],
+    "3 - Soja + Milho 2ª safra":[("conab_pam",         "milho_2a")],
+    "4 - Milho 1ª safra":       [("conab_pam",         "milho_1a")],
+    "5 - Cana-de-açúcar":  [("conab_pam",         "cana")],
+    "7 - Pastagem deg. média":  [("lapig_vigor",       "Intermediário"),
+                                      ("mb_pastagem_total", None),
+                                      ("tc_pastagem",       None)],
+    "8 - Pastagem deg. alta":        [("lapig_vigor",       "Severa"),
+                                      ("mb_pastagem_total", None),
+                                      ("tc_pastagem",       None)],
+    "9 - Pastagem deg. baixa":       [("lapig_vigor",       "Ausente"),
+                                      ("mb_pastagem_total", None),
+                                      ("tc_pastagem",       None)],
+    "11 - Veg. prim. florestal":     [("mb_floresta_total", None),
+                                      ("tc_floresta_prim",  None)],
+    "12 - Veg. sec. florestal":      [("mb_floresta_total", None),
+                                      ("tc_floresta_sec",   None)],
+    "13 - Veg. prim. não-florestal": [("mb_savana_total",  None),
+                                            ("tc_nao_florestal", None)],
+    "14 - Veg. sec. não-florestal":  [("mb_savana_total",  None),
+                                            ("tc_nao_florestal", None)],
 }
 
 
@@ -247,6 +289,55 @@ for meta in rgint_index:
                 )
                 sources["lapig_vigor"] = build_source_entry(
                     alt_vals, YEARS, rule_quality("lapig_vigor"), alt_notes
+                )
+
+            elif src_key == "mb_pastagem_total":
+                alt_vals = cruzamento_series(rgint_id, "MB_Pastagem_ha")
+                sources["mb_pastagem_total"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "MapBiomas Col.10 classe 15 — pastagem total (antes do split por vigor LAPIG)"
+                )
+
+            elif src_key == "tc_pastagem":
+                alt_vals = cruzamento_sum_series(rgint_id, ["Pastagem_Herbacea", "Pastagem_Arbustiva_Arborea"])
+                sources["tc_pastagem"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass — pastagem herbacea + arbustiva/arborea (AMZ/CER; anos de levantamento)"
+                )
+
+            elif src_key == "mb_floresta_total":
+                alt_vals = cruzamento_series(rgint_id, "MB_Floresta_ha")
+                sources["mb_floresta_total"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "MapBiomas Col.10 — floresta total (primaria + secundaria antes do split TC)"
+                )
+
+            elif src_key == "tc_floresta_prim":
+                alt_vals = cruzamento_series(rgint_id, "Veg_Florestal_Primaria")
+                sources["tc_floresta_prim"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass — vegetacao florestal primaria (AMZ/CER; anos de levantamento)"
+                )
+
+            elif src_key == "tc_floresta_sec":
+                alt_vals = cruzamento_series(rgint_id, "Veg_Florestal_Secundaria")
+                sources["tc_floresta_sec"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass — vegetacao florestal secundaria (AMZ/CER; anos de levantamento)"
+                )
+
+            elif src_key == "mb_savana_total":
+                alt_vals = cruzamento_series(rgint_id, "MB_Savana_ha")
+                sources["mb_savana_total"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "MapBiomas Col.10 — savana total (primaria + secundaria antes do split TC)"
+                )
+
+            elif src_key == "tc_nao_florestal":
+                alt_vals = cruzamento_series(rgint_id, "Natural_Nao_Florestal")
+                sources["tc_nao_florestal"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass — vegetacao natural nao-florestal (AMZ/CER; anos de levantamento)"
                 )
 
         result["classes"][cls_name] = sources
