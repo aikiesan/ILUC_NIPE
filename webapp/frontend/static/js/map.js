@@ -1,13 +1,19 @@
 (function () {
+  // Paleta Okabe-Ito — daltonico-segura, espelhada em dashboard.js
   const BIOME_COLORS = {
-    'Amazônia':      '#2d6a4f',
-    'Cerrado':       '#d4a017',
-    'Mata Atlântica':'#40916c',
-    'Caatinga':      '#e76f51',
-    'Pampa':         '#a8dadc',
+    'Amazônia':      '#009E73',
+    'Cerrado':       '#E69F00',
+    'Mata Atlântica':'#0072B2',
+    'Caatinga':      '#F0E442',
+    'Pampa':         '#CC79A7',
   };
 
-  const GOLDEN = new Set(['1201', '5101']);
+  function isLight(hex) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return (r * 299 + g * 587 + b * 114) / 1000 > 160;
+  }
 
   const map = L.map('map', {
     center: [-14, -52],
@@ -20,6 +26,20 @@
     subdomains: 'abcd',
     maxZoom: 19,
   }).addTo(map);
+
+  // Legenda de biomas injetada dinamicamente
+  const legendEl = document.getElementById('map-legend');
+  if (legendEl) {
+    legendEl.innerHTML =
+      '<strong class="legend-title">Biomas</strong>' +
+      Object.entries(BIOME_COLORS).map(([name, color]) => {
+        const border = isLight(color) ? 'border:1px solid #bbb;' : '';
+        return `<div class="legend-row">` +
+          `<span class="legend-swatch" style="background:${color};${border}"></span>` +
+          `<span>${name}</span>` +
+          `</div>`;
+      }).join('');
+  }
 
   let selectedLayer = null;
 
@@ -38,7 +58,7 @@
     return {
       fillColor: BIOME_COLORS[biome] || '#999',
       fillOpacity: 0.80,
-      color: '#ddd',
+      color: '#555',
       weight: 2,
     };
   }
@@ -47,9 +67,9 @@
     const biome = feature.properties.biome || '';
     return {
       fillColor: BIOME_COLORS[biome] || '#999',
-      fillOpacity: 0.80,
-      color: '#f4a261',
-      weight: 3.5,
+      fillOpacity: 0.85,
+      color: '#0072B2',
+      weight: 3,
     };
   }
 
@@ -58,7 +78,7 @@
 
     layer.bindTooltip(
       `<strong>${rgint} — ${nome_rgint}</strong><br>${uf} &middot; ${biome}`,
-      { sticky: true, opacity: 0.92 }
+      { sticky: true, opacity: 0.95 }
     );
 
     layer.on({
@@ -79,38 +99,17 @@
   }
 
   fetch('/api/geojson')
-    .then(r => r.json())
+    .then(r => {
+      if (!r.ok) throw new Error(`GeoJSON ${r.status}`);
+      return r.json();
+    })
     .then(geojson => {
       const geoLayer = L.geoJSON(geojson, { style, onEachFeature }).addTo(map);
-
-      // Star markers for golden-standard regions
-      geojson.features.forEach(f => {
-        const { rgint, nome_rgint, uf } = f.properties;
-        if (!GOLDEN.has(rgint)) return;
-
-        // Centroid approximation from first coordinate ring
-        const coords = f.geometry.type === 'Polygon'
-          ? f.geometry.coordinates[0]
-          : f.geometry.coordinates[0][0];
-        const lats = coords.map(c => c[1]);
-        const lngs = coords.map(c => c[0]);
-        const lat = (Math.min(...lats) + Math.max(...lats)) / 2;
-        const lng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
-
-        const icon = L.divIcon({
-          className: '',
-          html: '<span class="golden-icon" title="Padrão-ouro">★</span>',
-          iconSize: [22, 22],
-          iconAnchor: [11, 11],
-        });
-        L.marker([lat, lng], { icon, interactive: false }).addTo(map);
-      });
 
       // Auto-load Cuiabá (5101) on start with selection highlight
       const cuiaba = geojson.features.find(f => f.properties.rgint === '5101');
       if (cuiaba) {
         const { rgint, nome_rgint, uf, biome } = cuiaba.properties;
-        // Find its Leaflet layer and apply selectedStyle
         geoLayer.eachLayer(lyr => {
           if (lyr.feature.properties.rgint === rgint) {
             selectedLayer = lyr;
@@ -121,5 +120,9 @@
         window.loadRegion(rgint, nome_rgint, uf, biome);
       }
     })
-    .catch(err => console.error('GeoJSON load failed:', err));
+    .catch(err => {
+      console.error('GeoJSON load failed:', err);
+      const errEl = document.getElementById('map-error');
+      if (errEl) errEl.classList.remove('hidden');
+    });
 })();

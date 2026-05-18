@@ -47,7 +47,6 @@ header {
   font-weight: 600;
 }
 .badge-tag {
-  background: rgba(255,255,255,0.15);
   border-radius: 4px;
   padding: 2px 7px;
   font-size: 0.75rem;
@@ -78,6 +77,78 @@ main {
   height: 100%;
 }
 
+/* ── Map legend ──────────────────────────────────────────── */
+.map-legend {
+  position: absolute;
+  bottom: 28px;
+  left: 10px;
+  z-index: 500;
+  background: rgba(255, 255, 255, 0.93);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  color: #222;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  min-width: 130px;
+}
+.legend-title {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin-bottom: 5px;
+}
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+}
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* ── Map error overlay ───────────────────────────────────── */
+.map-error {
+  position: absolute;
+  inset: 0;
+  z-index: 600;
+  background: rgba(255, 249, 220, 0.96);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 0.5rem;
+}
+.map-error-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+.map-error p {
+  font-size: 0.9rem;
+  color: #444;
+  font-weight: 500;
+}
+.map-error-hint {
+  font-size: 0.8rem !important;
+  color: #777 !important;
+  font-weight: 400 !important;
+}
+.map-error code {
+  background: #f0e8c0;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 0.78rem;
+}
+
 /* ── Dashboard panel ─────────────────────────────────────── */
 .panel-dashboard {
   flex: 1;
@@ -92,7 +163,7 @@ main {
   text-align: center;
   padding: 2rem;
   color: #555;
-  max-width: 420px;
+  max-width: 440px;
 }
 .welcome-msg p { margin-bottom: 0.75rem; font-size: 1rem; }
 .welcome-hint { font-size: 0.85rem; color: #888; }
@@ -100,18 +171,42 @@ main {
 /* ── Tab bar ─────────────────────────────────────────────── */
 .tab-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 10px 12px 6px;
-  background: #eeeee8;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px 8px;
+  background: #e8e8e2;
   border-bottom: 1px solid #ccc;
   flex-shrink: 0;
 }
+
+/* Grupo temático de botões */
+.tab-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.tab-group-label {
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  padding: 2px 4px 2px 0;
+  white-space: nowrap;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
 .tab-btn {
-  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 4px 10px;
-  font-size: 0.74rem;
+  padding: 5px 10px;
+  font-size: 0.76rem;
   cursor: pointer;
   background: #fff;
   color: #333;
@@ -119,12 +214,34 @@ main {
   white-space: nowrap;
 }
 .tab-btn:hover {
-  border-color: #888;
+  border-color: #666;
+  background: #f5f5f2;
 }
 .tab-btn.active {
-  color: #fff;
   border-color: transparent;
   font-weight: 600;
+}
+.tab-btn-label {
+  /* label text — truncate if needed */
+}
+
+/* Badge de contagem de fontes */
+.src-count {
+  font-size: 0.62rem;
+  font-weight: 700;
+  background: #ddd;
+  color: #555;
+  border-radius: 9px;
+  padding: 1px 5px;
+  flex-shrink: 0;
+}
+.src-count.multi {
+  background: #56B4E9;
+  color: #fff;
+}
+.src-count.rich {
+  background: #009E73;
+  color: #fff;
 }
 
 /* ── Dashboard content wrapper ───────────────────────────── */
@@ -149,11 +266,6 @@ main {
   border-radius: 6px;
   font-size: 0.82rem;
 }
-.golden-icon {
-  font-size: 18px;
-  line-height: 1;
-  text-shadow: 0 0 4px rgba(0,0,0,0.5);
-}
 
 /* ── Report button (header) ──────────────────────────────── */
 .report-btn {
@@ -170,9 +282,9 @@ main {
 }
 .report-btn:hover { background: rgba(255,255,255,0.15); }
 
-/* ── Source quality badges (inside chart legend area) ─────── */
-.src-primary  { color: #2e7d32; font-weight: 700; }
-.src-fallback { color: #6d4c1a; }
+/* ── Source quality badges (daltonico-safe) ───────────────── */
+.src-primary  { color: #0072B2; font-weight: 700; }
+.src-fallback { color: #999933; }
 
 /* ── Source summary row ──────────────────────────────────── */
 .source-summary {
@@ -215,4 +327,5 @@ main {
   .panel-map { width: 100%; height: 45vh; flex-shrink: 0; border-right: none; border-bottom: 2px solid #0f3460; }
   .panel-dashboard { height: auto; overflow: visible; }
   #chart { min-height: 320px; }
+  .tab-group-label { min-width: 60px; }
 }
