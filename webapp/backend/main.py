@@ -3,6 +3,12 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse
 from pathlib import Path
 import json
+import re
+
+def _load_json(path: Path):
+    text = path.read_text(encoding="utf-8")
+    text = re.sub(r'\bNaN\b', 'null', text)
+    return json.loads(text)
 
 app = FastAPI(title="ABIOVE LULC Webapp")
 
@@ -25,16 +31,14 @@ def get_rgint(rgint_id: str):
     path = DATA / "rgint" / f"{rgint_id}.json"
     if not path.exists():
         return JSONResponse({"error": "RGINT not found"}, status_code=404)
-    with open(path, encoding="utf-8") as f:
-        return JSONResponse(json.load(f))
+    return JSONResponse(_load_json(path))
 
 @app.get("/api/rgint_full/{rgint_id}")
 def get_rgint_full(rgint_id: str):
     path = DATA / "rgint_full" / f"{rgint_id}.json"
     if not path.exists():
         return JSONResponse({"error": "Full data not generated yet — run pipeline 02_build_multisource_json.py"}, status_code=404)
-    with open(path, encoding="utf-8") as f:
-        return JSONResponse(json.load(f))
+    return JSONResponse(_load_json(path))
 
 @app.get("/api/geojson")
 def get_geojson():
