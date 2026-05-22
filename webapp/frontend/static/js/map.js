@@ -1,20 +1,4 @@
 (function () {
-  // Paleta Okabe-Ito — daltonico-segura, espelhada em dashboard.js
-  const BIOME_COLORS = {
-    'Amazônia':      '#009E73',
-    'Cerrado':       '#E69F00',
-    'Mata Atlântica':'#0072B2',
-    'Caatinga':      '#F0E442',
-    'Pampa':         '#CC79A7',
-  };
-
-  function isLight(hex) {
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    return (r * 299 + g * 587 + b * 114) / 1000 > 160;
-  }
-
   const map = L.map('map', {
     center: [-14, -52],
     zoom: 4,
@@ -27,50 +11,18 @@
     maxZoom: 19,
   }).addTo(map);
 
-  // Legenda de biomas injetada dinamicamente
-  const legendEl = document.getElementById('map-legend');
-  if (legendEl) {
-    legendEl.innerHTML =
-      '<strong class="legend-title">Biomas</strong>' +
-      Object.entries(BIOME_COLORS).map(([name, color]) => {
-        const border = isLight(color) ? 'border:1px solid #bbb;' : '';
-        return `<div class="legend-row">` +
-          `<span class="legend-swatch" style="background:${color};${border}"></span>` +
-          `<span>${name}</span>` +
-          `</div>`;
-      }).join('');
-  }
-
   let selectedLayer = null;
 
-  function style(feature) {
-    const biome = feature.properties.biome || '';
-    return {
-      fillColor: BIOME_COLORS[biome] || '#999',
-      fillOpacity: 0.55,
-      color: '#fff',
-      weight: 0.8,
-    };
+  function style() {
+    return { fillColor: '#B8C9D9', fillOpacity: 0.5, color: '#fff', weight: 0.6 };
   }
 
-  function highlightStyle(feature) {
-    const biome = feature.properties.biome || '';
-    return {
-      fillColor: BIOME_COLORS[biome] || '#999',
-      fillOpacity: 0.80,
-      color: '#555',
-      weight: 2,
-    };
+  function highlightStyle() {
+    return { fillColor: '#7A9BB5', fillOpacity: 0.75, color: '#555', weight: 1.5 };
   }
 
-  function selectedStyle(feature) {
-    const biome = feature.properties.biome || '';
-    return {
-      fillColor: BIOME_COLORS[biome] || '#999',
-      fillOpacity: 0.85,
-      color: '#0072B2',
-      weight: 3,
-    };
+  function selectedStyle() {
+    return { fillColor: '#4A90D9', fillOpacity: 0.85, color: '#0052A3', weight: 2.5 };
   }
 
   function onEachFeature(feature, layer) {
@@ -83,15 +35,15 @@
 
     layer.on({
       mouseover(e) {
-        if (e.target !== selectedLayer) e.target.setStyle(highlightStyle(feature));
+        if (e.target !== selectedLayer) e.target.setStyle(highlightStyle());
       },
       mouseout(e) {
-        if (e.target !== selectedLayer) e.target.setStyle(style(feature));
+        if (e.target !== selectedLayer) e.target.setStyle(style());
       },
       click(e) {
-        if (selectedLayer) selectedLayer.setStyle(style(selectedLayer.feature));
+        if (selectedLayer) selectedLayer.setStyle(style());
         selectedLayer = e.target;
-        selectedLayer.setStyle(selectedStyle(feature));
+        selectedLayer.setStyle(selectedStyle());
         selectedLayer.bringToFront();
         window.loadRegion(rgint, nome_rgint, uf, biome);
       },
@@ -113,7 +65,7 @@
         geoLayer.eachLayer(lyr => {
           if (lyr.feature.properties.rgint === rgint) {
             selectedLayer = lyr;
-            lyr.setStyle(selectedStyle(cuiaba));
+            lyr.setStyle(selectedStyle());
             lyr.bringToFront();
           }
         });
