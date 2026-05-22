@@ -289,10 +289,10 @@
     currentNome    = nome;
 
     const reportLink = document.getElementById('report-link');
-    reportLink.href = `/report/${rgintId}`;
+    reportLink.href = (window.API_BASE||'') + `/report/${rgintId}`;
     reportLink.classList.remove('hidden');
 
-    fetch(`/api/rgint_full/${rgintId}`)
+    fetch((window.API_BASE||'') + `/api/rgint_full/${rgintId}`)
       .then(r => {
         if (!r.ok) throw new Error('no_full');
         return r.json();
@@ -303,7 +303,7 @@
         renderDashboard(rgintId, nome, uf, biome, Object.keys(data.classes));
       })
       .catch(() => {
-        fetch(`/api/rgint/${rgintId}`)
+        fetch((window.API_BASE||'') + `/api/rgint/${rgintId}`)
           .then(r => { if (!r.ok) throw new Error(`RGINT ${rgintId} not found`); return r.json(); })
           .then(data => {
             currentData   = data;
