@@ -3,12 +3,15 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse
 from pathlib import Path
 import json
+import os
 import re
 
 def _load_json(path: Path):
     text = path.read_text(encoding="utf-8")
     text = re.sub(r'\bNaN\b', 'null', text)
     return json.loads(text)
+
+ROOT_PATH = os.environ.get("ROOT_PATH", "")
 
 app = FastAPI(title="ABIOVE LULC Webapp")
 
@@ -19,7 +22,10 @@ app.mount("/static", StaticFiles(directory=BASE / "frontend" / "static"), name="
 
 @app.get("/")
 def index():
-    return FileResponse(BASE / "frontend" / "templates" / "index.html")
+    html = (BASE / "frontend" / "templates" / "index.html").read_text(encoding="utf-8")
+    inject = f'<script>window.API_BASE="{ROOT_PATH}";</script>'
+    html = html.replace('</head>', inject + '\n</head>', 1)
+    return HTMLResponse(html)
 
 @app.get("/api/index")
 def get_index():

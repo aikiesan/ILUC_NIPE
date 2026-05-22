@@ -98,7 +98,7 @@
     });
   }
 
-  fetch('/api/geojson')
+  fetch((window.API_BASE||'') + '/api/geojson')
     .then(r => {
       if (!r.ok) throw new Error(`GeoJSON ${r.status}`);
       return r.json();
