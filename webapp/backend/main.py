@@ -23,6 +23,9 @@ app.mount("/static", StaticFiles(directory=BASE / "frontend" / "static"), name="
 @app.get("/")
 def index():
     html = (BASE / "frontend" / "templates" / "index.html").read_text(encoding="utf-8")
+    if ROOT_PATH:
+        html = html.replace('href="/static/', f'href="{ROOT_PATH}/static/')
+        html = html.replace('src="/static/', f'src="{ROOT_PATH}/static/')
     inject = f'<script>window.API_BASE="{ROOT_PATH}";</script>'
     html = html.replace('</head>', inject + '\n</head>', 1)
     return HTMLResponse(html)
