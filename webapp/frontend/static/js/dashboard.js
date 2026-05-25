@@ -75,6 +75,13 @@
     return 1;
   }
 
+  function hasOutliers(cls) {
+    if (currentFormat !== 'full' || !currentData?.classes?.[cls]) return false;
+    return Object.values(currentData.classes[cls]).some(
+      src => src.outliers && src.outliers.length > 0
+    );
+  }
+
   function makeTabBtn(cls) {
     const btn = document.createElement('button');
     btn.className = 'tab-btn';
@@ -91,6 +98,15 @@
     badge.className = 'src-count' + (count >= 3 ? ' rich' : count >= 2 ? ' multi' : '');
     badge.textContent = count;
     btn.appendChild(badge);
+
+    if (hasOutliers(cls)) {
+      btn.classList.add('has-outliers');
+      const warn = document.createElement('span');
+      warn.className = 'outlier-warn';
+      warn.textContent = '⚠';
+      warn.title = 'Outliers detectados nesta classe';
+      btn.appendChild(warn);
+    }
 
     btn.addEventListener('click', () => selectTab(cls));
     return btn;
@@ -166,9 +182,13 @@
       const src  = classData[srcName];
       const dotColor = meta.color || baseColor;
       const badge = src.quality === 'primary' ? ' ★' : ' ↩';
+      const outlierCount = src.outliers ? src.outliers.length : 0;
+      const outlierBit = outlierCount > 0
+        ? ` <span style="color:#c62828;font-weight:700">⚠${outlierCount}</span>`
+        : '';
       return `<span class="source-pill">` +
         `<span class="source-dot" style="background:${dotColor}"></span>` +
-        `<span>${meta.label}${badge}</span>` +
+        `<span>${meta.label}${badge}${outlierBit}</span>` +
         `</span>`;
     });
 
@@ -218,6 +238,30 @@
           marker: { color: lineColor, size: 5 },
           hovertemplate: `<b>%{x}</b><br>%{y:,.1f} ha<br><i>${meta.label}</i><extra></extra>`,
         });
+
+        // Overlay red open-circle markers for outlier years
+        if (src.outliers && src.outliers.length > 0) {
+          const ox = [], oy = [];
+          src.outliers.forEach(yr => {
+            const idx = src.years.indexOf(yr);
+            if (idx >= 0 && src.values[idx] != null) {
+              ox.push(yr);
+              oy.push(src.values[idx]);
+            }
+          });
+          if (ox.length > 0) {
+            traces.push({
+              x: ox,
+              y: oy,
+              type: 'scatter',
+              mode: 'markers',
+              marker: { color: '#c62828', size: 14, symbol: 'circle-open', line: { color: '#c62828', width: 2.5 } },
+              name: `⚠ ${meta.label}`,
+              showlegend: true,
+              hovertemplate: `<b>%{x}</b><br>⚠ Outlier detectado<br><i>${meta.label}</i><extra></extra>`,
+            });
+          }
+        }
       });
 
     } else {

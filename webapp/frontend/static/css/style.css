@@ -244,6 +244,17 @@ main {
   color: #fff;
 }
 
+/* Outlier warning badge on class tabs */
+.outlier-warn {
+  font-size: 0.68rem;
+  color: #c62828;
+  margin-left: 1px;
+  flex-shrink: 0;
+}
+.tab-btn.has-outliers {
+  border-color: #f5c6c6;
+}
+
 /* ── Dashboard content wrapper ───────────────────────────── */
 #dashboard-content {
   display: flex;
