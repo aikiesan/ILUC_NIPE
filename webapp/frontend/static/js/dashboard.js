@@ -336,6 +336,11 @@
     reportLink.href = (window.API_BASE||'') + `/report/${rgintId}`;
     reportLink.classList.remove('hidden');
 
+    // Notify transition view
+    if (typeof window.onRegionChanged === 'function') {
+      window.onRegionChanged(rgintId);
+    }
+
     fetch((window.API_BASE||'') + `/api/rgint_full/${rgintId}`)
       .then(r => {
         if (!r.ok) throw new Error('no_full');
@@ -364,7 +369,7 @@
 
     const biomeEl    = document.getElementById('badge-biome');
     const biomeColor = BIOME_COLORS[biome] || '#555';
-    biomeEl.textContent    = biome;
+    biomeEl.textContent      = biome;
     biomeEl.style.background = biomeColor + '99';
     biomeEl.style.color      = isLight(biomeColor) ? '#333' : '#fff';
 
@@ -373,6 +378,15 @@
 
     document.getElementById('welcome').classList.add('hidden');
     document.getElementById('dashboard-content').classList.remove('hidden');
+
+    // Switch back to series view on new region
+    document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    const seriesBtn = document.querySelector('.view-btn[data-view="series"]');
+    if (seriesBtn) seriesBtn.classList.add('active');
+    const seriesView = document.getElementById('series-view');
+    if (seriesView) seriesView.classList.remove('hidden');
+    const transitionPanel = document.getElementById('transition-panel');
+    if (transitionPanel) transitionPanel.classList.add('hidden');
 
     buildTabs(classes);
 

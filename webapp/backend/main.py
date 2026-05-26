@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, JSONResponse, HTMLResponse
 from pathlib import Path
@@ -71,3 +71,32 @@ def pipeline_status():
         "rgint_full_count":     len(list(full_dir.glob("*.json")))    if full_dir.exists()    else 0,
         "html_reports_count":   len(list(reports_dir.glob("*.html"))) if reports_dir.exists() else 0,
     })
+
+
+@app.get("/api/rgint_matrix/{rgint_id}")
+def get_rgint_matrix(rgint_id: str):
+    path = DATA / "rgint_matrix" / f"{rgint_id}.json"
+    if not path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail=f"Matrix not generated for {rgint_id} — run pipeline 06_interpolate_matrices.py",
+        )
+    return JSONResponse(_load_json(path))
+
+
+@app.get("/api/rgint_transition/{rgint_id}/{year_from}/{year_to}")
+def get_rgint_transition(rgint_id: str, year_from: int, year_to: int):
+    if year_from >= year_to:
+        raise HTTPException(status_code=400, detail="year_from must be less than year_to")
+    path = DATA / "rgint_matrix" / f"{rgint_id}.json"
+    if not path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail=f"Matrix not generated for {rgint_id} — run pipeline 06_interpolate_matrices.py",
+        )
+    data = _load_json(path)
+    matrices = data.get("matrices", {})
+    matrix = matrices.get(str(year_to))
+    if matrix is None:
+        raise HTTPException(status_code=404, detail=f"Year {year_to} not found in matrix data")
+    return JSONResponse(matrix)

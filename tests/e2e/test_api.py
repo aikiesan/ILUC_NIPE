@@ -109,13 +109,11 @@ class TestReportEndpoint:
 # ── New endpoints (xfail until PR 3) ─────────────────────────────────────────
 
 class TestMatrixEndpoint:
-    @pytest.mark.xfail(reason="/api/rgint_matrix not yet implemented (PR 3)")
     async def test_returns_200(self, fastapi_app):
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
             r = await c.get("/api/rgint_matrix/5101")
         assert r.status_code == 200
 
-    @pytest.mark.xfail(reason="/api/rgint_matrix not yet implemented (PR 3)")
     async def test_schema_valid(self, fastapi_app):
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
             r = await c.get("/api/rgint_matrix/5101")
@@ -128,13 +126,11 @@ class TestMatrixEndpoint:
 
 
 class TestTransitionEndpoint:
-    @pytest.mark.xfail(reason="/api/rgint_transition not yet implemented (PR 3)")
     async def test_returns_200(self, fastapi_app):
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
             r = await c.get("/api/rgint_transition/5101/2008/2017")
         assert r.status_code == 200
 
-    @pytest.mark.xfail(reason="/api/rgint_transition not yet implemented (PR 3)")
     async def test_matrix_cells_are_numeric(self, fastapi_app):
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
             r = await c.get("/api/rgint_transition/5101/2008/2017")
@@ -142,7 +138,6 @@ class TestTransitionEndpoint:
             for val in row.values():
                 assert isinstance(val, (int, float))
 
-    @pytest.mark.xfail(reason="/api/rgint_transition not yet implemented (PR 3)")
     async def test_invalid_year_range_returns_4xx(self, fastapi_app):
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
             r = await c.get("/api/rgint_transition/5101/2024/2008")
