@@ -5,3 +5,8 @@ fastapi>=0.111.0
 uvicorn[standard]>=0.29.0
 playwright>=1.44
 pytest-playwright>=0.5
+# data_pipeline dependencies needed for unit/integration tests
+pandas>=2.0
+numpy>=1.24
+pyaml>=23.0
+jinja2>=3.1

@@ -1,12 +1,10 @@
 """
 Integration tests for the pipeline builder (pipeline/builder.py).
-All tests are xfail until PR 2 creates the builder module.
 """
 
 import pytest
 
 
-@pytest.mark.xfail(reason="pipeline/builder.py not yet created (PR 2)")
 def test_build_class_sources_returns_dict_with_source_keys():
     from pipeline.builder import build_class_sources
     from pipeline.registry import SourceRegistry
@@ -17,7 +15,6 @@ def test_build_class_sources_returns_dict_with_source_keys():
     assert len(result) >= 1
 
 
-@pytest.mark.xfail(reason="pipeline/builder.py not yet created (PR 2)")
 def test_build_class_sources_each_entry_has_required_fields():
     from pipeline.builder import build_class_sources
     from pipeline.registry import SourceRegistry
@@ -32,7 +29,6 @@ def test_build_class_sources_each_entry_has_required_fields():
         assert "outliers" in src_entry or True  # outliers added by step 04
 
 
-@pytest.mark.xfail(reason="pipeline/builder.py not yet created (PR 2)")
 def test_build_class_sources_primary_source_present():
     from pipeline.builder import build_class_sources
     from pipeline.registry import SourceRegistry
@@ -43,7 +39,6 @@ def test_build_class_sources_primary_source_present():
     assert len(primaries) >= 1
 
 
-@pytest.mark.xfail(reason="pipeline/builder.py not yet created (PR 2)")
 def test_adding_new_adapter_appears_in_output_without_modifying_builder():
     """OCP: new source appears automatically via registry.register(), no elif needed."""
     from pipeline.builder import build_class_sources

@@ -1,12 +1,10 @@
 """
 Unit tests for the SourceRegistry (pipeline/registry.py).
-All tests are xfail until PR 2 creates the registry module.
 """
 
 import pytest
 
 
-@pytest.mark.xfail(reason="pipeline/registry.py not yet created (PR 2)")
 def test_registry_register_and_retrieve():
     from pipeline.registry import SourceRegistry
     from sources.base import ITimeSeriesSource
@@ -25,14 +23,12 @@ def test_registry_register_and_retrieve():
     assert adapter not in registry.adapters_for("11 - Veg. prim. florestal")
 
 
-@pytest.mark.xfail(reason="pipeline/registry.py not yet created (PR 2)")
 def test_registry_empty_for_unregistered_class():
     from pipeline.registry import SourceRegistry
     registry = SourceRegistry()
     assert registry.adapters_for("2 - Soja") == []
 
 
-@pytest.mark.xfail(reason="pipeline/registry.py not yet created (PR 2)")
 def test_registry_preserves_registration_order():
     from pipeline.registry import SourceRegistry
     from sources.base import ITimeSeriesSource
@@ -54,16 +50,13 @@ def test_registry_preserves_registration_order():
     assert keys == ["a", "b"]
 
 
-@pytest.mark.xfail(reason="pipeline/registry.py not yet created (PR 2)")
 def test_registry_from_quality_rules_has_all_known_sources():
     from pipeline.registry import SourceRegistry
     registry = SourceRegistry.from_quality_rules()
-    known_sources = {
-        "pipeline_diagonal", "conab_pam", "lapig_vigor",
-        "conab_cafe", "mb_pastagem_total", "mb_floresta_total",
-    }
+    # "2 - Soja" → pipeline_diagonal + conab_pam
+    # "7 - Pastagem deg. média" → pipeline_diagonal + lapig_vigor + mb_pastagem_total + tc_pastagem
     all_keys = {a.source_key for cls in ["2 - Soja", "7 - Pastagem deg. média"]
                 for a in registry.adapters_for(cls)}
-    assert known_sources & all_keys == known_sources & {
-        "pipeline_diagonal", "conab_pam", "lapig_vigor"
-    }
+    assert "pipeline_diagonal" in all_keys
+    assert "conab_pam" in all_keys
+    assert "lapig_vigor" in all_keys
