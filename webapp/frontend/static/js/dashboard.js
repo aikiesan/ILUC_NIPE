@@ -1,21 +1,26 @@
 (function () {
-  // Paleta Okabe-Ito + Paul Tol "Muted" — daltonico-segura (sem vermelho nem marrom)
   const CLASS_COLORS = {
-    '1 - Culturas perenes':          '#E69F00',  // laranja-âmbar
-    '2 - Soja':                      '#F0E442',  // amarelo
-    '3 - Soja + Milho 2ª safra':     '#D55E00',  // vermelhão (distinto de vermelho)
-    '4 - Milho 1ª safra':            '#009E73',  // verde-azulado
-    '5 - Cana-de-açúcar':            '#56B4E9',  // azul celeste
-    '6 - Outra agropecuária':        '#999933',  // oliva-amarelo
-    '7 - Pastagem deg. média':       '#CC79A7',  // rosa-púrpura
-    '8 - Pastagem deg. alta':        '#882255',  // púrpura escuro
-    '9 - Pastagem deg. baixa':       '#AA4499',  // púrpura médio
-    '10 - Silvicultura':             '#332288',  // índigo
-    '11 - Veg. prim. florestal':     '#117733',  // verde escuro
-    '12 - Veg. sec. florestal':      '#44AA99',  // teal
-    '13 - Veg. prim. não-florestal': '#88CCEE',  // azul claro
-    '14 - Veg. sec. não-florestal':  '#DDCC77',  // amarelo-quente
-    '15 - Outro':                    '#BBBBBB',  // cinza
+    // Culturas anuais — warm spectrum
+    '1 - Culturas perenes':          '#E07B00',  // amber
+    '2 - Soja':                      '#F5C400',  // gold
+    '3 - Soja + Milho 2ª safra':     '#E8502A',  // vermillion
+    '4 - Milho 1ª safra':            '#FFA040',  // light orange
+    '5 - Cana-de-açúcar':            '#B5D400',  // yellow-green
+    // Outras culturas
+    '6 - Outra agropecuária':        '#7B5E2A',  // brown
+    // Pastagem — pink/rose range, 3 levels of degradation
+    '7 - Pastagem deg. média':       '#C2185B',  // hot pink
+    '8 - Pastagem deg. alta':        '#7B003E',  // dark maroon
+    '9 - Pastagem deg. baixa':       '#F8A8C8',  // light pink
+    // Floresta — green range
+    '10 - Silvicultura':             '#00BFA5',  // teal-green
+    '11 - Veg. prim. florestal':     '#1B5E20',  // deep forest green
+    '12 - Veg. sec. florestal':      '#66BB6A',  // medium green
+    // Veg. não-florestal — blue range
+    '13 - Veg. prim. não-florestal': '#0D47A1',  // dark blue
+    '14 - Veg. sec. não-florestal':  '#64B5F6',  // light blue
+    // Outro
+    '15 - Outro':                    '#9E9E9E',  // neutral grey
   };
 
   const BIOME_COLORS = {
@@ -26,19 +31,18 @@
     'Pampa':         '#CC79A7',
   };
 
-  // Source metadata: cores também daltonico-safe
   const SOURCE_META = {
-    pipeline_diagonal:  { label: 'Pipeline MB/TC',      color: null,      dash: 'solid',   width: 3   },
-    conab_pam:          { label: 'PAM / IBGE',           color: '#0072B2', dash: 'dot',     width: 2   },
-    conab_cafe:         { label: 'CONAB Café',            color: '#D55E00', dash: 'dashdot', width: 2   },
-    lapig_vigor:        { label: 'LAPIG Vigor',           color: '#009E73', dash: 'dash',    width: 2   },
-    mb_pastagem_total:  { label: 'MB Pastagem Total',    color: '#882255', dash: 'dot',     width: 1.5 },
-    mb_floresta_total:  { label: 'MB Floresta Total',    color: '#117733', dash: 'dot',     width: 1.5 },
-    mb_savana_total:    { label: 'MB Savana Total',      color: '#999933', dash: 'dot',     width: 1.5 },
-    tc_pastagem:        { label: 'TC Pastagem',          color: '#AA4499', dash: 'dash',    width: 1.5 },
-    tc_floresta_prim:   { label: 'TC Floresta Primária', color: '#44AA99', dash: 'dash',    width: 1.5 },
-    tc_floresta_sec:    { label: 'TC Floresta Sec.',     color: '#56B4E9', dash: 'dashdot', width: 1.5 },
-    tc_nao_florestal:   { label: 'TC Não-Florestal',    color: '#DDCC77', dash: 'dash',    width: 1.5 },
+    pipeline_diagonal: { label: 'Pipeline MB/TC',      color: null,      dash: 'solid',   width: 3   },
+    conab_pam:         { label: 'PAM / IBGE',           color: '#B71C1C', dash: 'dot',     width: 2   },
+    conab_cafe:        { label: 'CONAB Café',            color: '#4527A0', dash: 'dashdot', width: 2   },
+    lapig_vigor:       { label: 'LAPIG Vigor',           color: '#00695C', dash: 'dash',    width: 2   },
+    mb_pastagem_total: { label: 'MB Pastagem Total',    color: '#0277BD', dash: 'dot',     width: 1.5 },
+    mb_floresta_total: { label: 'MB Floresta Total',    color: '#558B2F', dash: 'dot',     width: 1.5 },
+    mb_savana_total:   { label: 'MB Savana Total',      color: '#E65100', dash: 'dot',     width: 1.5 },
+    tc_pastagem:       { label: 'TC Pastagem',          color: '#AD1457', dash: 'dash',    width: 1.5 },
+    tc_floresta_prim:  { label: 'TC Floresta Primária', color: '#006064', dash: 'dash',    width: 1.5 },
+    tc_floresta_sec:   { label: 'TC Floresta Sec.',     color: '#827717', dash: 'dashdot', width: 1.5 },
+    tc_nao_florestal:  { label: 'TC Não-Florestal',    color: '#4E342E', dash: 'dash',    width: 1.5 },
   };
 
   // Agrupamento temático das 15 classes
