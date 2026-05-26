@@ -1,12 +1,10 @@
 """
 Unit tests for the linear matrix interpolator (pipeline/interpolator.py).
-All tests are xfail until PR 2 creates that module.
 """
 
 import pytest
 
 
-@pytest.mark.xfail(reason="pipeline/interpolator.py not yet created (PR 2)")
 def test_linear_midpoint():
     from pipeline.interpolator import interpolate_matrix
     m0 = {"A": {"A": 100.0, "B": 0.0},  "B": {"A": 0.0,  "B": 200.0}}
@@ -16,7 +14,6 @@ def test_linear_midpoint():
     assert mid["A"]["A"] == pytest.approx(90.0)
 
 
-@pytest.mark.xfail(reason="pipeline/interpolator.py not yet created (PR 2)")
 def test_anchor_year_returns_exact_matrix():
     from pipeline.interpolator import interpolate_matrix
     m = {"A": {"A": 100.0, "B": 50.0}}
@@ -24,7 +21,6 @@ def test_anchor_year_returns_exact_matrix():
     assert result == m
 
 
-@pytest.mark.xfail(reason="pipeline/interpolator.py not yet created (PR 2)")
 def test_interpolation_preserves_all_class_pairs():
     from pipeline.interpolator import interpolate_matrix
     classes = ["A", "B", "C"]
@@ -36,7 +32,6 @@ def test_interpolation_preserves_all_class_pairs():
         assert set(row.keys()) == set(classes)
 
 
-@pytest.mark.xfail(reason="pipeline/interpolator.py not yet created (PR 2)")
 def test_build_annual_matrices_returns_all_years():
     from pipeline.interpolator import build_annual_matrices
     m2008 = {"A": {"A": 100.0}}
@@ -46,7 +41,6 @@ def test_build_annual_matrices_returns_all_years():
     assert set(result.keys()) == set(range(2008, 2025))
 
 
-@pytest.mark.xfail(reason="pipeline/interpolator.py not yet created (PR 2)")
 def test_cells_bounded_by_anchor_values():
     from pipeline.interpolator import interpolate_matrix
     m0 = {"A": {"A": 100.0}}

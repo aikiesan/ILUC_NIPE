@@ -39,9 +39,34 @@
       </div>
 
       <div id="dashboard-content" class="hidden">
-        <div id="class-tabs" class="tab-bar"></div>
-        <div id="source-summary" class="source-summary hidden"></div>
-        <div id="chart"></div>
+
+        <!-- View toggle -->
+        <div id="view-toggle" class="view-toggle">
+          <button class="view-btn active" data-view="series">Série Temporal</button>
+          <button class="view-btn" data-view="transitions">Matriz de Transição</button>
+        </div>
+
+        <!-- Series temporal view -->
+        <div id="series-view">
+          <div id="class-tabs" class="tab-bar"></div>
+          <div id="source-summary" class="source-summary hidden"></div>
+          <div id="chart"></div>
+        </div>
+
+        <!-- Transition / Sankey view -->
+        <div id="transition-panel" class="transition-panel hidden">
+          <div class="transition-controls">
+            <div class="mode-selector">
+              <button class="mode-btn active" data-mode="annual">Cada Ano</button>
+              <button class="mode-btn" data-mode="biennial">A cada 2 Anos</button>
+              <button class="mode-btn" data-mode="anchor">3 Períodos</button>
+            </div>
+            <div id="year-controls" class="year-controls"></div>
+          </div>
+          <div id="stable-area-bar" class="stable-area-bar hidden"></div>
+          <div id="transition-chart"></div>
+        </div>
+
       </div>
     </section>
   </main>
@@ -49,6 +74,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
   <script src="/static/js/dashboard.js"></script>
+  <script src="/static/js/transitions.js"></script>
   <script src="/static/js/map.js"></script>
 </body>
 </html>
