@@ -34,11 +34,13 @@
 
   // ── State ────────────────────────────────────────────────────────────────
 
-  let currentRgintId = null;
-  let matrixData     = null;
-  let currentMode    = 'annual';
-  let yearFrom       = 2008;
-  let yearTo         = 2024;
+  let currentRgintId    = null;
+  let matrixData        = null;
+  let currentMode       = 'annual';
+  let yearFrom          = 2008;
+  let yearTo            = 2024;
+  let activeSankeyNode  = null;   // null = no focus; string = focused class label
+  let sankeyEventsBound = false;
 
   // ── Hex → rgba helper ────────────────────────────────────────────────────
 
@@ -179,7 +181,14 @@
 
   // ── Sankey drawing ───────────────────────────────────────────────────────
 
-  function drawSankey() {
+  function _setSankeyResetBtn(visible) {
+    const btn = document.getElementById('sankey-reset-btn');
+    if (!btn) return;
+    btn.classList.toggle('hidden', !visible);
+  }
+
+  function drawSankey(focusLabel) {
+    if (focusLabel === undefined) focusLabel = activeSankeyNode;
     if (!matrixData) return;
 
     const matrices = matrixData.matrices;
@@ -196,6 +205,9 @@
     const sources = [], targets = [], values = [], linkColors = [];
     let stableTotal = 0, totalFlow = 0;
 
+    const FULL_LINK_ALPHA = 0.38;
+    const DIM_LINK_ALPHA  = 0.05;
+
     for (const from_cls of classes) {
       const row = matrix[from_cls];
       if (!row) continue;
@@ -206,10 +218,11 @@
           stableTotal += val;
           continue;
         }
+        const isConnected = !focusLabel || from_cls === focusLabel || to_cls === focusLabel;
         sources.push(classIdx[from_cls]);
         targets.push(classIdx[to_cls]);
         values.push(val);
-        linkColors.push(hexToRgba(CLASS_COLORS[from_cls] || '#999', 0.38));
+        linkColors.push(hexToRgba(CLASS_COLORS[from_cls] || '#999', isConnected ? FULL_LINK_ALPHA : DIM_LINK_ALPHA));
         totalFlow += val;
       }
     }
@@ -258,6 +271,25 @@
       plot_bgcolor:  '#fafaf8',
       font: { size: 10, color: '#333' },
     }, { responsive: true, displayModeBar: false });
+
+    if (!sankeyEventsBound) {
+      chartEl.on('plotly_click', function (eventData) {
+        if (!eventData || !eventData.points || eventData.points.length === 0) return;
+        const pt = eventData.points[0];
+        // Node click has no .source property; link click has .source
+        if (pt.source === undefined) {
+          const clickedLabel = pt.label;
+          if (activeSankeyNode === clickedLabel) {
+            activeSankeyNode = null;
+          } else {
+            activeSankeyNode = clickedLabel;
+          }
+          _setSankeyResetBtn(activeSankeyNode !== null);
+          drawSankey(activeSankeyNode);
+        }
+      });
+      sankeyEventsBound = true;
+    }
   }
 
   function updateStableBar(stableHa, flowHa) {
@@ -275,13 +307,28 @@
   // ── Public hook — called by dashboard.js after region loads ──────────────
 
   window.onRegionChanged = function (rgintId) {
-    currentRgintId = rgintId;
-    matrixData     = null;   // invalidate cache on region change
+    currentRgintId   = rgintId;
+    matrixData       = null;   // invalidate cache on region change
+    activeSankeyNode = null;
+    _setSankeyResetBtn(false);
     const transitionEl = document.getElementById('transition-panel');
     if (!transitionEl.classList.contains('hidden')) {
       loadAndRender(rgintId);
     }
   };
+
+  // ── Reset button ─────────────────────────────────────────────────────────
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const resetBtn = document.getElementById('sankey-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        activeSankeyNode = null;
+        _setSankeyResetBtn(false);
+        drawSankey(null);
+      });
+    }
+  });
 
   // ── Init year controls on startup ────────────────────────────────────────
 
