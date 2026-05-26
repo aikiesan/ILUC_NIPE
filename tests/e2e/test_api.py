@@ -142,3 +142,57 @@ class TestTransitionEndpoint:
         async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
             r = await c.get("/api/rgint_transition/5101/2024/2008")
         assert r.status_code in (400, 422)
+
+
+class TestDiagnosticsEndpoint:
+    async def test_known_rgint_returns_200(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            r = await c.get("/api/rgint_matrix/5101/diagnostics")
+        assert r.status_code == 200
+
+    async def test_response_has_all_required_fields(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            r = await c.get("/api/rgint_matrix/5101/diagnostics")
+        data = r.json()
+        required = (
+            "rgint_id", "has_matrix", "is_synthetic", "anchor_years", "years",
+            "classes", "matrix_years_count", "has_negatives", "has_nulls",
+            "mass_balance_errors", "error_count", "coverage_pct",
+        )
+        for field in required:
+            assert field in data, f"Missing field: {field}"
+
+    async def test_has_matrix_true_for_known_rgint(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            r = await c.get("/api/rgint_matrix/5101/diagnostics")
+        assert r.json()["has_matrix"] is True
+
+    async def test_has_matrix_false_for_missing_rgint(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            r = await c.get("/api/rgint_matrix/9999/diagnostics")
+        data = r.json()
+        assert r.status_code == 200
+        assert data["has_matrix"] is False
+
+    async def test_coverage_pct_is_float_between_0_and_100(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            r = await c.get("/api/rgint_matrix/5101/diagnostics")
+        pct = r.json()["coverage_pct"]
+        assert isinstance(pct, (int, float))
+        assert 0.0 <= pct <= 100.0
+
+    async def test_mass_balance_errors_is_list(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            r = await c.get("/api/rgint_matrix/5101/diagnostics")
+        assert isinstance(r.json()["mass_balance_errors"], list)
+
+    async def test_has_negatives_is_bool_for_known_rgint(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            r = await c.get("/api/rgint_matrix/5101/diagnostics")
+        assert isinstance(r.json()["has_negatives"], bool)
+
+    async def test_anchor_years_matches_matrix_endpoint(self, fastapi_app):
+        async with AsyncClient(transport=ASGITransport(app=fastapi_app), base_url="http://test") as c:
+            diag = await c.get("/api/rgint_matrix/5101/diagnostics")
+            matrix = await c.get("/api/rgint_matrix/5101")
+        assert diag.json()["anchor_years"] == matrix.json()["anchor_years"]

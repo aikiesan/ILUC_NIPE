@@ -51,11 +51,30 @@
     { label: 'Outros',             classes: ['15 - Outro'] },
   ];
 
-  let currentData    = null;
-  let currentFormat  = null;
-  let activeClass    = null;
-  let currentRgintId = null;
-  let currentNome    = null;
+  let currentData      = null;
+  let currentFormat    = null;
+  let activeClass      = null;
+  let currentRgintId   = null;
+  let currentNome      = null;
+  let activeSourceIndex = null;  // null = no highlight; integer = curveNumber
+  let chartEventsBound = false;
+
+  const DIM_OPACITY  = 0.12;
+  const FULL_OPACITY = 1.0;
+
+  function _applyTraceHighlight(chartEl, clickedIdx) {
+    const n = chartEl.data.length;
+    if (clickedIdx === activeSourceIndex) {
+      activeSourceIndex = null;
+      Plotly.restyle('chart', { opacity: Array(n).fill(FULL_OPACITY) });
+    } else {
+      activeSourceIndex = clickedIdx;
+      const opacities = Array.from({ length: n }, (_, i) =>
+        i === clickedIdx ? FULL_OPACITY : DIM_OPACITY
+      );
+      Plotly.restyle('chart', { opacity: opacities });
+    }
+  }
 
   // ── Colour helpers ──────────────────────────────────────────────────────
 
@@ -203,6 +222,9 @@
   function plotTimeSeries(cls) {
     if (!currentData) return;
 
+    // Reset highlight state when switching class or region
+    activeSourceIndex = null;
+
     const chartEl  = document.getElementById('chart');
     const chartH   = Math.max(chartEl.clientHeight || 0, 320);
     const baseColor = CLASS_COLORS[cls] || '#555';
@@ -324,6 +346,20 @@
     };
 
     Plotly.react('chart', traces, layout, { responsive: true, displayModeBar: false });
+
+    if (!chartEventsBound) {
+      chartEl.on('plotly_legendclick', function (data) {
+        _applyTraceHighlight(chartEl, data.curveNumber);
+        return false;  // suppress default visibility toggle
+      });
+      chartEl.on('plotly_click', function (data) {
+        if ((!data || !data.points || data.points.length === 0) && activeSourceIndex !== null) {
+          activeSourceIndex = null;
+          Plotly.restyle('chart', { opacity: Array(chartEl.data.length).fill(FULL_OPACITY) });
+        }
+      });
+      chartEventsBound = true;
+    }
   }
 
   // ── Load region (tries full endpoint first, falls back to simple) ───────

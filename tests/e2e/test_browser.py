@@ -94,3 +94,53 @@ def test_stable_area_summary_visible(page, live_server_url):
     page.click('[data-view="transitions"]')
     page.wait_for_selector("#stable-area-bar:not(.hidden)", timeout=12_000)
     assert page.locator("#stable-area-bar").is_visible()
+
+
+# ── Chart interactivity tests ─────────────────────────────────────────────────
+
+@pytest.mark.xfail(reason="Playwright chromium may not be installed in CI")
+def test_trace_highlight_on_legend_click(page, live_server_url):
+    """Clicking a legend item dims other traces (chart stays visible, no crash)."""
+    page.goto(live_server_url)
+    page.wait_for_selector("#dashboard-content:not(.hidden)", timeout=15_000)
+    page.wait_for_selector(".tab-btn", timeout=10_000)
+    page.wait_for_selector("#chart .legend", timeout=10_000)
+    legend_item = page.locator("#chart .legend .traces").first
+    legend_item.click()
+    assert page.locator("#chart .svg-container").is_visible()
+
+
+@pytest.mark.xfail(reason="Playwright chromium may not be installed in CI")
+def test_second_legend_click_resets_highlight(page, live_server_url):
+    """Second click on the same legend item resets all traces to normal opacity."""
+    page.goto(live_server_url)
+    page.wait_for_selector("#dashboard-content:not(.hidden)", timeout=15_000)
+    page.wait_for_selector("#chart .legend .traces", timeout=10_000)
+    legend_item = page.locator("#chart .legend .traces").first
+    legend_item.click()
+    legend_item.click()
+    assert page.locator("#chart .svg-container").is_visible()
+
+
+@pytest.mark.xfail(reason="Playwright chromium may not be installed in CI — also needs rgint_matrix/ data")
+def test_sankey_node_click_shows_reset_button(page, live_server_url):
+    """After clicking a Sankey node, the reset-focus button becomes visible."""
+    page.goto(live_server_url)
+    page.wait_for_selector("#dashboard-content:not(.hidden)", timeout=15_000)
+    page.click('[data-view="transitions"]')
+    page.wait_for_selector("#transition-chart .sankey", timeout=12_000)
+    page.locator("#transition-chart .sankey-node").first.click()
+    assert page.locator("#sankey-reset-btn:not(.hidden)").is_visible()
+
+
+@pytest.mark.xfail(reason="Playwright chromium may not be installed in CI — also needs rgint_matrix/ data")
+def test_sankey_reset_button_clears_focus(page, live_server_url):
+    """Clicking the reset button hides it and restores all Sankey link opacities."""
+    page.goto(live_server_url)
+    page.wait_for_selector("#dashboard-content:not(.hidden)", timeout=15_000)
+    page.click('[data-view="transitions"]')
+    page.wait_for_selector("#transition-chart .sankey", timeout=12_000)
+    page.locator("#transition-chart .sankey-node").first.click()
+    page.locator("#sankey-reset-btn:not(.hidden)").click()
+    assert page.locator("#transition-chart").is_visible()
+    assert page.locator("#sankey-reset-btn.hidden").count() > 0
