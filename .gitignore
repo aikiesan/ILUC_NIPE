@@ -2,6 +2,9 @@
 ILUC_NIPE/01_Base_Matrices_RGINT/
 07_MATRIZES_15_CLASSES_FINAL/
 *.geojson
+# Web-ready simplified geojson ships with the SPA (dev source + built output)
+!webapp/public/data/rgint_simplified.geojson
+!docs/data/rgint_simplified.geojson
 
 # Python
 __pycache__/

@@ -1,0 +1,1332 @@
+[
+{
+"id": "1101",
+"nome": "Porto Velho",
+"uf": "RO",
+"bioma_principal": "Amazônia",
+"area_ha": 12685015.49,
+"n_municipios": 18,
+"lat_centroide": -9.94381,
+"lon_centroide": -63.7476
+},
+{
+"id": "1102",
+"nome": "Ji-Paraná",
+"uf": "RO",
+"bioma_principal": "Amazônia",
+"area_ha": 11356177.06,
+"n_municipios": 34,
+"lat_centroide": -11.98102,
+"lon_centroide": -61.84898
+},
+{
+"id": "1201",
+"nome": "Rio Branco",
+"uf": "AC",
+"bioma_principal": "Amazônia",
+"area_ha": 8134166.77,
+"n_municipios": 14,
+"lat_centroide": -9.94108,
+"lon_centroide": -69.06955
+},
+{
+"id": "1202",
+"nome": "Cruzeiro do Sul",
+"uf": "AC",
+"bioma_principal": "Amazônia",
+"area_ha": 8950964.14,
+"n_municipios": 8,
+"lat_centroide": -8.53826,
+"lon_centroide": -71.77902
+},
+{
+"id": "1301",
+"nome": "Manaus",
+"uf": "AM",
+"bioma_principal": "Amazônia",
+"area_ha": 57492527.47,
+"n_municipios": 21,
+"lat_centroide": -1.74792,
+"lon_centroide": -63.63052
+},
+{
+"id": "1302",
+"nome": "Tefé",
+"uf": "AM",
+"bioma_principal": "Amazônia",
+"area_ha": 45315679.82,
+"n_municipios": 21,
+"lat_centroide": -4.54589,
+"lon_centroide": -68.71325
+},
+{
+"id": "1303",
+"nome": "Lábrea",
+"uf": "AM",
+"bioma_principal": "Amazônia",
+"area_ha": 43443040.9,
+"n_municipios": 9,
+"lat_centroide": -7.28593,
+"lon_centroide": -63.7961
+},
+{
+"id": "1304",
+"nome": "Parintins",
+"uf": "AM",
+"bioma_principal": "Amazônia",
+"area_ha": 12717083.82,
+"n_municipios": 11,
+"lat_centroide": -2.90489,
+"lon_centroide": -58.25382
+},
+{
+"id": "1401",
+"nome": "Boa Vista",
+"uf": "RR",
+"bioma_principal": "Amazônia",
+"area_ha": 11202929.14,
+"n_municipios": 9,
+"lat_centroide": 3.35415,
+"lon_centroide": -61.65392
+},
+{
+"id": "1402",
+"nome": "Rorainópolis - Caracaraí",
+"uf": "RR",
+"bioma_principal": "Amazônia",
+"area_ha": 11420133.9,
+"n_municipios": 6,
+"lat_centroide": 0.83867,
+"lon_centroide": -61.15428
+},
+{
+"id": "1501",
+"nome": "Belém",
+"uf": "PA",
+"bioma_principal": "Amazônia",
+"area_ha": 4406902.73,
+"n_municipios": 23,
+"lat_centroide": -2.22654,
+"lon_centroide": -48.853
+},
+{
+"id": "1502",
+"nome": "Castanhal",
+"uf": "PA",
+"bioma_principal": "Amazônia",
+"area_ha": 7274485.07,
+"n_municipios": 39,
+"lat_centroide": -2.45316,
+"lon_centroide": -47.3957
+},
+{
+"id": "1503",
+"nome": "Marabá",
+"uf": "PA",
+"bioma_principal": "Amazônia",
+"area_ha": 10940276.81,
+"n_municipios": 23,
+"lat_centroide": -4.92708,
+"lon_centroide": -49.68948
+},
+{
+"id": "1504",
+"nome": "Redenção",
+"uf": "PA",
+"bioma_principal": "Amazônia",
+"area_ha": 17438038.34,
+"n_municipios": 15,
+"lat_centroide": -7.63506,
+"lon_centroide": -51.40219
+},
+{
+"id": "1505",
+"nome": "Santarém",
+"uf": "PA",
+"bioma_principal": "Amazônia",
+"area_ha": 44008567.02,
+"n_municipios": 19,
+"lat_centroide": -3.2113,
+"lon_centroide": -56.21189
+},
+{
+"id": "1506",
+"nome": "Altamira",
+"uf": "PA",
+"bioma_principal": "Amazônia",
+"area_ha": 30480188.14,
+"n_municipios": 9,
+"lat_centroide": -4.11654,
+"lon_centroide": -53.54383
+},
+{
+"id": "1507",
+"nome": "Breves",
+"uf": "PA",
+"bioma_principal": "Amazônia",
+"area_ha": 10436170.7,
+"n_municipios": 16,
+"lat_centroide": -1.32592,
+"lon_centroide": -50.37104
+},
+{
+"id": "1601",
+"nome": "Macapá",
+"uf": "AP",
+"bioma_principal": "Amazônia",
+"area_ha": 5631046.69,
+"n_municipios": 6,
+"lat_centroide": 0.62515,
+"lon_centroide": -52.50105
+},
+{
+"id": "1602",
+"nome": "Oiapoque - Porto Grande",
+"uf": "AP",
+"bioma_principal": "Amazônia",
+"area_ha": 8663096.12,
+"n_municipios": 10,
+"lat_centroide": 1.97435,
+"lon_centroide": -51.6009
+},
+{
+"id": "1701",
+"nome": "Palmas",
+"uf": "TO",
+"bioma_principal": "Cerrado",
+"area_ha": 11126616.73,
+"n_municipios": 42,
+"lat_centroide": -10.32474,
+"lon_centroide": -48.41307
+},
+{
+"id": "1702",
+"nome": "Araguaína",
+"uf": "TO",
+"bioma_principal": "Cerrado",
+"area_ha": 8048420.5,
+"n_municipios": 65,
+"lat_centroide": -7.64093,
+"lon_centroide": -48.10377
+},
+{
+"id": "1703",
+"nome": "Gurupi",
+"uf": "TO",
+"bioma_principal": "Cerrado",
+"area_ha": 8734384.2,
+"n_municipios": 32,
+"lat_centroide": -12.21072,
+"lon_centroide": -48.42427
+},
+{
+"id": "2101",
+"nome": "São Luís",
+"uf": "MA",
+"bioma_principal": "Cerrado",
+"area_ha": 7198176.0,
+"n_municipios": 73,
+"lat_centroide": -2.92678,
+"lon_centroide": -44.03438
+},
+{
+"id": "2102",
+"nome": "Santa Inês - Bacabal",
+"uf": "MA",
+"bioma_principal": "Cerrado",
+"area_ha": 6417931.04,
+"n_municipios": 59,
+"lat_centroide": -3.58134,
+"lon_centroide": -45.73619
+},
+{
+"id": "2103",
+"nome": "Caxias",
+"uf": "MA",
+"bioma_principal": "Cerrado",
+"area_ha": 2833576.89,
+"n_municipios": 14,
+"lat_centroide": -4.85927,
+"lon_centroide": -43.56619
+},
+{
+"id": "2104",
+"nome": "Presidente Dutra",
+"uf": "MA",
+"bioma_principal": "Cerrado",
+"area_ha": 3885394.73,
+"n_municipios": 28,
+"lat_centroide": -6.17241,
+"lon_centroide": -44.24435
+},
+{
+"id": "2105",
+"nome": "Imperatriz",
+"uf": "MA",
+"bioma_principal": "Cerrado",
+"area_ha": 13251671.19,
+"n_municipios": 43,
+"lat_centroide": -6.6225,
+"lon_centroide": -46.39186
+},
+{
+"id": "2201",
+"nome": "Teresina",
+"uf": "PI",
+"bioma_principal": "Cerrado",
+"area_ha": 5631377.1,
+"n_municipios": 65,
+"lat_centroide": -5.52939,
+"lon_centroide": -42.01342
+},
+{
+"id": "2202",
+"nome": "Parnaíba",
+"uf": "PI",
+"bioma_principal": "Cerrado",
+"area_ha": 2201636.1,
+"n_municipios": 30,
+"lat_centroide": -3.85464,
+"lon_centroide": -41.74309
+},
+{
+"id": "2203",
+"nome": "Picos",
+"uf": "PI",
+"bioma_principal": "Cerrado",
+"area_ha": 3816667.36,
+"n_municipios": 58,
+"lat_centroide": -7.48378,
+"lon_centroide": -41.45493
+},
+{
+"id": "2204",
+"nome": "São Raimundo Nonato",
+"uf": "PI",
+"bioma_principal": "Cerrado",
+"area_ha": 2804530.05,
+"n_municipios": 21,
+"lat_centroide": -8.80685,
+"lon_centroide": -42.55865
+},
+{
+"id": "2205",
+"nome": "Corrente - Bom Jesus",
+"uf": "PI",
+"bioma_principal": "Cerrado",
+"area_ha": 5183348.51,
+"n_municipios": 22,
+"lat_centroide": -9.54856,
+"lon_centroide": -44.75267
+},
+{
+"id": "2206",
+"nome": "Floriano",
+"uf": "PI",
+"bioma_principal": "Cerrado",
+"area_ha": 5993146.14,
+"n_municipios": 28,
+"lat_centroide": -7.78596,
+"lon_centroide": -43.88909
+},
+{
+"id": "2301",
+"nome": "Fortaleza",
+"uf": "CE",
+"bioma_principal": "Caatinga",
+"area_ha": 3189625.32,
+"n_municipios": 51,
+"lat_centroide": -4.12811,
+"lon_centroide": -39.19822
+},
+{
+"id": "2302",
+"nome": "Quixadá",
+"uf": "CE",
+"bioma_principal": "Caatinga",
+"area_ha": 3244834.67,
+"n_municipios": 31,
+"lat_centroide": -5.27864,
+"lon_centroide": -38.64437
+},
+{
+"id": "2303",
+"nome": "Iguatu",
+"uf": "CE",
+"bioma_principal": "Caatinga",
+"area_ha": 1475167.05,
+"n_municipios": 15,
+"lat_centroide": -6.27296,
+"lon_centroide": -39.38566
+},
+{
+"id": "2304",
+"nome": "Juazeiro do Norte",
+"uf": "CE",
+"bioma_principal": "Caatinga",
+"area_ha": 2045061.35,
+"n_municipios": 30,
+"lat_centroide": -7.08072,
+"lon_centroide": -39.54838
+},
+{
+"id": "2305",
+"nome": "Crateús",
+"uf": "CE",
+"bioma_principal": "Caatinga",
+"area_ha": 2212430.06,
+"n_municipios": 13,
+"lat_centroide": -5.50312,
+"lon_centroide": -40.49969
+},
+{
+"id": "2306",
+"nome": "Sobral",
+"uf": "CE",
+"bioma_principal": "Caatinga",
+"area_ha": 3191568.73,
+"n_municipios": 44,
+"lat_centroide": -3.76042,
+"lon_centroide": -40.54536
+},
+{
+"id": "2401",
+"nome": "Natal",
+"uf": "RN",
+"bioma_principal": "Caatinga",
+"area_ha": 1934206.97,
+"n_municipios": 75,
+"lat_centroide": -5.82977,
+"lon_centroide": -35.72772
+},
+{
+"id": "2402",
+"nome": "Caicó",
+"uf": "RN",
+"bioma_principal": "Caatinga",
+"area_ha": 979495.6,
+"n_municipios": 24,
+"lat_centroide": -6.38286,
+"lon_centroide": -36.8464
+},
+{
+"id": "2403",
+"nome": "Mossoró",
+"uf": "RN",
+"bioma_principal": "Caatinga",
+"area_ha": 2608502.41,
+"n_municipios": 68,
+"lat_centroide": -5.64227,
+"lon_centroide": -37.30286
+},
+{
+"id": "2501",
+"nome": "João Pessoa",
+"uf": "PB",
+"bioma_principal": "Caatinga",
+"area_ha": 1020567.85,
+"n_municipios": 63,
+"lat_centroide": -6.96481,
+"lon_centroide": -35.29728
+},
+{
+"id": "2502",
+"nome": "Campina Grande",
+"uf": "PB",
+"bioma_principal": "Caatinga",
+"area_ha": 2353288.06,
+"n_municipios": 72,
+"lat_centroide": -7.32899,
+"lon_centroide": -36.37244
+},
+{
+"id": "2503",
+"nome": "Patos",
+"uf": "PB",
+"bioma_principal": "Caatinga",
+"area_ha": 1936952.53,
+"n_municipios": 63,
+"lat_centroide": -7.03971,
+"lon_centroide": -37.71439
+},
+{
+"id": "2504",
+"nome": "Sousa - Cajazeiras",
+"uf": "PB",
+"bioma_principal": "Caatinga",
+"area_ha": 588350.57,
+"n_municipios": 25,
+"lat_centroide": -6.8227,
+"lon_centroide": -38.3785
+},
+{
+"id": "2601",
+"nome": "Recife",
+"uf": "PE",
+"bioma_principal": "Caatinga",
+"area_ha": 1398001.89,
+"n_municipios": 71,
+"lat_centroide": -8.12328,
+"lon_centroide": -35.33017
+},
+{
+"id": "2602",
+"nome": "Caruaru",
+"uf": "PE",
+"bioma_principal": "Caatinga",
+"area_ha": 3142155.09,
+"n_municipios": 64,
+"lat_centroide": -8.54517,
+"lon_centroide": -36.7568
+},
+{
+"id": "2603",
+"nome": "Serra Talhada",
+"uf": "PE",
+"bioma_principal": "Caatinga",
+"area_ha": 2029741.65,
+"n_municipios": 25,
+"lat_centroide": -8.18899,
+"lon_centroide": -38.13434
+},
+{
+"id": "2604",
+"nome": "Petrolina",
+"uf": "PE",
+"bioma_principal": "Caatinga",
+"area_ha": 3626851.99,
+"n_municipios": 25,
+"lat_centroide": -8.28863,
+"lon_centroide": -39.98262
+},
+{
+"id": "2701",
+"nome": "Maceió",
+"uf": "AL",
+"bioma_principal": "Caatinga",
+"area_ha": 1355460.28,
+"n_municipios": 52,
+"lat_centroide": -9.51325,
+"lon_centroide": -35.99243
+},
+{
+"id": "2702",
+"nome": "Arapiraca",
+"uf": "AL",
+"bioma_principal": "Caatinga",
+"area_ha": 1547244.19,
+"n_municipios": 50,
+"lat_centroide": -9.51635,
+"lon_centroide": -37.17004
+},
+{
+"id": "2801",
+"nome": "Aracaju",
+"uf": "SE",
+"bioma_principal": "Caatinga",
+"area_ha": 996205.69,
+"n_municipios": 46,
+"lat_centroide": -10.81374,
+"lon_centroide": -37.1938
+},
+{
+"id": "2802",
+"nome": "Itabaiana",
+"uf": "SE",
+"bioma_principal": "Caatinga",
+"area_ha": 1284656.21,
+"n_municipios": 29,
+"lat_centroide": -10.40475,
+"lon_centroide": -37.63701
+},
+{
+"id": "2901",
+"nome": "Salvador",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 1857368.19,
+"n_municipios": 33,
+"lat_centroide": -12.01725,
+"lon_centroide": -38.2208
+},
+{
+"id": "2902",
+"nome": "Santo Antônio de Jesus",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 1575382.88,
+"n_municipios": 41,
+"lat_centroide": -13.16178,
+"lon_centroide": -39.30589
+},
+{
+"id": "2903",
+"nome": "Ilhéus – Itabuna",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 4876542.6,
+"n_municipios": 51,
+"lat_centroide": -16.25861,
+"lon_centroide": -39.60423
+},
+{
+"id": "2904",
+"nome": "Vitória da Conquista",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 7181182.02,
+"n_municipios": 77,
+"lat_centroide": -14.36531,
+"lon_centroide": -40.85166
+},
+{
+"id": "2905",
+"nome": "Guanambi",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 4654541.3,
+"n_municipios": 31,
+"lat_centroide": -13.79906,
+"lon_centroide": -43.01521
+},
+{
+"id": "2906",
+"nome": "Barreiras",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 11880340.8,
+"n_municipios": 24,
+"lat_centroide": -12.55676,
+"lon_centroide": -45.10541
+},
+{
+"id": "2907",
+"nome": "Irecê",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 6271916.91,
+"n_municipios": 29,
+"lat_centroide": -11.397,
+"lon_centroide": -42.5912
+},
+{
+"id": "2908",
+"nome": "Juazeiro",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 7557996.25,
+"n_municipios": 18,
+"lat_centroide": -9.84207,
+"lon_centroide": -41.27268
+},
+{
+"id": "2909",
+"nome": "Paulo Afonso",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 4215462.78,
+"n_municipios": 30,
+"lat_centroide": -10.07293,
+"lon_centroide": -38.7574
+},
+{
+"id": "2910",
+"nome": "Feira de Santana",
+"uf": "BA",
+"bioma_principal": "Cerrado",
+"area_ha": 7687088.66,
+"n_municipios": 83,
+"lat_centroide": -12.02158,
+"lon_centroide": -40.43945
+},
+{
+"id": "3101",
+"nome": "Belo Horizonte",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 4136463.79,
+"n_municipios": 74,
+"lat_centroide": -19.15075,
+"lon_centroide": -44.04786
+},
+{
+"id": "3102",
+"nome": "Montes Claros",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 12579849.34,
+"n_municipios": 86,
+"lat_centroide": -16.10657,
+"lon_centroide": -43.9449
+},
+{
+"id": "3103",
+"nome": "Teófilo Otoni",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 7958207.28,
+"n_municipios": 86,
+"lat_centroide": -17.22206,
+"lon_centroide": -41.74937
+},
+{
+"id": "3104",
+"nome": "Governador Valadares",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 2653622.16,
+"n_municipios": 58,
+"lat_centroide": -18.80939,
+"lon_centroide": -42.0583
+},
+{
+"id": "3105",
+"nome": "Ipatinga",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 1346193.66,
+"n_municipios": 44,
+"lat_centroide": -19.58927,
+"lon_centroide": -42.47955
+},
+{
+"id": "3106",
+"nome": "Juíz de Fora",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 3956911.93,
+"n_municipios": 146,
+"lat_centroide": -20.99386,
+"lon_centroide": -42.80431
+},
+{
+"id": "3107",
+"nome": "Barbacena",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 1546415.39,
+"n_municipios": 49,
+"lat_centroide": -21.02425,
+"lon_centroide": -43.97323
+},
+{
+"id": "3108",
+"nome": "Varginha",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 3717212.13,
+"n_municipios": 82,
+"lat_centroide": -21.04333,
+"lon_centroide": -45.96869
+},
+{
+"id": "3109",
+"nome": "Pouso Alegre",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 2091370.08,
+"n_municipios": 80,
+"lat_centroide": -22.20051,
+"lon_centroide": -45.68381
+},
+{
+"id": "3110",
+"nome": "Uberaba",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 3711664.53,
+"n_municipios": 29,
+"lat_centroide": -19.69157,
+"lon_centroide": -48.30224
+},
+{
+"id": "3111",
+"nome": "Uberlândia",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 3560412.96,
+"n_municipios": 24,
+"lat_centroide": -18.96216,
+"lon_centroide": -48.92884
+},
+{
+"id": "3112",
+"nome": "Patos de Minas",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 8501273.32,
+"n_municipios": 34,
+"lat_centroide": -17.26335,
+"lon_centroide": -46.40325
+},
+{
+"id": "3113",
+"nome": "Divinópolis",
+"uf": "MG",
+"bioma_principal": "Cerrado",
+"area_ha": 3638886.58,
+"n_municipios": 61,
+"lat_centroide": -19.80349,
+"lon_centroide": -45.24799
+},
+{
+"id": "3201",
+"nome": "Vitória",
+"uf": "ES",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 992347.4,
+"n_municipios": 21,
+"lat_centroide": -20.23509,
+"lon_centroide": -40.7574
+},
+{
+"id": "3202",
+"nome": "São Mateus",
+"uf": "ES",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1504826.02,
+"n_municipios": 15,
+"lat_centroide": -18.91653,
+"lon_centroide": -40.12425
+},
+{
+"id": "3203",
+"nome": "Colatina",
+"uf": "ES",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1279120.68,
+"n_municipios": 18,
+"lat_centroide": -18.94406,
+"lon_centroide": -40.73073
+},
+{
+"id": "3204",
+"nome": "Cachoeiro do Itapemirim",
+"uf": "ES",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 945197.95,
+"n_municipios": 24,
+"lat_centroide": -20.75806,
+"lon_centroide": -41.34641
+},
+{
+"id": "3301",
+"nome": "Rio de Janeiro",
+"uf": "RJ",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1028572.36,
+"n_municipios": 26,
+"lat_centroide": -22.78969,
+"lon_centroide": -43.3363
+},
+{
+"id": "3302",
+"nome": "Volta Redonda - Barra Mansa",
+"uf": "RJ",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 766343.15,
+"n_municipios": 17,
+"lat_centroide": -22.43741,
+"lon_centroide": -43.97277
+},
+{
+"id": "3303",
+"nome": "Petrópolis",
+"uf": "RJ",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 875928.0,
+"n_municipios": 19,
+"lat_centroide": -22.1295,
+"lon_centroide": -42.60841
+},
+{
+"id": "3304",
+"nome": "Campos dos Goytacazes",
+"uf": "RJ",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1278705.7,
+"n_municipios": 18,
+"lat_centroide": -21.51666,
+"lon_centroide": -41.63589
+},
+{
+"id": "3305",
+"nome": "Macaé - Rio das Ostras - Cabo Frio",
+"uf": "RJ",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 503253.87,
+"n_municipios": 12,
+"lat_centroide": -22.43501,
+"lon_centroide": -41.94911
+},
+{
+"id": "3501",
+"nome": "São Paulo",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1139158.52,
+"n_municipios": 50,
+"lat_centroide": -23.73207,
+"lon_centroide": -46.58426
+},
+{
+"id": "3502",
+"nome": "Sorocaba",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 4525017.98,
+"n_municipios": 78,
+"lat_centroide": -23.9307,
+"lon_centroide": -48.29541
+},
+{
+"id": "3503",
+"nome": "Bauru",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 2224587.9,
+"n_municipios": 48,
+"lat_centroide": -22.34899,
+"lon_centroide": -48.90184
+},
+{
+"id": "3504",
+"nome": "Marília",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1955681.34,
+"n_municipios": 54,
+"lat_centroide": -22.46315,
+"lon_centroide": -50.09917
+},
+{
+"id": "3505",
+"nome": "Presidente Prudente",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 2486548.69,
+"n_municipios": 55,
+"lat_centroide": -22.05857,
+"lon_centroide": -51.59743
+},
+{
+"id": "3506",
+"nome": "Araçatuba",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1881231.44,
+"n_municipios": 44,
+"lat_centroide": -21.03617,
+"lon_centroide": -50.75273
+},
+{
+"id": "3507",
+"nome": "São José do Rio Preto",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 2615346.08,
+"n_municipios": 100,
+"lat_centroide": -20.61474,
+"lon_centroide": -49.7796
+},
+{
+"id": "3508",
+"nome": "Ribeirão Preto",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 2753449.31,
+"n_municipios": 64,
+"lat_centroide": -20.77547,
+"lon_centroide": -48.0045
+},
+{
+"id": "3509",
+"nome": "Araraquara",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1213473.05,
+"n_municipios": 26,
+"lat_centroide": -21.79381,
+"lon_centroide": -48.19512
+},
+{
+"id": "3510",
+"nome": "Campinas",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 2492415.71,
+"n_municipios": 87,
+"lat_centroide": -22.47456,
+"lon_centroide": -47.09932
+},
+{
+"id": "3511",
+"nome": "São José dos Campos",
+"uf": "SP",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1635168.42,
+"n_municipios": 39,
+"lat_centroide": -23.06931,
+"lon_centroide": -45.30752
+},
+{
+"id": "4101",
+"nome": "Curitiba",
+"uf": "PR",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 3001549.65,
+"n_municipios": 45,
+"lat_centroide": -25.57249,
+"lon_centroide": -49.59417
+},
+{
+"id": "4102",
+"nome": "Guarapuava",
+"uf": "PR",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1930510.37,
+"n_municipios": 19,
+"lat_centroide": -25.23066,
+"lon_centroide": -51.68671
+},
+{
+"id": "4103",
+"nome": "Cascavel",
+"uf": "PR",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 4473022.03,
+"n_municipios": 100,
+"lat_centroide": -25.38659,
+"lon_centroide": -53.22292
+},
+{
+"id": "4104",
+"nome": "Maringá",
+"uf": "PR",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 4305883.0,
+"n_municipios": 115,
+"lat_centroide": -23.6054,
+"lon_centroide": -52.76652
+},
+{
+"id": "4105",
+"nome": "Londrina",
+"uf": "PR",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 3257821.95,
+"n_municipios": 94,
+"lat_centroide": -23.58765,
+"lon_centroide": -50.88945
+},
+{
+"id": "4106",
+"nome": "Ponta Grossa",
+"uf": "PR",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 2981906.74,
+"n_municipios": 26,
+"lat_centroide": -24.77425,
+"lon_centroide": -50.33095
+},
+{
+"id": "4201",
+"nome": "Florianópolis",
+"uf": "SC",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 603959.03,
+"n_municipios": 17,
+"lat_centroide": -27.72291,
+"lon_centroide": -48.8864
+},
+{
+"id": "4202",
+"nome": "Criciúma",
+"uf": "SC",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 944459.35,
+"n_municipios": 44,
+"lat_centroide": -28.59536,
+"lon_centroide": -49.36616
+},
+{
+"id": "4203",
+"nome": "Lages",
+"uf": "SC",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1946035.19,
+"n_municipios": 24,
+"lat_centroide": -27.79164,
+"lon_centroide": -50.26227
+},
+{
+"id": "4204",
+"nome": "Chapecó",
+"uf": "SC",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 2460610.15,
+"n_municipios": 109,
+"lat_centroide": -26.92622,
+"lon_centroide": -52.41811
+},
+{
+"id": "4205",
+"nome": "Caçador",
+"uf": "SC",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 621559.57,
+"n_municipios": 16,
+"lat_centroide": -26.83782,
+"lon_centroide": -50.9933
+},
+{
+"id": "4206",
+"nome": "Joinville",
+"uf": "SC",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1480022.52,
+"n_municipios": 25,
+"lat_centroide": -26.35728,
+"lon_centroide": -49.74782
+},
+{
+"id": "4207",
+"nome": "Blumenau",
+"uf": "SC",
+"bioma_principal": "Mata Atlântica",
+"area_ha": 1533351.7,
+"n_municipios": 60,
+"lat_centroide": -27.05946,
+"lon_centroide": -49.43518
+},
+{
+"id": "4301",
+"nome": "Porto Alegre",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 2943776.08,
+"n_municipios": 90,
+"lat_centroide": -30.21156,
+"lon_centroide": -51.19296
+},
+{
+"id": "4302",
+"nome": "Pelotas",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 4500507.15,
+"n_municipios": 24,
+"lat_centroide": -31.77219,
+"lon_centroide": -53.25787
+},
+{
+"id": "4303",
+"nome": "Santa Maria",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 4367001.32,
+"n_municipios": 40,
+"lat_centroide": -29.89753,
+"lon_centroide": -54.06192
+},
+{
+"id": "4304",
+"nome": "Uruguaiana",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 3915515.24,
+"n_municipios": 10,
+"lat_centroide": -29.88023,
+"lon_centroide": -55.91699
+},
+{
+"id": "4305",
+"nome": "Ijuí",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 2745713.78,
+"n_municipios": 77,
+"lat_centroide": -28.14028,
+"lon_centroide": -54.43921
+},
+{
+"id": "4306",
+"nome": "Passo Fundo",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 4233879.66,
+"n_municipios": 144,
+"lat_centroide": -28.19356,
+"lon_centroide": -52.70256
+},
+{
+"id": "4307",
+"nome": "Caxias do Sul",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 2410970.78,
+"n_municipios": 54,
+"lat_centroide": -28.81683,
+"lon_centroide": -50.9216
+},
+{
+"id": "4308",
+"nome": "Santa Cruz do Sul - Lajeado",
+"uf": "RS",
+"bioma_principal": "Pampa",
+"area_ha": 1769312.17,
+"n_municipios": 58,
+"lat_centroide": -29.77225,
+"lon_centroide": -52.44214
+},
+{
+"id": "5001",
+"nome": "Campo Grande",
+"uf": "MS",
+"bioma_principal": "Cerrado",
+"area_ha": 15929437.28,
+"n_municipios": 32,
+"lat_centroide": -19.84179,
+"lon_centroide": -53.51946
+},
+{
+"id": "5002",
+"nome": "Dourados",
+"uf": "MS",
+"bioma_principal": "Cerrado",
+"area_ha": 6684720.6,
+"n_municipios": 34,
+"lat_centroide": -22.52423,
+"lon_centroide": -54.52361
+},
+{
+"id": "5003",
+"nome": "Corumbá",
+"uf": "MS",
+"bioma_principal": "Cerrado",
+"area_ha": 13117496.28,
+"n_municipios": 13,
+"lat_centroide": -19.7632,
+"lon_centroide": -56.6252
+},
+{
+"id": "5101",
+"nome": "Cuiabá",
+"uf": "MT",
+"bioma_principal": "Cerrado",
+"area_ha": 17294356.41,
+"n_municipios": 30,
+"lat_centroide": -14.68124,
+"lon_centroide": -56.91237
+},
+{
+"id": "5102",
+"nome": "Cáceres",
+"uf": "MT",
+"bioma_principal": "Cerrado",
+"area_ha": 10383497.97,
+"n_municipios": 21,
+"lat_centroide": -15.0117,
+"lon_centroide": -59.01769
+},
+{
+"id": "5103",
+"nome": "Sinop",
+"uf": "MT",
+"bioma_principal": "Cerrado",
+"area_ha": 34244778.32,
+"n_municipios": 42,
+"lat_centroide": -10.83229,
+"lon_centroide": -57.13348
+},
+{
+"id": "5104",
+"nome": "Barra do Garças",
+"uf": "MT",
+"bioma_principal": "Cerrado",
+"area_ha": 20105361.41,
+"n_municipios": 30,
+"lat_centroide": -12.79339,
+"lon_centroide": -52.17259
+},
+{
+"id": "5105",
+"nome": "Rondonópolis",
+"uf": "MT",
+"bioma_principal": "Cerrado",
+"area_ha": 8459052.9,
+"n_municipios": 18,
+"lat_centroide": -15.60227,
+"lon_centroide": -54.10006
+},
+{
+"id": "5201",
+"nome": "Goiânia",
+"uf": "GO",
+"bioma_principal": "Cerrado",
+"area_ha": 7704057.61,
+"n_municipios": 80,
+"lat_centroide": -16.15161,
+"lon_centroide": -49.51985
+},
+{
+"id": "5202",
+"nome": "Itumbiara",
+"uf": "GO",
+"bioma_principal": "Cerrado",
+"area_ha": 2265694.71,
+"n_municipios": 22,
+"lat_centroide": -17.85804,
+"lon_centroide": -49.24962
+},
+{
+"id": "5203",
+"nome": "Rio Verde",
+"uf": "GO",
+"bioma_principal": "Cerrado",
+"area_ha": 7314754.16,
+"n_municipios": 29,
+"lat_centroide": -17.9217,
+"lon_centroide": -51.66314
+},
+{
+"id": "5204",
+"nome": "São Luís de Montes Belos - Iporá",
+"uf": "GO",
+"bioma_principal": "Cerrado",
+"area_ha": 3377817.66,
+"n_municipios": 35,
+"lat_centroide": -16.60691,
+"lon_centroide": -50.96551
+},
+{
+"id": "5205",
+"nome": "Porangatu - Uruaçu",
+"uf": "GO",
+"bioma_principal": "Cerrado",
+"area_ha": 6631010.8,
+"n_municipios": 46,
+"lat_centroide": -14.14882,
+"lon_centroide": -49.25753
+},
+{
+"id": "5206",
+"nome": "Luziânia - Águas Lindas de Goiás",
+"uf": "GO",
+"bioma_principal": "Cerrado",
+"area_ha": 6824439.57,
+"n_municipios": 34,
+"lat_centroide": -14.79563,
+"lon_centroide": -47.33025
+},
+{
+"id": "5301",
+"nome": "Distrito Federal",
+"uf": "DF",
+"bioma_principal": "Cerrado",
+"area_ha": 581161.2,
+"n_municipios": 1,
+"lat_centroide": -15.78072,
+"lon_centroide": -47.79725
+}
+]

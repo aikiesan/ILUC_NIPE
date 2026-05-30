@@ -1,0 +1,36 @@
+name: Webapp
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "webapp/**"
+      - ".github/workflows/webapp.yml"
+  pull_request:
+    branches: ["**"]
+    paths:
+      - "webapp/**"
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: webapp
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: webapp/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Unit tests
+        run: npm run test
+
+      - name: Build (type-check + bundle to /docs)
+        run: npm run build
