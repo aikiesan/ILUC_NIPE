@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "rgint": "5101",
+    "nome": "Cuiabá",
+    "uf": "MT",
+    "biome": "Cerrado",
+    "area_ha": 11912600.0
+  },
+  "classes": {
+    "2 - Soja": {
+      "pipeline_diagonal": {
+        "values": [155249.38, 129122.01, 15594.55, 20206.94],
+        "years": [2008, 2009, 2017, 2023],
+        "quality": "fallback",
+        "notes": "MB Col.10 classe 39 × proporção CONAB",
+        "outliers": []
+      },
+      "conab_pam": {
+        "values": [162000.0, 135000.0, 16000.0, 22000.0],
+        "years": [2008, 2009, 2017, 2023],
+        "quality": "primary",
+        "notes": "PAM área plantada oficial alocada por RGINT",
+        "outliers": []
+      }
+    },
+    "11 - Veg. prim. florestal": {
+      "pipeline_diagonal": {
+        "values": [3250860.02, 3237435.19, 3218245.11, 3057546.56],
+        "years": [2008, 2009, 2017, 2023],
+        "quality": "primary",
+        "notes": "pct_prim TerraClass × MB floresta",
+        "outliers": []
+      }
+    }
+  }
+}

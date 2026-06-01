@@ -1,9 +1,19 @@
 """Shared helpers for the ABIOVE LULC data pipeline."""
 
+import math
 from pathlib import Path
 import json
 import yaml
 import pandas as pd
+
+YEARS = list(range(2008, 2025))
+
+
+def _nan_to_none(lst: list) -> list:
+    return [
+        None if (v is None or (isinstance(v, float) and math.isnan(v))) else v
+        for v in lst
+    ]
 
 ROOT = Path(__file__).parent.parent
 ILUC = ROOT / "ILUC_NIPE"

@@ -1,4 +1,91 @@
-# Primary and fallback source per class.
+# ── Source Registry ──────────────────────────────────────────────────────────
+# To add a new data source:
+#   1. Place raw files in ILUC_NIPE/{NN}_NewSourceName/
+#   2. Add a loader function in 01_load_sources.py  (outputs processed/{name}_rgint.csv)
+#   3. Add a series helper and elif branch in 02_build_multisource_json.py
+#   4. Register source in CLASS_EXTRA_SOURCES (same file)
+#   5. Add entry below with label, description, unit, temporal/spatial coverage
+# Outlier detection (04_outlier_detection.py) runs automatically on all sources.
+
+source_registry:
+  pipeline_diagonal:
+    label: "Pipeline MB/TC"
+    description: "MapBiomas Col.10 + TerraClass split — produto principal do pipeline"
+    unit: ha
+    temporal_coverage: "2008-2023"
+    spatial_coverage: "133 RGINTs (Brasil)"
+
+  conab_pam:
+    label: "PAM / IBGE"
+    description: "Produção Agrícola Municipal — área plantada oficial"
+    unit: ha
+    temporal_coverage: "2008-2024"
+    spatial_coverage: "Municípios → RGINT"
+
+  conab_cafe:
+    label: "CONAB Café"
+    description: "Série Histórica CONAB — área plantada café por UF, alocada por RGINT via proxy milho"
+    unit: ha
+    temporal_coverage: "2008-2024"
+    spatial_coverage: "UF → RGINT (proxy PAM milho)"
+
+  lapig_vigor:
+    label: "LAPIG Vigor"
+    description: "Degradação de pastagem por vigor NDVI — UFG/LAPIG Col.9"
+    unit: ha
+    temporal_coverage: "2008-2023"
+    spatial_coverage: "Municípios → RGINT"
+
+  mb_pastagem_total:
+    label: "MB Pastagem Total"
+    description: "MapBiomas Col.10 classe 15 — pastagem total antes do split por vigor LAPIG"
+    unit: ha
+    temporal_coverage: "2008-2023"
+    spatial_coverage: "133 RGINTs"
+
+  mb_floresta_total:
+    label: "MB Floresta Total"
+    description: "MapBiomas Col.10 — floresta total (primária + secundária) antes do split TerraClass"
+    unit: ha
+    temporal_coverage: "2008-2023"
+    spatial_coverage: "133 RGINTs"
+
+  mb_savana_total:
+    label: "MB Savana Total"
+    description: "MapBiomas Col.10 — savana total (primária + secundária) antes do split TerraClass"
+    unit: ha
+    temporal_coverage: "2008-2023"
+    spatial_coverage: "133 RGINTs"
+
+  tc_pastagem:
+    label: "TC Pastagem"
+    description: "TerraClass — pastagem herbácea + arbustiva/arbórea (AMZ/CER)"
+    unit: ha
+    temporal_coverage: "2008-2022 (AMZ, bienal); 2018-2024 (CER)"
+    spatial_coverage: "Amazônia + Cerrado (municípios → RGINT)"
+
+  tc_floresta_prim:
+    label: "TC Floresta Primária"
+    description: "TerraClass — vegetação florestal primária (AMZ/CER)"
+    unit: ha
+    temporal_coverage: "2008-2022 (AMZ, bienal); 2018-2024 (CER)"
+    spatial_coverage: "Amazônia + Cerrado"
+
+  tc_floresta_sec:
+    label: "TC Floresta Sec."
+    description: "TerraClass — vegetação florestal secundária (AMZ/CER)"
+    unit: ha
+    temporal_coverage: "2008-2022 (AMZ, bienal); 2018-2024 (CER)"
+    spatial_coverage: "Amazônia + Cerrado"
+
+  tc_nao_florestal:
+    label: "TC Não-Florestal"
+    description: "TerraClass — vegetação natural não-florestal (AMZ/CER)"
+    unit: ha
+    temporal_coverage: "2008-2022 (AMZ, bienal); 2018-2024 (CER)"
+    spatial_coverage: "Amazônia + Cerrado"
+
+# ── Class-level source rules ──────────────────────────────────────────────────
 # quality: "primary" = recommended source | "fallback" = secondary/proxy
 
 "1 - Culturas perenes":

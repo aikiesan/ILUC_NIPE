@@ -146,6 +146,22 @@
         marker: {color: hexToRgba(baseColor, op), size: 5},
         hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>{{ src_name }}<extra></extra>"
       });
+      {% if src_data.outliers %}
+      (function(){
+        var outlierYears = {{ src_data.outliers | tojson }};
+        var ox = [], oy = [];
+        outlierYears.forEach(function(yr){
+          var i = x.indexOf(yr);
+          if(i >= 0 && y[i] != null){ ox.push(yr); oy.push(y[i]); }
+        });
+        if(ox.length > 0) traces.push({
+          x: ox, y: oy, mode: "markers", type: "scatter",
+          marker: {color: "#c62828", size: 14, symbol: "circle-open", line: {color: "#c62828", width: 2.5}},
+          name: "⚠ outlier {{ src_name }}", showlegend: false,
+          hovertemplate: "<b>%{x}</b><br>⚠ Outlier detectado ({{ src_name }})<extra></extra>"
+        });
+      })();
+      {% endif %}
     })();
     {% endfor %}
 
