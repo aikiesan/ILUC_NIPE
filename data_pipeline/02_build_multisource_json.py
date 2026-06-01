@@ -67,6 +67,33 @@ if cruzamento_rgint is not None:
 else:
     print("  AVISO: cruzamento_rgint.csv nao encontrado — fontes MB/TC raw nao disponiveis.")
 
+# ILUC matrix time series (all 15 classes, all 133 RGINTs)
+iluc_path = PROCESSED / "iluc_matrix_rgint.csv"
+iluc_matrix_df = pd.read_csv(iluc_path, dtype={"rgint_id": str}) if iluc_path.exists() else None
+if iluc_matrix_df is not None:
+    iluc_matrix_df["year"] = iluc_matrix_df["year"].astype(int)
+    print(f"  iluc_matrix loaded: {len(iluc_matrix_df):,} rows, {iluc_matrix_df['rgint_id'].nunique()} RGINTs")
+else:
+    print("  AVISO: iluc_matrix_rgint.csv nao encontrado — run 01_load_sources.py primeiro.")
+
+# CONAB UF soja/milho/cana allocated to RGINT
+conab_graos_path = PROCESSED / "conab_graos_cana_rgint.csv"
+conab_graos_df = pd.read_csv(conab_graos_path, dtype={"rgint_id": str}) if conab_graos_path.exists() else None
+if conab_graos_df is not None:
+    conab_graos_df["year"] = conab_graos_df["year"].astype(int)
+    print(f"  conab_graos loaded: {len(conab_graos_df):,} rows")
+else:
+    print("  AVISO: conab_graos_cana_rgint.csv nao encontrado.")
+
+# TerraClass direct (AMZ + CER) — richer column set
+tc_direct_path = PROCESSED / "tc_direct_rgint.csv"
+tc_direct = pd.read_csv(tc_direct_path, dtype={"rgint_id": str}) if tc_direct_path.exists() else None
+if tc_direct is not None:
+    tc_direct["year"] = tc_direct["year"].astype(int)
+    print(f"  tc_direct loaded: {len(tc_direct)} rows, cols={list(tc_direct.columns)}")
+else:
+    print("  AVISO: tc_direct_rgint.csv nao encontrado — run 01_load_sources.py primeiro.")
+
 
 # ── Series helpers ───────────────────────────────────────────────────────────
 
@@ -113,6 +140,33 @@ def cruzamento_series(rgint_id: str, col: str) -> list:
     if cruzamento_rgint is None or col not in cruzamento_rgint.columns:
         return [None] * len(YEARS)
     sub = cruzamento_rgint[cruzamento_rgint["rgint_id"] == rgint_id].set_index("year")
+    return _nan_to_none(sub[col].reindex(YEARS).tolist())
+
+
+def iluc_series(rgint_id: str, cls_name: str) -> list:
+    """Area time series from ILUC transition matrices (row sums = stock per class per year)."""
+    if iluc_matrix_df is None or cls_name not in iluc_matrix_df.columns:
+        return [None] * len(YEARS)
+    sub = iluc_matrix_df[iluc_matrix_df["rgint_id"] == rgint_id].set_index("year")
+    return _nan_to_none(sub[cls_name].reindex(YEARS).tolist())
+
+
+def conab_graos_series(rgint_id: str, cultura: str) -> list:
+    """CONAB UF-level grains/cane area allocated to RGINT via PAM proxy."""
+    if conab_graos_df is None:
+        return [None] * len(YEARS)
+    sub = conab_graos_df[
+        (conab_graos_df["rgint_id"] == rgint_id) &
+        (conab_graos_df["cultura"] == cultura)
+    ].set_index("year")["conab_ha"]
+    return _nan_to_none(sub.reindex(YEARS).tolist())
+
+
+def tc_direct_series(rgint_id: str, col: str) -> list:
+    """Single column from tc_direct_rgint (TerraClass AMZ+CER loaded directly)."""
+    if tc_direct is None or col not in tc_direct.columns:
+        return [None] * len(YEARS)
+    sub = tc_direct[tc_direct["rgint_id"] == rgint_id].set_index("year")
     return _nan_to_none(sub[col].reindex(YEARS).tolist())
 
 
@@ -172,28 +226,44 @@ def cafe_rgint_series(rgint_id: str, uf: str) -> list:
 # ── Mapping: class name → extra sources to add ───────────────────────────────
 
 CLASS_EXTRA_SOURCES = {
-    "1 - Culturas perenes":          [("conab_cafe",        None)],
-    "2 - Soja":                      [("conab_pam",         "soja")],
-    "3 - Soja + Milho 2ª safra":[("conab_pam",         "milho_2a")],
-    "4 - Milho 1ª safra":       [("conab_pam",         "milho_1a")],
-    "5 - Cana-de-açúcar":  [("conab_pam",         "cana")],
-    "7 - Pastagem deg. média":  [("lapig_vigor",       "Intermediário"),
-                                      ("mb_pastagem_total", None),
-                                      ("tc_pastagem",       None)],
-    "8 - Pastagem deg. alta":        [("lapig_vigor",       "Severa"),
-                                      ("mb_pastagem_total", None),
-                                      ("tc_pastagem",       None)],
-    "9 - Pastagem deg. baixa":       [("lapig_vigor",       "Ausente"),
-                                      ("mb_pastagem_total", None),
-                                      ("tc_pastagem",       None)],
-    "11 - Veg. prim. florestal":     [("mb_floresta_total", None),
-                                      ("tc_floresta_prim",  None)],
-    "12 - Veg. sec. florestal":      [("mb_floresta_total", None),
-                                      ("tc_floresta_sec",   None)],
-    "13 - Veg. prim. não-florestal": [("mb_savana_total",  None),
-                                            ("tc_nao_florestal", None)],
-    "14 - Veg. sec. não-florestal":  [("mb_savana_total",  None),
-                                            ("tc_nao_florestal", None)],
+    "1 - Culturas perenes":           [("conab_cafe",             None),
+                                       ("tc_cultura_perene",      None)],
+    "2 - Soja":                       [("conab_pam",              "soja"),
+                                       ("conab_soja_uf",          None),
+                                       ("tc_cultura_temporaria",  None)],
+    "3 - Soja + Milho 2ª safra":      [("conab_pam",              "milho_2a"),
+                                       ("conab_milho_uf",         None),
+                                       ("tc_cultura_temporaria",  None)],
+    "4 - Milho 1ª safra":             [("conab_pam",              "milho_1a"),
+                                       ("conab_milho_uf",         None),
+                                       ("tc_cultura_temporaria",  None)],
+    "5 - Cana-de-açúcar":             [("conab_pam",              "cana"),
+                                       ("conab_cana_uf",          None),
+                                       ("tc_cultura_temporaria",  None)],
+    "7 - Pastagem deg. média":        [("lapig_vigor",            "Intermediário"),
+                                       ("mb_pastagem_total",      None),
+                                       ("tc_pastagem",            None),
+                                       ("tc_pastagem_herbacea",   None),
+                                       ("tc_pastagem_arborea",    None)],
+    "8 - Pastagem deg. alta":         [("lapig_vigor",            "Severa"),
+                                       ("mb_pastagem_total",      None),
+                                       ("tc_pastagem",            None),
+                                       ("tc_pastagem_herbacea",   None),
+                                       ("tc_pastagem_arborea",    None)],
+    "9 - Pastagem deg. baixa":        [("lapig_vigor",            "Ausente"),
+                                       ("mb_pastagem_total",      None),
+                                       ("tc_pastagem",            None),
+                                       ("tc_pastagem_herbacea",   None),
+                                       ("tc_pastagem_arborea",    None)],
+    "10 - Silvicultura":              [("tc_silvicultura",        None)],
+    "11 - Veg. prim. florestal":      [("mb_floresta_total",      None),
+                                       ("tc_floresta_prim",       None)],
+    "12 - Veg. sec. florestal":       [("mb_floresta_total",      None),
+                                       ("tc_floresta_sec",        None)],
+    "13 - Veg. prim. não-florestal":  [("mb_savana_total",        None),
+                                       ("tc_nao_florestal",       None)],
+    "14 - Veg. sec. não-florestal":   [("mb_savana_total",        None),
+                                       ("tc_nao_florestal",       None)],
 }
 
 
@@ -339,6 +409,67 @@ for meta in rgint_index:
                     alt_vals, YEARS, "fallback",
                     "TerraClass — vegetacao natural nao-florestal (AMZ/CER; anos de levantamento)"
                 )
+
+            elif src_key == "tc_pastagem_herbacea":
+                alt_vals = tc_direct_series(rgint_id, "Pastagem_Herbacea")
+                sources["tc_pastagem_herbacea"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass direto — pastagem herbacea (Pastagem_Herbacea; AMZ/CER)"
+                )
+
+            elif src_key == "tc_pastagem_arborea":
+                alt_vals = tc_direct_series(rgint_id, "Pastagem_Arbustiva_Arborea")
+                sources["tc_pastagem_arborea"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass direto — pastagem arbustiva/arborea (Pastagem_Arbustiva_Arborea; AMZ/CER)"
+                )
+
+            elif src_key == "tc_cultura_temporaria":
+                alt_vals = tc_direct_series(rgint_id, "Cultura_Temporaria_Total")
+                sources["tc_cultura_temporaria"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass direto — cultura temporaria total (soja, milho, cana; AMZ/CER)"
+                )
+
+            elif src_key == "tc_cultura_perene":
+                alt_vals = tc_direct_series(rgint_id, "Cultura_Perene")
+                sources["tc_cultura_perene"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass direto — cultura perene (cafe, citrus etc.; AMZ/CER)"
+                )
+
+            elif src_key == "tc_silvicultura":
+                alt_vals = tc_direct_series(rgint_id, "Silvicultura")
+                sources["tc_silvicultura"] = build_source_entry(
+                    alt_vals, YEARS, "fallback",
+                    "TerraClass direto — silvicultura (eucalipto, pinus; AMZ/CER)"
+                )
+
+            elif src_key == "conab_soja_uf":
+                sources["conab_soja_uf"] = build_source_entry(
+                    conab_graos_series(rgint_id, "soja"), YEARS, "fallback",
+                    "CONAB Grãos — soja área colhida (UF→RGINT via PAM proxy)"
+                )
+
+            elif src_key == "conab_milho_uf":
+                sources["conab_milho_uf"] = build_source_entry(
+                    conab_graos_series(rgint_id, "milho"), YEARS, "fallback",
+                    "CONAB Grãos — milho total (1ª+2ª safra; UF→RGINT via PAM proxy)"
+                )
+
+            elif src_key == "conab_cana_uf":
+                sources["conab_cana_uf"] = build_source_entry(
+                    conab_graos_series(rgint_id, "cana"), YEARS, "fallback",
+                    "CONAB — cana-de-açúcar área (UF→RGINT via PAM proxy)"
+                )
+
+        # ── ILUC matrix: add to ALL classes if data available ──────────────
+        iluc_vals = iluc_series(rgint_id, cls_name)
+        if any(v is not None for v in iluc_vals):
+            sources["iluc_matrix"] = build_source_entry(
+                iluc_vals, YEARS, "fallback",
+                "Matrizes ILUC 15 Classes — row sums (área total da classe por ano)"
+            )
 
         result["classes"][cls_name] = sources
 

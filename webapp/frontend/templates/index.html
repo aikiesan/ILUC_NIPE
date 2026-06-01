@@ -16,7 +16,7 @@
     <div id="region-badge" class="region-badge hidden">
       <span id="badge-name"></span>
       <span id="badge-biome" class="badge-tag"></span>
-      <span id="badge-uf" class="badge-tag"></span>
+      <span id="badge-uf" class="badge-tag" style="background:rgba(255,255,255,0.15);color:#fff;"></span>
       <a id="report-link" class="report-btn hidden" target="_blank" rel="noopener">Relatório ↗</a>
     </div>
   </header>
@@ -24,12 +24,18 @@
   <main>
     <section class="panel-map">
       <div id="map"></div>
+      <div id="map-legend" class="map-legend"></div>
+      <div id="map-error" class="map-error hidden">
+        <span class="map-error-icon">⚠</span>
+        <p>Mapa não disponível — arquivo GeoJSON ausente.</p>
+        <p class="map-error-hint">Execute o pipeline de dados para gerar <code>rgint_brasil.geojson</code>.</p>
+      </div>
     </section>
 
     <section class="panel-dashboard">
       <div id="welcome" class="welcome-msg">
-        <p>Clique em uma região no mapa para visualizar a série temporal de uso do solo.</p>
-        <p class="welcome-hint">Regiões marcadas com ★ são os padrões-ouro de validação.</p>
+        <p>Clique em uma região intermediária no mapa para visualizar a série temporal de uso do solo.</p>
+        <p class="welcome-hint">133 regiões intermediárias do Brasil — MapBiomas + fontes auxiliares (PAM/IBGE, LAPIG, TerraClass).</p>
       </div>
 
       <div id="dashboard-content" class="hidden">

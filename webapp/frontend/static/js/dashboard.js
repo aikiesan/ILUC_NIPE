@@ -1,58 +1,63 @@
 (function () {
+  // Paleta Okabe-Ito + Paul Tol "Muted" — daltonico-segura (sem vermelho nem marrom)
   const CLASS_COLORS = {
-    '1 - Culturas perenes':          '#f4a261',
-    '2 - Soja':                      '#e9c46a',
-    '3 - Soja + Milho 2ª safra':     '#f3722c',
-    '4 - Milho 1ª safra':            '#90be6d',
-    '5 - Cana-de-açúcar':            '#43aa8b',
-    '6 - Outra agropecuária':        '#577590',
-    '7 - Pastagem deg. média':       '#c77dff',
-    '8 - Pastagem deg. alta':        '#9d4edd',
-    '9 - Pastagem deg. baixa':       '#e0aaff',
-    '10 - Silvicultura':             '#606c38',
-    '11 - Veg. prim. florestal':     '#1b4332',
-    '12 - Veg. sec. florestal':      '#52b788',
-    '13 - Veg. prim. não-florestal': '#b7e4c7',
-    '14 - Veg. sec. não-florestal':  '#74c69d',
-    '15 - Outro':                    '#adb5bd',
+    '1 - Culturas perenes':          '#E69F00',  // laranja-âmbar
+    '2 - Soja':                      '#F0E442',  // amarelo
+    '3 - Soja + Milho 2ª safra':     '#D55E00',  // vermelhão (distinto de vermelho)
+    '4 - Milho 1ª safra':            '#009E73',  // verde-azulado
+    '5 - Cana-de-açúcar':            '#56B4E9',  // azul celeste
+    '6 - Outra agropecuária':        '#999933',  // oliva-amarelo
+    '7 - Pastagem deg. média':       '#CC79A7',  // rosa-púrpura
+    '8 - Pastagem deg. alta':        '#882255',  // púrpura escuro
+    '9 - Pastagem deg. baixa':       '#AA4499',  // púrpura médio
+    '10 - Silvicultura':             '#332288',  // índigo
+    '11 - Veg. prim. florestal':     '#117733',  // verde escuro
+    '12 - Veg. sec. florestal':      '#44AA99',  // teal
+    '13 - Veg. prim. não-florestal': '#88CCEE',  // azul claro
+    '14 - Veg. sec. não-florestal':  '#DDCC77',  // amarelo-quente
+    '15 - Outro':                    '#BBBBBB',  // cinza
   };
 
   const BIOME_COLORS = {
-    'Amazônia':      '#2d6a4f',
-    'Cerrado':       '#d4a017',
-    'Mata Atlântica':'#40916c',
-    'Caatinga':      '#e76f51',
-    'Pampa':         '#a8dadc',
+    'Amazônia':      '#009E73',
+    'Cerrado':       '#E69F00',
+    'Mata Atlântica':'#0072B2',
+    'Caatinga':      '#F0E442',
+    'Pampa':         '#CC79A7',
   };
 
-  // Source metadata: label, fixed color (null = use class color), line style
+  // Source metadata: cores também daltonico-safe
   const SOURCE_META = {
-    pipeline_diagonal:  { label: 'Pipeline MB/TC',       color: null,      dash: 'solid',   width: 3   },
-    conab_pam:          { label: 'PAM / IBGE',            color: '#1565C0', dash: 'dot',     width: 2   },
-    conab_cafe:         { label: 'CONAB Café',             color: '#E65100', dash: 'dashdot', width: 2   },
-    lapig_vigor:        { label: 'LAPIG Vigor',            color: '#2E7D32', dash: 'dash',    width: 2   },
-    mb_pastagem_total:  { label: 'MB Pastagem Total',     color: '#6A1B9A', dash: 'dot',     width: 1.5 },
-    mb_floresta_total:  { label: 'MB Floresta Total',     color: '#1B5E20', dash: 'dot',     width: 1.5 },
-    mb_savana_total:    { label: 'MB Savana Total',       color: '#827717', dash: 'dot',     width: 1.5 },
-    tc_pastagem:        { label: 'TC Pastagem',           color: '#CE93D8', dash: 'dash',    width: 1.5 },
-    tc_floresta_prim:   { label: 'TC Floresta Primária',  color: '#00695C', dash: 'dash',    width: 1.5 },
-    tc_floresta_sec:    { label: 'TC Floresta Sec.',      color: '#4CAF50', dash: 'dashdot', width: 1.5 },
-    tc_nao_florestal:   { label: 'TC Não-Florestal',     color: '#F9A825', dash: 'dash',    width: 1.5 },
+    pipeline_diagonal:  { label: 'Pipeline MB/TC',      color: null,      dash: 'solid',   width: 3   },
+    conab_pam:          { label: 'PAM / IBGE',           color: '#0072B2', dash: 'dot',     width: 2   },
+    conab_cafe:         { label: 'CONAB Café',            color: '#D55E00', dash: 'dashdot', width: 2   },
+    lapig_vigor:        { label: 'LAPIG Vigor',           color: '#009E73', dash: 'dash',    width: 2   },
+    mb_pastagem_total:  { label: 'MB Pastagem Total',    color: '#882255', dash: 'dot',     width: 1.5 },
+    mb_floresta_total:  { label: 'MB Floresta Total',    color: '#117733', dash: 'dot',     width: 1.5 },
+    mb_savana_total:    { label: 'MB Savana Total',      color: '#999933', dash: 'dot',     width: 1.5 },
+    tc_pastagem:        { label: 'TC Pastagem',          color: '#AA4499', dash: 'dash',    width: 1.5 },
+    tc_floresta_prim:   { label: 'TC Floresta Primária', color: '#44AA99', dash: 'dash',    width: 1.5 },
+    tc_floresta_sec:    { label: 'TC Floresta Sec.',     color: '#56B4E9', dash: 'dashdot', width: 1.5 },
+    tc_nao_florestal:   { label: 'TC Não-Florestal',    color: '#DDCC77', dash: 'dash',    width: 1.5 },
   };
 
-  let currentData     = null;   // raw API response
-  let currentFormat   = null;   // 'full' | 'simple'
-  let activeClass     = null;
-  let currentRgintId  = null;
+  // Agrupamento temático das 15 classes
+  const CLASS_GROUPS = [
+    { label: 'Culturas Anuais',    classes: ['2 - Soja', '3 - Soja + Milho 2ª safra', '4 - Milho 1ª safra', '5 - Cana-de-açúcar'] },
+    { label: 'Outras Culturas',    classes: ['1 - Culturas perenes', '6 - Outra agropecuária'] },
+    { label: 'Pastagem',           classes: ['9 - Pastagem deg. baixa', '7 - Pastagem deg. média', '8 - Pastagem deg. alta'] },
+    { label: 'Florestas',          classes: ['11 - Veg. prim. florestal', '12 - Veg. sec. florestal', '10 - Silvicultura'] },
+    { label: 'Veg. Não-Florestal', classes: ['13 - Veg. prim. não-florestal', '14 - Veg. sec. não-florestal'] },
+    { label: 'Outros',             classes: ['15 - Outro'] },
+  ];
+
+  let currentData    = null;
+  let currentFormat  = null;
+  let activeClass    = null;
+  let currentRgintId = null;
+  let currentNome    = null;
 
   // ── Colour helpers ──────────────────────────────────────────────────────
-
-  function hexToRgba(hex, alpha) {
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    return `rgba(${r},${g},${b},${alpha})`;
-  }
 
   function isLight(hex) {
     const r = parseInt(hex.slice(1, 3), 16);
@@ -63,17 +68,68 @@
 
   // ── Tab bar ─────────────────────────────────────────────────────────────
 
+  function getSourceCount(cls) {
+    if (currentFormat === 'full' && currentData?.classes?.[cls]) {
+      return Object.keys(currentData.classes[cls]).length;
+    }
+    return 1;
+  }
+
+  function makeTabBtn(cls) {
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn';
+    btn.dataset.cls = cls;
+    btn.title = cls;
+
+    const labelEl = document.createElement('span');
+    labelEl.className = 'tab-btn-label';
+    labelEl.textContent = cls;
+    btn.appendChild(labelEl);
+
+    const count = getSourceCount(cls);
+    const badge = document.createElement('span');
+    badge.className = 'src-count' + (count >= 3 ? ' rich' : count >= 2 ? ' multi' : '');
+    badge.textContent = count;
+    btn.appendChild(badge);
+
+    btn.addEventListener('click', () => selectTab(cls));
+    return btn;
+  }
+
   function buildTabs(classes) {
     const bar = document.getElementById('class-tabs');
     bar.innerHTML = '';
-    classes.forEach(cls => {
-      const btn = document.createElement('button');
-      btn.className = 'tab-btn';
-      btn.textContent = cls;
-      btn.dataset.cls = cls;
-      btn.addEventListener('click', () => selectTab(cls));
-      bar.appendChild(btn);
+    const classSet = new Set(classes);
+    const rendered = new Set();
+
+    CLASS_GROUPS.forEach(group => {
+      const groupClasses = group.classes.filter(c => classSet.has(c));
+      if (groupClasses.length === 0) return;
+
+      const groupEl = document.createElement('div');
+      groupEl.className = 'tab-group';
+
+      const labelEl = document.createElement('span');
+      labelEl.className = 'tab-group-label';
+      labelEl.textContent = group.label;
+      groupEl.appendChild(labelEl);
+
+      groupClasses.forEach(cls => {
+        groupEl.appendChild(makeTabBtn(cls));
+        rendered.add(cls);
+      });
+
+      bar.appendChild(groupEl);
     });
+
+    // Classes fora dos grupos conhecidos
+    const extras = classes.filter(c => !rendered.has(c));
+    if (extras.length > 0) {
+      const groupEl = document.createElement('div');
+      groupEl.className = 'tab-group';
+      extras.forEach(cls => groupEl.appendChild(makeTabBtn(cls)));
+      bar.appendChild(groupEl);
+    }
   }
 
   function selectTab(cls) {
@@ -85,9 +141,11 @@
         const color = CLASS_COLORS[cls] || '#666';
         b.style.background = color;
         b.style.color = isLight(color) ? '#111' : '#fff';
+        b.style.borderColor = 'transparent';
       } else {
         b.style.background = '';
         b.style.color = '';
+        b.style.borderColor = '';
       }
     });
     plotTimeSeries(cls);
@@ -125,9 +183,11 @@
   function plotTimeSeries(cls) {
     if (!currentData) return;
 
-    const chartEl = document.getElementById('chart');
-    const chartH  = Math.max(chartEl.clientHeight || 0, 320);
+    const chartEl  = document.getElementById('chart');
+    const chartH   = Math.max(chartEl.clientHeight || 0, 320);
     const baseColor = CLASS_COLORS[cls] || '#555';
+    const regionLabel = currentRgintId && currentNome ? `${currentRgintId} — ${currentNome}` : '';
+    const titleText   = regionLabel ? `${cls}  ·  ${regionLabel}` : cls;
 
     let traces = [];
     let isMultiSource = false;
@@ -183,17 +243,40 @@
     }
 
     const layout = {
-      title: { text: cls, font: { size: 13 }, x: 0.02 },
+      title: { text: titleText, font: { size: 13 }, x: 0.02 },
       height: chartH,
       autosize: true,
-      xaxis: { title: 'Ano', tickmode: 'linear', dtick: 2, tickfont: { size: 10 } },
-      yaxis: { title: 'Área (ha)', tickfont: { size: 10 }, tickformat: ',.0f' },
-      margin: { t: 40, r: isMultiSource ? 160 : 16, b: 52, l: 80 },
+      xaxis: {
+        title: { text: 'Ano', font: { size: 12 } },
+        tickmode: 'linear',
+        dtick: 2,
+        tickfont: { size: 11 },
+        showgrid: true,
+        gridcolor: '#e8e8e0',
+        gridwidth: 1,
+      },
+      yaxis: {
+        title: { text: 'Área (ha)', font: { size: 12 } },
+        tickfont: { size: 11 },
+        tickformat: ',.0f',
+        showgrid: true,
+        gridcolor: '#e8e8e0',
+        gridwidth: 1,
+      },
+      margin: { t: 48, r: isMultiSource ? 170 : 20, b: 56, l: 90 },
       paper_bgcolor: '#fafaf8',
       plot_bgcolor:  '#fafaf8',
       hovermode: 'x unified',
       showlegend: isMultiSource,
-      legend: isMultiSource ? { orientation: 'v', x: 1.02, y: 1, font: { size: 10 } } : {},
+      legend: isMultiSource ? {
+        orientation: 'v',
+        x: 1.02,
+        y: 1,
+        font: { size: 11 },
+        bgcolor: 'rgba(250,250,248,0.92)',
+        bordercolor: '#ddd',
+        borderwidth: 1,
+      } : {},
     };
 
     Plotly.react('chart', traces, layout, { responsive: true, displayModeBar: false });
@@ -203,8 +286,8 @@
 
   window.loadRegion = function (rgintId, nome, uf, biome) {
     currentRgintId = rgintId;
+    currentNome    = nome;
 
-    // Update report link immediately (may 404 until pipeline runs)
     const reportLink = document.getElementById('report-link');
     reportLink.href = `/report/${rgintId}`;
     reportLink.classList.remove('hidden');
@@ -220,7 +303,6 @@
         renderDashboard(rgintId, nome, uf, biome, Object.keys(data.classes));
       })
       .catch(() => {
-        // Fallback to original simple diagonal JSON
         fetch(`/api/rgint/${rgintId}`)
           .then(r => { if (!r.ok) throw new Error(`RGINT ${rgintId} not found`); return r.json(); })
           .then(data => {
@@ -233,15 +315,18 @@
   };
 
   function renderDashboard(rgintId, nome, uf, biome, classes) {
-    // Header badge
     const badge = document.getElementById('region-badge');
     document.getElementById('badge-name').textContent = `${rgintId} — ${nome}`;
-    document.getElementById('badge-biome').textContent = biome;
-    document.getElementById('badge-biome').style.background = (BIOME_COLORS[biome] || '#555') + '99';
+
+    const biomeEl    = document.getElementById('badge-biome');
+    const biomeColor = BIOME_COLORS[biome] || '#555';
+    biomeEl.textContent    = biome;
+    biomeEl.style.background = biomeColor + '99';
+    biomeEl.style.color      = isLight(biomeColor) ? '#333' : '#fff';
+
     document.getElementById('badge-uf').textContent = uf;
     badge.classList.remove('hidden');
 
-    // Show dashboard
     document.getElementById('welcome').classList.add('hidden');
     document.getElementById('dashboard-content').classList.remove('hidden');
 

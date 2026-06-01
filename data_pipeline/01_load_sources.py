@@ -10,12 +10,13 @@ Outputs:
 """
 
 import glob
+import re
 import numpy as np
 import pandas as pd
 from pathlib import Path
 from utils import ILUC, ROOT, PROCESSED, load_lookup, ensure_processed_dir
 
-CONAB = ROOT / "Dados_CONAB"
+CONAB = ROOT  # SerieHistoricaCafe.txt, LevantamentoGraos.txt live directly in ILUC_NIPE/
 YEARS = list(range(2008, 2025))   # 2008-2024 inclusive
 
 ensure_processed_dir()
@@ -203,5 +204,183 @@ if cruzamento_path.exists():
     print(f"  Anos: {sorted(cruzamento_rgint['year'].unique())}")
 else:
     print(f"  AVISO: {cruzamento_path} nao encontrado, pulando cruzamento MB/TC.")
+
+
+# ── F. TerraClass AMZ + CER — aggregate municipality to RGINT ───────────────
+print("Loading TerraClass AMZ + CER files ...")
+
+TC_AMZ_FILE = Path(r"C:\Users\Lucas\Documents\ABIOVE_SOJA_2026\01_START_Data_Sources\BDC_ABIOVE_Dictionary\04_TerraClass\AMAZONIA") / "TC_AMZ_AMAZONIA_LEGAL_harmonizado.csv"
+TC_CER_DIR  = Path(r"C:\Users\Lucas\Documents\ABIOVE_SOJA_2026\01_START_Data_Sources\BDC_ABIOVE_Dictionary\04_TerraClass\CERRADO")
+
+TC_COLS_WANT = [
+    "Veg_Florestal_Primaria", "Veg_Florestal_Secundaria",
+    "Natural_Nao_Florestal", "Silvicultura",
+    "Pastagem_Arbustiva_Arborea", "Pastagem_Herbacea",
+    "Cultura_Perene", "Cultura_Temporaria_Total", "Desflorestamento_Ano",
+]
+
+tc_frames = []
+
+if TC_AMZ_FILE.exists():
+    df_amz = pd.read_csv(TC_AMZ_FILE, dtype={"CD_MUN": str})
+    df_amz.columns = df_amz.columns.str.strip()
+    df_amz["CD_MUN"] = df_amz["CD_MUN"].astype(str).str.zfill(7)
+    tc_frames.append(df_amz)
+    print(f"  AMZ: {len(df_amz):,} rows, anos {sorted(df_amz['ANO'].unique())}")
+else:
+    print(f"  AVISO: TC AMZ nao encontrado em {TC_AMZ_FILE}")
+
+if TC_CER_DIR.exists():
+    # Use the full Cerrado file if available; otherwise concatenate state files
+    cerrado_full = TC_CER_DIR / "TC_CER_CERRADO_harmonizado.csv"
+    cer_files = [cerrado_full] if cerrado_full.exists() else sorted(
+        f for f in TC_CER_DIR.glob("TC_CER_*_harmonizado.csv")
+        if f.name != "TC_CER_CERRADO_harmonizado.csv"
+    )
+    # TC CER uses different column names — normalize to match AMZ before concat
+    CER_RENAME = {
+        "Veg_Natural_Primaria":   "Veg_Florestal_Primaria",
+        "Veg_Natural_Secundaria":  "Veg_Florestal_Secundaria",
+        # CER has a single Pastagem column (no herbácea/arbórea split)
+        # Map to Pastagem_Herbacea; Pastagem_Arbustiva_Arborea stays 0 for CER RGINTs
+        "Pastagem":               "Pastagem_Herbacea",
+    }
+    for f in cer_files:
+        df_cer = pd.read_csv(f, dtype={"CD_MUN": str})
+        df_cer.columns = df_cer.columns.str.strip()
+        df_cer["CD_MUN"] = df_cer["CD_MUN"].astype(str).str.zfill(7)
+        df_cer = df_cer.rename(columns=CER_RENAME)
+        tc_frames.append(df_cer)
+        print(f"  CER {f.name}: {len(df_cer):,} rows")
+else:
+    print(f"  AVISO: TC CER dir nao encontrado: {TC_CER_DIR}")
+
+if tc_frames:
+    tc_all = pd.concat(tc_frames, ignore_index=True)
+    tc_all = tc_all.rename(columns={"CD_MUN": "CD_GEOCODI", "ANO": "year"})
+    lookup = load_lookup()
+    tc_all = tc_all.merge(lookup[["CD_GEOCODI", "cod_rgint"]], on="CD_GEOCODI", how="left")
+    tc_all = tc_all.dropna(subset=["cod_rgint"])
+    tc_all["rgint_id"] = tc_all["cod_rgint"].astype(str).str.strip()
+    tc_all["year"] = tc_all["year"].astype(int)
+
+    valid_cols = [c for c in TC_COLS_WANT if c in tc_all.columns]
+    # min_count=1 ensures that groups where ALL values are NaN stay NaN (not 0)
+    # This prevents CER RGINTs showing a flat zero line for AMZ-only columns
+    tc_rgint = (
+        tc_all.groupby(["rgint_id", "year"])[valid_cols]
+        .sum(min_count=1)
+        .reset_index()
+        .sort_values(["rgint_id", "year"])
+    )
+    tc_rgint.to_csv(PROCESSED / "tc_direct_rgint.csv", index=False, encoding="utf-8")
+    print(f"  Colunas extraidas: {valid_cols}")
+    print(f"  Saved {len(tc_rgint):,} rows -> processed/tc_direct_rgint.csv")
+    print(f"  Anos TC: {sorted(tc_rgint['year'].unique())}")
+else:
+    print("  AVISO: nenhum arquivo TC carregado — tc_direct_rgint.csv nao gerado.")
+
+
+# ── G. ILUC Matrices (ALL_RGINTS) → time series per RGINT × class ───────────
+print("Loading ILUC_15Classes matrices (133 RGINTs × 16 periods) ...")
+ILUC_DIR = Path(r"C:\Users\Lucas\Documents\ABIOVE_SOJA_2026\05_FINAL_INTEGRATION_DATA\07_MATRIZES_15_CLASSES_FINAL\ALL_RGINTS")
+
+CLASS_NAMES_15 = [
+    "1 - Culturas perenes", "2 - Soja", "3 - Soja + Milho 2ª safra",
+    "4 - Milho 1ª safra", "5 - Cana-de-açúcar", "6 - Outra agropecuária",
+    "7 - Pastagem deg. média", "8 - Pastagem deg. alta", "9 - Pastagem deg. baixa",
+    "10 - Silvicultura", "11 - Veg. prim. florestal", "12 - Veg. sec. florestal",
+    "13 - Veg. prim. não-florestal", "14 - Veg. sec. não-florestal", "15 - Outro",
+]
+
+if ILUC_DIR.exists():
+    iluc_files = sorted(ILUC_DIR.glob("ILUC_15Classes_RGINT*.xlsx"))
+    iluc_records = []
+    for i, f in enumerate(iluc_files):
+        m = re.search(r"RGINT(\d{4})", f.name)
+        if not m:
+            continue
+        rgint_id = m.group(1)
+        xl = pd.ExcelFile(f)
+        period_dfs = {}
+        for sheet in xl.sheet_names:
+            year_start = int(sheet.split("_")[0])
+            df = pd.read_excel(f, sheet_name=sheet, index_col=0)
+            df.index = df.index.astype(str).str.strip()
+            period_dfs[year_start] = df
+        # Row sums per period = area of each class at start year
+        for year, df in period_dfs.items():
+            row_sums = df.sum(axis=1)
+            rec = {"rgint_id": rgint_id, "year": year}
+            for cls in CLASS_NAMES_15:
+                rec[cls] = row_sums.get(cls, None)
+            iluc_records.append(rec)
+        # Column sums of last period = area in 2024
+        last_df = period_dfs[max(period_dfs)]
+        last_df.columns = last_df.columns.astype(str).str.strip()
+        col_sums = last_df.sum(axis=0)
+        rec = {"rgint_id": rgint_id, "year": 2024}
+        for cls in CLASS_NAMES_15:
+            rec[cls] = col_sums.get(cls, None)
+        iluc_records.append(rec)
+        if (i + 1) % 25 == 0:
+            print(f"  {i+1}/{len(iluc_files)} RGINTs processados...")
+
+    iluc_ts = pd.DataFrame(iluc_records).sort_values(["rgint_id", "year"])
+    iluc_ts.to_csv(PROCESSED / "iluc_matrix_rgint.csv", index=False, encoding="utf-8")
+    print(f"  Saved {len(iluc_ts):,} rows -> processed/iluc_matrix_rgint.csv")
+    print(f"  RGINTs: {iluc_ts['rgint_id'].nunique()} | anos: {sorted(iluc_ts['year'].unique())}")
+else:
+    print(f"  AVISO: ILUC_DIR nao encontrado: {ILUC_DIR}")
+
+
+# ── H. CONAB UF Soja/Milho/Cana → allocate to RGINT via PAM proxy ───────────
+print("Loading CONAB_GRAOS_CANA_UF_2008_2024.csv ...")
+CONAB_CSV = Path(r"C:\Users\Lucas\Documents\ABIOVE_SOJA_2026\05_FINAL_INTEGRATION_DATA\05_Agro_Subdivisions\CONAB_GRAOS_CANA_UF_2008_2024.csv")
+
+CULTURA_MAP = {
+    "Soja (em grão)":  "soja",
+    "Milho (em grão)": "milho",
+    "Cana-de-açúcar":  "cana",
+}
+
+if CONAB_CSV.exists():
+    pam_base = pd.read_csv(PROCESSED / "pam_rgint.csv", dtype={"rgint_id": str})
+    uf_lookup = pam_base[["rgint_id", "uf"]].drop_duplicates()
+
+    conab_uf_df = pd.read_csv(CONAB_CSV)
+    conab_uf_df = conab_uf_df[conab_uf_df["cultura"].isin(CULTURA_MAP)].copy()
+    conab_uf_df["cultura_key"] = conab_uf_df["cultura"].map(CULTURA_MAP)
+    # Deduplicate (file has some duplicate rows)
+    conab_uf_df = conab_uf_df.groupby(["ano", "uf", "cultura_key"], as_index=False)["conab_ha"].mean()
+
+    rows = []
+    for (ano, uf, cultura_key), grp in conab_uf_df.groupby(["ano", "uf", "cultura_key"]):
+        uf_ha = grp["conab_ha"].sum()
+        pam_sub = pam_base[
+            (pam_base["uf"] == uf) &
+            (pam_base["year"] == ano) &
+            (pam_base["crop"] == cultura_key)
+        ]
+        uf_pam_total = pam_sub["area_ha"].sum()
+        if uf_pam_total > 0:
+            for _, r in pam_sub.iterrows():
+                rows.append({"rgint_id": r["rgint_id"], "year": ano,
+                              "cultura": cultura_key,
+                              "conab_ha": round(uf_ha * r["area_ha"] / uf_pam_total, 2)})
+        else:
+            rgints = uf_lookup[uf_lookup["uf"] == uf]["rgint_id"].unique()
+            if len(rgints):
+                for rid in rgints:
+                    rows.append({"rgint_id": rid, "year": ano,
+                                 "cultura": cultura_key,
+                                 "conab_ha": round(uf_ha / len(rgints), 2)})
+
+    conab_rgint = pd.DataFrame(rows).sort_values(["rgint_id", "year", "cultura"])
+    conab_rgint.to_csv(PROCESSED / "conab_graos_cana_rgint.csv", index=False, encoding="utf-8")
+    print(f"  Saved {len(conab_rgint):,} rows -> processed/conab_graos_cana_rgint.csv")
+    print(f"  Culturas: {sorted(conab_rgint['cultura'].unique())} | anos: {sorted(conab_rgint['year'].unique())}")
+else:
+    print(f"  AVISO: {CONAB_CSV} nao encontrado")
 
 print("\nDone. Run 02_build_multisource_json.py next.")
