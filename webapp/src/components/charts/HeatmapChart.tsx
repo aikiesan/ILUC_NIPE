@@ -1,4 +1,5 @@
 import { Plot, baseConfig } from "./plotlyClient";
+import { SEQ_MATRIX } from "@/lib/colors";
 
 interface HeatmapChartProps {
   z: (number | null)[][];
@@ -8,7 +9,7 @@ interface HeatmapChartProps {
   onCellClick?: (row: number, col: number) => void;
 }
 
-/** Grayscale transition-matrix heatmap with click-through cells. */
+/** Transition-matrix heatmap (teal sequential scale) with click-through cells. */
 export default function HeatmapChart({
   z,
   x,
@@ -24,10 +25,7 @@ export default function HeatmapChart({
           z,
           x,
           y,
-          colorscale: [
-            [0, "#FFFFFF"],
-            [1, "#0A0A0A"],
-          ],
+          colorscale: SEQ_MATRIX,
           hovertemplate: "%{y} → %{x}<br>%{z:,.0f} ha<extra></extra>",
           showscale: true,
           colorbar: { thickness: 10, outlinewidth: 0, tickfont: { size: 10 } },

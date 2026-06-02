@@ -11,6 +11,12 @@ export default {
         muted: "#6B6B6B",
         accent: "#1A1A1A",
         highlight: "#F0F0F0",
+        // Semantic palette (mirrors src/lib/colors.ts SEMANTIC).
+        primary: "#0F766E", // deep teal
+        "primary-fg": "#FFFFFF",
+        "primary-tint": "#F0FDFA",
+        positive: "#15803D", // regeneration / gain
+        negative: "#B45309", // pressure / loss
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

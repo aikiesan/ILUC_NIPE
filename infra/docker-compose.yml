@@ -1,0 +1,44 @@
+# Local/dev data store for the ILUC_NIPE pipeline.
+#
+#   raw files  ->  Postgres (ingest)  ->  static export  ->  SPA
+#
+# Postgres is the build/dev source of truth. The deployed GitHub Pages SPA is
+# 100% static (reads committed webapp/public/data) and never connects here.
+#
+# Usage (from repo root):  make db-up   |   make db-down   |   make db-reset
+# Env comes from infra/.env (copy infra/.env.example first).
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: iluc_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-iluc}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in infra/.env}
+      POSTGRES_DB: ${POSTGRES_DB:-iluc_nipe}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # schema is applied on first init of an empty volume
+      - ../db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-iluc} -d ${POSTGRES_DB:-iluc_nipe}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Lightweight DB inspector at http://localhost:8080 (optional).
+  adminer:
+    image: adminer:4
+    container_name: iluc_adminer
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${ADMINER_PORT:-8080}:8080"
+
+volumes:
+  pgdata:

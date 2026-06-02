@@ -1,4 +1,5 @@
-"""Generate webapp/public/data/rgint_indicators.csv and national_timeseries.csv.
+"""Generate webapp/public/data/rgint_indicators.csv and national_timeseries.csv
+FROM Postgres (tables ``regions``, ``lulc_timeseries``, ``pam``).
 
 Indicators are derived from each region's 15-class area time series:
   * balanco_ha   = native veg (last year) − native veg (first year)
@@ -11,15 +12,10 @@ Indicators are derived from each region's 15-class area time series:
 from __future__ import annotations
 
 import csv
+from collections import defaultdict
 
-from common import (
-    AGRO_CLASSES,
-    NATIVE_CLASSES,
-    PAM_CSV,
-    ensure_out,
-    load_index,
-    load_series,
-)
+from common import NATIVE_CLASSES, ensure_out
+from db import connect
 
 
 def native_total_by_year(series: dict) -> dict[int, float]:
@@ -53,18 +49,34 @@ def pressure_metrics(series: dict) -> tuple[float, float, float]:
     return pressao, regen, balanco
 
 
-def pam_latest_by_rgint() -> tuple[dict[str, float], dict[str, float]]:
-    """Return (total_agro, soja) planted area for the latest PAM year per RGINT."""
-    rows: dict[str, dict[int, dict[str, float]]] = {}
-    with open(PAM_CSV, encoding="utf-8-sig") as fh:
-        for r in csv.DictReader(fh):
-            rid = r["CD_RGINT"].strip()
-            year = int(r["ano"])
-            area = float(r["area_ha"] or 0)
-            rows.setdefault(rid, {}).setdefault(year, {})[r["cultura"]] = area
+def load_from_db():
+    """Return (regions, series_by_rgint, pam_by_rgint) from Postgres."""
+    with connect() as conn:
+        cur = conn.cursor()
+        cur.execute("SELECT rgint_id, nome, uf, bioma FROM regions ORDER BY rgint_id")
+        regions = [
+            {"rgint": str(r[0]), "nome": r[1], "uf": r[2], "biome": r[3]}
+            for r in cur.fetchall()
+        ]
+        # series: rgint -> {classe -> {year(str) -> area}}
+        series: dict[str, dict[str, dict[str, float]]] = defaultdict(
+            lambda: defaultdict(dict))
+        cur.execute("SELECT rgint_id, ano, classe, area_ha FROM lulc_timeseries")
+        for rid, ano, classe, area in cur.fetchall():
+            series[str(rid)][classe][str(ano)] = None if area is None else float(area)
+        # pam: rgint -> {year -> {cultura -> area}}
+        pam: dict[str, dict[int, dict[str, float]]] = defaultdict(
+            lambda: defaultdict(dict))
+        cur.execute("SELECT rgint_id, ano, cultura, area_ha FROM pam")
+        for rid, ano, cultura, area in cur.fetchall():
+            pam[str(rid)][int(ano)][cultura] = float(area or 0)
+    return regions, series, pam
+
+
+def pam_latest(pam: dict) -> tuple[dict[str, float], dict[str, float]]:
     agro: dict[str, float] = {}
     soja: dict[str, float] = {}
-    for rid, by_year in rows.items():
+    for rid, by_year in pam.items():
         latest = max(by_year)
         cultures = by_year[latest]
         agro[rid] = round(sum(cultures.values()), 2)
@@ -73,15 +85,15 @@ def pam_latest_by_rgint() -> tuple[dict[str, float], dict[str, float]]:
 
 
 def main() -> None:
-    index = load_index()
-    agro, soja = pam_latest_by_rgint()
+    regions, series_all, pam = load_from_db()
+    agro, soja = pam_latest(pam)
 
     records = []
     national: dict[tuple[int, str, str], float] = {}
 
-    for item in index:
+    for item in regions:
         rid = item["rgint"]
-        series = load_series(rid)
+        series = series_all.get(rid)
         if series is None:
             continue
         pressao, regen, balanco = pressure_metrics(series)
@@ -98,7 +110,6 @@ def main() -> None:
                 "soja_2024_ha": soja.get(rid, 0.0),
             }
         )
-        # accumulate national time series by class & biome
         for cls, by_year in series.items():
             for y, val in by_year.items():
                 if val is None:
@@ -130,5 +141,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    _ = AGRO_CLASSES  # referenced for documentation of agro classes
     main()

@@ -22,12 +22,10 @@ import { loadNationalTimeseries, loadNationalTransitions } from "@/lib/data";
 import { compositionLatestYear, nativeByBiomeYear } from "@/lib/analytics";
 import { shortClassLabel } from "@/lib/classes";
 import { formatHa, formatPct } from "@/lib/format";
+import { CATEGORY_COLORS, SEMANTIC, biomeColor } from "@/lib/colors";
 import type { SankeyFlow } from "@/components/charts/SankeyChart";
 
 const SankeyChart = lazy(() => import("@/components/charts/SankeyChart"));
-
-// Grayscale palette for categorical series.
-const GRAYS = ["#0A0A0A", "#525252", "#737373", "#9CA3AF", "#BDBDBD", "#D4D4D4", "#E5E5E5"];
 
 const KPIS = [
   { label: "Pressão antrópica 2008–2024", value: "38.392.587 ha", hint: "Conversão acumulada de vegetação nativa", icon: <TrendingDown className="h-4 w-4" /> },
@@ -97,8 +95,8 @@ export default function Overview() {
                     contentStyle={{ fontSize: 12, borderColor: "#E5E5E5", borderRadius: 8 }}
                   />
                   <Legend wrapperStyle={{ fontSize: 12 }} />
-                  <Line type="monotone" dataKey="Amazônia" stroke="#0A0A0A" strokeWidth={2} dot={false} />
-                  <Line type="monotone" dataKey="Cerrado" stroke="#9CA3AF" strokeWidth={2} dot={false} />
+                  <Line type="monotone" dataKey="Amazônia" stroke={biomeColor("Amazônia")} strokeWidth={2} dot={false} />
+                  <Line type="monotone" dataKey="Cerrado" stroke={biomeColor("Cerrado")} strokeWidth={2} dot={false} />
                 </LineChart>
               </ResponsiveContainer>
             )}
@@ -128,8 +126,8 @@ export default function Overview() {
                     outerRadius={110}
                     paddingAngle={1}
                   >
-                    {composition.groups.map((_, i) => (
-                      <Cell key={i} fill={GRAYS[i % GRAYS.length]} stroke="#FFFFFF" />
+                    {composition.groups.map((g, i) => (
+                      <Cell key={i} fill={CATEGORY_COLORS[g.name] ?? SEMANTIC.neutral} stroke="#FFFFFF" />
                     ))}
                   </Pie>
                   <Tooltip

@@ -1,4 +1,4 @@
-import{r as ke,g as xe,d as Ce}from"./index-DI0TYPWk.js";function Le(_,j){const[U,m]=ke.useState({data:null,loading:!0,error:null});return ke.useEffect(()=>{let L=!0;return m({data:null,loading:!0,error:null}),_().then(M=>L&&m({data:M,loading:!1,error:null})).catch(M=>L&&m({data:null,loading:!1,error:M})),()=>{L=!1}},j),U}var be={exports:{}};/* @license
+import{r as ke,g as xe,d as Ce}from"./index-DNt6GONr.js";function Le(_,j){const[U,m]=ke.useState({data:null,loading:!0,error:null});return ke.useEffect(()=>{let L=!0;return m({data:null,loading:!0,error:null}),_().then(M=>L&&m({data:M,loading:!1,error:null})).catch(M=>L&&m({data:null,loading:!1,error:M})),()=>{L=!1}},j),U}var be={exports:{}};/* @license
 Papa Parse
 v5.5.3
 https://github.com/mholt/PapaParse

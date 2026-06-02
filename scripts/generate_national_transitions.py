@@ -1,47 +1,41 @@
-"""Generate webapp/public/data/national_transitions.csv.
+"""Generate webapp/public/data/national_transitions.csv FROM Postgres
+(table ``transitions``).
 
-Aggregates per-region transition matrices into the three GTAP periods used
-across the app. Anchor matrices map to periods as:
+Aggregates per-region transition flows into the three GTAP periods. Anchor
+years map to periods as:
     2017 anchor  -> '2008_2017'
     2024 anchor  -> '2017_2024'
     '2008_2024'  = sum of the two above
 Only off-diagonal (class-changing) flows are kept.
 
 Output columns: periodo, origem_id, origem_nome, destino_id, destino_nome, area_ha.
-This scales to all 133 regions automatically once their matrices are present.
+This scales to all 133 regions automatically once their matrices are ingested.
 """
 from __future__ import annotations
 
 import csv
-import json
 from collections import defaultdict
 
-from common import RGINT_MATRIX_DIR, ensure_out
+from common import ensure_out
+from db import connect
 
 ANCHOR_TO_PERIOD = {"2017": "2008_2017", "2024": "2017_2024"}
-
-
-def load_matrix(path) -> dict:
-    text = path.read_text(encoding="utf-8").replace("NaN", "null")
-    return json.loads(text)
 
 
 def main() -> None:
     # period -> (origem, destino) -> area
     agg: dict[str, dict[tuple[str, str], float]] = defaultdict(lambda: defaultdict(float))
-    files = sorted(RGINT_MATRIX_DIR.glob("*.json")) if RGINT_MATRIX_DIR.exists() else []
-
-    for path in files:
-        data = load_matrix(path)
-        for year, by_src in data.get("matrices", {}).items():
-            period = ANCHOR_TO_PERIOD.get(str(year))
-            if period is None:
+    with connect() as conn:
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT ano_par, origem_id, destino_id, area_ha FROM transitions "
+            "WHERE ano_par IN %s AND origem_id <> destino_id",
+            (tuple(ANCHOR_TO_PERIOD),),
+        )
+        for ano_par, origem, destino, area in cur.fetchall():
+            if area is None:
                 continue
-            for origem, dests in by_src.items():
-                for destino, area in dests.items():
-                    if area is None or origem == destino:
-                        continue
-                    agg[period][(origem, destino)] += float(area)
+            agg[ANCHOR_TO_PERIOD[ano_par]][(origem, destino)] += float(area)
 
     # derive cumulative period
     for key, area in agg.get("2008_2017", {}).items():

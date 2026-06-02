@@ -1,6 +1,7 @@
 import { MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { BiomeBadge } from "@/components/common/BiomeBadge";
 import { formatHa, formatSignedHa } from "@/lib/format";
 import type { RegionIndicator, RegionMeta } from "@/lib/types";
 
@@ -24,7 +25,7 @@ export function RegionSummary({ meta, indicator }: RegionSummaryProps) {
           <div className="flex items-center gap-2">
             <Badge variant="solid" className="mono">{meta.id}</Badge>
             <Badge variant="outline">{meta.uf}</Badge>
-            <Badge>{meta.bioma_principal}</Badge>
+            <BiomeBadge biome={meta.bioma_principal} />
           </div>
           <CardTitle className="mt-1 text-lg">{meta.nome}</CardTitle>
         </CardHeader>

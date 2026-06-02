@@ -1,4 +1,11 @@
 import { Plot, baseConfig } from "./plotlyClient";
+import { classColor } from "@/lib/colors";
+
+/** #RRGGBB + alpha -> rgba() string for translucent Sankey links. */
+function hexToRgba(hex: string, alpha: number): string {
+  const n = parseInt(hex.replace("#", ""), 16);
+  return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${alpha})`;
+}
 
 export interface SankeyFlow {
   source: string;
@@ -11,7 +18,7 @@ interface SankeyChartProps {
   height?: number;
 }
 
-/** Monochrome Plotly Sankey. Node order is derived from the flow list. */
+/** Plotly Sankey colored by LULC class group. Node order derives from flows. */
 export default function SankeyChart({ flows, height = 420 }: SankeyChartProps) {
   const labels: string[] = [];
   const index = new Map<string, number>();
@@ -26,11 +33,14 @@ export default function SankeyChart({ flows, height = 420 }: SankeyChartProps) {
   const source: number[] = [];
   const target: number[] = [];
   const value: number[] = [];
+  const linkColor: string[] = [];
   for (const f of flows) {
     source.push(idOf(f.source));
     target.push(idOf(f.target));
     value.push(f.value);
+    linkColor.push(hexToRgba(classColor(f.target), 0.4)); // tint link by destination
   }
+  const nodeColor = labels.map((l) => classColor(l));
 
   return (
     <Plot
@@ -43,14 +53,14 @@ export default function SankeyChart({ flows, height = 420 }: SankeyChartProps) {
             label: labels,
             pad: 16,
             thickness: 16,
-            color: "#1A1A1A",
-            line: { color: "#E5E5E5", width: 1 },
+            color: nodeColor,
+            line: { color: "#FFFFFF", width: 1 },
           },
           link: {
             source,
             target,
             value,
-            color: "rgba(107,107,107,0.35)",
+            color: linkColor,
           },
         } as never,
       ]}

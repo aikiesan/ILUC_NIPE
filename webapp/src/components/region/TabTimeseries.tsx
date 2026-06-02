@@ -12,6 +12,7 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { NATIVE_CLASSES, PASTURE_CLASSES } from "@/lib/classes";
 import { formatHa } from "@/lib/format";
+import { SERIES_COLORS } from "@/lib/colors";
 import type { RegionSeries } from "@/lib/types";
 
 const SOJA = "2 - Soja";
@@ -81,9 +82,9 @@ export function TabTimeseries({ series }: { series: RegionSeries }) {
             contentStyle={{ fontSize: 12, borderColor: "#E5E5E5", borderRadius: 8 }}
           />
           <Legend wrapperStyle={{ fontSize: 12 }} />
-          <Line type="monotone" dataKey="Soja" stroke="#0A0A0A" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="Pastagem" stroke="#737373" strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="Veg. nativa" stroke="#BDBDBD" strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="Soja" stroke={SERIES_COLORS["Soja"]} strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="Pastagem" stroke={SERIES_COLORS["Pastagem"]} strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="Veg. nativa" stroke={SERIES_COLORS["Veg. nativa"]} strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </div>

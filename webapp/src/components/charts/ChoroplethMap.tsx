@@ -1,4 +1,5 @@
 import { Plot, baseConfig } from "./plotlyClient";
+import { VIRIDIS, type PlotlyColorscale } from "@/lib/colors";
 
 interface ChoroplethMapProps {
   geojson: GeoJSON.FeatureCollection;
@@ -6,17 +7,23 @@ interface ChoroplethMapProps {
   z: number[];
   text: string[];
   colorbarTitle: string;
+  /** Perceptually-uniform scale (defaults to Viridis). See src/lib/colors.ts. */
+  colorscale?: PlotlyColorscale;
+  /** Center the scale at zero (diverging) — used for the net-balance variable. */
+  diverging?: boolean;
   height?: number;
   onRegionClick?: (rgint: string) => void;
 }
 
-/** Grayscale choropleth of the 133 RGINTs, keyed by properties.rgint. */
+/** Choropleth of the 133 RGINTs, keyed by properties.rgint. */
 export default function ChoroplethMap({
   geojson,
   locations,
   z,
   text,
   colorbarTitle,
+  colorscale = VIRIDIS,
+  diverging = false,
   height = 560,
   onRegionClick,
 }: ChoroplethMapProps) {
@@ -30,10 +37,8 @@ export default function ChoroplethMap({
           z,
           text,
           featureidkey: "properties.rgint",
-          colorscale: [
-            [0, "#F0F0F0"],
-            [1, "#0A0A0A"],
-          ],
+          colorscale,
+          zmid: diverging ? 0 : undefined,
           marker: { line: { color: "#FFFFFF", width: 0.5 } },
           hovertemplate: "%{text}<br>%{z:,.0f}<extra></extra>",
           colorbar: { title: { text: colorbarTitle, side: "right" }, thickness: 10, outlinewidth: 0, tickfont: { size: 10 } },

@@ -11,9 +11,14 @@ __pycache__/
 *.pyc
 *.pyo
 .env
+infra/.env
 *.log
 .venv/
 venv/
+
+# Local Postgres data volume (never commit the database itself)
+infra/pgdata/
+*.pgdata/
 
 # Spatial binary indexes
 *.sbn

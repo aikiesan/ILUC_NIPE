@@ -10,6 +10,29 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    # Postgres test DB for the ingest/export integration tests.
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: iluc
+          POSTGRES_DB: iluc_nipe
+          # Ephemeral CI DB, reachable only inside the job: no password needed.
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U iluc -d iluc_nipe"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: iluc
+      POSTGRES_DB: iluc_nipe
+
     steps:
       - uses: actions/checkout@v4
 
