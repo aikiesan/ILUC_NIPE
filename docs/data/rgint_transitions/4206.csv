@@ -1,0 +1,169 @@
+ano_par,origem_id,destino_id,area_ha
+2009,2 - Soja,12 - Veg. sec. florestal,0.09
+2009,11 - Veg. prim. florestal,2 - Soja,30.04
+2009,11 - Veg. prim. florestal,6 - Outra agropecuária,146.81
+2009,11 - Veg. prim. florestal,12 - Veg. sec. florestal,6.33
+2009,11 - Veg. prim. florestal,Pastagem,316.61
+2009,12 - Veg. sec. florestal,2 - Soja,0.29
+2009,12 - Veg. sec. florestal,6 - Outra agropecuária,1.42
+2009,12 - Veg. sec. florestal,Pastagem,3.07
+2009,Pastagem,2 - Soja,93.06
+2009,Pastagem,6 - Outra agropecuária,2053.44
+2009,Pastagem,12 - Veg. sec. florestal,1.26
+2010,2 - Soja,12 - Veg. sec. florestal,0.09
+2010,11 - Veg. prim. florestal,2 - Soja,24.06
+2010,11 - Veg. prim. florestal,6 - Outra agropecuária,185.34
+2010,11 - Veg. prim. florestal,12 - Veg. sec. florestal,2.05
+2010,11 - Veg. prim. florestal,Pastagem,217.6
+2010,12 - Veg. sec. florestal,2 - Soja,0.24
+2010,12 - Veg. sec. florestal,6 - Outra agropecuária,1.86
+2010,12 - Veg. sec. florestal,Pastagem,2.18
+2010,Pastagem,2 - Soja,57.24
+2010,Pastagem,6 - Outra agropecuária,1366.47
+2010,Pastagem,12 - Veg. sec. florestal,1.8
+2011,2 - Soja,12 - Veg. sec. florestal,0.18
+2011,11 - Veg. prim. florestal,2 - Soja,9.18
+2011,11 - Veg. prim. florestal,6 - Outra agropecuária,88.47
+2011,11 - Veg. prim. florestal,12 - Veg. sec. florestal,5.08
+2011,11 - Veg. prim. florestal,Pastagem,130.61
+2011,12 - Veg. sec. florestal,2 - Soja,0.09
+2011,12 - Veg. sec. florestal,6 - Outra agropecuária,0.9
+2011,12 - Veg. sec. florestal,Pastagem,1.33
+2011,Pastagem,2 - Soja,32.04
+2011,Pastagem,6 - Outra agropecuária,845.37
+2011,Pastagem,12 - Veg. sec. florestal,1.8
+2012,11 - Veg. prim. florestal,2 - Soja,16.39
+2012,11 - Veg. prim. florestal,6 - Outra agropecuária,109.68
+2012,11 - Veg. prim. florestal,12 - Veg. sec. florestal,4.72
+2012,11 - Veg. prim. florestal,Pastagem,188.97
+2012,12 - Veg. sec. florestal,2 - Soja,0.17
+2012,12 - Veg. sec. florestal,6 - Outra agropecuária,1.11
+2012,12 - Veg. sec. florestal,Pastagem,1.92
+2012,Pastagem,2 - Soja,35.64
+2012,Pastagem,6 - Outra agropecuária,733.77
+2012,Pastagem,12 - Veg. sec. florestal,1.8
+2013,11 - Veg. prim. florestal,2 - Soja,16.13
+2013,11 - Veg. prim. florestal,6 - Outra agropecuária,150.88
+2013,11 - Veg. prim. florestal,12 - Veg. sec. florestal,5.53
+2013,11 - Veg. prim. florestal,Pastagem,338.92
+2013,12 - Veg. sec. florestal,2 - Soja,0.16
+2013,12 - Veg. sec. florestal,6 - Outra agropecuária,1.49
+2013,12 - Veg. sec. florestal,Pastagem,3.35
+2013,Pastagem,2 - Soja,28.62
+2013,Pastagem,6 - Outra agropecuária,722.88
+2013,Pastagem,12 - Veg. sec. florestal,3.96
+2014,11 - Veg. prim. florestal,2 - Soja,35.56
+2014,11 - Veg. prim. florestal,6 - Outra agropecuária,87.87
+2014,11 - Veg. prim. florestal,12 - Veg. sec. florestal,3.65
+2014,11 - Veg. prim. florestal,Pastagem,324.21
+2014,12 - Veg. sec. florestal,2 - Soja,0.35
+2014,12 - Veg. sec. florestal,6 - Outra agropecuária,0.87
+2014,12 - Veg. sec. florestal,Pastagem,3.21
+2014,Pastagem,2 - Soja,61.74
+2014,Pastagem,6 - Outra agropecuária,383.58
+2014,Pastagem,12 - Veg. sec. florestal,1.98
+2015,11 - Veg. prim. florestal,2 - Soja,67.73
+2015,11 - Veg. prim. florestal,6 - Outra agropecuária,415.28
+2015,11 - Veg. prim. florestal,12 - Veg. sec. florestal,2.94
+2015,11 - Veg. prim. florestal,Pastagem,259.51
+2015,12 - Veg. sec. florestal,2 - Soja,0.67
+2015,12 - Veg. sec. florestal,6 - Outra agropecuária,4.12
+2015,12 - Veg. sec. florestal,Pastagem,2.57
+2015,Pastagem,2 - Soja,48.15
+2015,Pastagem,6 - Outra agropecuária,1332.63
+2015,Pastagem,12 - Veg. sec. florestal,0.45
+2016,11 - Veg. prim. florestal,2 - Soja,25.13
+2016,11 - Veg. prim. florestal,6 - Outra agropecuária,78.69
+2016,11 - Veg. prim. florestal,12 - Veg. sec. florestal,5.26
+2016,11 - Veg. prim. florestal,Pastagem,213.96
+2016,12 - Veg. sec. florestal,2 - Soja,0.25
+2016,12 - Veg. sec. florestal,6 - Outra agropecuária,0.78
+2016,12 - Veg. sec. florestal,Pastagem,2.13
+2016,Pastagem,2 - Soja,42.03
+2016,Pastagem,6 - Outra agropecuária,229.5
+2017,11 - Veg. prim. florestal,2 - Soja,65.68
+2017,11 - Veg. prim. florestal,6 - Outra agropecuária,47.77
+2017,11 - Veg. prim. florestal,12 - Veg. sec. florestal,0.45
+2017,11 - Veg. prim. florestal,Pastagem,233.21
+2017,12 - Veg. sec. florestal,2 - Soja,0.65
+2017,12 - Veg. sec. florestal,6 - Outra agropecuária,0.47
+2017,12 - Veg. sec. florestal,Pastagem,2.32
+2017,Pastagem,2 - Soja,77.85
+2017,Pastagem,6 - Outra agropecuária,109.17
+2017,Pastagem,12 - Veg. sec. florestal,0.45
+2018,2 - Soja,12 - Veg. sec. florestal,0.18
+2018,11 - Veg. prim. florestal,2 - Soja,41.8
+2018,11 - Veg. prim. florestal,6 - Outra agropecuária,25.04
+2018,11 - Veg. prim. florestal,12 - Veg. sec. florestal,3.12
+2018,11 - Veg. prim. florestal,Pastagem,335.57
+2018,12 - Veg. sec. florestal,2 - Soja,0.41
+2018,12 - Veg. sec. florestal,6 - Outra agropecuária,0.25
+2018,12 - Veg. sec. florestal,Pastagem,3.28
+2018,Pastagem,2 - Soja,106.02
+2018,Pastagem,6 - Outra agropecuária,89.28
+2018,Pastagem,12 - Veg. sec. florestal,2.25
+2019,2 - Soja,12 - Veg. sec. florestal,0.18
+2019,11 - Veg. prim. florestal,2 - Soja,46.26
+2019,11 - Veg. prim. florestal,6 - Outra agropecuária,30.39
+2019,11 - Veg. prim. florestal,12 - Veg. sec. florestal,16.85
+2019,11 - Veg. prim. florestal,Pastagem,396.74
+2019,12 - Veg. sec. florestal,2 - Soja,0.45
+2019,12 - Veg. sec. florestal,6 - Outra agropecuária,0.3
+2019,12 - Veg. sec. florestal,Pastagem,3.85
+2019,Pastagem,2 - Soja,118.17
+2019,Pastagem,6 - Outra agropecuária,155.25
+2019,Pastagem,12 - Veg. sec. florestal,0.27
+2020,11 - Veg. prim. florestal,2 - Soja,24.34
+2020,11 - Veg. prim. florestal,6 - Outra agropecuária,10.88
+2020,11 - Veg. prim. florestal,12 - Veg. sec. florestal,24.34
+2020,11 - Veg. prim. florestal,Pastagem,270.79
+2020,12 - Veg. sec. florestal,2 - Soja,0.23
+2020,12 - Veg. sec. florestal,6 - Outra agropecuária,0.1
+2020,12 - Veg. sec. florestal,Pastagem,2.54
+2020,Pastagem,2 - Soja,28.26
+2020,Pastagem,6 - Outra agropecuária,32.13
+2020,Pastagem,12 - Veg. sec. florestal,0.54
+2021,2 - Soja,12 - Veg. sec. florestal,0.09
+2021,11 - Veg. prim. florestal,2 - Soja,22.91
+2021,11 - Veg. prim. florestal,6 - Outra agropecuária,17.56
+2021,11 - Veg. prim. florestal,12 - Veg. sec. florestal,16.67
+2021,11 - Veg. prim. florestal,Pastagem,364.37
+2021,12 - Veg. sec. florestal,2 - Soja,0.22
+2021,12 - Veg. sec. florestal,6 - Outra agropecuária,0.17
+2021,12 - Veg. sec. florestal,Pastagem,3.46
+2021,Pastagem,2 - Soja,63.63
+2021,Pastagem,6 - Outra agropecuária,37.26
+2021,Pastagem,12 - Veg. sec. florestal,3.24
+2022,2 - Soja,12 - Veg. sec. florestal,0.09
+2022,11 - Veg. prim. florestal,2 - Soja,28.71
+2022,11 - Veg. prim. florestal,6 - Outra agropecuária,30.85
+2022,11 - Veg. prim. florestal,12 - Veg. sec. florestal,15.25
+2022,11 - Veg. prim. florestal,Pastagem,303.27
+2022,12 - Veg. sec. florestal,2 - Soja,0.27
+2022,12 - Veg. sec. florestal,6 - Outra agropecuária,0.29
+2022,12 - Veg. sec. florestal,Pastagem,2.82
+2022,Pastagem,2 - Soja,67.95
+2022,Pastagem,6 - Outra agropecuária,102.06
+2022,Pastagem,12 - Veg. sec. florestal,3.51
+2023,2 - Soja,12 - Veg. sec. florestal,0.18
+2023,11 - Veg. prim. florestal,2 - Soja,18.54
+2023,11 - Veg. prim. florestal,6 - Outra agropecuária,13.46
+2023,11 - Veg. prim. florestal,12 - Veg. sec. florestal,20.95
+2023,11 - Veg. prim. florestal,Pastagem,245.26
+2023,12 - Veg. sec. florestal,2 - Soja,0.18
+2023,12 - Veg. sec. florestal,6 - Outra agropecuária,0.13
+2023,12 - Veg. sec. florestal,Pastagem,2.33
+2023,Pastagem,2 - Soja,46.8
+2023,Pastagem,6 - Outra agropecuária,42.57
+2023,Pastagem,12 - Veg. sec. florestal,4.59
+2024,2 - Soja,12 - Veg. sec. florestal,0.18
+2024,11 - Veg. prim. florestal,2 - Soja,2.41
+2024,11 - Veg. prim. florestal,6 - Outra agropecuária,3.3
+2024,11 - Veg. prim. florestal,12 - Veg. sec. florestal,26.12
+2024,11 - Veg. prim. florestal,Pastagem,160.04
+2024,12 - Veg. sec. florestal,2 - Soja,0.02
+2024,12 - Veg. sec. florestal,6 - Outra agropecuária,0.03
+2024,12 - Veg. sec. florestal,Pastagem,1.51
+2024,Pastagem,2 - Soja,34.83
+2024,Pastagem,6 - Outra agropecuária,66.96
+2024,Pastagem,12 - Veg. sec. florestal,17.01

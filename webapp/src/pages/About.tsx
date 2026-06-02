@@ -32,6 +32,7 @@ const LIMITS = [
   { ref: "L6", lim: "Mata Atlântica, Caatinga e Pampa sem TerraClass: 100% primária no fallback.", mit: "Validação com módulo MapBiomas Regeneração — pendente." },
   { ref: "L7", lim: "Dados HARVEX aguardando reprocessamento (escala de biomas).", mit: "131/133 RGINTs em draft; 2 validados como golden standard." },
   { ref: "L8", lim: "Join PAM × municípios por nome (não por código IBGE).", mit: "Adotar CD_MUN como chave primária em versão futura." },
+  { ref: "L9", lim: "Pastagem MapBiomas (classes 7–9) ≈ 0,85 × LAPIG, estável no tempo; em Pampa (MB ≈ 9% do LAPIG) e Caatinga (~72%) o campo nativo pastejado permanece como vegetação nativa no MapBiomas, subestimando a pastagem nesses biomas.", mit: "Divergência estrutural por bioma; não afeta o núcleo soja-ILUC (Cerrado/Amazônia, concordância 0,88–0,91). Cross-check LAPIG documentado." },
 ];
 
 /** Roteamento das classes de vegetação nativa por bioma — D4 §7. */

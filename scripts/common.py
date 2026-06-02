@@ -45,6 +45,19 @@ CLASS_ORDER = [
 NATIVE_CLASSES = CLASS_ORDER[10:14]  # classes 11–14
 AGRO_CLASSES = CLASS_ORDER[0:10]      # classes 1–10
 
+# Pasture vigor sub-classes (7/8/9) are a LAPIG-proportional split of a single
+# land use, not distinct uses — their year-to-year reshuffling generates huge
+# spurious "transitions" (7↔9 etc., hundreds of Mha) that swamp the Sankey.
+# Collapse them to one "Pastagem" for the transition/flow outputs (the 15×15
+# matrix heatmap keeps the full vigor detail; it reads the matrix JSON, not these).
+PASTURE_LABEL = "Pastagem"
+_PASTURE_VIGOR = set(CLASS_ORDER[6:9])  # classes 7,8,9
+
+
+def collapse_class(name: str) -> str:
+    """Map the 3 pasture-vigor classes to a single 'Pastagem'; pass others through."""
+    return PASTURE_LABEL if name in _PASTURE_VIGOR else name
+
 
 def ensure_out(*subdirs: str) -> Path:
     """Create and return an output directory under webapp/public/data."""

@@ -1,0 +1,549 @@
+ano_par,origem_id,destino_id,area_ha
+2009,11 - Veg. prim. florestal,2 - Soja,2.03
+2009,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.06
+2009,11 - Veg. prim. florestal,5 - Cana-de-açúcar,22.1
+2009,11 - Veg. prim. florestal,6 - Outra agropecuária,13.95
+2009,11 - Veg. prim. florestal,12 - Veg. sec. florestal,10.65
+2009,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.09
+2009,11 - Veg. prim. florestal,Pastagem,211.53
+2009,12 - Veg. sec. florestal,2 - Soja,0.24
+2009,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.01
+2009,12 - Veg. sec. florestal,5 - Cana-de-açúcar,2.58
+2009,12 - Veg. sec. florestal,6 - Outra agropecuária,1.63
+2009,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.24
+2009,12 - Veg. sec. florestal,Pastagem,24.64
+2009,13 - Veg. prim. não-florestal,2 - Soja,5.87
+2009,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.18
+2009,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,4.34
+2009,13 - Veg. prim. não-florestal,6 - Outra agropecuária,18.54
+2009,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.09
+2009,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.41
+2009,13 - Veg. prim. não-florestal,Pastagem,1260.31
+2009,14 - Veg. sec. não-florestal,2 - Soja,0.68
+2009,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.02
+2009,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.51
+2009,14 - Veg. sec. não-florestal,6 - Outra agropecuária,2.16
+2009,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.24
+2009,14 - Veg. sec. não-florestal,Pastagem,146.82
+2009,Pastagem,2 - Soja,1825.92
+2009,Pastagem,3 - Soja + Milho 2ª safra,55.98
+2009,Pastagem,5 - Cana-de-açúcar,11534.4
+2009,Pastagem,6 - Outra agropecuária,8080.02
+2009,Pastagem,12 - Veg. sec. florestal,45.97
+2009,Pastagem,14 - Veg. sec. não-florestal,9.02
+2010,11 - Veg. prim. florestal,2 - Soja,1.98
+2010,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.05
+2010,11 - Veg. prim. florestal,5 - Cana-de-açúcar,12.62
+2010,11 - Veg. prim. florestal,6 - Outra agropecuária,5.87
+2010,11 - Veg. prim. florestal,12 - Veg. sec. florestal,8.13
+2010,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.58
+2010,11 - Veg. prim. florestal,Pastagem,146.26
+2010,12 - Veg. sec. florestal,2 - Soja,0.23
+2010,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.01
+2010,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.47
+2010,12 - Veg. sec. florestal,6 - Outra agropecuária,0.68
+2010,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.18
+2010,12 - Veg. sec. florestal,Pastagem,17.04
+2010,13 - Veg. prim. não-florestal,2 - Soja,2.67
+2010,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.07
+2010,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.46
+2010,13 - Veg. prim. não-florestal,6 - Outra agropecuária,19.44
+2010,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,1.58
+2010,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.31
+2010,13 - Veg. prim. não-florestal,Pastagem,592.6
+2010,14 - Veg. sec. não-florestal,2 - Soja,0.31
+2010,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.01
+2010,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.29
+2010,14 - Veg. sec. não-florestal,6 - Outra agropecuária,2.26
+2010,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.18
+2010,14 - Veg. sec. não-florestal,Pastagem,69.04
+2010,Pastagem,2 - Soja,1761.85
+2010,Pastagem,3 - Soja + Milho 2ª safra,43.37
+2010,Pastagem,5 - Cana-de-açúcar,3937.68
+2010,Pastagem,6 - Outra agropecuária,9740.16
+2010,Pastagem,12 - Veg. sec. florestal,33.9
+2010,Pastagem,14 - Veg. sec. não-florestal,6.6
+2011,11 - Veg. prim. florestal,2 - Soja,1.91
+2011,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.04
+2011,11 - Veg. prim. florestal,5 - Cana-de-açúcar,20.47
+2011,11 - Veg. prim. florestal,6 - Outra agropecuária,10.0
+2011,11 - Veg. prim. florestal,12 - Veg. sec. florestal,4.98
+2011,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.96
+2011,11 - Veg. prim. florestal,Pastagem,141.4
+2011,12 - Veg. sec. florestal,2 - Soja,0.22
+2011,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.01
+2011,12 - Veg. sec. florestal,5 - Cana-de-açúcar,2.38
+2011,12 - Veg. sec. florestal,6 - Outra agropecuária,1.16
+2011,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.11
+2011,12 - Veg. sec. florestal,Pastagem,16.47
+2011,13 - Veg. prim. não-florestal,2 - Soja,0.76
+2011,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.02
+2011,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,3.95
+2011,13 - Veg. prim. não-florestal,6 - Outra agropecuária,19.58
+2011,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.96
+2011,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.19
+2011,13 - Veg. prim. não-florestal,Pastagem,356.44
+2011,14 - Veg. sec. não-florestal,2 - Soja,0.09
+2011,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.0
+2011,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.46
+2011,14 - Veg. sec. não-florestal,6 - Outra agropecuária,2.28
+2011,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.11
+2011,14 - Veg. sec. não-florestal,Pastagem,41.52
+2011,Pastagem,2 - Soja,665.49
+2011,Pastagem,3 - Soja + Milho 2ª safra,15.54
+2011,Pastagem,5 - Cana-de-açúcar,4869.09
+2011,Pastagem,6 - Outra agropecuária,5996.7
+2011,Pastagem,12 - Veg. sec. florestal,27.53
+2011,Pastagem,14 - Veg. sec. não-florestal,5.32
+2012,2 - Soja,12 - Veg. sec. florestal,0.07
+2012,2 - Soja,14 - Veg. sec. não-florestal,0.01
+2012,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.0
+2012,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.0
+2012,11 - Veg. prim. florestal,2 - Soja,1.55
+2012,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.08
+2012,11 - Veg. prim. florestal,5 - Cana-de-açúcar,53.97
+2012,11 - Veg. prim. florestal,6 - Outra agropecuária,28.95
+2012,11 - Veg. prim. florestal,12 - Veg. sec. florestal,8.68
+2012,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.67
+2012,11 - Veg. prim. florestal,Pastagem,105.24
+2012,12 - Veg. sec. florestal,2 - Soja,0.18
+2012,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.01
+2012,12 - Veg. sec. florestal,5 - Cana-de-açúcar,6.29
+2012,12 - Veg. sec. florestal,6 - Outra agropecuária,3.37
+2012,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.19
+2012,12 - Veg. sec. florestal,Pastagem,12.26
+2012,13 - Veg. prim. não-florestal,2 - Soja,1.29
+2012,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.06
+2012,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,10.36
+2012,13 - Veg. prim. não-florestal,6 - Outra agropecuária,28.45
+2012,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,1.67
+2012,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.32
+2012,13 - Veg. prim. não-florestal,Pastagem,387.77
+2012,14 - Veg. sec. não-florestal,2 - Soja,0.15
+2012,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.01
+2012,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,1.21
+2012,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.31
+2012,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.19
+2012,14 - Veg. sec. não-florestal,Pastagem,45.17
+2012,Pastagem,2 - Soja,352.34
+2012,Pastagem,3 - Soja + Milho 2ª safra,17.56
+2012,Pastagem,5 - Cana-de-açúcar,10436.04
+2012,Pastagem,6 - Outra agropecuária,7899.12
+2012,Pastagem,12 - Veg. sec. florestal,41.83
+2012,Pastagem,14 - Veg. sec. não-florestal,8.03
+2013,11 - Veg. prim. florestal,2 - Soja,7.6
+2013,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.59
+2013,11 - Veg. prim. florestal,5 - Cana-de-açúcar,16.64
+2013,11 - Veg. prim. florestal,6 - Outra agropecuária,16.16
+2013,11 - Veg. prim. florestal,12 - Veg. sec. florestal,24.4
+2013,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,4.68
+2013,11 - Veg. prim. florestal,Pastagem,135.46
+2013,12 - Veg. sec. florestal,2 - Soja,0.88
+2013,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.07
+2013,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.94
+2013,12 - Veg. sec. florestal,6 - Outra agropecuária,1.88
+2013,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.55
+2013,12 - Veg. sec. florestal,Pastagem,15.78
+2013,13 - Veg. prim. não-florestal,2 - Soja,4.97
+2013,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.38
+2013,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,3.19
+2013,13 - Veg. prim. não-florestal,6 - Outra agropecuária,81.45
+2013,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,4.68
+2013,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.9
+2013,13 - Veg. prim. não-florestal,Pastagem,363.43
+2013,14 - Veg. sec. não-florestal,2 - Soja,0.58
+2013,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.04
+2013,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.37
+2013,14 - Veg. sec. não-florestal,6 - Outra agropecuária,9.49
+2013,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.55
+2013,14 - Veg. sec. não-florestal,Pastagem,42.34
+2013,Pastagem,2 - Soja,1641.71
+2013,Pastagem,3 - Soja + Milho 2ª safra,126.88
+2013,Pastagem,5 - Cana-de-açúcar,14883.3
+2013,Pastagem,6 - Outra agropecuária,11651.76
+2013,Pastagem,12 - Veg. sec. florestal,53.38
+2013,Pastagem,14 - Veg. sec. não-florestal,10.25
+2014,2 - Soja,12 - Veg. sec. florestal,0.14
+2014,2 - Soja,14 - Veg. sec. não-florestal,0.03
+2014,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.01
+2014,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.0
+2014,11 - Veg. prim. florestal,2 - Soja,4.91
+2014,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.51
+2014,11 - Veg. prim. florestal,5 - Cana-de-açúcar,26.0
+2014,11 - Veg. prim. florestal,6 - Outra agropecuária,26.06
+2014,11 - Veg. prim. florestal,12 - Veg. sec. florestal,3.47
+2014,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.66
+2014,11 - Veg. prim. florestal,Pastagem,89.7
+2014,12 - Veg. sec. florestal,2 - Soja,0.57
+2014,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.06
+2014,12 - Veg. sec. florestal,5 - Cana-de-açúcar,3.03
+2014,12 - Veg. sec. florestal,6 - Outra agropecuária,3.04
+2014,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.08
+2014,12 - Veg. sec. florestal,Pastagem,10.45
+2014,13 - Veg. prim. não-florestal,2 - Soja,2.69
+2014,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.28
+2014,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,4.96
+2014,13 - Veg. prim. não-florestal,6 - Outra agropecuária,70.5
+2014,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.66
+2014,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.13
+2014,13 - Veg. prim. não-florestal,Pastagem,282.07
+2014,14 - Veg. sec. não-florestal,2 - Soja,0.31
+2014,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.03
+2014,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.58
+2014,14 - Veg. sec. não-florestal,6 - Outra agropecuária,8.21
+2014,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.08
+2014,14 - Veg. sec. não-florestal,Pastagem,32.86
+2014,Pastagem,2 - Soja,1942.17
+2014,Pastagem,3 - Soja + Milho 2ª safra,200.82
+2014,Pastagem,5 - Cana-de-açúcar,11573.28
+2014,Pastagem,6 - Outra agropecuária,7817.04
+2014,Pastagem,12 - Veg. sec. florestal,30.46
+2014,Pastagem,14 - Veg. sec. não-florestal,5.81
+2015,2 - Soja,12 - Veg. sec. florestal,0.25
+2015,2 - Soja,14 - Veg. sec. não-florestal,0.05
+2015,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.05
+2015,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.01
+2015,11 - Veg. prim. florestal,2 - Soja,1.85
+2015,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.38
+2015,11 - Veg. prim. florestal,5 - Cana-de-açúcar,16.73
+2015,11 - Veg. prim. florestal,6 - Outra agropecuária,14.7
+2015,11 - Veg. prim. florestal,12 - Veg. sec. florestal,5.47
+2015,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.04
+2015,11 - Veg. prim. florestal,Pastagem,91.93
+2015,12 - Veg. sec. florestal,2 - Soja,0.22
+2015,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.04
+2015,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.95
+2015,12 - Veg. sec. florestal,6 - Outra agropecuária,1.71
+2015,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.12
+2015,12 - Veg. sec. florestal,Pastagem,10.71
+2015,13 - Veg. prim. não-florestal,2 - Soja,0.95
+2015,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.2
+2015,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,3.18
+2015,13 - Veg. prim. não-florestal,6 - Outra agropecuária,23.91
+2015,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,1.04
+2015,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.2
+2015,13 - Veg. prim. não-florestal,Pastagem,449.36
+2015,14 - Veg. sec. não-florestal,2 - Soja,0.11
+2015,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.02
+2015,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.37
+2015,14 - Veg. sec. não-florestal,6 - Outra agropecuária,2.79
+2015,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.12
+2015,14 - Veg. sec. não-florestal,Pastagem,52.35
+2015,Pastagem,2 - Soja,440.07
+2015,Pastagem,3 - Soja + Milho 2ª safra,91.38
+2015,Pastagem,5 - Cana-de-açúcar,3308.85
+2015,Pastagem,6 - Outra agropecuária,6716.25
+2015,Pastagem,12 - Veg. sec. florestal,24.13
+2015,Pastagem,14 - Veg. sec. não-florestal,4.58
+2016,2 - Soja,12 - Veg. sec. florestal,0.12
+2016,2 - Soja,14 - Veg. sec. não-florestal,0.02
+2016,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.03
+2016,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.01
+2016,11 - Veg. prim. florestal,2 - Soja,1.09
+2016,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.27
+2016,11 - Veg. prim. florestal,5 - Cana-de-açúcar,15.67
+2016,11 - Veg. prim. florestal,6 - Outra agropecuária,28.49
+2016,11 - Veg. prim. florestal,12 - Veg. sec. florestal,2.97
+2016,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.56
+2016,11 - Veg. prim. florestal,Pastagem,79.16
+2016,12 - Veg. sec. florestal,2 - Soja,0.13
+2016,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.03
+2016,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.83
+2016,12 - Veg. sec. florestal,6 - Outra agropecuária,3.32
+2016,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.07
+2016,12 - Veg. sec. florestal,Pastagem,9.22
+2016,13 - Veg. prim. não-florestal,2 - Soja,2.4
+2016,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.6
+2016,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.95
+2016,13 - Veg. prim. não-florestal,6 - Outra agropecuária,61.47
+2016,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.56
+2016,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.11
+2016,13 - Veg. prim. não-florestal,Pastagem,496.55
+2016,14 - Veg. sec. não-florestal,2 - Soja,0.28
+2016,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.07
+2016,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.34
+2016,14 - Veg. sec. não-florestal,6 - Outra agropecuária,7.16
+2016,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.07
+2016,14 - Veg. sec. não-florestal,Pastagem,57.85
+2016,Pastagem,2 - Soja,973.71
+2016,Pastagem,3 - Soja + Milho 2ª safra,243.0
+2016,Pastagem,5 - Cana-de-açúcar,3497.49
+2016,Pastagem,6 - Outra agropecuária,5063.94
+2016,Pastagem,12 - Veg. sec. florestal,17.87
+2016,Pastagem,14 - Veg. sec. não-florestal,3.37
+2017,2 - Soja,12 - Veg. sec. florestal,0.26
+2017,2 - Soja,14 - Veg. sec. não-florestal,0.05
+2017,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.12
+2017,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.02
+2017,11 - Veg. prim. florestal,2 - Soja,1.94
+2017,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.85
+2017,11 - Veg. prim. florestal,5 - Cana-de-açúcar,23.26
+2017,11 - Veg. prim. florestal,6 - Outra agropecuária,17.07
+2017,11 - Veg. prim. florestal,12 - Veg. sec. florestal,29.49
+2017,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,5.46
+2017,11 - Veg. prim. florestal,Pastagem,86.03
+2017,12 - Veg. sec. florestal,2 - Soja,0.23
+2017,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.1
+2017,12 - Veg. sec. florestal,5 - Cana-de-açúcar,2.71
+2017,12 - Veg. sec. florestal,6 - Outra agropecuária,1.99
+2017,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.64
+2017,12 - Veg. sec. florestal,Pastagem,10.02
+2017,13 - Veg. prim. não-florestal,2 - Soja,6.47
+2017,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,2.84
+2017,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,4.31
+2017,13 - Veg. prim. não-florestal,6 - Outra agropecuária,34.2
+2017,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,5.46
+2017,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,1.01
+2017,13 - Veg. prim. não-florestal,Pastagem,540.54
+2017,14 - Veg. sec. não-florestal,2 - Soja,0.75
+2017,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.33
+2017,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.5
+2017,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.98
+2017,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.64
+2017,14 - Veg. sec. não-florestal,Pastagem,62.97
+2017,Pastagem,2 - Soja,1163.7
+2017,Pastagem,3 - Soja + Milho 2ª safra,510.12
+2017,Pastagem,5 - Cana-de-açúcar,3634.92
+2017,Pastagem,6 - Outra agropecuária,4086.45
+2017,Pastagem,12 - Veg. sec. florestal,27.72
+2017,Pastagem,14 - Veg. sec. não-florestal,5.13
+2018,2 - Soja,12 - Veg. sec. florestal,0.11
+2018,2 - Soja,14 - Veg. sec. não-florestal,0.02
+2018,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.04
+2018,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.01
+2018,11 - Veg. prim. florestal,2 - Soja,0.68
+2018,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.27
+2018,11 - Veg. prim. florestal,5 - Cana-de-açúcar,17.01
+2018,11 - Veg. prim. florestal,6 - Outra agropecuária,26.47
+2018,11 - Veg. prim. florestal,12 - Veg. sec. florestal,16.08
+2018,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.97
+2018,11 - Veg. prim. florestal,Pastagem,85.94
+2018,12 - Veg. sec. florestal,2 - Soja,0.08
+2018,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.03
+2018,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.98
+2018,12 - Veg. sec. florestal,6 - Outra agropecuária,3.08
+2018,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.35
+2018,12 - Veg. sec. florestal,Pastagem,10.01
+2018,13 - Veg. prim. não-florestal,2 - Soja,0.59
+2018,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.23
+2018,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,3.14
+2018,13 - Veg. prim. não-florestal,6 - Outra agropecuária,42.77
+2018,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.97
+2018,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.55
+2018,13 - Veg. prim. não-florestal,Pastagem,501.86
+2018,14 - Veg. sec. não-florestal,2 - Soja,0.07
+2018,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.03
+2018,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.37
+2018,14 - Veg. sec. não-florestal,6 - Outra agropecuária,4.98
+2018,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.35
+2018,14 - Veg. sec. não-florestal,Pastagem,58.47
+2018,Pastagem,2 - Soja,425.42
+2018,Pastagem,3 - Soja + Milho 2ª safra,167.41
+2018,Pastagem,5 - Cana-de-açúcar,4526.64
+2018,Pastagem,6 - Outra agropecuária,3839.85
+2018,Pastagem,12 - Veg. sec. florestal,11.7
+2018,Pastagem,14 - Veg. sec. não-florestal,2.16
+2019,2 - Soja,12 - Veg. sec. florestal,0.05
+2019,2 - Soja,14 - Veg. sec. não-florestal,0.01
+2019,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.02
+2019,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.0
+2019,11 - Veg. prim. florestal,2 - Soja,2.8
+2019,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,1.15
+2019,11 - Veg. prim. florestal,5 - Cana-de-açúcar,12.53
+2019,11 - Veg. prim. florestal,6 - Outra agropecuária,13.48
+2019,11 - Veg. prim. florestal,12 - Veg. sec. florestal,14.38
+2019,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.64
+2019,11 - Veg. prim. florestal,Pastagem,86.21
+2019,12 - Veg. sec. florestal,2 - Soja,0.33
+2019,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.13
+2019,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.46
+2019,12 - Veg. sec. florestal,6 - Outra agropecuária,1.57
+2019,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.31
+2019,12 - Veg. sec. florestal,Pastagem,10.04
+2019,13 - Veg. prim. não-florestal,2 - Soja,1.94
+2019,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.8
+2019,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.3
+2019,13 - Veg. prim. não-florestal,6 - Outra agropecuária,32.54
+2019,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.64
+2019,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.49
+2019,13 - Veg. prim. não-florestal,Pastagem,566.4
+2019,14 - Veg. sec. não-florestal,2 - Soja,0.23
+2019,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.09
+2019,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.27
+2019,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.79
+2019,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.31
+2019,14 - Veg. sec. não-florestal,Pastagem,65.98
+2019,Pastagem,2 - Soja,1124.87
+2019,Pastagem,3 - Soja + Milho 2ª safra,462.37
+2019,Pastagem,5 - Cana-de-açúcar,3533.76
+2019,Pastagem,6 - Outra agropecuária,3337.56
+2019,Pastagem,12 - Veg. sec. florestal,24.1
+2019,Pastagem,14 - Veg. sec. não-florestal,4.43
+2020,11 - Veg. prim. florestal,2 - Soja,0.31
+2020,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.17
+2020,11 - Veg. prim. florestal,5 - Cana-de-açúcar,24.61
+2020,11 - Veg. prim. florestal,6 - Outra agropecuária,41.39
+2020,11 - Veg. prim. florestal,12 - Veg. sec. florestal,3.92
+2020,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.71
+2020,11 - Veg. prim. florestal,Pastagem,83.52
+2020,12 - Veg. sec. florestal,2 - Soja,0.04
+2020,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.02
+2020,12 - Veg. sec. florestal,5 - Cana-de-açúcar,2.87
+2020,12 - Veg. sec. florestal,6 - Outra agropecuária,4.82
+2020,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.08
+2020,12 - Veg. sec. florestal,Pastagem,9.73
+2020,13 - Veg. prim. não-florestal,2 - Soja,0.52
+2020,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.29
+2020,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,4.49
+2020,13 - Veg. prim. não-florestal,6 - Outra agropecuária,18.75
+2020,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.71
+2020,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.13
+2020,13 - Veg. prim. não-florestal,Pastagem,537.25
+2020,14 - Veg. sec. não-florestal,2 - Soja,0.06
+2020,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.03
+2020,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.52
+2020,14 - Veg. sec. não-florestal,6 - Outra agropecuária,2.18
+2020,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.08
+2020,14 - Veg. sec. não-florestal,Pastagem,62.59
+2020,Pastagem,2 - Soja,87.13
+2020,Pastagem,3 - Soja + Milho 2ª safra,48.86
+2020,Pastagem,5 - Cana-de-açúcar,6759.18
+2020,Pastagem,6 - Outra agropecuária,2819.07
+2020,Pastagem,12 - Veg. sec. florestal,22.15
+2020,Pastagem,14 - Veg. sec. não-florestal,4.04
+2021,11 - Veg. prim. florestal,2 - Soja,2.88
+2021,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,1.8
+2021,11 - Veg. prim. florestal,5 - Cana-de-açúcar,23.24
+2021,11 - Veg. prim. florestal,6 - Outra agropecuária,77.88
+2021,11 - Veg. prim. florestal,12 - Veg. sec. florestal,5.1
+2021,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.92
+2021,11 - Veg. prim. florestal,Pastagem,140.88
+2021,12 - Veg. sec. florestal,2 - Soja,0.22
+2021,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.14
+2021,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.75
+2021,12 - Veg. sec. florestal,6 - Outra agropecuária,5.87
+2021,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.07
+2021,12 - Veg. sec. florestal,Pastagem,10.61
+2021,13 - Veg. prim. não-florestal,2 - Soja,2.37
+2021,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,1.49
+2021,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,4.21
+2021,13 - Veg. prim. não-florestal,6 - Outra agropecuária,43.14
+2021,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.92
+2021,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.17
+2021,13 - Veg. prim. não-florestal,Pastagem,532.29
+2021,14 - Veg. sec. não-florestal,2 - Soja,0.18
+2021,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.11
+2021,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.32
+2021,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.25
+2021,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.07
+2021,14 - Veg. sec. não-florestal,Pastagem,40.09
+2021,Pastagem,2 - Soja,813.13
+2021,Pastagem,3 - Soja + Milho 2ª safra,509.33
+2021,Pastagem,5 - Cana-de-açúcar,3914.91
+2021,Pastagem,6 - Outra agropecuária,809.37
+2021,Pastagem,12 - Veg. sec. florestal,18.9
+2021,Pastagem,14 - Veg. sec. não-florestal,3.42
+2022,2 - Soja,12 - Veg. sec. florestal,0.1
+2022,2 - Soja,14 - Veg. sec. não-florestal,0.02
+2022,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.06
+2022,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.01
+2022,11 - Veg. prim. florestal,2 - Soja,1.45
+2022,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,0.87
+2022,11 - Veg. prim. florestal,5 - Cana-de-açúcar,62.61
+2022,11 - Veg. prim. florestal,6 - Outra agropecuária,72.71
+2022,11 - Veg. prim. florestal,12 - Veg. sec. florestal,3.82
+2022,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.69
+2022,11 - Veg. prim. florestal,Pastagem,130.06
+2022,12 - Veg. sec. florestal,2 - Soja,0.17
+2022,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.1
+2022,12 - Veg. sec. florestal,5 - Cana-de-açúcar,7.29
+2022,12 - Veg. sec. florestal,6 - Outra agropecuária,8.47
+2022,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.08
+2022,12 - Veg. sec. florestal,Pastagem,15.15
+2022,13 - Veg. prim. não-florestal,2 - Soja,2.13
+2022,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,1.28
+2022,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,11.31
+2022,13 - Veg. prim. não-florestal,6 - Outra agropecuária,32.97
+2022,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.69
+2022,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.12
+2022,13 - Veg. prim. não-florestal,Pastagem,626.22
+2022,14 - Veg. sec. não-florestal,2 - Soja,0.25
+2022,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.15
+2022,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,1.32
+2022,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.84
+2022,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.08
+2022,14 - Veg. sec. não-florestal,Pastagem,72.95
+2022,Pastagem,2 - Soja,60.22
+2022,Pastagem,3 - Soja + Milho 2ª safra,36.17
+2022,Pastagem,5 - Cana-de-açúcar,4147.38
+2022,Pastagem,6 - Outra agropecuária,874.35
+2022,Pastagem,12 - Veg. sec. florestal,27.9
+2022,Pastagem,14 - Veg. sec. não-florestal,5.04
+2023,2 - Soja,12 - Veg. sec. florestal,0.37
+2023,2 - Soja,14 - Veg. sec. não-florestal,0.07
+2023,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,0.24
+2023,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.04
+2023,11 - Veg. prim. florestal,2 - Soja,2.37
+2023,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,1.56
+2023,11 - Veg. prim. florestal,5 - Cana-de-açúcar,6.17
+2023,11 - Veg. prim. florestal,6 - Outra agropecuária,56.43
+2023,11 - Veg. prim. florestal,12 - Veg. sec. florestal,20.51
+2023,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,3.7
+2023,11 - Veg. prim. florestal,Pastagem,113.53
+2023,12 - Veg. sec. florestal,2 - Soja,0.29
+2023,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.19
+2023,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.77
+2023,12 - Veg. sec. florestal,6 - Outra agropecuária,7.02
+2023,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.46
+2023,12 - Veg. sec. florestal,Pastagem,14.12
+2023,13 - Veg. prim. não-florestal,2 - Soja,1.49
+2023,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,0.98
+2023,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.11
+2023,13 - Veg. prim. não-florestal,6 - Outra agropecuária,22.5
+2023,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,3.7
+2023,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.67
+2023,13 - Veg. prim. não-florestal,Pastagem,700.07
+2023,14 - Veg. sec. não-florestal,2 - Soja,0.18
+2023,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.12
+2023,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.14
+2023,14 - Veg. sec. não-florestal,6 - Outra agropecuária,2.8
+2023,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.46
+2023,14 - Veg. sec. não-florestal,Pastagem,87.04
+2023,Pastagem,2 - Soja,61.47
+2023,Pastagem,3 - Soja + Milho 2ª safra,40.59
+2023,Pastagem,5 - Cana-de-açúcar,547.2
+2023,Pastagem,6 - Outra agropecuária,709.29
+2023,Pastagem,12 - Veg. sec. florestal,68.1
+2023,Pastagem,14 - Veg. sec. não-florestal,12.27
+2024,11 - Veg. prim. florestal,2 - Soja,1.99
+2024,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,1.29
+2024,11 - Veg. prim. florestal,5 - Cana-de-açúcar,9.58
+2024,11 - Veg. prim. florestal,6 - Outra agropecuária,2.05
+2024,11 - Veg. prim. florestal,12 - Veg. sec. florestal,2.55
+2024,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.46
+2024,11 - Veg. prim. florestal,Pastagem,147.02
+2024,12 - Veg. sec. florestal,2 - Soja,0.23
+2024,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,0.15
+2024,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.12
+2024,12 - Veg. sec. florestal,6 - Outra agropecuária,0.24
+2024,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.05
+2024,12 - Veg. sec. florestal,Pastagem,17.13
+2024,13 - Veg. prim. não-florestal,2 - Soja,2.9
+2024,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,1.88
+2024,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.71
+2024,13 - Veg. prim. não-florestal,6 - Outra agropecuária,6.49
+2024,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.46
+2024,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.08
+2024,13 - Veg. prim. não-florestal,Pastagem,837.94
+2024,14 - Veg. sec. não-florestal,2 - Soja,0.34
+2024,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,0.22
+2024,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.2
+2024,14 - Veg. sec. não-florestal,6 - Outra agropecuária,0.76
+2024,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.05
+2024,14 - Veg. sec. não-florestal,Pastagem,97.62
+2024,Pastagem,2 - Soja,101.73
+2024,Pastagem,3 - Soja + Milho 2ª safra,66.03
+2024,Pastagem,5 - Cana-de-açúcar,1431.18
+2024,Pastagem,6 - Outra agropecuária,133.38
+2024,Pastagem,12 - Veg. sec. florestal,16.19
+2024,Pastagem,14 - Veg. sec. não-florestal,2.89

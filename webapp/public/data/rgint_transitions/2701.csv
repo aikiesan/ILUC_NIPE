@@ -1,0 +1,149 @@
+ano_par,origem_id,destino_id,area_ha
+2009,11 - Veg. prim. florestal,5 - Cana-de-açúcar,12.91
+2009,11 - Veg. prim. florestal,12 - Veg. sec. florestal,0.26
+2009,11 - Veg. prim. florestal,Pastagem,138.89
+2009,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.5
+2009,12 - Veg. sec. florestal,Pastagem,5.38
+2009,13 - Veg. prim. não-florestal,Pastagem,965.79
+2009,Pastagem,5 - Cana-de-açúcar,763.47
+2009,Pastagem,6 - Outra agropecuária,4.68
+2009,Pastagem,12 - Veg. sec. florestal,4.77
+2010,11 - Veg. prim. florestal,5 - Cana-de-açúcar,23.14
+2010,11 - Veg. prim. florestal,12 - Veg. sec. florestal,0.17
+2010,11 - Veg. prim. florestal,Pastagem,177.81
+2010,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.89
+2010,12 - Veg. sec. florestal,Pastagem,6.87
+2010,13 - Veg. prim. não-florestal,Pastagem,1001.61
+2010,Pastagem,5 - Cana-de-açúcar,760.68
+2010,Pastagem,6 - Outra agropecuária,6.3
+2010,Pastagem,12 - Veg. sec. florestal,12.42
+2011,11 - Veg. prim. florestal,5 - Cana-de-açúcar,13.27
+2011,11 - Veg. prim. florestal,6 - Outra agropecuária,4.51
+2011,11 - Veg. prim. florestal,12 - Veg. sec. florestal,3.38
+2011,11 - Veg. prim. florestal,Pastagem,193.43
+2011,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.5
+2011,12 - Veg. sec. florestal,6 - Outra agropecuária,0.17
+2011,12 - Veg. sec. florestal,Pastagem,7.36
+2011,13 - Veg. prim. não-florestal,6 - Outra agropecuária,0.45
+2011,13 - Veg. prim. não-florestal,Pastagem,1751.58
+2011,Pastagem,5 - Cana-de-açúcar,730.62
+2011,Pastagem,6 - Outra agropecuária,16.29
+2011,Pastagem,12 - Veg. sec. florestal,6.93
+2012,11 - Veg. prim. florestal,5 - Cana-de-açúcar,16.89
+2012,11 - Veg. prim. florestal,12 - Veg. sec. florestal,0.52
+2012,11 - Veg. prim. florestal,Pastagem,302.27
+2012,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.66
+2012,12 - Veg. sec. florestal,Pastagem,11.83
+2012,13 - Veg. prim. não-florestal,6 - Outra agropecuária,0.18
+2012,13 - Veg. prim. não-florestal,Pastagem,2078.37
+2012,Pastagem,5 - Cana-de-açúcar,338.94
+2012,Pastagem,6 - Outra agropecuária,7.92
+2012,Pastagem,12 - Veg. sec. florestal,6.21
+2013,11 - Veg. prim. florestal,5 - Cana-de-açúcar,15.22
+2013,11 - Veg. prim. florestal,12 - Veg. sec. florestal,0.87
+2013,11 - Veg. prim. florestal,Pastagem,223.95
+2013,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.62
+2013,12 - Veg. sec. florestal,Pastagem,9.06
+2013,13 - Veg. prim. não-florestal,6 - Outra agropecuária,1.71
+2013,13 - Veg. prim. não-florestal,Pastagem,1200.6
+2013,Pastagem,5 - Cana-de-açúcar,772.47
+2013,Pastagem,6 - Outra agropecuária,13.86
+2013,Pastagem,12 - Veg. sec. florestal,12.51
+2014,11 - Veg. prim. florestal,5 - Cana-de-açúcar,5.7
+2014,11 - Veg. prim. florestal,Pastagem,219.03
+2014,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.24
+2014,12 - Veg. sec. florestal,Pastagem,9.21
+2014,13 - Veg. prim. não-florestal,Pastagem,1019.97
+2014,Pastagem,5 - Cana-de-açúcar,1028.25
+2014,Pastagem,6 - Outra agropecuária,2.7
+2014,Pastagem,12 - Veg. sec. florestal,8.46
+2015,11 - Veg. prim. florestal,5 - Cana-de-açúcar,8.89
+2015,11 - Veg. prim. florestal,12 - Veg. sec. florestal,1.3
+2015,11 - Veg. prim. florestal,Pastagem,217.56
+2015,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.38
+2015,12 - Veg. sec. florestal,Pastagem,9.24
+2015,13 - Veg. prim. não-florestal,Pastagem,1412.46
+2015,Pastagem,5 - Cana-de-açúcar,879.12
+2015,Pastagem,6 - Outra agropecuária,54.63
+2015,Pastagem,12 - Veg. sec. florestal,16.29
+2016,11 - Veg. prim. florestal,5 - Cana-de-açúcar,9.76
+2016,11 - Veg. prim. florestal,Pastagem,210.44
+2016,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.41
+2016,12 - Veg. sec. florestal,Pastagem,8.89
+2016,13 - Veg. prim. não-florestal,Pastagem,1224.45
+2016,Pastagem,5 - Cana-de-açúcar,716.67
+2016,Pastagem,6 - Outra agropecuária,35.01
+2016,Pastagem,12 - Veg. sec. florestal,5.04
+2017,11 - Veg. prim. florestal,5 - Cana-de-açúcar,18.06
+2017,11 - Veg. prim. florestal,Pastagem,210.61
+2017,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.75
+2017,12 - Veg. sec. florestal,Pastagem,8.72
+2017,13 - Veg. prim. não-florestal,Pastagem,986.58
+2017,Pastagem,5 - Cana-de-açúcar,988.56
+2017,Pastagem,6 - Outra agropecuária,43.74
+2017,Pastagem,12 - Veg. sec. florestal,6.39
+2018,11 - Veg. prim. florestal,5 - Cana-de-açúcar,10.82
+2018,11 - Veg. prim. florestal,12 - Veg. sec. florestal,0.09
+2018,11 - Veg. prim. florestal,Pastagem,142.78
+2018,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.43
+2018,12 - Veg. sec. florestal,Pastagem,5.72
+2018,13 - Veg. prim. não-florestal,6 - Outra agropecuária,0.81
+2018,13 - Veg. prim. não-florestal,Pastagem,810.27
+2018,Pastagem,5 - Cana-de-açúcar,994.05
+2018,Pastagem,6 - Outra agropecuária,26.73
+2018,Pastagem,12 - Veg. sec. florestal,7.83
+2019,11 - Veg. prim. florestal,5 - Cana-de-açúcar,7.02
+2019,11 - Veg. prim. florestal,Pastagem,104.52
+2019,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.27
+2019,12 - Veg. sec. florestal,Pastagem,4.02
+2019,13 - Veg. prim. não-florestal,Pastagem,820.98
+2019,Pastagem,5 - Cana-de-açúcar,856.44
+2019,Pastagem,6 - Outra agropecuária,75.15
+2019,Pastagem,12 - Veg. sec. florestal,3.69
+2020,11 - Veg. prim. florestal,5 - Cana-de-açúcar,5.55
+2020,11 - Veg. prim. florestal,12 - Veg. sec. florestal,2.77
+2020,11 - Veg. prim. florestal,Pastagem,125.78
+2020,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.21
+2020,12 - Veg. sec. florestal,Pastagem,4.81
+2020,13 - Veg. prim. não-florestal,Pastagem,773.01
+2020,Pastagem,5 - Cana-de-açúcar,1106.73
+2020,Pastagem,6 - Outra agropecuária,3.69
+2020,Pastagem,12 - Veg. sec. florestal,4.05
+2021,11 - Veg. prim. florestal,5 - Cana-de-açúcar,9.19
+2021,11 - Veg. prim. florestal,6 - Outra agropecuária,21.49
+2021,11 - Veg. prim. florestal,12 - Veg. sec. florestal,0.95
+2021,11 - Veg. prim. florestal,Pastagem,194.57
+2021,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.35
+2021,12 - Veg. sec. florestal,6 - Outra agropecuária,0.83
+2021,12 - Veg. sec. florestal,Pastagem,7.48
+2021,13 - Veg. prim. não-florestal,Pastagem,1010.25
+2021,Pastagem,5 - Cana-de-açúcar,963.81
+2021,Pastagem,6 - Outra agropecuária,12.6
+2021,Pastagem,12 - Veg. sec. florestal,3.24
+2022,11 - Veg. prim. florestal,5 - Cana-de-açúcar,11.95
+2022,11 - Veg. prim. florestal,12 - Veg. sec. florestal,1.65
+2022,11 - Veg. prim. florestal,Pastagem,199.15
+2022,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.47
+2022,12 - Veg. sec. florestal,Pastagem,7.85
+2022,13 - Veg. prim. não-florestal,Pastagem,967.23
+2022,Pastagem,5 - Cana-de-açúcar,981.45
+2022,Pastagem,6 - Outra agropecuária,23.31
+2022,Pastagem,12 - Veg. sec. florestal,44.19
+2023,11 - Veg. prim. florestal,5 - Cana-de-açúcar,2.34
+2023,11 - Veg. prim. florestal,12 - Veg. sec. florestal,1.64
+2023,11 - Veg. prim. florestal,Pastagem,161.03
+2023,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.09
+2023,12 - Veg. sec. florestal,Pastagem,6.37
+2023,13 - Veg. prim. não-florestal,Pastagem,718.2
+2023,Pastagem,5 - Cana-de-açúcar,485.73
+2023,Pastagem,6 - Outra agropecuária,7.56
+2023,Pastagem,12 - Veg. sec. florestal,48.33
+2024,11 - Veg. prim. florestal,5 - Cana-de-açúcar,33.29
+2024,11 - Veg. prim. florestal,12 - Veg. sec. florestal,2.77
+2024,11 - Veg. prim. florestal,Pastagem,276.31
+2024,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.36
+2024,12 - Veg. sec. florestal,Pastagem,11.33
+2024,13 - Veg. prim. não-florestal,Pastagem,213.12
+2024,Pastagem,5 - Cana-de-açúcar,1861.11
+2024,Pastagem,6 - Outra agropecuária,0.18
+2024,Pastagem,12 - Veg. sec. florestal,250.92

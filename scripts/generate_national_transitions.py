@@ -17,7 +17,7 @@ from __future__ import annotations
 import csv
 from collections import defaultdict
 
-from common import ensure_out
+from common import collapse_class, ensure_out
 from db import connect
 
 # Annual end-year -> GTAP period. 2008 is the base-year stock (no transitions).
@@ -36,8 +36,7 @@ def main() -> None:
     with connect() as conn:
         cur = conn.cursor()
         cur.execute(
-            "SELECT ano_par, origem_id, destino_id, area_ha FROM transitions "
-            "WHERE origem_id <> destino_id"
+            "SELECT ano_par, origem_id, destino_id, area_ha FROM transitions"
         )
         for ano_par, origem, destino, area in cur.fetchall():
             if area is None:
@@ -45,7 +44,12 @@ def main() -> None:
             period = YEAR_TO_PERIOD.get(str(ano_par))
             if period is None:
                 continue
-            agg[period][(origem, destino)] += float(area)
+            # Collapse pasture vigor (7/8/9 -> "Pastagem") and drop the resulting
+            # self-transitions so intra-pasture churn doesn't dominate the flows.
+            o, d = collapse_class(origem), collapse_class(destino)
+            if o == d:
+                continue
+            agg[period][(o, d)] += float(area)
 
     # derive cumulative period
     for key, area in agg.get("2008_2017", {}).items():
