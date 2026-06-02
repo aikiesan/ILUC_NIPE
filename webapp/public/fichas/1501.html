@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RGINT 1501 — Belém | ABIOVE LULC 2026</title>
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f0; color: #1a1a1a; }
+    header {
+      background: #1a1a2e; color: #fff; padding: 1rem 1.5rem;
+      display: flex; align-items: baseline; gap: 1rem;
+    }
+    header h1 { font-size: 1.2rem; font-weight: 700; }
+    header span { font-size: 0.85rem; opacity: 0.65; }
+    .meta-bar {
+      background: #eeeee8; border-bottom: 1px solid #ccc;
+      padding: 0.6rem 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap;
+      font-size: 0.85rem;
+    }
+    .meta-bar strong { margin-right: 0.25rem; }
+    .biome-tag {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 0.78rem; font-weight: 600; color: #fff;
+    }
+    .class-section {
+      margin: 1.5rem 1.5rem 0;
+      background: #fff; border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .class-header {
+      padding: 0.75rem 1rem; border-bottom: 1px solid #eee;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .class-header h2 { font-size: 0.95rem; font-weight: 600; }
+    .source-badge {
+      display: inline-block; padding: 2px 7px; border-radius: 4px;
+      font-size: 0.72rem; font-weight: 600;
+    }
+    .badge-primary  { background: #c8e6c9; color: #1b5e20; }
+    .badge-fallback { background: #fff9c4; color: #5d4037; }
+    .notes-list {
+      padding: 0.4rem 1rem 0; font-size: 0.75rem; color: #666;
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .notes-list li { list-style: none; }
+    .chart-wrap { padding: 0 0.5rem 0.5rem; }
+    .source-table {
+      margin: 0.4rem 1rem 0.75rem; border-collapse: collapse;
+      font-size: 0.75rem; width: calc(100% - 2rem);
+    }
+    .source-table th { text-align: left; padding: 4px 8px; background: #f0f0ea; }
+    .source-table td { padding: 3px 8px; border-bottom: 1px solid #eee; }
+    .outlier-years { color: #c62828; font-weight: 600; }
+    footer {
+      margin: 2rem 1.5rem; font-size: 0.75rem; color: #999; text-align: center;
+    }
+    @media print {
+      .class-section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>RGINT 1501 — Belém</h1>
+  <span>PA &middot;
+    <span class="biome-tag" style="background:#2d6a4f">Amazônia</span>
+  </span>
+  <span style="margin-left:auto; font-size:0.78rem; opacity:0.5">ABIOVE LULC 2026 | NIPE/UNICAMP</span>
+</header>
+
+<div class="meta-bar">
+  <div><strong>Área total:</strong> 735,421 ha</div>
+  <div><strong>Bioma:</strong> Amazônia</div>
+  <div><strong>UF:</strong> PA</div>
+  <div><strong>Fontes:</strong> pipeline_diagonal, conab_cafe, conab_pam, conab_pam, conab_pam, conab_pam, lapig_vigor, mb_pastagem_total, tc_pastagem, lapig_vigor, mb_pastagem_total, tc_pastagem, lapig_vigor, mb_pastagem_total, tc_pastagem, mb_floresta_total, tc_floresta_prim, mb_floresta_total, tc_floresta_sec, mb_savana_total, tc_nao_florestal, mb_savana_total, tc_nao_florestal</div>
+</div>
+
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#f4a261;flex-shrink:0"></div>
+    <h2>1 - Culturas perenes</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">conab_cafe (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB Col.10 classes 46,47,48 — mapeamento satélite 30m (café, citrus, perenes)</li>
+    
+      <li><strong>conab_cafe:</strong> CONAB SerieHistoricaCafe — área plantada café por UF, alocada ao RGINT via proporção PAM milho</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-1" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>conab_cafe</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#f4a261";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [2368.8145, 2350.3332, 1973.693, 1217.2934, 908.8092, 1910.5734, 2422.9349, 3214.3775, 4762.1999, 5241.2133, 6088.7243, 6016.4539, 6293.4214, 6260.9107, 5962.4894, 5950.343, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["conab_cafe"] || "solid";
+      var op   = sourceOpacity["conab_cafe"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "conab_cafe (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>conab_cafe<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-1", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#e9c46a;flex-shrink:0"></div>
+    <h2>2 - Soja</h2>
+    
+      <span class="source-badge badge-fallback">pipeline_diagonal (fallback)</span>
+    
+      <span class="source-badge badge-primary">conab_pam (primary)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB Col.10 classe 39 × proporção CONAB (output pipeline)</li>
+    
+      <li><strong>conab_pam:</strong> PAM área plantada oficial alocada por RGINT</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-2" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>conab_pam</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#e9c46a";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [1.98, 6.39, 12.42, 3.78, 4.77, 9.09, 45.0, 60.03, 609.12, 652.8746, 1154.215, 1361.5171, 2028.7481, 7906.852, 7960.455, 7362.4059, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [0, 0, 120, 200, 700, 900, 3000, 4370, 6000, 5000, 11000, 11000, 17500, 17500, 17500, 17500, 22500];
+      var dash = sourceDash["conab_pam"] || "solid";
+      var op   = sourceOpacity["conab_pam"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "conab_pam (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>conab_pam<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-2", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#f3722c;flex-shrink:0"></div>
+    <h2>3 - Soja + Milho 2ª safra</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">conab_pam (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB × pct_2a CONAB — produto do pipeline</li>
+    
+      <li><strong>conab_pam:</strong> PAM milho RGINT × pct_2a por UF (LevantamentoGraos CONAB; total PAM onde split indisponível)</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-3" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>conab_pam</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#f3722c";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 299.5954, 474.335, 868.8629, 1249.4119, 8744.048, 10362.195, 11368.4841, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [6985, 6650, 6570, 8065, 9035, 8235, 7935, 10590, 10275, 8860, 13975, 18016, 24676, 24666, 22666, 22666, 23526];
+      var dash = sourceDash["conab_pam"] || "solid";
+      var op   = sourceOpacity["conab_pam"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "conab_pam (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>conab_pam<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-3", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#90be6d;flex-shrink:0"></div>
+    <h2>4 - Milho 1ª safra</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">conab_pam (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> PAM milho × (1−pct_2a) — produto do pipeline</li>
+    
+      <li><strong>conab_pam:</strong> PAM milho RGINT × (1−pct_2a) por UF (LevantamentoGraos CONAB; total PAM onde split indisponível)</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-4" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>conab_pam</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#90be6d";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [6985.0, 6650.0, 6570.0, 8065.0, 9035.0, 8235.0, 7935.0, 10590.0, 10275.0, 6073.1242, 9904.6117, 10997.7189, 15271.1849, 11712.905, 9847.4659, 8909.1491, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [6985, 6650, 6570, 8065, 9035, 8235, 7935, 10590, 10275, 8860, 13975, 18016, 24676, 24666, 22666, 22666, 23526];
+      var dash = sourceDash["conab_pam"] || "solid";
+      var op   = sourceOpacity["conab_pam"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "conab_pam (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>conab_pam<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-4", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#43aa8b;flex-shrink:0"></div>
+    <h2>5 - Cana-de-açúcar</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">conab_pam (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB Col.10 classe 20 — mapeamento satélite</li>
+    
+      <li><strong>conab_pam:</strong> PAM cana área plantada por RGINT</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-5" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>conab_pam</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#43aa8b";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [72.6998, 76.9614, 80.3361, 80.8688, 81.8461, 86.7298, 89.393, 88.9496, 89.5706, 100.5807, 114.6113, 126.689, 126.1562, 115.5897, 76.3407, 62.6638, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [145, 147, 142, 143, 143, 147, 137, 130, 115, 265, 115, 115, 115, 115, 115, 115, 125];
+      var dash = sourceDash["conab_pam"] || "solid";
+      var op   = sourceOpacity["conab_pam"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "conab_pam (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>conab_pam<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-5", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#577590;flex-shrink:0"></div>
+    <h2>6 - Outra agropecuária</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB Col.10 classes 40,41,62,21</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-6" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#577590";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [5425.7595, 4847.3137, 4518.1287, 3617.1615, 4150.0035, 4425.7864, 6888.6479, 11870.3789, 15951.2097, 19853.7524, 23417.6466, 27513.6384, 26148.5772, 15785.641, 14666.4969, 15069.355, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-6", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#c77dff;flex-shrink:0"></div>
+    <h2>7 - Pastagem deg. média</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">lapig_vigor (fallback)</span>
+    
+      <span class="source-badge badge-fallback">mb_pastagem_total (fallback)</span>
+    
+      <span class="source-badge badge-fallback">tc_pastagem (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB classe 15 × pct LAPIG Intermediário — produto pipeline</li>
+    
+      <li><strong>lapig_vigor:</strong> LAPIG vigor Intermediário agregado municipio→RGINT (área bruta)</li>
+    
+      <li><strong>mb_pastagem_total:</strong> LAPIG vigor Intermediário agregado municipio→RGINT (área bruta)</li>
+    
+      <li><strong>tc_pastagem:</strong> LAPIG vigor Intermediário agregado municipio→RGINT (área bruta)</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-7" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>lapig_vigor</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>mb_pastagem_total</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>tc_pastagem</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#c77dff";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [95620.9006, 85364.1928, 76475.6446, 69211.3068, 65346.142, 69252.2576, 75390.9737, 81731.1149, 86112.4561, 81090.9017, 71126.3214, 64292.3056, 59163.6908, 64969.0688, 72450.9694, 65456.7652, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [232138.7958, 227850.8607, 221214.6348, 210440.5272, 206462.7797, 204698.343, 207425.4122, 215086.8146, 214647.7848, 214409.6941, 204386.6065, 194163.3252, 191266.297, 193109.2945, 201518.9282, 195161.8502, null];
+      var dash = sourceDash["lapig_vigor"] || "solid";
+      var op   = sourceOpacity["lapig_vigor"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "lapig_vigor (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>lapig_vigor<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["mb_pastagem_total"] || "solid";
+      var op   = sourceOpacity["mb_pastagem_total"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "mb_pastagem_total (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>mb_pastagem_total<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["tc_pastagem"] || "solid";
+      var op   = sourceOpacity["tc_pastagem"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "tc_pastagem (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>tc_pastagem<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-7", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#9d4edd;flex-shrink:0"></div>
+    <h2>8 - Pastagem deg. alta</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">lapig_vigor (fallback)</span>
+    
+      <span class="source-badge badge-fallback">mb_pastagem_total (fallback)</span>
+    
+      <span class="source-badge badge-fallback">tc_pastagem (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB classe 15 × pct LAPIG Severa — produto pipeline</li>
+    
+      <li><strong>lapig_vigor:</strong> LAPIG vigor Severa agregado municipio→RGINT (área bruta)</li>
+    
+      <li><strong>mb_pastagem_total:</strong> LAPIG vigor Severa agregado municipio→RGINT (área bruta)</li>
+    
+      <li><strong>tc_pastagem:</strong> LAPIG vigor Severa agregado municipio→RGINT (área bruta)</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-8" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>lapig_vigor</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>mb_pastagem_total</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>tc_pastagem</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#9d4edd";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [10412.7622, 6803.6228, 5023.7272, 3331.374, 2917.1668, 3662.4738, 4801.8743, 6983.0331, 7637.151, 7191.2319, 4284.4635, 2987.634, 2187.6787, 2890.3919, 5631.6694, 3658.9337, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [76604.501, 64325.4626, 56697.6824, 46169.2213, 43622.6879, 47074.3817, 52348.9141, 62869.8067, 63923.2889, 63849.8674, 50163.2286, 41855.3905, 36779.2263, 40731.2955, 56183.9565, 46141.8421, null];
+      var dash = sourceDash["lapig_vigor"] || "solid";
+      var op   = sourceOpacity["lapig_vigor"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "lapig_vigor (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>lapig_vigor<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["mb_pastagem_total"] || "solid";
+      var op   = sourceOpacity["mb_pastagem_total"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "mb_pastagem_total (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>mb_pastagem_total<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["tc_pastagem"] || "solid";
+      var op   = sourceOpacity["tc_pastagem"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "tc_pastagem (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>tc_pastagem<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-8", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#e0aaff;flex-shrink:0"></div>
+    <h2>9 - Pastagem deg. baixa</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">lapig_vigor (fallback)</span>
+    
+      <span class="source-badge badge-fallback">mb_pastagem_total (fallback)</span>
+    
+      <span class="source-badge badge-fallback">tc_pastagem (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB classe 15 × pct LAPIG Ausente — produto pipeline</li>
+    
+      <li><strong>lapig_vigor:</strong> LAPIG vigor Ausente agregado municipio→RGINT (área bruta)</li>
+    
+      <li><strong>mb_pastagem_total:</strong> LAPIG vigor Ausente agregado municipio→RGINT (área bruta)</li>
+    
+      <li><strong>tc_pastagem:</strong> LAPIG vigor Ausente agregado municipio→RGINT (área bruta)</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-9" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>lapig_vigor</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>mb_pastagem_total</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>tc_pastagem</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#e0aaff";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [184552.1531, 224509.4553, 249446.5917, 273186.1301, 261753.5338, 250588.1867, 226864.5541, 204537.6991, 205537.9433, 219962.8806, 256426.433, 290843.4049, 314577.8689, 312258.8446, 294945.7463, 358952.3666, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [322500.8553, 369513.3407, 399522.3403, 418090.3844, 413216.8958, 389383.6, 359820.2563, 340256.7576, 331619.0156, 353128.7293, 388077.6703, 412968.8658, 441036.8764, 423357.473, 406597.602, 457020.9067, null];
+      var dash = sourceDash["lapig_vigor"] || "solid";
+      var op   = sourceOpacity["lapig_vigor"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "lapig_vigor (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>lapig_vigor<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["mb_pastagem_total"] || "solid";
+      var op   = sourceOpacity["mb_pastagem_total"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "mb_pastagem_total (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>mb_pastagem_total<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["tc_pastagem"] || "solid";
+      var op   = sourceOpacity["tc_pastagem"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "tc_pastagem (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>tc_pastagem<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-9", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#606c38;flex-shrink:0"></div>
+    <h2>10 - Silvicultura</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB Col.10 classe 9</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-10" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#606c38";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [753.3957, 745.8053, 767.0652, 792.3517, 838.7235, 1213.301, 1232.059, 1259.8335, 1263.139, 1302.2795, 1286.6504, 1318.8184, 1383.5829, 1548.8252, 1551.7734, 1553.6487, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-10", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#1b4332;flex-shrink:0"></div>
+    <h2>11 - Veg. prim. florestal</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">mb_floresta_total (fallback)</span>
+    
+      <span class="source-badge badge-fallback">tc_floresta_prim (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> pct_prim TerraClass × MB floresta (AMZ/CER); MB puro outros biomas</li>
+    
+      <li><strong>mb_floresta_total:</strong> mb_floresta_total</li>
+    
+      <li><strong>tc_floresta_prim:</strong> tc_floresta_prim</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-11" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>mb_floresta_total</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>tc_floresta_prim</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#1b4332";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["mb_floresta_total"] || "solid";
+      var op   = sourceOpacity["mb_floresta_total"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "mb_floresta_total (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>mb_floresta_total<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["tc_floresta_prim"] || "solid";
+      var op   = sourceOpacity["tc_floresta_prim"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "tc_floresta_prim (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>tc_floresta_prim<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-11", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#52b788;flex-shrink:0"></div>
+    <h2>12 - Veg. sec. florestal</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">mb_floresta_total (fallback)</span>
+    
+      <span class="source-badge badge-fallback">tc_floresta_sec (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> pct_sec TerraClass × MB floresta (AMZ/CER); MB puro outros biomas</li>
+    
+      <li><strong>mb_floresta_total:</strong> mb_floresta_total</li>
+    
+      <li><strong>tc_floresta_sec:</strong> tc_floresta_sec</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-12" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>mb_floresta_total</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>tc_floresta_sec</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#52b788";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["mb_floresta_total"] || "solid";
+      var op   = sourceOpacity["mb_floresta_total"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "mb_floresta_total (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>mb_floresta_total<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["tc_floresta_sec"] || "solid";
+      var op   = sourceOpacity["tc_floresta_sec"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "tc_floresta_sec (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>tc_floresta_sec<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-12", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#b7e4c7;flex-shrink:0"></div>
+    <h2>13 - Veg. prim. não-florestal</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">mb_savana_total (fallback)</span>
+    
+      <span class="source-badge badge-fallback">tc_nao_florestal (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> pct_prim TerraClass × MB savana (AMZ/CER); MB puro outros biomas</li>
+    
+      <li><strong>mb_savana_total:</strong> mb_savana_total</li>
+    
+      <li><strong>tc_nao_florestal:</strong> tc_nao_florestal</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-13" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>mb_savana_total</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>tc_nao_florestal</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#b7e4c7";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["mb_savana_total"] || "solid";
+      var op   = sourceOpacity["mb_savana_total"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "mb_savana_total (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>mb_savana_total<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["tc_nao_florestal"] || "solid";
+      var op   = sourceOpacity["tc_nao_florestal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "tc_nao_florestal (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>tc_nao_florestal<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-13", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#74c69d;flex-shrink:0"></div>
+    <h2>14 - Veg. sec. não-florestal</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+      <span class="source-badge badge-fallback">mb_savana_total (fallback)</span>
+    
+      <span class="source-badge badge-fallback">tc_nao_florestal (fallback)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> pct_sec TerraClass × MB savana (AMZ/CER); MB puro outros biomas</li>
+    
+      <li><strong>mb_savana_total:</strong> mb_savana_total</li>
+    
+      <li><strong>tc_nao_florestal:</strong> tc_nao_florestal</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-14" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>mb_savana_total</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+    <tr>
+      <td>tc_nao_florestal</td>
+      <td><span class="source-badge badge-fallback">fallback</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#74c69d";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["mb_savana_total"] || "solid";
+      var op   = sourceOpacity["mb_savana_total"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "mb_savana_total (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>mb_savana_total<extra></extra>"
+      });
+      
+    })();
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+      var dash = sourceDash["tc_nao_florestal"] || "solid";
+      var op   = sourceOpacity["tc_nao_florestal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "tc_nao_florestal (fallback)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 1.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>tc_nao_florestal<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-14", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+<div class="class-section">
+  <div class="class-header">
+    <div class="color-dot" style="width:12px;height:12px;border-radius:50%;background:#adb5bd;flex-shrink:0"></div>
+    <h2>15 - Outro</h2>
+    
+      <span class="source-badge badge-primary">pipeline_diagonal (primary)</span>
+    
+  </div>
+
+  <ul class="notes-list">
+    
+      <li><strong>pipeline_diagonal:</strong> MB Col.10 classes 24,25,30,31,33,23 (urbano, água, mineração)</li>
+    
+  </ul>
+
+  <div class="chart-wrap">
+    <div id="chart-15" style="height:260px"></div>
+  </div>
+
+  <table class="source-table">
+    <tr>
+      <th>Fonte</th><th>Qualidade</th><th>Anos com outlier</th>
+    </tr>
+    
+    <tr>
+      <td>pipeline_diagonal</td>
+      <td><span class="source-badge badge-primary">primary</span></td>
+      <td class="outlier-years">
+        —
+      </td>
+    </tr>
+    
+  </table>
+
+  <script>
+  (function(){
+    var traces = [];
+    var sourceDash = {pipeline_diagonal:"solid", conab_pam:"dot", lapig_vigor:"dashdot"};
+    var sourceOpacity = {pipeline_diagonal:1.0, conab_pam:0.75, lapig_vigor:0.75};
+    var baseColor = "#adb5bd";
+
+    function hexToRgba(hex, alpha) {
+      var r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+      return "rgba("+r+","+g+","+b+","+alpha+")";
+    }
+
+    
+    (function(){
+      var x = [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
+      var y = [411064.2327, 410116.1192, 413346.8219, 412898.0755, 413517.1473, 411299.9685, 412034.1759, 412982.1968, 412874.2806, 413341.0466, 413791.0438, 414145.0575, 414621.5665, 414182.4898, 414720.7102, 417842.1168, null];
+      var dash = sourceDash["pipeline_diagonal"] || "solid";
+      var op   = sourceOpacity["pipeline_diagonal"] || 0.8;
+      traces.push({
+        x: x, y: y,
+        name: "pipeline_diagonal (primary)",
+        type: "scatter", mode: "lines+markers",
+        line: {color: hexToRgba(baseColor, op), dash: dash, width: 2.5},
+        marker: {color: hexToRgba(baseColor, op), size: 5},
+        hovertemplate: "<b>%{x}</b><br>%{y:,.1f} ha<br>pipeline_diagonal<extra></extra>"
+      });
+      
+    })();
+    
+
+    Plotly.newPlot("chart-15", traces, {
+      margin:{t:20,r:20,b:40,l:70},
+      xaxis:{title:"Ano", tickmode:"linear", dtick:2},
+      yaxis:{title:"Área (ha)", tickformat:",.0f"},
+      legend:{orientation:"h", y:-0.25},
+      hovermode:"x unified",
+      paper_bgcolor:"#fff",
+      plot_bgcolor:"#fafaf8"
+    }, {responsive:true, displayModeBar:false});
+  })();
+  </script>
+</div>
+
+
+<footer>
+  Gerado por ABIOVE LULC 2026 Pipeline — NIPE/UNICAMP | Lucas Nakamura Cerejo
+</footer>
+</body>
+</html>

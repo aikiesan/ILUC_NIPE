@@ -15,7 +15,7 @@ COMPOSE := docker compose -f infra/docker-compose.yml --env-file infra/.env
 PY      := python3
 SCRIPTS := scripts
 
-.PHONY: help db-up db-down db-reset ingest export-static dev build test e2e pipeline
+.PHONY: help db-up db-down db-reset ingest export-static dev build test e2e pipeline fichas
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
@@ -39,6 +39,9 @@ export-static: ## Export static webapp/public/data artifacts (DB -> SPA)
 	cd $(SCRIPTS) && $(PY) export_static.py
 
 pipeline: ingest export-static ## Full data refresh: ingest then export
+
+fichas: ## Rebuild multi-source JSONs + per-region HTML fichas (-> webapp/public/fichas)
+	cd data_pipeline && $(PY) 01_load_sources.py && $(PY) 02_build_multisource_json.py && $(PY) 03_generate_reports.py
 
 dev: ## Run the Vite dev server
 	cd webapp && npm run dev
