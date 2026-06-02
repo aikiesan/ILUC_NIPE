@@ -8,9 +8,10 @@
 
 ## Where we left off (state as of this session)
 
-- **PR #11** — `claude/iluc-nipe-postgres-pipeline-cJSHT` → `master`, **open**.
-  Adds the local Postgres pipeline (`raw → Postgres → static export → SPA`),
-  a shared color system, and a full pytest + vitest + Playwright suite with CI.
+- **PR #12** — `claude/iluc-nipe-postgres-pipeline-cJSHT` → `master`, **open**
+  (supersedes #11). Adds the local Postgres pipeline (`raw → Postgres → static
+  export → SPA`), a shared color system, and a full pytest + vitest + Playwright
+  suite with CI.
 - CI: `test`, `build-test`, `e2e` green. **GitGuardian** was resolved by
   removing the hardcoded DB password entirely (it had flagged the throwaway
   local/CI Postgres password). There is now **no password literal** anywhere:
@@ -29,7 +30,7 @@
 2. Drop the full per-region transition matrices in → light up **all 133 regions**.
 3. Run the full pipeline + build + tests; confirm the SPA renders all 133.
 4. SSH to the VM, pull the branch, and verify the project runs fine there.
-5. With CI green and the 133-region data committed, merge PR #11.
+5. With CI green and the 133-region data committed, merge PR #12.
 
 ### Carried over — national indicators ⚠️ (decide with the consolidated data)
 A parity check found the committed `rgint_indicators.csv` and the **D3 report
@@ -137,10 +138,10 @@ make db-up ingest export-static build
 > `webapp/public/data/` and never connects to Postgres. The VM Postgres is only
 > needed if the VM is used as a build/refresh host.
 
-### 5. Merge PR #11
+### 5. Merge PR #12
 - GitGuardian is already resolved (no password literal anywhere; CI uses `trust`
   auth; branch history squashed clean). Just confirm all checks are green.
-- Once the 133-region data is committed and CI is green, **merge PR #11 into
+- Once the 133-region data is committed and CI is green, **merge PR #12 into
   `master`**.
 
 ### 6. Commit the new data
@@ -163,9 +164,9 @@ Confirm `infra/.env` and the Postgres volume stay git-ignored.
 > 3. Run `make test` and `make e2e`; fix anything that breaks.
 > 4. SSH into my VM (I'll give you the host), pull the branch, and verify the
 >    project runs fine there.
-> 5. Once CI is green and the 133-region data is committed, merge **PR #11** into
+> 5. Once CI is green and the 133-region data is committed, merge **PR #12** into
 >    `master`.
-> Start by checking the current PR #11 / CI status and confirming the local
+> Start by checking the current PR #12 / CI status and confirming the local
 > Postgres container and data folders are in place.
 
 ## Key references
