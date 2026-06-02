@@ -1,10 +1,11 @@
 """Generate webapp/public/data/national_transitions.csv FROM Postgres
 (table ``transitions``).
 
-Aggregates per-region transition flows into the three GTAP periods. Anchor
-years map to periods as:
-    2017 anchor  -> '2008_2017'
-    2024 anchor  -> '2017_2024'
+Aggregates per-region transition flows into the three GTAP periods. Each
+``ano_par`` is the END year of one annual transition (2008_2009 -> "2009"), so
+a GTAP period is the **sum of its annual flows** (gross class-changing area):
+    '2008_2017'  = sum of ano_par 2009..2017
+    '2017_2024'  = sum of ano_par 2018..2024
     '2008_2024'  = sum of the two above
 Only off-diagonal (class-changing) flows are kept.
 
@@ -19,7 +20,14 @@ from collections import defaultdict
 from common import ensure_out
 from db import connect
 
-ANCHOR_TO_PERIOD = {"2017": "2008_2017", "2024": "2017_2024"}
+# Annual end-year -> GTAP period. 2008 is the base-year stock (no transitions).
+PERIOD_RANGES = {
+    "2008_2017": range(2009, 2018),
+    "2017_2024": range(2018, 2025),
+}
+YEAR_TO_PERIOD = {
+    str(y): period for period, yrs in PERIOD_RANGES.items() for y in yrs
+}
 
 
 def main() -> None:
@@ -29,13 +37,15 @@ def main() -> None:
         cur = conn.cursor()
         cur.execute(
             "SELECT ano_par, origem_id, destino_id, area_ha FROM transitions "
-            "WHERE ano_par IN %s AND origem_id <> destino_id",
-            (tuple(ANCHOR_TO_PERIOD),),
+            "WHERE origem_id <> destino_id"
         )
         for ano_par, origem, destino, area in cur.fetchall():
             if area is None:
                 continue
-            agg[ANCHOR_TO_PERIOD[ano_par]][(origem, destino)] += float(area)
+            period = YEAR_TO_PERIOD.get(str(ano_par))
+            if period is None:
+                continue
+            agg[period][(origem, destino)] += float(area)
 
     # derive cumulative period
     for key, area in agg.get("2008_2017", {}).items():
