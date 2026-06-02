@@ -70,11 +70,34 @@ are git-ignored (too large) and live on the data maintainer's machine.
 To light up **all 133** regions — no code changes needed:
 
 1. Generate the per-region matrix JSONs into `webapp/data/rgint_matrix/{id}.json`
-   (same shape as the existing 5101 file).
+   (same shape as the existing 5101 file). For the ABIOVE 15-class workbooks
+   (`07_MATRIZES_15_CLASSES_FINAL/ALL_RGINTS/*.xlsx`, one sheet per year pair),
+   use the converter:
+
+   ```bash
+   # default src = the local ABIOVE_SOJA_2026 path; override with arg or
+   # ILUC_MATRIX_SRC_DIR. Needs openpyxl (Python 3.11 locally).
+   python scripts/convert_iluc_matrices.py [SRC_DIR]
+   ```
+
+   It reads the real annual transitions (key = end year of each pair; `2008` =
+   base-year stock diagonal), prefers the `GOLDEN_*` workbook for 1201/5101, and
+   maps classes to `common.CLASS_ORDER`.
 2. `make pipeline` (re-ingest + re-export) then `make build`.
 
 `transitions`, `rgint_transitions/*.csv`, `national_transitions.csv`, the Sankey
 and the heatmap all scale automatically from whatever matrices are present.
+`national_transitions.csv` sums each GTAP period's **annual** flows
+(2009–2017 → `2008_2017`, 2018–2024 → `2017_2024`).
+
+> **Status (provisional, awaiting HARVEX):** the final golden matrices are
+> blocked on Joel-HARVEX delivering precise **2008 / 2017 / 2024** anchor data
+> (+ milho 2013), same xlsx format. The current ALL_RGINTS workbooks are interim
+> — large Amazon RGINTs (Manaus, Tefé, Lábrea) are stubs, so a direct
+> native→anthropic sum gives ~20.3 Mha vs the D3 reference 38.4 Mha (~60%
+> coverage). Until the anchors land, keep the D3 figures attributed (do not flip
+> the parity test or switch the Overview KPIs to data-driven). When they arrive,
+> drop the new workbooks in and re-run `convert_iluc_matrices.py`.
 
 ## Geometry artifacts
 
