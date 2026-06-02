@@ -1,0 +1,6 @@
+# Runtime deps for the Postgres ingest/export scripts.
+psycopg2-binary>=2.9
+openpyxl>=3.1
+# geopandas is only needed for the geometry generators (--geometry):
+#   generate_rgint_meta.py / generate_geojson.py
+# geopandas>=0.14

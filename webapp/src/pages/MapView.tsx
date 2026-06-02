@@ -7,6 +7,7 @@ import { ChartSkeleton, ErrorState } from "@/components/common/StateBlocks";
 import { useAsync } from "@/lib/useAsync";
 import { loadGeoJson, loadIndicators } from "@/lib/data";
 import { formatHa } from "@/lib/format";
+import { scaleForVariable } from "@/lib/colors";
 import type { RegionIndicator } from "@/lib/types";
 
 const ChoroplethMap = lazy(() => import("@/components/charts/ChoroplethMap"));
@@ -41,7 +42,8 @@ export default function MapView() {
       if (!rec) continue;
       locations.push(id);
       const raw = Number(rec[variable]);
-      z.push(variable === "balanco_ha" ? Math.abs(raw) : raw);
+      // Diverging balance keeps its sign; sequential variables use magnitude.
+      z.push(variable === "balanco_ha" ? raw : Math.abs(raw));
       text.push(`${rec.nome} (${rec.uf}) · ${rec.bioma}<br>${formatHa(raw)} ha`);
     }
     return { locations, z, text };
@@ -50,6 +52,7 @@ export default function MapView() {
   const loading = geo.loading || ind.loading;
   const error = geo.error || ind.error;
   const label = VARIABLES.find((v) => v.value === variable)!.label;
+  const scale = scaleForVariable(variable);
 
   return (
     <div>
@@ -81,6 +84,8 @@ export default function MapView() {
                 z={trace.z}
                 text={trace.text}
                 colorbarTitle={label}
+                colorscale={scale.colorscale}
+                diverging={scale.diverging}
                 onRegionClick={(id) => navigate(`/region/${id}`)}
               />
             </Suspense>
@@ -88,7 +93,7 @@ export default function MapView() {
         </CardContent>
       </Card>
       <p className="mt-3 text-xs text-muted">
-        Escala de cinza · valores acumulados 2008–2024 · {trace?.locations.length ?? 0} regiões.
+        {scale.diverging ? "Escala divergente (perda ↔ ganho)" : "Escala sequencial perceptual"} · valores acumulados 2008–2024 · {trace?.locations.length ?? 0} regiões.
       </p>
     </div>
   );

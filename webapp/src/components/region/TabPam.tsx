@@ -14,13 +14,11 @@ import { useAsync } from "@/lib/useAsync";
 import { loadRegionPam } from "@/lib/data";
 import { formatHa, formatPct } from "@/lib/format";
 import { cn } from "@/lib/utils";
+import { CULTURE_COLORS as COLORS } from "@/lib/colors";
 
 const CULTURES = ["soja", "milho", "cana", "algodao"] as const;
 const LABELS: Record<string, string> = {
   soja: "Soja", milho: "Milho", cana: "Cana-de-açúcar", algodao: "Algodão",
-};
-const COLORS: Record<string, string> = {
-  soja: "#0A0A0A", milho: "#525252", cana: "#9CA3AF", algodao: "#D4D4D4",
 };
 
 export function TabPam({ regionId }: { regionId: string }) {

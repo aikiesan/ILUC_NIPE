@@ -4,6 +4,7 @@ import { ArrowUpDown, Download, Search } from "lucide-react";
 import { PageHeader } from "@/components/common/PageHeader";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { BiomeBadge } from "@/components/common/BiomeBadge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ChartSkeleton, ErrorState } from "@/components/common/StateBlocks";
 import { useAsync } from "@/lib/useAsync";
@@ -121,7 +122,7 @@ export default function Ranking() {
                 <TableCell className="mono text-right text-muted">{r.ranking_pressao}</TableCell>
                 <TableCell className="font-medium">{r.nome}</TableCell>
                 <TableCell><Badge variant="outline">{r.uf}</Badge></TableCell>
-                <TableCell className="text-muted">{r.bioma}</TableCell>
+                <TableCell><BiomeBadge biome={r.bioma} /></TableCell>
                 <TableCell className="text-right tnum">{formatHa(r.pressao_ha)}</TableCell>
                 <TableCell className="text-right tnum">{formatHa(r.regeneracao_ha)}</TableCell>
                 <TableCell className="text-right tnum">{formatSignedHa(r.balanco_ha)}</TableCell>

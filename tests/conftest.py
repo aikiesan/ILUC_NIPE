@@ -17,11 +17,37 @@ import pytest
 
 ROOT          = Path(__file__).parent.parent
 DATA_PIPELINE = ROOT / "data_pipeline"
+SCRIPTS       = ROOT / "scripts"
 FIXTURES      = Path(__file__).parent / "fixtures"
 
 # Make data_pipeline importable for named modules (sources/, pipeline/)
 if str(DATA_PIPELINE) not in sys.path:
     sys.path.insert(0, str(DATA_PIPELINE))
+# Make the Postgres ingest/export scripts importable.
+if str(SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS))
+
+
+# ── Postgres fixture (skips cleanly when no test DB is reachable) ─────────────
+
+@pytest.fixture(scope="session")
+def pg_conn():
+    """A psycopg2 connection to a fresh test schema, or skip if unreachable.
+
+    Connection settings come from POSTGRES_* env vars (see infra/.env.example).
+    The schema is (re)applied once per session so tests start from a clean DB.
+    """
+    import db as db_mod
+
+    try:
+        conn = __import__("psycopg2").connect(**db_mod.dsn())
+    except Exception as exc:  # pragma: no cover - depends on environment
+        pytest.skip(f"Postgres not available: {exc}")
+    conn.autocommit = True
+    with conn.cursor() as cur:
+        cur.execute((ROOT / "db" / "schema.sql").read_text(encoding="utf-8"))
+    yield conn
+    conn.close()
 
 
 # ── Importlib helper for digit-prefixed scripts ───────────────────────────────
