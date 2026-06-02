@@ -66,11 +66,15 @@ export default function Overview() {
         description="Síntese da mudança de uso e cobertura da terra no Brasil entre 2008 e 2024, agregando as 133 Regiões Geográficas Intermediárias."
       />
 
-      <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-2 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {KPIS.map((k) => (
           <KpiCard key={k.label} {...k} />
         ))}
       </div>
+      <p className="mb-6 text-xs text-muted">
+        Valores de referência do relatório D3 (metodologia de transições, acumulado 2008–2024).
+        Serão recalculados a partir do dataset consolidado das 133 matrizes de transição.
+      </p>
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>

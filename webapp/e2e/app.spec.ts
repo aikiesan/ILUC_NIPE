@@ -60,6 +60,9 @@ test.describe("region detail", () => {
     await expect(page.getByText("Análise detalhada")).toBeVisible();
     // biome badge from the shared palette
     await expect(page.getByText("Cerrado").first()).toBeVisible();
+    // per-region downloads card and data-status badge
+    await expect(page.getByRole("heading", { name: "Downloads" })).toBeVisible();
+    await expect(page.getByText("Golden standard")).toBeVisible();
 
     for (const tab of ["Série temporal", "Matriz", "Produção (PAM)", "Transições"]) {
       await page.getByRole("tab", { name: tab }).click();

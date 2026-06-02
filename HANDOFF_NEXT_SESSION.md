@@ -8,9 +8,10 @@
 
 ## Where we left off (state as of this session)
 
-- **PR #11** — `claude/iluc-nipe-postgres-pipeline-cJSHT` → `master`, **open**.
-  Adds the local Postgres pipeline (`raw → Postgres → static export → SPA`),
-  a shared color system, and a full pytest + vitest + Playwright suite with CI.
+- **PR #12** — `claude/iluc-nipe-postgres-pipeline-cJSHT` → `master`, **open**
+  (supersedes #11). Adds the local Postgres pipeline (`raw → Postgres → static
+  export → SPA`), a shared color system, and a full pytest + vitest + Playwright
+  suite with CI.
 - CI: `test`, `build-test`, `e2e` green. **GitGuardian** was resolved by
   removing the hardcoded DB password entirely (it had flagged the throwaway
   local/CI Postgres password). There is now **no password literal** anywhere:
@@ -29,7 +30,48 @@
 2. Drop the full per-region transition matrices in → light up **all 133 regions**.
 3. Run the full pipeline + build + tests; confirm the SPA renders all 133.
 4. SSH to the VM, pull the branch, and verify the project runs fine there.
-5. With CI green and the 133-region data committed, merge PR #11.
+5. With CI green and the 133-region data committed, merge PR #12.
+
+### Carried over — national indicators ⚠️ (decide with the consolidated data)
+A parity check found the committed `rgint_indicators.csv` and the **D3 report
+disagree ~2×** on the national headline numbers — a *definition* difference, not
+a bug:
+
+| Indicator | Webapp data (stock-based, 133 rgts) | D3 report (transition-based) |
+|---|---|---|
+| Pressão antrópica | 16,459,542 ha | 38,392,587 ha |
+| Regeneração | 1,788,349 ha | 487,648 ha |
+| Balanço | −14,671,193 ha | −37,904,939 ha |
+| Razão P/R | 9.2 : 1 | 78.7 : 1 |
+
+- The webapp indicators are computed from `lulc_timeseries` **stock changes**
+  (all it can do with only 3 matrices); D3's figures are **transition-based**
+  (Veg-nativa→antrópico flows), which need the full 133 matrices.
+- For now the Overview KPIs show the **D3 reference numbers, explicitly
+  attributed** (not presented as data-derived), and a parity harness is in place:
+  `src/lib/analytics.ts` (`nationalSummary`, `D3_NATIONAL_REFERENCE`) +
+  `src/lib/analytics.parity.test.ts` (locks the balance identity + 133 coverage;
+  records the D3 reference).
+- **Tomorrow with the consolidated dataset:** recompute indicators
+  transition-based, then flip the parity test's final assertion to
+  `toBeCloseTo` the D3 reference within ±5% (D1 §12), and switch the Overview
+  KPIs to the data-driven `nationalSummary`.
+
+### Already delivered this session (verified: 32 vitest pass, vite build)
+- Methodology page now self-documents from D4/D1: canonical 15-class crosswalk
+  (`src/lib/classes.ts` `CLASS_META`), biome-routing (D4 §7), limitations L1–L8.
+- Per-region downloads (timeseries / PAM / 15×15 matrix CSV) on the region page.
+- Per-region data-status badge (golden / matrix available / pending) —
+  `src/lib/quality.ts`.
+
+### Still open (data-dependent — best done tomorrow)
+- National **Data-Quality page**: ingest `LOG_AUDITORIA_INTEGRIDADE_V2.csv` into
+  a `validation` table (`db/schema.sql` + `scripts/ingest.py`, data-driven so it
+  skips when absent), export a coverage/quality summary, and render PASS/golden
+  counts + TerraClass flags site-wide.
+- New **transition indicators** (Veg→Pastagem, Pastagem→Soja per RGINT — D3
+  inputs to Atividade 1-4) once the matrices are loaded.
+- Optional: GTAP export (P6) and PostGIS geometry (P7).
 
 ---
 
@@ -96,10 +138,10 @@ make db-up ingest export-static build
 > `webapp/public/data/` and never connects to Postgres. The VM Postgres is only
 > needed if the VM is used as a build/refresh host.
 
-### 5. Merge PR #11
+### 5. Merge PR #12
 - GitGuardian is already resolved (no password literal anywhere; CI uses `trust`
   auth; branch history squashed clean). Just confirm all checks are green.
-- Once the 133-region data is committed and CI is green, **merge PR #11 into
+- Once the 133-region data is committed and CI is green, **merge PR #12 into
   `master`**.
 
 ### 6. Commit the new data
@@ -122,9 +164,9 @@ Confirm `infra/.env` and the Postgres volume stay git-ignored.
 > 3. Run `make test` and `make e2e`; fix anything that breaks.
 > 4. SSH into my VM (I'll give you the host), pull the branch, and verify the
 >    project runs fine there.
-> 5. Once CI is green and the 133-region data is committed, merge **PR #11** into
+> 5. Once CI is green and the 133-region data is committed, merge **PR #12** into
 >    `master`.
-> Start by checking the current PR #11 / CI status and confirming the local
+> Start by checking the current PR #12 / CI status and confirming the local
 > Postgres container and data folders are in place.
 
 ## Key references
