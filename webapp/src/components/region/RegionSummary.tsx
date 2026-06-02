@@ -3,14 +3,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { BiomeBadge } from "@/components/common/BiomeBadge";
 import { formatHa, formatSignedHa } from "@/lib/format";
+import { regionStatus } from "@/lib/quality";
 import type { RegionIndicator, RegionMeta } from "@/lib/types";
 
 interface RegionSummaryProps {
   meta: RegionMeta;
   indicator?: RegionIndicator;
+  hasMatrix?: boolean;
 }
 
-export function RegionSummary({ meta, indicator }: RegionSummaryProps) {
+export function RegionSummary({ meta, indicator, hasMatrix = false }: RegionSummaryProps) {
+  const status = regionStatus(meta.id, hasMatrix);
   const stats = [
     { label: "Área agrícola (PAM)", value: `${formatHa(indicator?.area_agro_2024)} ha` },
     { label: "Pressão antrópica acum.", value: `${formatHa(indicator?.pressao_ha)} ha` },
@@ -22,10 +25,13 @@ export function RegionSummary({ meta, indicator }: RegionSummaryProps) {
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <Badge variant="solid" className="mono">{meta.id}</Badge>
             <Badge variant="outline">{meta.uf}</Badge>
             <BiomeBadge biome={meta.bioma_principal} />
+            <Badge variant={status.variant} title="Estado de validação dos dados (D4 §11)">
+              {status.label}
+            </Badge>
           </div>
           <CardTitle className="mt-1 text-lg">{meta.nome}</CardTitle>
         </CardHeader>

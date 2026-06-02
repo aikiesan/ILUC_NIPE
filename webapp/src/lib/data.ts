@@ -85,6 +85,30 @@ export async function loadRegionMatrix(id: string): Promise<RegionMatrix | null>
   }
 }
 
+/** Flatten a region series ({class: {year: area}}) to tidy download rows. */
+export function seriesToRows(series: RegionSeries): Record<string, unknown>[] {
+  const rows: Record<string, unknown>[] = [];
+  for (const [classe, byYear] of Object.entries(series)) {
+    for (const [ano, area_ha] of Object.entries(byYear)) {
+      rows.push({ classe, ano: Number(ano), area_ha });
+    }
+  }
+  return rows;
+}
+
+/** Flatten a 15×15 region matrix to tidy rows (periodo, origem, destino, area_ha). */
+export function matrixToRows(matrix: RegionMatrix): Record<string, unknown>[] {
+  const rows: Record<string, unknown>[] = [];
+  for (const [periodo, byOrigin] of Object.entries(matrix.matrices)) {
+    for (const [origem, byDest] of Object.entries(byOrigin)) {
+      for (const [destino, area_ha] of Object.entries(byDest)) {
+        rows.push({ periodo, origem, destino, area_ha });
+      }
+    }
+  }
+  return rows;
+}
+
 /** Convert a record of objects to a CSV blob and trigger a browser download. */
 export function downloadCsv(filename: string, rows: Record<string, unknown>[]): void {
   const csv = Papa.unparse(rows);
