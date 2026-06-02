@@ -2,7 +2,7 @@
 03_generate_reports.py
 Generates one standalone HTML report per RGINT using Jinja2 + Plotly.
 
-Output: webapp/data/html_reports/{rgint_id}.html  (133 files)
+Output: webapp/public/fichas/{rgint_id}.html  (133 files, shipped with the SPA)
 """
 
 import json
@@ -13,7 +13,9 @@ from utils import WEBAPP_DATA, ensure_processed_dir
 ensure_processed_dir()
 
 FULL_DIR    = WEBAPP_DATA / "rgint_full"
-REPORTS_DIR = WEBAPP_DATA / "html_reports"
+# Ship the fichas with the static SPA: webapp/public/fichas/{id}.html is copied
+# to /docs on build and served at `${BASE}fichas/{id}.html`.
+REPORTS_DIR = WEBAPP_DATA.parent / "public" / "fichas"
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 BIOME_COLORS = {
@@ -65,4 +67,4 @@ for jf in json_files:
     out = REPORTS_DIR / f"{data['metadata']['rgint']}.html"
     out.write_text(html, encoding="utf-8")
 
-print(f"  Done. {len(json_files)} reports -> webapp/data/html_reports/")
+print(f"  Done. {len(json_files)} reports -> webapp/public/fichas/")

@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChartSkeleton, EmptyState, ErrorState } from "@/components/common/StateBlocks";
 import { RegionSummary } from "@/components/region/RegionSummary";
 import { RegionDownloads } from "@/components/region/RegionDownloads";
+import { RegionFicha } from "@/components/region/RegionFicha";
 import { TabTransitions } from "@/components/region/TabTransitions";
 import { TabTimeseries } from "@/components/region/TabTimeseries";
 import { TabMatrix } from "@/components/region/TabMatrix";
@@ -51,6 +52,7 @@ export default function Region() {
       <div className="grid gap-6 lg:grid-cols-[20rem_1fr]">
         <div className="space-y-6">
           <RegionSummary meta={region} indicator={indicator} hasMatrix={!!matrix.data} />
+          <RegionFicha regionId={id} />
           <RegionDownloads regionId={id} />
         </div>
 
