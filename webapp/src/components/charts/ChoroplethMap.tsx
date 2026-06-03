@@ -11,11 +11,21 @@ interface ChoroplethMapProps {
   colorscale?: PlotlyColorscale;
   /** Center the scale at zero (diverging) — used for the net-balance variable. */
   diverging?: boolean;
+  /** Base mode: render regions as a neutral translucent overlay (no variable / no colorbar). */
+  baseMode?: boolean;
   height?: number;
   onRegionClick?: (rgint: string) => void;
 }
 
-/** Choropleth of the 133 RGINTs, keyed by properties.rgint. */
+// Carto Positron — clean light tile basemap, no API token required.
+const BASEMAP_STYLE = "carto-positron";
+// Brazil-centered view (the geo `fitbounds` auto-zoom isn't available on mapbox).
+const BRAZIL_CENTER = { lon: -54, lat: -14 };
+const BRAZIL_ZOOM = 3.1;
+// Uniform slate fill for the no-variable base map.
+const BASE_FILL: PlotlyColorscale = [[0, "#64748B"], [1, "#64748B"]];
+
+/** Choropleth of the 133 RGINTs over a tile basemap, keyed by properties.rgint. */
 export default function ChoroplethMap({
   geojson,
   locations,
@@ -24,6 +34,7 @@ export default function ChoroplethMap({
   colorbarTitle,
   colorscale = VIRIDIS,
   diverging = false,
+  baseMode = false,
   height = 560,
   onRegionClick,
 }: ChoroplethMapProps) {
@@ -31,26 +42,29 @@ export default function ChoroplethMap({
     <Plot
       data={[
         {
-          type: "choropleth",
+          type: "choroplethmapbox",
           geojson,
           locations,
-          z,
+          z: baseMode ? locations.map(() => 0) : z,
           text,
           featureidkey: "properties.rgint",
-          colorscale,
-          zmid: diverging ? 0 : undefined,
-          marker: { line: { color: "#FFFFFF", width: 0.5 } },
-          hovertemplate: "%{text}<br>%{z:,.0f}<extra></extra>",
+          colorscale: baseMode ? BASE_FILL : colorscale,
+          zmid: !baseMode && diverging ? 0 : undefined,
+          showscale: !baseMode,
+          marker: {
+            line: { color: "#FFFFFF", width: 0.5 },
+            opacity: baseMode ? 0.35 : 0.82,
+          },
+          hovertemplate: baseMode ? "%{text}<extra></extra>" : "%{text}<br>%{z:,.0f}<extra></extra>",
           colorbar: { title: { text: colorbarTitle, side: "right" }, thickness: 10, outlinewidth: 0, tickfont: { size: 10 } },
         } as never,
       ]}
       layout={{
         height,
-        geo: {
-          fitbounds: "locations",
-          visible: false,
-          bgcolor: "rgba(0,0,0,0)",
-          projection: { type: "mercator" },
+        mapbox: {
+          style: BASEMAP_STYLE,
+          center: BRAZIL_CENTER,
+          zoom: BRAZIL_ZOOM,
         },
         margin: { l: 0, r: 0, t: 0, b: 0 },
         paper_bgcolor: "rgba(0,0,0,0)",
