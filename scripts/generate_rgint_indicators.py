@@ -150,14 +150,27 @@ def main() -> None:
                 "soja_2024_ha": soja.get(rid, 0.0),
             }
         )
-        # national_timeseries still aggregates the full 15-class lulc series.
+        # national_timeseries: non-native classes from the lulc series, but native
+        # veg (11–14) from the MapBiomas flagship (A2), so the Overview "nativa por
+        # bioma" reflects the complete national source — not the Amazon stub. The
+        # 4-way native subclass split isn't reliable nationally, so all native is
+        # carried under the primary native class (the Overview sums 11–14 / groups
+        # them as one category, so the aggregate is exact). TerraClass remains the
+        # side-by-side comparison in the multi-source fichas where it exists.
         if series:
             for cls, by_year in series.items():
+                if cls in NATIVE_CLASSES:
+                    continue
                 for y, val in by_year.items():
                     if val is None:
                         continue
                     key = (int(y), cls, item["biome"])
                     national[key] = national.get(key, 0.0) + float(val)
+        ns = native_stock.get(rid)
+        if ns:
+            for y, ha in ns.items():
+                key = (int(y), NATIVE_CLASSES[0], item["biome"])
+                national[key] = national.get(key, 0.0) + float(ha)
 
     records.sort(key=lambda r: r["pressao_ha"], reverse=True)
     for rank, rec in enumerate(records, start=1):
