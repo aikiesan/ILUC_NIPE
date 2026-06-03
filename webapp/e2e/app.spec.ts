@@ -14,8 +14,12 @@ test.describe("routes", () => {
   test("map renders and the variable selector switches scale", async ({ page }) => {
     await page.goto("/#/map");
     await expect(page.getByRole("heading", { name: "Mapa Interativo" })).toBeVisible();
-    // sequential by default
+    // neutral base map by default (no variable)
+    await expect(page.getByText(/Mapa base —/)).toBeVisible();
+    // switching to a sequential variable shows the perceptual-scale caption
+    await page.getByLabel("Variável").selectOption("pressao_ha");
     await expect(page.getByText(/Escala sequencial/)).toBeVisible();
+    // and the net-balance variable switches to the diverging scale
     await page.getByLabel("Variável").selectOption("balanco_ha");
     await expect(page.getByText(/Escala divergente/)).toBeVisible();
   });

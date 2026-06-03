@@ -1,10 +1,11 @@
 import { expect, test } from "@playwright/test";
 
-test("redirects to the overview dashboard and shows KPIs", async ({ page }) => {
+test("redirects to the interactive map landing", async ({ page }) => {
   await page.goto("/");
-  await expect(page).toHaveURL(/#\/overview/);
-  await expect(page.getByText("Visão Nacional")).toBeVisible();
-  await expect(page.getByText("Pressão antrópica 2008–2024")).toBeVisible();
+  await expect(page).toHaveURL(/#\/map/);
+  await expect(page.getByRole("heading", { name: "Mapa Interativo" })).toBeVisible();
+  // default view is the neutral base map (no variable coloring)
+  await expect(page.getByText(/Mapa base —/)).toBeVisible();
 });
 
 test("navigates to the ranking and opens a region", async ({ page }) => {
