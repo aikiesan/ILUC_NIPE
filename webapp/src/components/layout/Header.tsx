@@ -1,5 +1,4 @@
 import { Github, BookText, Menu } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -24,9 +23,6 @@ export function Header({ onMenuClick }: HeaderProps) {
         </div>
       </div>
       <div className="flex items-center gap-2">
-        <Badge variant="outline" className="hidden sm:inline-flex">
-          FAPESP 2025/08745-2
-        </Badge>
         <a
           href="https://github.com/aikiesan/ILUC_NIPE"
           target="_blank"

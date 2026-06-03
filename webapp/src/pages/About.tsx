@@ -218,13 +218,11 @@ export default function About() {
           <CardContent className="space-y-3 text-sm text-muted">
             <p className="rounded bg-highlight p-3 text-xs leading-relaxed text-foreground">
               CP2B/NIPE-UNICAMP (2026). <em>Mudança de uso e cobertura da terra nas Regiões
-              Geográficas Intermediárias do Brasil, 2008–2024.</em> ABIOVE Biocombustíveis 2026,
-              FAPESP 2025/08745-2. Dados: MapBiomas Col. 10.1 (DOI 10.58053/MapBiomas/JNJGVT).
+              Geográficas Intermediárias do Brasil, 2008–2024.</em> ABIOVE Biocombustíveis 2026.
+              Dados: MapBiomas Col. 10.1 (DOI 10.58053/MapBiomas/JNJGVT).
             </p>
             <p>
               <strong className="text-foreground">CP2B / NIPE — UNICAMP</strong>
-              <br />
-              FAPESP 2025/08745-2
             </p>
           </CardContent>
         </Card>

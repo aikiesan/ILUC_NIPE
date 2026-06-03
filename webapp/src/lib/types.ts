@@ -71,3 +71,19 @@ export interface IndexEntry {
   biome: string;
   label: string;
 }
+
+/** One regional cut of the direct/indirect soy-conversion split. */
+export interface DirectIndirectCut {
+  direta_ha: number;
+  indireta_ha: number;
+  total_ha: number;
+  /** Share of total that is direct (native veg → soy); null when total is 0. */
+  pct_direta: number | null;
+  /** false when total volume is statistically negligible (divide-by-noise). */
+  reliable: boolean;
+}
+
+/** direct_indirect_soy.json: per GTAP period, a map of cut name → split. */
+export interface DirectIndirectData {
+  periodos: Record<string, { recortes: Record<string, DirectIndirectCut> }>;
+}

@@ -116,21 +116,40 @@ export const VIRIDIS: PlotlyColorscale = [
   [0.85, "#B4DE2C"], [1.0, "#FDE725"],
 ];
 
-/** ColorBrewer YlOrRd — "loss"/pressure sequential. */
+/**
+ * "loss"/pressure sequential — **Magma** (reversed: low = pale, high = near-black).
+ * Perceptually uniform and colorblind-safe by design (matplotlib scientific
+ * colormap), replacing the prior YlOrRd whose red high-end read poorly under
+ * deuteranopia. Monotonic in lightness, so magnitude survives any dichromacy.
+ */
 export const SEQ_LOSS: PlotlyColorscale = [
-  [0.0, "#FFFFCC"], [0.25, "#FED976"], [0.5, "#FD8D3C"],
-  [0.75, "#E31A1C"], [1.0, "#800026"],
+  [0.0, "#FCFDBF"], [0.2, "#FE9F6D"], [0.4, "#DE4968"],
+  [0.6, "#8C2981"], [0.8, "#3B0F70"], [1.0, "#000004"],
 ];
 
-/** ColorBrewer YlGn — "gain"/regeneration sequential. */
+/**
+ * "gain"/regeneration sequential — **Cividis** (reversed: low = yellow, high =
+ * dark blue). Cividis is explicitly engineered so colorblind and normal-vision
+ * viewers perceive it near-identically; replaces the prior green YlGn (green
+ * being exactly the hue the project lead can't distinguish).
+ */
 export const SEQ_GAIN: PlotlyColorscale = [
-  [0.0, "#FFFFE5"], [0.5, "#78C679"], [1.0, "#004529"],
+  [0.0, "#FFE945"], [0.25, "#A69D75"], [0.5, "#666970"],
+  [0.75, "#31446B"], [1.0, "#00204D"],
 ];
 
-/** Diverging RdYlGn — net balance (loss ↔ gain), use with zmid = 0. */
+/**
+ * Diverging net balance (loss ↔ gain), use with zmid = 0.
+ *
+ * ColorBrewer **RdBu** (red↔blue), one of the few diverging schemes flagged
+ * colorblind-safe: the prior RdYlGn collapsed to indistinguishable brown under
+ * deuteranopia/protanopia (~8% of men, incl. the project's lead). Red↔blue
+ * survives because the blue channel is preserved across the common dichromacies
+ * and the two ends also differ in lightness. Loss = red, gain = blue.
+ */
 export const DIVERGING_BALANCE: PlotlyColorscale = [
-  [0.0, "#A50026"], [0.25, "#F46D43"], [0.5, "#FFFFBF"],
-  [0.75, "#A6D96A"], [1.0, "#006837"],
+  [0.0, "#B2182B"], [0.25, "#D6604D"], [0.5, "#F7F7F7"],
+  [0.75, "#4393C3"], [1.0, "#2166AC"],
 ];
 
 /** Teal sequential for the transition-matrix heatmap (white → primary). */

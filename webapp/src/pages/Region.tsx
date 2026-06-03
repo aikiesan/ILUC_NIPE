@@ -7,6 +7,7 @@ import { ChartSkeleton, EmptyState, ErrorState } from "@/components/common/State
 import { RegionSummary } from "@/components/region/RegionSummary";
 import { RegionDownloads } from "@/components/region/RegionDownloads";
 import { RegionFicha } from "@/components/region/RegionFicha";
+import { TabExpansion } from "@/components/region/TabExpansion";
 import { TabTransitions } from "@/components/region/TabTransitions";
 import { TabTimeseries } from "@/components/region/TabTimeseries";
 import { TabMatrix } from "@/components/region/TabMatrix";
@@ -61,13 +62,18 @@ export default function Region() {
             <CardTitle>Análise detalhada</CardTitle>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="transicoes">
+            <Tabs defaultValue="expansao">
               <TabsList>
+                <TabsTrigger value="expansao">Expansão (iLUC)</TabsTrigger>
                 <TabsTrigger value="transicoes">Transições</TabsTrigger>
                 <TabsTrigger value="serie">Série temporal</TabsTrigger>
                 <TabsTrigger value="matriz">Matriz</TabsTrigger>
                 <TabsTrigger value="pam">Produção (PAM)</TabsTrigger>
               </TabsList>
+
+              <TabsContent value="expansao">
+                <TabExpansion bioma={region.bioma_principal} uf={region.uf} />
+              </TabsContent>
 
               <TabsContent value="transicoes">
                 <TabTransitions regionId={id} />
