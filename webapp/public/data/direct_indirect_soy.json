@@ -1,0 +1,163 @@
+{
+  "periodos": {
+    "2008_2017": {
+      "recortes": {
+        "Amazônia": {
+          "direta_ha": 13.5,
+          "indireta_ha": 133174.71,
+          "total_ha": 133188.21,
+          "pct_direta": 0.0001,
+          "reliable": true
+        },
+        "Caatinga": {
+          "direta_ha": 185.49,
+          "indireta_ha": 71.19,
+          "total_ha": 256.68,
+          "pct_direta": 0.7227,
+          "reliable": false
+        },
+        "Cerrado": {
+          "direta_ha": 453001.95,
+          "indireta_ha": 2507871.78,
+          "total_ha": 2960873.73,
+          "pct_direta": 0.153,
+          "reliable": true
+        },
+        "MATOPIBA": {
+          "direta_ha": 392572.98,
+          "indireta_ha": 535767.57,
+          "total_ha": 928340.55,
+          "pct_direta": 0.4229,
+          "reliable": true
+        },
+        "Mata Atlântica": {
+          "direta_ha": 10779.48,
+          "indireta_ha": 229955.4,
+          "total_ha": 240734.88,
+          "pct_direta": 0.0448,
+          "reliable": true
+        },
+        "Nacional": {
+          "direta_ha": 483475.32,
+          "indireta_ha": 2897627.76,
+          "total_ha": 3381103.08,
+          "pct_direta": 0.143,
+          "reliable": true
+        },
+        "Pampa": {
+          "direta_ha": 19494.9,
+          "indireta_ha": 26554.68,
+          "total_ha": 46049.58,
+          "pct_direta": 0.4233,
+          "reliable": false
+        }
+      }
+    },
+    "2017_2024": {
+      "recortes": {
+        "Amazônia": {
+          "direta_ha": 0.0,
+          "indireta_ha": 70338.96,
+          "total_ha": 70338.96,
+          "pct_direta": 0.0,
+          "reliable": false
+        },
+        "Caatinga": {
+          "direta_ha": 2.79,
+          "indireta_ha": 9.54,
+          "total_ha": 12.33,
+          "pct_direta": 0.2263,
+          "reliable": false
+        },
+        "Cerrado": {
+          "direta_ha": 142776.09,
+          "indireta_ha": 1024955.64,
+          "total_ha": 1167731.73,
+          "pct_direta": 0.1223,
+          "reliable": true
+        },
+        "MATOPIBA": {
+          "direta_ha": 119537.73,
+          "indireta_ha": 190425.24,
+          "total_ha": 309962.97,
+          "pct_direta": 0.3857,
+          "reliable": true
+        },
+        "Mata Atlântica": {
+          "direta_ha": 4690.44,
+          "indireta_ha": 69109.65,
+          "total_ha": 73800.09,
+          "pct_direta": 0.0636,
+          "reliable": false
+        },
+        "Nacional": {
+          "direta_ha": 159803.55,
+          "indireta_ha": 1171089.27,
+          "total_ha": 1330892.82,
+          "pct_direta": 0.1201,
+          "reliable": true
+        },
+        "Pampa": {
+          "direta_ha": 12334.23,
+          "indireta_ha": 6675.48,
+          "total_ha": 19009.71,
+          "pct_direta": 0.6488,
+          "reliable": false
+        }
+      }
+    },
+    "2008_2024": {
+      "recortes": {
+        "Amazônia": {
+          "direta_ha": 13.5,
+          "indireta_ha": 203513.67,
+          "total_ha": 203527.17,
+          "pct_direta": 0.0001,
+          "reliable": true
+        },
+        "Caatinga": {
+          "direta_ha": 188.28,
+          "indireta_ha": 80.73,
+          "total_ha": 269.01,
+          "pct_direta": 0.6999,
+          "reliable": false
+        },
+        "Cerrado": {
+          "direta_ha": 595778.04,
+          "indireta_ha": 3532827.42,
+          "total_ha": 4128605.46,
+          "pct_direta": 0.1443,
+          "reliable": true
+        },
+        "MATOPIBA": {
+          "direta_ha": 512110.71,
+          "indireta_ha": 726192.81,
+          "total_ha": 1238303.52,
+          "pct_direta": 0.4136,
+          "reliable": true
+        },
+        "Mata Atlântica": {
+          "direta_ha": 15469.92,
+          "indireta_ha": 299065.05,
+          "total_ha": 314534.97,
+          "pct_direta": 0.0492,
+          "reliable": true
+        },
+        "Nacional": {
+          "direta_ha": 643278.87,
+          "indireta_ha": 4068717.03,
+          "total_ha": 4711995.9,
+          "pct_direta": 0.1365,
+          "reliable": true
+        },
+        "Pampa": {
+          "direta_ha": 31829.13,
+          "indireta_ha": 33230.16,
+          "total_ha": 65059.29,
+          "pct_direta": 0.4892,
+          "reliable": false
+        }
+      }
+    }
+  }
+}

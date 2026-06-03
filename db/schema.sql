@@ -11,7 +11,9 @@
 
 BEGIN;
 
-DROP TABLE IF EXISTS indicators       CASCADE;
+DROP TABLE IF EXISTS indicators          CASCADE;
+DROP TABLE IF EXISTS harvex_trajectories CASCADE;
+DROP TABLE IF EXISTS harvex_transitions  CASCADE;
 DROP TABLE IF EXISTS transitions      CASCADE;
 DROP TABLE IF EXISTS lulc_timeseries  CASCADE;
 DROP TABLE IF EXISTS pam              CASCADE;
@@ -90,6 +92,41 @@ CREATE TABLE indicators (
     soja_2024_ha    NUMERIC,
     ranking_pressao INTEGER
 );
+
+-- ---------------------------------------------------------------------------
+-- HARVEX anchor-point tables (Joel/HARVEX deliverable — the GOLDEN source)
+--
+-- Ingested by scripts/ingest_harvex.py from the HARVEX workbook + consolidado.
+-- Kept SEPARATE from `transitions` (interim annual matrices) so placeholder
+-- anchor values never contaminate the live export. Downstream scripts cut over
+-- to these tables once Joel delivers the real values. Classes are stored as the
+-- canonical 15-class labels (matching `transitions`); periods are canonicalized
+-- to '2008_2017' / '2017_2024' / '2008_2024'.
+-- ---------------------------------------------------------------------------
+
+-- Two-step transitions per GTAP period (HARVEX 'Lookup' sheet).
+CREATE TABLE harvex_transitions (
+    rgint_id   INTEGER NOT NULL REFERENCES regions(rgint_id),
+    periodo    TEXT    NOT NULL,   -- '2008_2017' | '2017_2024' | '2008_2024'
+    origem_id  TEXT    NOT NULL,
+    destino_id TEXT    NOT NULL,
+    area_ha    NUMERIC,
+    PRIMARY KEY (rgint_id, periodo, origem_id, destino_id)
+);
+CREATE INDEX idx_hxtrans_rgint ON harvex_transitions(rgint_id);
+
+-- Three-step pixel trajectories 2008 -> 2017 -> 2024 (HARVEX 'consolidado').
+-- Enables true direct/indirect: e.g. floresta->pastagem->soja (indirect) vs
+-- floresta->soja (direct), impossible to tell from 2-step matrices alone.
+CREATE TABLE harvex_trajectories (
+    rgint_id   INTEGER NOT NULL REFERENCES regions(rgint_id),
+    classe_2008 TEXT   NOT NULL,
+    classe_2017 TEXT   NOT NULL,
+    classe_2024 TEXT   NOT NULL,
+    area_ha    NUMERIC,
+    PRIMARY KEY (rgint_id, classe_2008, classe_2017, classe_2024)
+);
+CREATE INDEX idx_hxtraj_rgint ON harvex_trajectories(rgint_id);
 
 -- ---------------------------------------------------------------------------
 -- Staging tables (raw auxiliary sources; ingested for completeness/future use)

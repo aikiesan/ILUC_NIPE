@@ -1,0 +1,1 @@
+import{j as r,b as t}from"./index-D1iuRV9u.js";import{e as s}from"./colors-XMZXQsSV.js";function a({biome:e,className:n}){const o=s(e);return r.jsx("span",{className:t("inline-flex items-center rounded border px-2 py-0.5 text-xs font-medium",n),style:{backgroundColor:o.tint,color:o.ink,borderColor:`${o.ink}33`},children:e})}export{a as B};

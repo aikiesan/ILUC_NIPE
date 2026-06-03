@@ -127,10 +127,18 @@ export const SEQ_GAIN: PlotlyColorscale = [
   [0.0, "#FFFFE5"], [0.5, "#78C679"], [1.0, "#004529"],
 ];
 
-/** Diverging RdYlGn — net balance (loss ↔ gain), use with zmid = 0. */
+/**
+ * Diverging net balance (loss ↔ gain), use with zmid = 0.
+ *
+ * ColorBrewer **RdBu** (red↔blue), one of the few diverging schemes flagged
+ * colorblind-safe: the prior RdYlGn collapsed to indistinguishable brown under
+ * deuteranopia/protanopia (~8% of men, incl. the project's lead). Red↔blue
+ * survives because the blue channel is preserved across the common dichromacies
+ * and the two ends also differ in lightness. Loss = red, gain = blue.
+ */
 export const DIVERGING_BALANCE: PlotlyColorscale = [
-  [0.0, "#A50026"], [0.25, "#F46D43"], [0.5, "#FFFFBF"],
-  [0.75, "#A6D96A"], [1.0, "#006837"],
+  [0.0, "#B2182B"], [0.25, "#D6604D"], [0.5, "#F7F7F7"],
+  [0.75, "#4393C3"], [1.0, "#2166AC"],
 ];
 
 /** Teal sequential for the transition-matrix heatmap (white → primary). */

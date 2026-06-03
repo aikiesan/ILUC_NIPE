@@ -16,7 +16,7 @@ const router = createHashRouter([
     path: "/",
     element: <AppLayout />,
     children: [
-      { index: true, element: <Navigate to="/overview" replace /> },
+      { index: true, element: <Navigate to="/map" replace /> },
       { path: "overview", element: <Overview /> },
       { path: "map", element: <MapView /> },
       { path: "region/:id", element: <Region /> },

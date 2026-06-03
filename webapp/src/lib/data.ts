@@ -1,5 +1,6 @@
 import Papa from "papaparse";
 import type {
+  DirectIndirectData,
   IndexEntry,
   NationalTimeseriesRow,
   NationalTransitionRow,
@@ -67,6 +68,8 @@ export const loadRegionSeries = (id: string) =>
 export const loadRegionPam = (id: string) => fetchCsv<PamRow>(`rgint_pam/${id}.csv`);
 export const loadGeoJson = () =>
   fetchJson<GeoJSON.FeatureCollection>("rgint_simplified.geojson");
+export const loadDirectIndirect = () =>
+  fetchJson<DirectIndirectData>("direct_indirect_soy.json");
 
 /** Region transitions / matrix may be absent until the full dataset lands. */
 export async function loadRegionTransitions(id: string): Promise<RegionTransitionRow[] | null> {
