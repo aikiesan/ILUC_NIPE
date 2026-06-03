@@ -1,7 +1,15 @@
 """Generate webapp/public/data/rgint_indicators.csv and national_timeseries.csv
 FROM Postgres (tables ``regions``, ``lulc_timeseries``, ``pam``).
 
-Indicators are derived from each region's 15-class area time series:
+Native-vegetation indicators (pressure/regeneration/balance) are computed from
+the **MapBiomas Collection 10** native-veg stock per RGINT/year, persisted in
+``data/native_stock_by_rgint.csv`` (built once from the MapBiomas municipal grid;
+see the rebuild notebook). This is the A2 decision: a single, complete, auditable
+stock source for all 133 regions — it eliminates the Amazon "blackout" where the
+interim ``lulc_timeseries`` had native veg NULL (pressão spuriously 0). The
+agro/soy figures still come from PAM (Postgres); national_timeseries (all 15
+classes by biome) still comes from lulc_timeseries.
+
   * balanco_ha   = native veg (last year) − native veg (first year)
   * pressao_ha   = gross native-veg loss (sum of year-over-year decreases)
   * regeneracao_ha = gross native-veg gain (sum of year-over-year increases)
@@ -14,8 +22,39 @@ from __future__ import annotations
 import csv
 from collections import defaultdict
 
-from common import NATIVE_CLASSES, ensure_out
+from common import NATIVE_CLASSES, ROOT, ensure_out
 from db import connect
+
+# MapBiomas-derived native-veg stock (tidy: rgint_id, ano, native_ha). Built once
+# from MapBiomas col10; committed so the pipeline is reproducible without the
+# external 62 MB municipal grid.
+NATIVE_STOCK_CSV = ROOT / "data" / "native_stock_by_rgint.csv"
+
+
+def load_native_stock() -> dict[str, dict[int, float]]:
+    """rgint_id -> {ano -> native_ha} from the committed MapBiomas stock CSV."""
+    stock: dict[str, dict[int, float]] = defaultdict(dict)
+    with open(NATIVE_STOCK_CSV, encoding="utf-8") as fh:
+        for r in csv.DictReader(fh):
+            try:
+                stock[str(r["rgint_id"])][int(r["ano"])] = float(r["native_ha"])
+            except (TypeError, ValueError):
+                continue
+    return stock
+
+
+def stock_metrics(by_year: dict[int, float] | None) -> tuple[float, float, float]:
+    """(pressao, regeneracao, balanco) from a native-veg stock series."""
+    if not by_year:
+        return 0.0, 0.0, 0.0
+    years = sorted(by_year)
+    if len(years) < 2:
+        return 0.0, 0.0, 0.0
+    vals = [by_year[y] for y in years]
+    pressao = sum(max(0.0, a - b) for a, b in zip(vals, vals[1:]))
+    regen = sum(max(0.0, b - a) for a, b in zip(vals, vals[1:]))
+    balanco = vals[-1] - vals[0]
+    return pressao, regen, balanco
 
 
 def native_total_by_year(series: dict) -> dict[int, float]:
@@ -90,13 +129,14 @@ def main() -> None:
 
     records = []
     national: dict[tuple[int, str, str], float] = {}
+    native_stock = load_native_stock()  # MapBiomas A2 native-veg stock per RGINT
 
     for item in regions:
         rid = item["rgint"]
         series = series_all.get(rid)
-        if series is None:
-            continue
-        pressao, regen, balanco = pressure_metrics(series)
+        # Pressure/regeneration/balance from the MapBiomas native stock (A2),
+        # not the interim lulc_timeseries (which is NULL for the Amazon stubs).
+        pressao, regen, balanco = stock_metrics(native_stock.get(rid))
         records.append(
             {
                 "rgint_id": rid,
@@ -110,12 +150,14 @@ def main() -> None:
                 "soja_2024_ha": soja.get(rid, 0.0),
             }
         )
-        for cls, by_year in series.items():
-            for y, val in by_year.items():
-                if val is None:
-                    continue
-                key = (int(y), cls, item["biome"])
-                national[key] = national.get(key, 0.0) + float(val)
+        # national_timeseries still aggregates the full 15-class lulc series.
+        if series:
+            for cls, by_year in series.items():
+                for y, val in by_year.items():
+                    if val is None:
+                        continue
+                    key = (int(y), cls, item["biome"])
+                    national[key] = national.get(key, 0.0) + float(val)
 
     records.sort(key=lambda r: r["pressao_ha"], reverse=True)
     for rank, rec in enumerate(records, start=1):
