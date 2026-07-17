@@ -10,6 +10,7 @@ import type {
   RegionMeta,
   RegionSeries,
   RegionTransitionRow,
+  RegionFullData,
 } from "./types";
 
 const BASE = import.meta.env.BASE_URL;
@@ -72,6 +73,8 @@ export const loadDirectIndirect = () =>
   fetchJson<DirectIndirectData>("direct_indirect_soy.json");
 export const loadAllTimeseries = () =>
   fetchJson<Record<string, RegionSeries>>("rgint_timeseries_all.json");
+export const loadRegionFull = (id: string) =>
+  fetchJson<RegionFullData>(`rgint_full/${id}.json`);
 
 /** Region transitions / matrix may be absent until the full dataset lands. */
 export async function loadRegionTransitions(id: string): Promise<RegionTransitionRow[] | null> {

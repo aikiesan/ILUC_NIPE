@@ -15,31 +15,65 @@ import { CLASS_ORDER, NATIVE_CLASSES, PASTURE_CLASSES } from "@/lib/classes";
 import { formatHa } from "@/lib/format";
 import { classColor } from "@/lib/colors";
 import { useAsync } from "@/lib/useAsync";
-import { loadRegionPam } from "@/lib/data";
-import type { RegionSeries } from "@/lib/types";
+import { loadRegionFull } from "@/lib/data";
+import { ChartSkeleton, EmptyState, ErrorState } from "@/components/common/StateBlocks";
 
 const SOJA = "2 - Soja";
 const SOJA_MILHO = "3 - Soja + Milho 2ª safra";
 const MILHO_1A = "4 - Milho 1ª safra";
 const CANA = "5 - Cana-de-açúcar";
 
-type ViewMode = string;
+const SOURCE_NAMES: Record<string, string> = {
+  pipeline_diagonal: "MapBiomas (Matriz)",
+  conab_pam: "IBGE PAM / CONAB",
+  lapig_vigor: "LAPIG Vigor",
+  conab_cafe: "CONAB Café",
+  tc_pastagem: "TerraClass Pastagem",
+  tc_floresta_prim: "TerraClass Primária",
+  tc_floresta_sec: "TerraClass Secundária",
+  tc_nao_florestal: "TerraClass Não-Florestal",
+  mb_floresta_total: "MapBiomas Floresta Bruta",
+  mb_pastagem_total: "MapBiomas Pastagem Bruta",
+  mb_savana_total: "MapBiomas Savana Bruta",
+};
 
-function sumClasses(series: RegionSeries, classes: string[], year: string): number {
-  return classes.reduce((acc, c) => acc + (Number(series[c]?.[year]) || 0), 0);
+const SOURCE_COLORS: Record<string, string> = {
+  pipeline_diagonal: "", // dynamic
+  conab_pam: "#0F766E", // teal
+  lapig_vigor: "#D97706", // amber
+  conab_cafe: "#7C3AED", // purple
+  tc_pastagem: "#059669", // emerald
+  tc_floresta_prim: "#047857",
+  tc_floresta_sec: "#10B981",
+  tc_nao_florestal: "#34D399",
+  mb_floresta_total: "#2563EB", // blue
+  mb_pastagem_total: "#4F46E5", // indigo
+  mb_savana_total: "#DB2777", // pink
+};
+
+function getSourceColor(srcKey: string, activeClass: string): string {
+  if (srcKey === "pipeline_diagonal") {
+    return classColor(activeClass);
+  }
+  return SOURCE_COLORS[srcKey] || "#6B7280";
+}
+
+function getSourceDashArray(srcKey: string): string | undefined {
+  if (srcKey === "pipeline_diagonal") return undefined; // solid
+  if (srcKey.includes("pam") || srcKey.includes("conab")) return "5 5"; // dashed
+  if (srcKey.includes("tc_") || srcKey.includes("lapig")) return "3 3"; // dotted
+  return "1 1";
 }
 
 export function TabTimeseries({
-  series,
   regionId,
   initialMode,
 }: {
-  series: RegionSeries;
   regionId: string;
-  initialMode?: ViewMode;
+  initialMode?: string;
 }) {
-  const pam = useAsync(() => loadRegionPam(regionId), [regionId]);
-  const [mode, setMode] = useState<ViewMode>(initialMode || "geral");
+  const full = useAsync(() => loadRegionFull(regionId), [regionId]);
+  const [mode, setMode] = useState<string>(initialMode || "geral");
 
   useEffect(() => {
     if (initialMode) {
@@ -47,56 +81,48 @@ export function TabTimeseries({
     }
   }, [initialMode]);
 
-  const years = useMemo(() => {
-    const ys = new Set<string>();
-    Object.values(series).forEach((byYear) => Object.keys(byYear).forEach((y) => ys.add(y)));
-    return [...ys].sort();
-  }, [series]);
+  const years = useMemo(() => Array.from({ length: 17 }, (_, i) => 2008 + i), []);
 
-  const pamByYear = useMemo(() => {
-    const m = new Map<number, Record<string, number>>();
-    if (!pam.data) return m;
-    for (const r of pam.data) {
-      const e = m.get(r.ano) ?? {};
-      e[r.cultura] = (e[r.cultura] ?? 0) + (Number(r.area_ha) || 0);
-      m.set(r.ano, e);
-    }
-    return m;
-  }, [pam.data]);
+  const data = useMemo(() => {
+    if (!full.data) return [];
+    return years.map((y, idx) => {
+      const row: Record<string, any> = { ano: y };
 
-  const data = useMemo(
-    () =>
-      years.map((y) => {
-        const yearNum = Number(y);
-        const pVals = pamByYear.get(yearNum) ?? {};
+      // High-level MapBiomas sums
+      const getMbVal = (c: string) => Number(full.data?.classes[c]?.pipeline_diagonal?.values[idx]) || 0;
+      const mbSoja = getMbVal(SOJA) + getMbVal(SOJA_MILHO);
+      const mbPastagem = sumGroup(full.data, PASTURE_CLASSES, idx);
+      const mbVegNativa = sumGroup(full.data, NATIVE_CLASSES, idx);
+      const mbMilho = getMbVal(MILHO_1A) + getMbVal(SOJA_MILHO);
+      const mbCana = getMbVal(CANA);
 
-        const mbSoja = (Number(series[SOJA]?.[y]) || 0) + (Number(series[SOJA_MILHO]?.[y]) || 0);
-        const mbMilho = (Number(series[MILHO_1A]?.[y]) || 0) + (Number(series[SOJA_MILHO]?.[y]) || 0);
-        const mbCana = Number(series[CANA]?.[y]) || 0;
-        const mbPastagem = sumClasses(series, PASTURE_CLASSES, y);
-        const mbVegNativa = sumClasses(series, NATIVE_CLASSES, y);
+      // PAM comparisons
+      const pamSoja = Number(full.data?.classes[SOJA]?.conab_pam?.values[idx]);
+      const pamMilho = (Number(full.data?.classes[SOJA_MILHO]?.conab_pam?.values[idx]) || 0) +
+                       (Number(full.data?.classes[MILHO_1A]?.conab_pam?.values[idx]) || 0);
+      const pamCana = Number(full.data?.classes[CANA]?.conab_pam?.values[idx]);
 
-        const row: Record<string, any> = {
-          ano: yearNum,
-          "Soja (MapBiomas)": mbSoja,
-          "Pastagem (MapBiomas)": mbPastagem,
-          "Veg. nativa (MapBiomas)": mbVegNativa,
-          "Milho (MapBiomas)": mbMilho,
-          "Cana (MapBiomas)": mbCana,
-          "Soja (IBGE PAM)": pVals["soja"] ?? null,
-          "Milho (IBGE PAM)": pVals["milho"] ?? null,
-          "Cana (IBGE PAM)": pVals["cana"] ?? null,
-        };
+      row["Soja (MapBiomas)"] = mbSoja;
+      row["Pastagem (MapBiomas)"] = mbPastagem;
+      row["Veg. nativa (MapBiomas)"] = mbVegNativa;
+      row["Milho (MapBiomas)"] = mbMilho;
+      row["Cana (MapBiomas)"] = mbCana;
+      row["Soja (IBGE PAM)"] = pamSoja !== null && !isNaN(pamSoja) ? pamSoja : null;
+      row["Milho (IBGE PAM)"] = pamMilho !== null && !isNaN(pamMilho) ? pamMilho : null;
+      row["Cana (IBGE PAM)"] = pamCana !== null && !isNaN(pamCana) ? pamCana : null;
 
-        // Add individual LULC classes
-        CLASS_ORDER.forEach((c) => {
-          row[c] = Number(series[c]?.[y]) || 0;
+      // Individual LULC classes all sources
+      CLASS_ORDER.forEach((c) => {
+        const classObj = full.data?.classes[c] || {};
+        Object.keys(classObj).forEach((srcKey) => {
+          const val = classObj[srcKey]?.values[idx];
+          row[`${c}__${srcKey}`] = val !== null && !isNaN(Number(val)) ? Number(val) : null;
         });
+      });
 
-        return row;
-      }),
-    [years, series, pamByYear],
-  );
+      return row;
+    });
+  }, [years, full.data]);
 
   const [yearIdx, setYearIdx] = useState(years.length - 1);
   const selected = data[yearIdx] ?? data[data.length - 1];
@@ -114,10 +140,14 @@ export function TabTimeseries({
     return list;
   }, []);
 
-  if (!data.length) return null;
+  if (full.loading) return <ChartSkeleton height={300} />;
+  if (full.error) return <ErrorState error={full.error} />;
+  if (!full.data || !data.length) return <EmptyState title="Série temporal indisponível" />;
 
   const isClassMode = mode.startsWith("class:");
   const activeClassName = isClassMode ? mode.substring(6) : "";
+  const classSources = isClassMode ? (full.data.classes[activeClassName] || {}) : {};
+  const sourceKeys = Object.keys(classSources);
 
   return (
     <div className="space-y-5">
@@ -214,12 +244,21 @@ export function TabTimeseries({
             </div>
           </>
         ) : (
-          <div className="rounded border border-border bg-card p-3 col-span-3">
-            <p className="text-xs text-muted">{activeClassName}</p>
-            <p className="text-base font-semibold text-foreground tnum font-mono">
-              {formatHa(selected?.[activeClassName])} ha
-            </p>
-          </div>
+          <>
+            {sourceKeys.map((srcKey) => {
+              const val = selected?.[`${activeClassName}__${srcKey}`];
+              return (
+                <div key={srcKey} className="rounded border border-border bg-card p-2 text-center col-span-1">
+                  <p className="text-[10px] text-muted truncate" title={SOURCE_NAMES[srcKey] || srcKey}>
+                    {SOURCE_NAMES[srcKey] || srcKey}
+                  </p>
+                  <p className="text-xs font-semibold text-foreground font-mono">
+                    {val !== null ? `${formatHa(val)} ha` : "N/D"}
+                  </p>
+                </div>
+              );
+            })}
+          </>
         )}
       </div>
 
@@ -264,18 +303,29 @@ export function TabTimeseries({
             </>
           )}
 
-          {isClassMode && (
-            <Line
-              type="monotone"
-              name={activeClassName}
-              dataKey={activeClassName}
-              stroke={classColor(activeClassName)}
-              strokeWidth={2.5}
-              dot={false}
-            />
-          )}
+          {isClassMode &&
+            sourceKeys.map((srcKey) => (
+              <Line
+                key={srcKey}
+                type="monotone"
+                name={SOURCE_NAMES[srcKey] || srcKey}
+                dataKey={`${activeClassName}__${srcKey}`}
+                stroke={getSourceColor(srcKey, activeClassName)}
+                strokeWidth={srcKey === "pipeline_diagonal" ? 2.5 : 1.8}
+                strokeDasharray={getSourceDashArray(srcKey)}
+                dot={false}
+                connectNulls
+              />
+            ))}
         </LineChart>
       </ResponsiveContainer>
     </div>
   );
+}
+
+function sumGroup(fullData: any, classes: string[], yearIdx: number): number {
+  return classes.reduce((acc, c) => {
+    const val = Number(fullData.classes[c]?.pipeline_diagonal?.values[yearIdx]) || 0;
+    return acc + val;
+  }, 0);
 }

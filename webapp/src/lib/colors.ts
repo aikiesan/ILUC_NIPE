@@ -182,6 +182,12 @@ export const SEQ_MATRIX: PlotlyColorscale = [
   [0.75, "#0F766E"], [1.0, "#134E4A"],
 ];
 
+/** Colorblind-friendly diverging scale (Purple ↔ Orange - PuOr) */
+export const COLORBLIND_DIVERGING: PlotlyColorscale = [
+  [0.0, "#B35806"], [0.25, "#F1A340"], [0.5, "#F7F7F7"],
+  [0.75, "#998EC3"], [1.0, "#542788"],
+];
+
 /** Choropleth scale + diverging flag for a given indicator variable. */
 export function scaleForVariable(variable: string): {
   colorscale: PlotlyColorscale;

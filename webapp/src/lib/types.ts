@@ -53,6 +53,18 @@ export interface PamRow {
   area_ha: number;
 }
 
+export interface SourceData {
+  values: (number | null)[];
+  years: number[];
+  quality?: string;
+  notes?: string;
+}
+
+export interface RegionFullData {
+  metadata: { rgint: string; nome: string; uf: string; biome: string; area_ha: number };
+  classes: Record<string, Record<string, SourceData>>;
+}
+
 /** class -> { year -> area_ha } */
 export type RegionSeries = Record<string, Record<string, number | null>>;
 

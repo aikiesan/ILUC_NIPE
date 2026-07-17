@@ -7,10 +7,11 @@ import { Select } from "@/components/ui/select";
 import { ChartSkeleton, EmptyState, ErrorState } from "@/components/common/StateBlocks";
 import { TabExpansion } from "@/components/region/TabExpansion";
 import { useAsync } from "@/lib/useAsync";
-import { loadAllTimeseries, loadGeoJson, loadIndicators, loadMeta, loadRegionSeries, loadRegionTransitions } from "@/lib/data";
+import { loadAllTimeseries, loadGeoJson, loadIndicators, loadMeta, loadRegionTransitions } from "@/lib/data";
 import { formatHa, formatSignedHa, formatPct } from "@/lib/format";
-import { scaleForVariable } from "@/lib/colors";
+import { scaleForVariable, COLORBLIND_DIVERGING, SEQ_GAIN } from "@/lib/colors";
 import type { RegionIndicator, RegionMeta } from "@/lib/types";
+import { cn } from "@/lib/utils";
 import { CLASS_ORDER, shortClassLabel } from "@/lib/classes";
 import { Slider } from "@/components/ui/slider";
 import { TabTimeseries } from "@/components/region/TabTimeseries";
@@ -154,6 +155,7 @@ export default function MapView() {
   const [variable, setVariable] = useState<MapVar>("none");
   const [year, setYear] = useState<number>(2024);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [colorBlindMode, setColorBlindMode] = useState(false);
   const baseMode = variable === "none";
   const isClass = CLASS_ORDER.includes(variable as any);
 
@@ -188,10 +190,7 @@ export default function MapView() {
 
 
 
-  const selectedSeries = useAsync(
-    () => (selectedId ? loadRegionSeries(selectedId) : Promise.resolve(null)),
-    [selectedId],
-  );
+
 
   const chartMode = useMemo(() => {
     const vLower = String(variable).toLowerCase();
@@ -263,9 +262,17 @@ export default function MapView() {
   const loading = geo.loading || ind.loading || (isClass && ts.loading);
   const error = geo.error || ind.error || (isClass && ts.error);
   const label = isClass ? `${variable} (${year})` : VARIABLES.find((v) => v.value === variable)!.label;
-  const scale = baseMode
+  let scale = baseMode
     ? { colorscale: undefined, diverging: false }
     : scaleForVariable(variable);
+
+  if (colorBlindMode && !baseMode) {
+    if (scale.diverging) {
+      scale = { colorscale: COLORBLIND_DIVERGING, diverging: true };
+    } else {
+      scale = { colorscale: SEQ_GAIN, diverging: false };
+    }
+  }
 
   return (
     <div>
@@ -321,14 +328,27 @@ export default function MapView() {
           </div>
         </div>
         <div className="flex gap-2 w-full items-end justify-between sm:justify-start">
-          {selectedId && (
+          <div className="flex gap-2 items-center shrink-0">
+            {selectedId && (
+              <button
+                onClick={() => setSelectedId(null)}
+                className="rounded border border-border bg-card px-3 py-2 text-xs font-semibold text-foreground hover:bg-highlight hover:text-foreground transition-colors shrink-0"
+              >
+                Limpar Seleção
+              </button>
+            )}
             <button
-              onClick={() => setSelectedId(null)}
-              className="rounded border border-border px-3 py-2 text-xs font-semibold text-foreground hover:bg-card transition-colors shrink-0"
+              onClick={() => setColorBlindMode(!colorBlindMode)}
+              className={cn(
+                "rounded border px-3 py-2 text-xs font-semibold transition-colors shrink-0",
+                colorBlindMode
+                  ? "bg-accent border-accent text-white hover:bg-accent/90"
+                  : "border-border text-foreground hover:bg-card"
+              )}
             >
-              Limpar Seleção
+              {colorBlindMode ? "Daltônico: Ativado" : "Modo Daltônico"}
             </button>
-          )}
+          </div>
           {isClass && (
             <div className="w-full max-w-xs space-y-1">
               <div className="flex items-center justify-between text-xs text-muted">
@@ -409,17 +429,10 @@ export default function MapView() {
                   <h3 className="mb-3 text-sm font-semibold text-foreground">
                     Série Temporal & Comparação Multi-fonte
                   </h3>
-                  {selectedSeries.loading ? (
-                    <ChartSkeleton height={200} />
-                  ) : selectedSeries.error || !selectedSeries.data ? (
-                    <EmptyState title="Série temporal indisponível" />
-                  ) : (
                     <TabTimeseries
-                      series={selectedSeries.data}
                       regionId={selectedMeta.id}
                       initialMode={chartMode}
                     />
-                  )}
                 </CardContent>
               </Card>
             </>

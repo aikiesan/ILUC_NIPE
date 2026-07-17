@@ -13,13 +13,12 @@ import { TabTimeseries } from "@/components/region/TabTimeseries";
 import { TabMatrix } from "@/components/region/TabMatrix";
 import { TabPam } from "@/components/region/TabPam";
 import { useAsync } from "@/lib/useAsync";
-import { loadIndicators, loadMeta, loadRegionMatrix, loadRegionSeries } from "@/lib/data";
+import { loadIndicators, loadMeta, loadRegionMatrix } from "@/lib/data";
 
 export default function Region() {
   const { id = "" } = useParams();
   const meta = useAsync(loadMeta, []);
   const indicators = useAsync(loadIndicators, []);
-  const series = useAsync(() => loadRegionSeries(id), [id]);
   const matrix = useAsync(() => loadRegionMatrix(id), [id]);
 
   const region = useMemo(
@@ -80,13 +79,7 @@ export default function Region() {
               </TabsContent>
 
               <TabsContent value="serie">
-                {series.loading ? (
-                  <ChartSkeleton height={300} />
-                ) : series.error || !series.data ? (
-                  <EmptyState title="Série temporal indisponível" />
-                ) : (
-                  <TabTimeseries series={series.data} regionId={id} />
-                )}
+                <TabTimeseries regionId={id} />
               </TabsContent>
 
               <TabsContent value="matriz">
