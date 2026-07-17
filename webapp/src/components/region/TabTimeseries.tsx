@@ -18,10 +18,8 @@ import { useAsync } from "@/lib/useAsync";
 import { loadRegionFull } from "@/lib/data";
 import { ChartSkeleton, EmptyState, ErrorState } from "@/components/common/StateBlocks";
 
-const SOJA = "2 - Soja";
-const SOJA_MILHO = "3 - Soja + Milho 2ª safra";
-const MILHO_1A = "4 - Milho 1ª safra";
-const CANA = "5 - Cana-de-açúcar";
+const SOJA = "2 - Soja Safra Única";
+const SOJA_MILHO = "3 - Soja + Milho 2ª Safra";
 
 const SOURCE_NAMES: Record<string, string> = {
   pipeline_diagonal: "MapBiomas (Matriz)",
@@ -93,23 +91,10 @@ export function TabTimeseries({
       const mbSoja = getMbVal(SOJA) + getMbVal(SOJA_MILHO);
       const mbPastagem = sumGroup(full.data, PASTURE_CLASSES, idx);
       const mbVegNativa = sumGroup(full.data, NATIVE_CLASSES, idx);
-      const mbMilho = getMbVal(MILHO_1A) + getMbVal(SOJA_MILHO);
-      const mbCana = getMbVal(CANA);
-
-      // PAM comparisons
-      const pamSoja = Number(full.data?.classes[SOJA]?.conab_pam?.values[idx]);
-      const pamMilho = (Number(full.data?.classes[SOJA_MILHO]?.conab_pam?.values[idx]) || 0) +
-                       (Number(full.data?.classes[MILHO_1A]?.conab_pam?.values[idx]) || 0);
-      const pamCana = Number(full.data?.classes[CANA]?.conab_pam?.values[idx]);
 
       row["Soja (MapBiomas)"] = mbSoja;
       row["Pastagem (MapBiomas)"] = mbPastagem;
       row["Veg. nativa (MapBiomas)"] = mbVegNativa;
-      row["Milho (MapBiomas)"] = mbMilho;
-      row["Cana (MapBiomas)"] = mbCana;
-      row["Soja (IBGE PAM)"] = pamSoja !== null && !isNaN(pamSoja) ? pamSoja : null;
-      row["Milho (IBGE PAM)"] = pamMilho !== null && !isNaN(pamMilho) ? pamMilho : null;
-      row["Cana (IBGE PAM)"] = pamCana !== null && !isNaN(pamCana) ? pamCana : null;
 
       // Individual LULC classes all sources
       CLASS_ORDER.forEach((c) => {
@@ -129,10 +114,7 @@ export function TabTimeseries({
 
   const selectOptions = useMemo(() => {
     const list = [
-      { value: "geral", label: "Visão Geral (Soja/Pastagem/Veg. nativa)" },
-      { value: "soja", label: "Comparação: Soja (MapBiomas vs IBGE PAM)" },
-      { value: "milho", label: "Comparação: Milho (MapBiomas vs IBGE PAM)" },
-      { value: "cana", label: "Comparação: Cana (MapBiomas vs IBGE PAM)" },
+      { value: "geral", label: "Visão Geral (Soja/Pastagem/Veg. nativa)" }
     ];
     CLASS_ORDER.forEach((c) => {
       list.push({ value: `class:${c}`, label: `Classe: ${c}` });
@@ -198,51 +180,6 @@ export function TabTimeseries({
               </p>
             </div>
           </>
-        ) : mode === "soja" ? (
-          <>
-            <div className="rounded border border-border bg-card p-3 col-span-2">
-              <p className="text-xs text-muted">Soja (MapBiomas - física/dupla safra)</p>
-              <p className="text-base font-semibold text-foreground tnum font-mono">
-                {formatHa(selected?.["Soja (MapBiomas)"])} ha
-              </p>
-            </div>
-            <div className="rounded border border-border bg-card p-3">
-              <p className="text-xs text-muted">Soja (IBGE PAM)</p>
-              <p className="text-base font-semibold text-foreground tnum font-mono">
-                {selected?.["Soja (IBGE PAM)"] !== null ? `${formatHa(selected?.["Soja (IBGE PAM)"])} ha` : "N/D"}
-              </p>
-            </div>
-          </>
-        ) : mode === "milho" ? (
-          <>
-            <div className="rounded border border-border bg-card p-3 col-span-2">
-              <p className="text-xs text-muted">Milho (MapBiomas - 1ª + 2ª safra)</p>
-              <p className="text-base font-semibold text-foreground tnum font-mono">
-                {formatHa(selected?.["Milho (MapBiomas)"])} ha
-              </p>
-            </div>
-            <div className="rounded border border-border bg-card p-3">
-              <p className="text-xs text-muted">Milho (IBGE PAM)</p>
-              <p className="text-base font-semibold text-foreground tnum font-mono">
-                {selected?.["Milho (IBGE PAM)"] !== null ? `${formatHa(selected?.["Milho (IBGE PAM)"])} ha` : "N/D"}
-              </p>
-            </div>
-          </>
-        ) : mode === "cana" ? (
-          <>
-            <div className="rounded border border-border bg-card p-3 col-span-2">
-              <p className="text-xs text-muted">Cana (MapBiomas)</p>
-              <p className="text-base font-semibold text-foreground tnum font-mono">
-                {formatHa(selected?.["Cana (MapBiomas)"])} ha
-              </p>
-            </div>
-            <div className="rounded border border-border bg-card p-3">
-              <p className="text-xs text-muted">Cana (IBGE PAM)</p>
-              <p className="text-base font-semibold text-foreground tnum font-mono">
-                {selected?.["Cana (IBGE PAM)"] !== null ? `${formatHa(selected?.["Cana (IBGE PAM)"])} ha` : "N/D"}
-              </p>
-            </div>
-          </>
         ) : (
           <>
             {sourceKeys.map((srcKey) => {
@@ -279,27 +216,6 @@ export function TabTimeseries({
               <Line type="monotone" name="Veg. nativa (MapBiomas)" dataKey="Veg. nativa (MapBiomas)" stroke="#15803D" strokeWidth={2} dot={false} />
               <Line type="monotone" name="Pastagem (MapBiomas)" dataKey="Pastagem (MapBiomas)" stroke="#B45309" strokeWidth={2} dot={false} />
               <Line type="monotone" name="Soja (MapBiomas)" dataKey="Soja (MapBiomas)" stroke="#0F766E" strokeWidth={2} dot={false} />
-            </>
-          )}
-
-          {mode === "soja" && (
-            <>
-              <Line type="monotone" name="Soja (MapBiomas)" dataKey="Soja (MapBiomas)" stroke="#0F766E" strokeWidth={2.5} dot={false} />
-              <Line type="monotone" name="Soja (IBGE PAM)" dataKey="Soja (IBGE PAM)" stroke="#0F766E" strokeWidth={2} strokeDasharray="5 5" connectNulls dot={false} />
-            </>
-          )}
-
-          {mode === "milho" && (
-            <>
-              <Line type="monotone" name="Milho (MapBiomas)" dataKey="Milho (MapBiomas)" stroke="#B45309" strokeWidth={2.5} dot={false} />
-              <Line type="monotone" name="Milho (IBGE PAM)" dataKey="Milho (IBGE PAM)" stroke="#B45309" strokeWidth={2} strokeDasharray="5 5" connectNulls dot={false} />
-            </>
-          )}
-
-          {mode === "cana" && (
-            <>
-              <Line type="monotone" name="Cana (MapBiomas)" dataKey="Cana (MapBiomas)" stroke="#15803D" strokeWidth={2.5} dot={false} />
-              <Line type="monotone" name="Cana (IBGE PAM)" dataKey="Cana (IBGE PAM)" stroke="#15803D" strokeWidth={2} strokeDasharray="5 5" connectNulls dot={false} />
             </>
           )}
 

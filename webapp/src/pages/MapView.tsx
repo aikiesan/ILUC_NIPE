@@ -193,10 +193,6 @@ export default function MapView() {
 
 
   const chartMode = useMemo(() => {
-    const vLower = String(variable).toLowerCase();
-    if (vLower.includes("soja")) return "soja";
-    if (vLower.includes("milho")) return "milho";
-    if (vLower.includes("cana")) return "cana";
     if (isClass) {
       return `class:${variable}`;
     }

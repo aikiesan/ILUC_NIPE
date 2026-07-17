@@ -29,8 +29,8 @@ def _count(cur, table):
 
 def test_core_tables_populated(ingested):
     assert _count(ingested, "regions") == 133
-    # 133 regions x 15 classes x 16 years (2008-2023)
-    assert _count(ingested, "lulc_timeseries") == 31920
+    # 133 regions x 15 classes x 17 years (2008-2024)
+    assert _count(ingested, "lulc_timeseries") == 33915
     assert _count(ingested, "municipios") > 5000
     assert _count(ingested, "pam") > 0
     assert _count(ingested, "transitions") > 0  # 3 regions today

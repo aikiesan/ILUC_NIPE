@@ -1,4 +1,4 @@
-import{e as j,u as C,r as o,j as a,C as S,a as B,b as i}from"./index-BM7N7SSl.js";import{P as R}from"./PageHeader-D0Rq8Gwv.js";import{C as T}from"./card-Bldmdy1c.js";import{B as q}from"./badge-a2wow3bV.js";import{D as A,B as H}from"./BiomeBadge-B9MRzQHH.js";import{T as I,d as L,e as f,c as U,a as D,b as s}from"./table-0sshJ6C5.js";import{B as E,h as M,i as u,l as P,p as G}from"./colors-CwV23NpG.js";/**
+import{e as j,u as C,r as o,j as a,C as S,a as B,b as i}from"./index-CJT8qgfc.js";import{P as R}from"./PageHeader-C8UERRfi.js";import{C as T}from"./card-Bo7rpKgp.js";import{B as q}from"./badge-CTOctnUR.js";import{D as A,B as H}from"./BiomeBadge-CiCtYTvY.js";import{T as I,d as L,e as f,c as U,a as D,b as s}from"./table-XY0djHZT.js";import{B as E,h as M,i as u,l as P,p as G}from"./colors-BuNmt1U0.js";/**
  * @license lucide-react v0.456.0 - ISC
  *
  * This source code is licensed under the ISC license.
