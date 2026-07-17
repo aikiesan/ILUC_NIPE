@@ -120,33 +120,60 @@ def main():
             continue
         matrix_file = matrix_files[0]
 
-        print(f"  Region {rid}: Processing transition matrix...")
+        # ── 2. MULTI-SOURCE HANDOFF FILE ──
+        handoff_files = glob.glob(str(HANDOFF_DIR / f"*_{rid}_classes_multifonte.xlsx"))
+        if not handoff_files:
+            print(f"  [MISSING HANDOFF] Region {rid} - {name}")
+            continue
+        handoff_file = handoff_files[0]
+
+        print(f"  Region {rid}: Processing transition matrix & handoff tidy...")
         df_mat = pd.read_excel(matrix_file, sheet_name="4_Dados")
+        df_tidy = pd.read_excel(handoff_file, sheet_name="tidy")
 
         # Normalize Origem and Destino to canonical classes
         df_mat["ORIGEM_CANON"] = df_mat["ORIGEM"].map(get_canon_name)
         df_mat["DESTINO_CANON"] = df_mat["DESTINO"].map(get_canon_name)
 
+        df_tidy["CL_CANON"] = df_tidy["classe_principal"].map(lambda x: CLASS_ORDER[int(x)-1] if pd.notna(x) else "")
+
         # Initialize stocks dict for all classes and years 2008-2024
         stocks = {c: {str(y): 0.0 for y in range(2008, 2025)} for c in CLASS_ORDER}
         
-        # Row sums of 2008→2009 matrix give 2008 stocks
-        df_first = df_mat[df_mat["ANO_PAR"] == "2008→2009"]
-        for c in CLASS_ORDER:
-            stocks[c]["2008"] = float(df_first[df_first["ORIGEM_CANON"] == c]["VALOR_HA"].sum())
-
-        # Column sums of each year pair give that end year's stocks
-        year_pairs = sorted(df_mat["ANO_PAR"].dropna().unique())
-        for pair in year_pairs:
-            m = re.match(r"(\d{4})→(\d{4})", pair)
-            if not m:
-                continue
-            end_year = m.group(2)
-            df_pair = df_mat[df_mat["ANO_PAR"] == pair]
+        # Populate years 2008-2023 from tidy sheet
+        for y in range(2008, 2024):
+            df_y = df_tidy[df_tidy["ano"] == y]
+            
+            # Non-pasture: MapBiomas col10 (15cl)
+            df_mb = df_y[df_y["fonte"] == "MapBiomas col10 (15cl)"]
             for c in CLASS_ORDER:
-                stocks[c][end_year] = float(df_pair[df_pair["DESTINO_CANON"] == c]["VALOR_HA"].sum())
+                num = _leading_num(c)
+                if num in [7, 8, 9]:
+                    continue
+                stocks[c][str(y)] = float(df_mb[df_mb["CL_CANON"] == c]["area_ha"].sum())
+                
+            # Pasture: LAPIG vigor
+            df_lapig = df_y[df_y["fonte"] == "LAPIG vigor"]
+            for c in CLASS_ORDER:
+                num = _leading_num(c)
+                if num not in [7, 8, 9]:
+                    continue
+                stocks[c][str(y)] = float(df_lapig[df_lapig["CL_CANON"] == c]["area_ha"].sum())
+
+        # Project to 2024 using 2023->2024 transitions
+        df_2024 = df_mat[df_mat["ANO_PAR"] == "2023→2024"]
+        row_sums = df_2024.groupby("ORIGEM_CANON")["VALOR_HA"].sum().to_dict()
+        col_sums = df_2024.groupby("DESTINO_CANON")["VALOR_HA"].sum().to_dict()
+        
+        for c in CLASS_ORDER:
+            prev = stocks[c]["2023"]
+            in_flow = col_sums.get(c, 0.0)
+            out_flow = row_sums.get(c, 0.0)
+            val_2024 = prev + in_flow - out_flow
+            stocks[c]["2024"] = max(0.0, round(val_2024, 4))
 
         all_stocks[rid] = stocks
+        year_pairs = sorted(df_mat["ANO_PAR"].dropna().unique())
 
         # Build matrices JSON structures
         matrices = {str(y): {} for y in range(2008, 2025)}
@@ -206,12 +233,7 @@ def main():
             with open(path_out, "w", encoding="utf-8") as f:
                 json.dump(series_payload, f, ensure_ascii=False, separators=(",", ":"))
 
-        # ── 2. MULTI-SOURCE HANDOFF FILE ──
-        handoff_files = glob.glob(str(HANDOFF_DIR / f"*_{rid}_classes_multifonte.xlsx"))
-        if not handoff_files:
-            print(f"  [MISSING HANDOFF] Region {rid} - {name}")
-            continue
-        handoff_file = handoff_files[0]
+
 
         print(f"  Region {rid}: Processing multi-source handoff...")
         df_comp = pd.read_excel(handoff_file, sheet_name="completo_todas_fontes")
