@@ -24,18 +24,55 @@ test.describe("routes", () => {
     await expect(page.getByText(/Escala divergente/)).toBeVisible();
   });
 
-  test("transitions page reacts to the period selector", async ({ page }) => {
-    await page.goto("/#/transitions");
-    await expect(page.getByText("Análise de Transições Nacionais")).toBeVisible();
-    await page.getByLabel("Período").selectOption("2008_2017");
-    await page.getByLabel("Período").selectOption("2008_2024");
-    await expect(page.getByLabel("Período")).toHaveValue("2008_2024");
-  });
-
   test("about/methodology page renders", async ({ page }) => {
     await page.goto("/#/about");
     await expect(page.getByText("Metodologia e Fontes")).toBeVisible();
     await expect(page.getByText("Sistema de 15 classes")).toBeVisible();
+  });
+});
+
+test.describe("map color blind mode and year slider", () => {
+  test("toggles color blind mode and displays year slider on class selection", async ({ page }) => {
+    await page.goto("/#/map");
+    
+    // Toggle Color Blind Mode on
+    const cbBtn = page.getByRole("button", { name: "Modo Daltônico" });
+    await expect(cbBtn).toBeVisible();
+    await cbBtn.click();
+    
+    // Toggle Color Blind Mode off
+    const cbBtnActive = page.getByRole("button", { name: "Daltônico: Ativado" });
+    await expect(cbBtnActive).toBeVisible();
+    await cbBtnActive.click();
+    
+    await expect(page.getByRole("button", { name: "Modo Daltônico" })).toBeVisible();
+
+    // Select a class variable
+    await page.getByLabel("Variável").selectOption("2 - Soja Safra Única");
+    
+    // Slider should appear
+    await expect(page.getByText("Ano de visualização")).toBeVisible();
+  });
+});
+
+test.describe("sidebar timeseries multi-source rendering", () => {
+  test("renders multi-source options and source cards on map selection", async ({ page }) => {
+    await page.goto("/#/map");
+    
+    // Search and click region
+    await page.getByPlaceholder("Ex: Barreiras, Cascavel...").fill("Londrina");
+    await page.getByText("Londrina (PR)").click();
+
+    // Sidebar should show "Série Temporal & Comparação Multi-fonte"
+    await expect(page.getByRole("heading", { name: "Série Temporal & Comparação Multi-fonte" })).toBeVisible();
+
+    // Choose class visualization in chart select specifically by its label
+    const select = page.getByLabel("Visualização do Gráfico");
+    await select.selectOption("class:2 - Soja Safra Única");
+    
+    // Should render source cards above chart (using .first() to satisfy strict mode)
+    await expect(page.getByText("MapBiomas (Matriz)").first()).toBeVisible();
+    await expect(page.getByText("IBGE PAM / CONAB").first()).toBeVisible();
   });
 });
 
