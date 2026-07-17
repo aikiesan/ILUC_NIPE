@@ -237,6 +237,9 @@ def main():
 
         print(f"  Region {rid}: Processing multi-source handoff...")
         df_comp = pd.read_excel(handoff_file, sheet_name="completo_todas_fontes")
+        # Filter for RGINT scale only to exclude state-level (UF) totals from regional charts
+        if "escala" in df_comp.columns:
+            df_comp = df_comp[df_comp["escala"] == "RGINT"]
         df_comp["source_key"] = df_comp.apply(get_source_key, axis=1)
 
         # Group and aggregate areas for identical sources
