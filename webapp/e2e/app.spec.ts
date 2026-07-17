@@ -71,7 +71,7 @@ test.describe("sidebar timeseries multi-source rendering", () => {
     await select.selectOption("class:2 - Soja Safra Única");
     
     // Should render source cards above chart (using .first() to satisfy strict mode)
-    await expect(page.getByText("MapBiomas (Matriz)").first()).toBeVisible();
+    await expect(page.getByText("MapBiomas col10").first()).toBeVisible();
     await expect(page.getByText("IBGE PAM / CONAB").first()).toBeVisible();
   });
 });

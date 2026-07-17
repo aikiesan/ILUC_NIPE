@@ -22,7 +22,7 @@ const SOJA = "2 - Soja Safra Única";
 const SOJA_MILHO = "3 - Soja + Milho 2ª Safra";
 
 const SOURCE_NAMES: Record<string, string> = {
-  pipeline_diagonal: "MapBiomas (Matriz)",
+  pipeline_diagonal: "MapBiomas col10",
   conab_pam: "IBGE PAM / CONAB",
   lapig_vigor: "LAPIG Vigor",
   conab_cafe: "CONAB Café",
