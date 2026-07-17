@@ -15,7 +15,7 @@ import { CLASS_ORDER, NATIVE_CLASSES, PASTURE_CLASSES } from "@/lib/classes";
 import { formatHa } from "@/lib/format";
 import { classColor } from "@/lib/colors";
 import { useAsync } from "@/lib/useAsync";
-import { loadRegionFull } from "@/lib/data";
+import { loadRegionFull, loadRegionSeries } from "@/lib/data";
 import { ChartSkeleton, EmptyState, ErrorState } from "@/components/common/StateBlocks";
 
 const SOJA = "2 - Soja Safra Única";
@@ -71,6 +71,7 @@ export function TabTimeseries({
   initialMode?: string;
 }) {
   const full = useAsync(() => loadRegionFull(regionId), [regionId]);
+  const series = useAsync(() => loadRegionSeries(regionId), [regionId]);
   const [mode, setMode] = useState<string>(initialMode || "geral");
 
   useEffect(() => {
@@ -82,15 +83,15 @@ export function TabTimeseries({
   const years = useMemo(() => Array.from({ length: 17 }, (_, i) => 2008 + i), []);
 
   const data = useMemo(() => {
-    if (!full.data) return [];
+    if (!full.data || !series.data) return [];
     return years.map((y, idx) => {
       const row: Record<string, any> = { ano: y };
 
-      // High-level MapBiomas sums
-      const getMbVal = (c: string) => Number(full.data?.classes[c]?.pipeline_diagonal?.values[idx]) || 0;
+      // High-level MapBiomas sums (overwritten by canonical stock series)
+      const getMbVal = (c: string) => Number(series.data?.[c]?.[String(y)]) || 0;
       const mbSoja = getMbVal(SOJA) + getMbVal(SOJA_MILHO);
-      const mbPastagem = sumGroup(full.data, PASTURE_CLASSES, idx);
-      const mbVegNativa = sumGroup(full.data, NATIVE_CLASSES, idx);
+      const mbPastagem = PASTURE_CLASSES.reduce((acc, c) => acc + getMbVal(c), 0);
+      const mbVegNativa = NATIVE_CLASSES.reduce((acc, c) => acc + getMbVal(c), 0);
 
       row["Soja (MapBiomas)"] = mbSoja;
       row["Pastagem (MapBiomas)"] = mbPastagem;
@@ -100,14 +101,17 @@ export function TabTimeseries({
       CLASS_ORDER.forEach((c) => {
         const classObj = full.data?.classes[c] || {};
         Object.keys(classObj).forEach((srcKey) => {
-          const val = classObj[srcKey]?.values[idx];
+          let val = classObj[srcKey]?.values[idx];
+          if (srcKey === "pipeline_diagonal" && series.data) {
+            val = series.data[c]?.[String(y)] ?? null;
+          }
           row[`${c}__${srcKey}`] = val !== null && !isNaN(Number(val)) ? Number(val) : null;
         });
       });
 
       return row;
     });
-  }, [years, full.data]);
+  }, [years, full.data, series.data]);
 
   const [yearIdx, setYearIdx] = useState(years.length - 1);
   const selected = data[yearIdx] ?? data[data.length - 1];
@@ -122,9 +126,10 @@ export function TabTimeseries({
     return list;
   }, []);
 
-  if (full.loading) return <ChartSkeleton height={300} />;
-  if (full.error) return <ErrorState error={full.error} />;
-  if (!full.data || !data.length) return <EmptyState title="Série temporal indisponível" />;
+  if (full.loading || series.loading) return <ChartSkeleton height={300} />;
+  const err = full.error || series.error;
+  if (err) return <ErrorState error={err} />;
+  if (!full.data || !series.data || !data.length) return <EmptyState title="Série temporal indisponível" />;
 
   const isClassMode = mode.startsWith("class:");
   const activeClassName = isClassMode ? mode.substring(6) : "";
@@ -239,9 +244,3 @@ export function TabTimeseries({
   );
 }
 
-function sumGroup(fullData: any, classes: string[], yearIdx: number): number {
-  return classes.reduce((acc, c) => {
-    const val = Number(fullData.classes[c]?.pipeline_diagonal?.values[yearIdx]) || 0;
-    return acc + val;
-  }, 0);
-}
