@@ -12,7 +12,7 @@
 # read connection settings from infra/.env (copy infra/.env.example first).
 
 COMPOSE := docker compose -f infra/docker-compose.yml --env-file infra/.env
-PY      := python3
+PY      := python
 SCRIPTS := scripts
 
 .PHONY: help db-up db-down db-reset ingest export-static dev build test e2e pipeline fichas

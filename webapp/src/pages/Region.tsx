@@ -85,7 +85,7 @@ export default function Region() {
                 ) : series.error || !series.data ? (
                   <EmptyState title="Série temporal indisponível" />
                 ) : (
-                  <TabTimeseries series={series.data} />
+                  <TabTimeseries series={series.data} regionId={id} />
                 )}
               </TabsContent>
 

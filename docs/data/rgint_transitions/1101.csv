@@ -1,0 +1,424 @@
+ano_par,origem_id,destino_id,area_ha
+2008,1 - Culturas perenes,1 - Culturas perenes,295.73
+2008,2 - Soja,2 - Soja,9.36
+2008,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1.71
+2008,4 - Milho 1ª safra,4 - Milho 1ª safra,24209.85
+2008,5 - Cana-de-açúcar,5 - Cana-de-açúcar,24.88
+2008,6 - Outra agropecuária,6 - Outra agropecuária,38748.37
+2008,7 - Pastagem deg. média,7 - Pastagem deg. média,1345582.67
+2008,8 - Pastagem deg. alta,8 - Pastagem deg. alta,239884.76
+2008,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,1535166.2
+2008,10 - Silvicultura,10 - Silvicultura,36.27
+2008,15 - Outro,15 - Outro,195684.83
+2009,1 - Culturas perenes,1 - Culturas perenes,295.73
+2009,2 - Soja,2 - Soja,9.36
+2009,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1.71
+2009,4 - Milho 1ª safra,4 - Milho 1ª safra,24209.85
+2009,5 - Cana-de-açúcar,5 - Cana-de-açúcar,24.88
+2009,6 - Outra agropecuária,6 - Outra agropecuária,38748.37
+2009,7 - Pastagem deg. média,6 - Outra agropecuária,268.35
+2009,7 - Pastagem deg. média,7 - Pastagem deg. média,580084.64
+2009,7 - Pastagem deg. média,8 - Pastagem deg. alta,103415.02
+2009,7 - Pastagem deg. média,9 - Pastagem deg. baixa,661814.66
+2009,8 - Pastagem deg. alta,6 - Outra agropecuária,47.84
+2009,8 - Pastagem deg. alta,7 - Pastagem deg. média,103415.02
+2009,8 - Pastagem deg. alta,8 - Pastagem deg. alta,18436.39
+2009,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,117985.5
+2009,9 - Pastagem deg. baixa,6 - Outra agropecuária,306.16
+2009,9 - Pastagem deg. baixa,7 - Pastagem deg. média,661814.66
+2009,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,117985.5
+2009,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,755059.88
+2009,10 - Silvicultura,10 - Silvicultura,36.27
+2009,15 - Outro,15 - Outro,195684.83
+2010,1 - Culturas perenes,1 - Culturas perenes,307.89
+2010,2 - Soja,2 - Soja,2.5
+2010,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,0.65
+2010,4 - Milho 1ª safra,4 - Milho 1ª safra,24443.82
+2010,5 - Cana-de-açúcar,5 - Cana-de-açúcar,329.56
+2010,6 - Outra agropecuária,6 - Outra agropecuária,39017.33
+2010,7 - Pastagem deg. média,2 - Soja,8.56
+2010,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,2.24
+2010,7 - Pastagem deg. média,6 - Outra agropecuária,235.42
+2010,7 - Pastagem deg. média,7 - Pastagem deg. média,605681.06
+2010,7 - Pastagem deg. média,8 - Pastagem deg. alta,108834.72
+2010,7 - Pastagem deg. média,9 - Pastagem deg. baixa,667818.14
+2010,8 - Pastagem deg. alta,2 - Soja,1.54
+2010,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,0.4
+2010,8 - Pastagem deg. alta,6 - Outra agropecuária,42.3
+2010,8 - Pastagem deg. alta,7 - Pastagem deg. média,108834.72
+2010,8 - Pastagem deg. alta,8 - Pastagem deg. alta,19556.49
+2010,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,120000.13
+2010,9 - Pastagem deg. baixa,2 - Soja,9.44
+2010,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,2.47
+2010,9 - Pastagem deg. baixa,6 - Outra agropecuária,259.57
+2010,9 - Pastagem deg. baixa,7 - Pastagem deg. média,667818.14
+2010,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,120000.13
+2010,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,736329.89
+2010,10 - Silvicultura,10 - Silvicultura,74.83
+2010,13 - Veg. prim. não-florestal,2 - Soja,8.7
+2010,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,2.28
+2010,15 - Outro,15 - Outro,192813.39
+2011,1 - Culturas perenes,1 - Culturas perenes,327.8
+2011,2 - Soja,2 - Soja,55.98
+2011,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,33.03
+2011,4 - Milho 1ª safra,4 - Milho 1ª safra,20142.31
+2011,5 - Cana-de-açúcar,5 - Cana-de-açúcar,450.92
+2011,6 - Outra agropecuária,6 - Outra agropecuária,35577.98
+2011,7 - Pastagem deg. média,2 - Soja,57.96
+2011,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,34.2
+2011,7 - Pastagem deg. média,6 - Outra agropecuária,310.69
+2011,7 - Pastagem deg. média,7 - Pastagem deg. média,652218.14
+2011,7 - Pastagem deg. média,8 - Pastagem deg. alta,118734.01
+2011,7 - Pastagem deg. média,9 - Pastagem deg. baixa,671154.35
+2011,8 - Pastagem deg. alta,2 - Soja,10.55
+2011,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,6.23
+2011,8 - Pastagem deg. alta,6 - Outra agropecuária,56.56
+2011,8 - Pastagem deg. alta,7 - Pastagem deg. média,118734.01
+2011,8 - Pastagem deg. alta,8 - Pastagem deg. alta,21615.11
+2011,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,122181.28
+2011,9 - Pastagem deg. baixa,2 - Soja,59.64
+2011,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,35.19
+2011,9 - Pastagem deg. baixa,6 - Outra agropecuária,319.71
+2011,9 - Pastagem deg. baixa,7 - Pastagem deg. média,671154.35
+2011,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,122181.28
+2011,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,690640.35
+2011,10 - Silvicultura,10 - Silvicultura,154.09
+2011,15 - Outro,15 - Outro,197201.28
+2012,1 - Culturas perenes,1 - Culturas perenes,393.66
+2012,2 - Soja,2 - Soja,593.65
+2012,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,354.23
+2012,4 - Milho 1ª safra,4 - Milho 1ª safra,18518.86
+2012,5 - Cana-de-açúcar,5 - Cana-de-açúcar,603.41
+2012,6 - Outra agropecuária,6 - Outra agropecuária,35733.24
+2012,7 - Pastagem deg. média,2 - Soja,15.58
+2012,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,9.3
+2012,7 - Pastagem deg. média,6 - Outra agropecuária,356.24
+2012,7 - Pastagem deg. média,7 - Pastagem deg. média,662723.01
+2012,7 - Pastagem deg. média,8 - Pastagem deg. alta,115180.18
+2012,7 - Pastagem deg. média,9 - Pastagem deg. baixa,693984.89
+2012,8 - Pastagem deg. alta,2 - Soja,2.71
+2012,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,1.62
+2012,8 - Pastagem deg. alta,6 - Outra agropecuária,61.91
+2012,8 - Pastagem deg. alta,7 - Pastagem deg. média,115180.18
+2012,8 - Pastagem deg. alta,8 - Pastagem deg. alta,20018.13
+2012,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,120613.44
+2012,9 - Pastagem deg. baixa,2 - Soja,16.32
+2012,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,9.74
+2012,9 - Pastagem deg. baixa,6 - Outra agropecuária,373.04
+2012,9 - Pastagem deg. baixa,7 - Pastagem deg. média,693984.89
+2012,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,120613.44
+2012,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,726721.44
+2012,10 - Silvicultura,10 - Silvicultura,482.63
+2012,15 - Outro,15 - Outro,196347.87
+2013,1 - Culturas perenes,1 - Culturas perenes,434.82
+2013,2 - Soja,2 - Soja,448.4
+2013,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,325.51
+2013,4 - Milho 1ª safra,4 - Milho 1ª safra,10987.78
+2013,5 - Cana-de-açúcar,5 - Cana-de-açúcar,675.42
+2013,6 - Outra agropecuária,6 - Outra agropecuária,39709.25
+2013,7 - Pastagem deg. média,2 - Soja,45.81
+2013,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,33.25
+2013,7 - Pastagem deg. média,6 - Outra agropecuária,1210.22
+2013,7 - Pastagem deg. média,7 - Pastagem deg. média,646117.35
+2013,7 - Pastagem deg. média,8 - Pastagem deg. alta,111479.19
+2013,7 - Pastagem deg. média,9 - Pastagem deg. baixa,709736.58
+2013,8 - Pastagem deg. alta,2 - Soja,7.9
+2013,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,5.74
+2013,8 - Pastagem deg. alta,6 - Outra agropecuária,208.81
+2013,8 - Pastagem deg. alta,7 - Pastagem deg. média,111479.19
+2013,8 - Pastagem deg. alta,8 - Pastagem deg. alta,19234.29
+2013,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,122455.86
+2013,9 - Pastagem deg. baixa,2 - Soja,50.32
+2013,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,36.53
+2013,9 - Pastagem deg. baixa,6 - Outra agropecuária,1329.39
+2013,9 - Pastagem deg. baixa,7 - Pastagem deg. média,709736.58
+2013,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,122455.86
+2013,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,779620.0
+2013,10 - Silvicultura,10 - Silvicultura,834.63
+2013,15 - Outro,15 - Outro,217082.89
+2014,1 - Culturas perenes,1 - Culturas perenes,463.85
+2014,2 - Soja,2 - Soja,668.34
+2014,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,781.47
+2014,4 - Milho 1ª safra,4 - Milho 1ª safra,7254.51
+2014,5 - Cana-de-açúcar,5 - Cana-de-açúcar,923.02
+2014,6 - Outra agropecuária,6 - Outra agropecuária,47831.13
+2014,7 - Pastagem deg. média,2 - Soja,106.1
+2014,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,124.06
+2014,7 - Pastagem deg. média,6 - Outra agropecuária,2824.34
+2014,7 - Pastagem deg. média,7 - Pastagem deg. média,590730.8
+2014,7 - Pastagem deg. média,8 - Pastagem deg. alta,91417.13
+2014,7 - Pastagem deg. média,9 - Pastagem deg. baixa,736418.15
+2014,8 - Pastagem deg. alta,2 - Soja,16.42
+2014,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,19.2
+2014,8 - Pastagem deg. alta,6 - Outra agropecuária,437.07
+2014,8 - Pastagem deg. alta,7 - Pastagem deg. média,91417.13
+2014,8 - Pastagem deg. alta,8 - Pastagem deg. alta,14147.04
+2014,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,113962.63
+2014,9 - Pastagem deg. baixa,2 - Soja,132.26
+2014,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,154.65
+2014,9 - Pastagem deg. baixa,6 - Outra agropecuária,3520.89
+2014,9 - Pastagem deg. baixa,7 - Pastagem deg. média,736418.15
+2014,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,113962.63
+2014,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,918035.23
+2014,10 - Silvicultura,10 - Silvicultura,1215.72
+2014,15 - Outro,15 - Outro,224145.37
+2015,1 - Culturas perenes,1 - Culturas perenes,668.97
+2015,2 - Soja,2 - Soja,1151.35
+2015,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1666.1
+2015,4 - Milho 1ª safra,4 - Milho 1ª safra,6277.26
+2015,5 - Cana-de-açúcar,5 - Cana-de-açúcar,919.78
+2015,6 - Outra agropecuária,6 - Outra agropecuária,53886.33
+2015,7 - Pastagem deg. média,2 - Soja,152.11
+2015,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,220.12
+2015,7 - Pastagem deg. média,6 - Outra agropecuária,5079.88
+2015,7 - Pastagem deg. média,7 - Pastagem deg. média,558074.72
+2015,7 - Pastagem deg. média,8 - Pastagem deg. alta,82258.42
+2015,7 - Pastagem deg. média,9 - Pastagem deg. baixa,750850.18
+2015,8 - Pastagem deg. alta,2 - Soja,22.42
+2015,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,32.44
+2015,8 - Pastagem deg. alta,6 - Outra agropecuária,748.76
+2015,8 - Pastagem deg. alta,7 - Pastagem deg. média,82258.42
+2015,8 - Pastagem deg. alta,8 - Pastagem deg. alta,12124.63
+2015,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,110672.9
+2015,9 - Pastagem deg. baixa,2 - Soja,204.65
+2015,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,296.15
+2015,9 - Pastagem deg. baixa,6 - Outra agropecuária,6834.63
+2015,9 - Pastagem deg. baixa,7 - Pastagem deg. média,750850.18
+2015,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,110672.9
+2015,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,1010215.95
+2015,10 - Silvicultura,10 - Silvicultura,1508.41
+2015,15 - Outro,15 - Outro,226186.8
+2016,1 - Culturas perenes,1 - Culturas perenes,721.64
+2016,2 - Soja,2 - Soja,1895.38
+2016,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,4934.18
+2016,4 - Milho 1ª safra,4 - Milho 1ª safra,5591.32
+2016,5 - Cana-de-açúcar,5 - Cana-de-açúcar,814.51
+2016,6 - Outra agropecuária,6 - Outra agropecuária,61424.15
+2016,7 - Pastagem deg. média,2 - Soja,87.24
+2016,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,227.12
+2016,7 - Pastagem deg. média,6 - Outra agropecuária,2013.82
+2016,7 - Pastagem deg. média,7 - Pastagem deg. média,585995.53
+2016,7 - Pastagem deg. média,8 - Pastagem deg. alta,86843.95
+2016,7 - Pastagem deg. média,9 - Pastagem deg. baixa,775979.12
+2016,8 - Pastagem deg. alta,2 - Soja,12.93
+2016,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,33.66
+2016,8 - Pastagem deg. alta,6 - Outra agropecuária,298.45
+2016,8 - Pastagem deg. alta,7 - Pastagem deg. média,86843.95
+2016,8 - Pastagem deg. alta,8 - Pastagem deg. alta,12870.19
+2016,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,114999.33
+2016,9 - Pastagem deg. baixa,2 - Soja,115.53
+2016,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,300.76
+2016,9 - Pastagem deg. baixa,6 - Outra agropecuária,2666.71
+2016,9 - Pastagem deg. baixa,7 - Pastagem deg. média,775979.12
+2016,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,114999.33
+2016,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,1027556.63
+2016,10 - Silvicultura,10 - Silvicultura,1687.82
+2016,15 - Outro,15 - Outro,216909.07
+2017,1 - Culturas perenes,1 - Culturas perenes,743.66
+2017,2 - Soja,2 - Soja,3136.13
+2017,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,9679.15
+2017,4 - Milho 1ª safra,4 - Milho 1ª safra,4376.29
+2017,5 - Cana-de-açúcar,5 - Cana-de-açúcar,758.59
+2017,6 - Outra agropecuária,6 - Outra agropecuária,60635.32
+2017,7 - Pastagem deg. média,2 - Soja,166.03
+2017,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,512.41
+2017,7 - Pastagem deg. média,6 - Outra agropecuária,4666.05
+2017,7 - Pastagem deg. média,7 - Pastagem deg. média,640370.4
+2017,7 - Pastagem deg. média,8 - Pastagem deg. alta,96411.52
+2017,7 - Pastagem deg. média,9 - Pastagem deg. baixa,803368.85
+2017,8 - Pastagem deg. alta,2 - Soja,25.0
+2017,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,77.15
+2017,8 - Pastagem deg. alta,6 - Outra agropecuária,702.5
+2017,8 - Pastagem deg. alta,7 - Pastagem deg. média,96411.52
+2017,8 - Pastagem deg. alta,8 - Pastagem deg. alta,14515.32
+2017,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,120951.89
+2017,9 - Pastagem deg. baixa,2 - Soja,208.28
+2017,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,642.84
+2017,9 - Pastagem deg. baixa,6 - Outra agropecuária,5853.73
+2017,9 - Pastagem deg. baixa,7 - Pastagem deg. média,803368.85
+2017,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,120951.89
+2017,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,1007856.55
+2017,10 - Silvicultura,10 - Silvicultura,1710.45
+2017,15 - Outro,15 - Outro,225827.83
+2018,1 - Culturas perenes,1 - Culturas perenes,684.2
+2018,2 - Soja,2 - Soja,3983.84
+2018,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,15592.6
+2018,4 - Milho 1ª safra,4 - Milho 1ª safra,4914.36
+2018,5 - Cana-de-açúcar,5 - Cana-de-açúcar,692.59
+2018,6 - Outra agropecuária,6 - Outra agropecuária,66249.51
+2018,7 - Pastagem deg. média,2 - Soja,75.93
+2018,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,297.18
+2018,7 - Pastagem deg. média,6 - Outra agropecuária,5841.33
+2018,7 - Pastagem deg. média,7 - Pastagem deg. média,706331.66
+2018,7 - Pastagem deg. média,8 - Pastagem deg. alta,108001.95
+2018,7 - Pastagem deg. média,9 - Pastagem deg. baixa,825722.82
+2018,8 - Pastagem deg. alta,2 - Soja,11.61
+2018,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,45.44
+2018,8 - Pastagem deg. alta,6 - Outra agropecuária,893.17
+2018,8 - Pastagem deg. alta,7 - Pastagem deg. média,108001.95
+2018,8 - Pastagem deg. alta,8 - Pastagem deg. alta,16514.08
+2018,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,126257.5
+2018,9 - Pastagem deg. baixa,2 - Soja,88.76
+2018,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,347.42
+2018,9 - Pastagem deg. baixa,6 - Outra agropecuária,6828.68
+2018,9 - Pastagem deg. baixa,7 - Pastagem deg. média,825722.82
+2018,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,126257.5
+2018,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,965294.65
+2018,10 - Silvicultura,10 - Silvicultura,1708.59
+2018,15 - Outro,15 - Outro,236988.57
+2019,1 - Culturas perenes,1 - Culturas perenes,736.32
+2019,2 - Soja,2 - Soja,4291.15
+2019,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,21986.6
+2019,4 - Milho 1ª safra,4 - Milho 1ª safra,3667.55
+2019,5 - Cana-de-açúcar,5 - Cana-de-açúcar,664.34
+2019,6 - Outra agropecuária,6 - Outra agropecuária,75290.72
+2019,7 - Pastagem deg. média,2 - Soja,119.79
+2019,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,613.77
+2019,7 - Pastagem deg. média,6 - Outra agropecuária,4100.54
+2019,7 - Pastagem deg. média,7 - Pastagem deg. média,743635.67
+2019,7 - Pastagem deg. média,8 - Pastagem deg. alta,110895.8
+2019,7 - Pastagem deg. média,9 - Pastagem deg. baixa,848933.44
+2019,8 - Pastagem deg. alta,2 - Soja,17.86
+2019,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,91.53
+2019,8 - Pastagem deg. alta,6 - Outra agropecuária,611.5
+2019,8 - Pastagem deg. alta,7 - Pastagem deg. média,110895.8
+2019,8 - Pastagem deg. alta,8 - Pastagem deg. alta,16537.51
+2019,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,126598.49
+2019,9 - Pastagem deg. baixa,2 - Soja,136.75
+2019,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,700.68
+2019,9 - Pastagem deg. baixa,6 - Outra agropecuária,4681.17
+2019,9 - Pastagem deg. baixa,7 - Pastagem deg. média,848933.44
+2019,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,126598.49
+2019,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,969141.22
+2019,10 - Silvicultura,10 - Silvicultura,1629.92
+2019,15 - Outro,15 - Outro,239579.23
+2020,1 - Culturas perenes,1 - Culturas perenes,764.17
+2020,2 - Soja,2 - Soja,2261.88
+2020,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,36807.03
+2020,4 - Milho 1ª safra,4 - Milho 1ª safra,2040.38
+2020,5 - Cana-de-açúcar,5 - Cana-de-açúcar,503.16
+2020,6 - Outra agropecuária,6 - Outra agropecuária,72668.44
+2020,7 - Pastagem deg. média,2 - Soja,44.39
+2020,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,722.39
+2020,7 - Pastagem deg. média,6 - Outra agropecuária,2792.41
+2020,7 - Pastagem deg. média,7 - Pastagem deg. média,814520.71
+2020,7 - Pastagem deg. média,8 - Pastagem deg. alta,125207.24
+2020,7 - Pastagem deg. média,9 - Pastagem deg. baixa,874636.13
+2020,8 - Pastagem deg. alta,2 - Soja,6.82
+2020,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,111.04
+2020,8 - Pastagem deg. alta,6 - Outra agropecuária,429.25
+2020,8 - Pastagem deg. alta,7 - Pastagem deg. média,125207.24
+2020,8 - Pastagem deg. alta,8 - Pastagem deg. alta,19246.72
+2020,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,134448.12
+2020,9 - Pastagem deg. baixa,2 - Soja,47.67
+2020,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,775.7
+2020,9 - Pastagem deg. baixa,6 - Outra agropecuária,2998.51
+2020,9 - Pastagem deg. baixa,7 - Pastagem deg. média,874636.13
+2020,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,134448.12
+2020,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,939188.35
+2020,10 - Silvicultura,10 - Silvicultura,1677.11
+2020,15 - Outro,15 - Outro,240601.82
+2021,1 - Culturas perenes,1 - Culturas perenes,774.46
+2021,2 - Soja,2 - Soja,3064.03
+2021,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,47492.48
+2021,4 - Milho 1ª safra,4 - Milho 1ª safra,2235.09
+2021,5 - Cana-de-açúcar,5 - Cana-de-açúcar,481.39
+2021,6 - Outra agropecuária,6 - Outra agropecuária,70637.19
+2021,7 - Pastagem deg. média,2 - Soja,6.59
+2021,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,102.15
+2021,7 - Pastagem deg. média,6 - Outra agropecuária,865.94
+2021,7 - Pastagem deg. média,7 - Pastagem deg. média,926481.51
+2021,7 - Pastagem deg. média,8 - Pastagem deg. alta,150773.14
+2021,7 - Pastagem deg. média,9 - Pastagem deg. baixa,891160.9
+2021,8 - Pastagem deg. alta,2 - Soja,1.07
+2021,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,16.62
+2021,8 - Pastagem deg. alta,6 - Outra agropecuária,140.92
+2021,8 - Pastagem deg. alta,7 - Pastagem deg. média,150773.14
+2021,8 - Pastagem deg. alta,8 - Pastagem deg. alta,24536.42
+2021,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,145025.15
+2021,9 - Pastagem deg. baixa,2 - Soja,6.34
+2021,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,98.26
+2021,9 - Pastagem deg. baixa,6 - Outra agropecuária,832.92
+2021,9 - Pastagem deg. baixa,7 - Pastagem deg. média,891160.9
+2021,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,145025.15
+2021,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,857186.84
+2021,10 - Silvicultura,10 - Silvicultura,1676.05
+2021,15 - Outro,15 - Outro,235416.66
+2022,1 - Culturas perenes,1 - Culturas perenes,725.1
+2022,2 - Soja,2 - Soja,4487.38
+2022,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,69036.59
+2022,4 - Milho 1ª safra,4 - Milho 1ª safra,2782.31
+2022,5 - Cana-de-açúcar,5 - Cana-de-açúcar,457.74
+2022,6 - Outra agropecuária,6 - Outra agropecuária,48808.01
+2022,7 - Pastagem deg. média,2 - Soja,2.18
+2022,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,33.51
+2022,7 - Pastagem deg. média,6 - Outra agropecuária,397.42
+2022,7 - Pastagem deg. média,7 - Pastagem deg. média,1030533.3
+2022,7 - Pastagem deg. média,8 - Pastagem deg. alta,190303.35
+2022,7 - Pastagem deg. média,9 - Pastagem deg. baixa,897298.11
+2022,8 - Pastagem deg. alta,2 - Soja,0.4
+2022,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,6.19
+2022,8 - Pastagem deg. alta,6 - Outra agropecuária,73.39
+2022,8 - Pastagem deg. alta,7 - Pastagem deg. média,190303.35
+2022,8 - Pastagem deg. alta,8 - Pastagem deg. alta,35142.35
+2022,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,165699.48
+2022,9 - Pastagem deg. baixa,2 - Soja,1.9
+2022,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,29.18
+2022,9 - Pastagem deg. baixa,6 - Outra agropecuária,346.04
+2022,9 - Pastagem deg. baixa,7 - Pastagem deg. média,897298.11
+2022,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,165699.48
+2022,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,781288.58
+2022,10 - Silvicultura,10 - Silvicultura,1671.16
+2022,15 - Outro,15 - Outro,240616.04
+2023,1 - Culturas perenes,1 - Culturas perenes,724.23
+2023,2 - Soja,2 - Soja,4291.52
+2023,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,70007.17
+2023,4 - Milho 1ª safra,4 - Milho 1ª safra,4412.71
+2023,5 - Cana-de-açúcar,5 - Cana-de-açúcar,465.87
+2023,6 - Outra agropecuária,6 - Outra agropecuária,53164.52
+2023,7 - Pastagem deg. média,2 - Soja,12.58
+2023,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,205.17
+2023,7 - Pastagem deg. média,6 - Outra agropecuária,591.96
+2023,7 - Pastagem deg. média,7 - Pastagem deg. média,1106960.45
+2023,7 - Pastagem deg. média,8 - Pastagem deg. alta,247892.77
+2023,7 - Pastagem deg. média,9 - Pastagem deg. baixa,882006.39
+2023,8 - Pastagem deg. alta,2 - Soja,2.82
+2023,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,45.95
+2023,8 - Pastagem deg. alta,6 - Outra agropecuária,132.56
+2023,8 - Pastagem deg. alta,7 - Pastagem deg. média,247892.77
+2023,8 - Pastagem deg. alta,8 - Pastagem deg. alta,55513.12
+2023,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,197516.55
+2023,9 - Pastagem deg. baixa,2 - Soja,10.02
+2023,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,163.48
+2023,9 - Pastagem deg. baixa,6 - Outra agropecuária,471.66
+2023,9 - Pastagem deg. baixa,7 - Pastagem deg. média,882006.39
+2023,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,197516.55
+2023,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,702766.99
+2023,10 - Silvicultura,10 - Silvicultura,1665.24
+2023,15 - Outro,15 - Outro,248188.11
+2024,1 - Culturas perenes,1 - Culturas perenes,723.53
+2024,2 - Soja,2 - Soja,3636.31
+2024,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,71415.05
+2024,4 - Milho 1ª safra,4 - Milho 1ª safra,3570.59
+2024,5 - Cana-de-açúcar,5 - Cana-de-açúcar,468.5
+2024,6 - Outra agropecuária,6 - Outra agropecuária,58858.52
+2024,7 - Pastagem deg. média,2 - Soja,0.51
+2024,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,9.97
+2024,7 - Pastagem deg. média,6 - Outra agropecuária,105.6
+2024,7 - Pastagem deg. média,7 - Pastagem deg. média,1146294.52
+2024,7 - Pastagem deg. média,8 - Pastagem deg. alta,265778.29
+2024,7 - Pastagem deg. média,9 - Pastagem deg. baixa,891682.26
+2024,8 - Pastagem deg. alta,2 - Soja,0.12
+2024,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,2.31
+2024,8 - Pastagem deg. alta,6 - Outra agropecuária,24.48
+2024,8 - Pastagem deg. alta,7 - Pastagem deg. média,265778.29
+2024,8 - Pastagem deg. alta,8 - Pastagem deg. alta,61623.0
+2024,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,206744.24
+2024,9 - Pastagem deg. baixa,2 - Soja,0.39
+2024,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,7.76
+2024,9 - Pastagem deg. baixa,6 - Outra agropecuária,82.14
+2024,9 - Pastagem deg. baixa,7 - Pastagem deg. média,891682.26
+2024,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,206744.24
+2024,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,693623.89
+2024,10 - Silvicultura,10 - Silvicultura,1665.83
+2024,15 - Outro,15 - Outro,252882.75

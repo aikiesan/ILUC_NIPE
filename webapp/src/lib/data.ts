@@ -70,6 +70,8 @@ export const loadGeoJson = () =>
   fetchJson<GeoJSON.FeatureCollection>("rgint_simplified.geojson");
 export const loadDirectIndirect = () =>
   fetchJson<DirectIndirectData>("direct_indirect_soy.json");
+export const loadAllTimeseries = () =>
+  fetchJson<Record<string, RegionSeries>>("rgint_timeseries_all.json");
 
 /** Region transitions / matrix may be absent until the full dataset lands. */
 export async function loadRegionTransitions(id: string): Promise<RegionTransitionRow[] | null> {

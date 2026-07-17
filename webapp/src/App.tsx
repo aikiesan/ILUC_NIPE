@@ -6,7 +6,6 @@ import { AppLayout } from "@/components/layout/AppLayout";
 const Overview = lazy(() => import("@/pages/Overview"));
 const MapView = lazy(() => import("@/pages/MapView"));
 const Region = lazy(() => import("@/pages/Region"));
-const Transitions = lazy(() => import("@/pages/Transitions"));
 const Ranking = lazy(() => import("@/pages/Ranking"));
 const About = lazy(() => import("@/pages/About"));
 
@@ -20,7 +19,6 @@ const router = createHashRouter([
       { path: "overview", element: <Overview /> },
       { path: "map", element: <MapView /> },
       { path: "region/:id", element: <Region /> },
-      { path: "transitions", element: <Transitions /> },
       { path: "ranking", element: <Ranking /> },
       { path: "about", element: <About /> },
       { path: "*", element: <Navigate to="/overview" replace /> },

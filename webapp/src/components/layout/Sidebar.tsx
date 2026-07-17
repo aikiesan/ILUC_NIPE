@@ -5,14 +5,12 @@ import {
   LayoutDashboard,
   Map as MapIcon,
   ListOrdered,
-  Shuffle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV = [
   { to: "/overview", label: "Visão Nacional", icon: LayoutDashboard },
   { to: "/map", label: "Mapa Interativo", icon: MapIcon },
-  { to: "/transitions", label: "Transições", icon: Shuffle },
   { to: "/ranking", label: "Ranking", icon: ListOrdered },
   { to: "/about", label: "Metodologia", icon: Info },
 ] as const;

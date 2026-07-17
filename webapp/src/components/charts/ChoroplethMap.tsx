@@ -15,6 +15,9 @@ interface ChoroplethMapProps {
   baseMode?: boolean;
   height?: number;
   onRegionClick?: (rgint: string) => void;
+  selectedLocation?: string | null;
+  center?: { lon: number; lat: number };
+  zoom?: number;
 }
 
 // Carto Positron — clean light tile basemap, no API token required.
@@ -37,34 +40,56 @@ export default function ChoroplethMap({
   baseMode = false,
   height = 560,
   onRegionClick,
+  selectedLocation,
+  center = BRAZIL_CENTER,
+  zoom = BRAZIL_ZOOM,
 }: ChoroplethMapProps) {
+  const traces: any[] = [
+    {
+      type: "choroplethmapbox",
+      geojson,
+      locations,
+      z: baseMode ? locations.map(() => 0) : z,
+      text,
+      featureidkey: "properties.rgint",
+      colorscale: baseMode ? BASE_FILL : colorscale,
+      zmid: !baseMode && diverging ? 0 : undefined,
+      showscale: !baseMode,
+      marker: {
+        line: { color: "#FFFFFF", width: 0.5 },
+        opacity: baseMode ? 0.35 : 0.82,
+      },
+      hovertemplate: baseMode ? "%{text}<extra></extra>" : "%{text}<br>%{z:,.0f}<extra></extra>",
+      colorbar: { title: { text: colorbarTitle, side: "right" }, thickness: 10, outlinewidth: 0, tickfont: { size: 10 } },
+    }
+  ];
+
+  if (selectedLocation) {
+    traces.push({
+      type: "choroplethmapbox",
+      geojson,
+      locations: [selectedLocation],
+      z: [1],
+      showscale: false,
+      featureidkey: "properties.rgint",
+      colorscale: [[0, "rgba(0,0,0,0)"], [1, "rgba(0,0,0,0)"]], // transparent fill
+      marker: {
+        line: { color: "#EA580C", width: 3.0 }, // high-contrast thick orange-red line
+        opacity: 1.0,
+      },
+      hovertemplate: "%{text}<extra></extra>",
+    });
+  }
+
   return (
     <Plot
-      data={[
-        {
-          type: "choroplethmapbox",
-          geojson,
-          locations,
-          z: baseMode ? locations.map(() => 0) : z,
-          text,
-          featureidkey: "properties.rgint",
-          colorscale: baseMode ? BASE_FILL : colorscale,
-          zmid: !baseMode && diverging ? 0 : undefined,
-          showscale: !baseMode,
-          marker: {
-            line: { color: "#FFFFFF", width: 0.5 },
-            opacity: baseMode ? 0.35 : 0.82,
-          },
-          hovertemplate: baseMode ? "%{text}<extra></extra>" : "%{text}<br>%{z:,.0f}<extra></extra>",
-          colorbar: { title: { text: colorbarTitle, side: "right" }, thickness: 10, outlinewidth: 0, tickfont: { size: 10 } },
-        } as never,
-      ]}
+      data={traces}
       layout={{
         height,
         mapbox: {
           style: BASEMAP_STYLE,
-          center: BRAZIL_CENTER,
-          zoom: BRAZIL_ZOOM,
+          center,
+          zoom,
         },
         margin: { l: 0, r: 0, t: 0, b: 0 },
         paper_bgcolor: "rgba(0,0,0,0)",
