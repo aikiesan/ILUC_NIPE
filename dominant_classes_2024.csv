@@ -1,0 +1,134 @@
+﻿id,nome,uf,bioma,classe_dominante,area_ha,total_regiao_ha,representacao_pct
+1506,Altamira,PA,Amazônia,11 - Veg. prim. florestal,24961067.15,29239793.35,85.37
+2801,Aracaju,SE,Caatinga,9 - Pastagem de Alto Vigor,230924.52,898978.41,25.69
+1702,Araguaína,TO,Cerrado,13 - Veg. prim. não-florestal,1926908.71,7716748.52,24.97
+2702,Arapiraca,AL,Caatinga,9 - Pastagem de Alto Vigor,426452.51,1477219.56,28.87
+3509,Araraquara,SP,Mata Atlântica,5 - Cana-de-açúcar,561844.6,1204158.79,46.66
+3506,Araçatuba,SP,Mata Atlântica,5 - Cana-de-açúcar,740766.92,1857527.03,39.88
+3107,Barbacena,MG,Cerrado,6 - Outra agropecuária,371353.14,1510577.25,24.58
+5104,Barra do Garças,MT,Cerrado,11 - Veg. prim. florestal,4653648.83,16919770.31,27.5
+2906,Barreiras,BA,Cerrado,13 - Veg. prim. não-florestal,6051952.04,11567789.12,52.32
+3503,Bauru,SP,Mata Atlântica,5 - Cana-de-açúcar,627320.57,2205967.57,28.44
+3101,Belo Horizonte,MG,Cerrado,6 - Outra agropecuária,580879.73,3679158.14,15.79
+1501,Belém,PA,Amazônia,11 - Veg. prim. florestal,1341001.12,3281375.57,40.87
+4207,Blumenau,SC,Mata Atlântica,12 - Veg. sec. florestal,466440.59,1666571.54,27.99
+1401,Boa Vista,RR,Amazônia,11 - Veg. prim. florestal,6463098.53,7328873.26,88.19
+1507,Breves,PA,Amazônia,11 - Veg. prim. florestal,4537449.55,6231947.67,72.81
+3204,Cachoeiro do Itapemirim,ES,Mata Atlântica,6 - Outra agropecuária,210268.01,929095.72,22.63
+2402,Caicó,RN,Caatinga,14 - Veg. sec. não-florestal,274708.26,902533.79,30.44
+2502,Campina Grande,PB,Caatinga,14 - Veg. sec. não-florestal,555429.64,2202887.17,25.21
+3510,Campinas,SP,Mata Atlântica,6 - Outra agropecuária,656010.46,2504406.06,26.19
+5001,Campo Grande,MS,Cerrado,8 - Pastagem de Médio Vigor,4001107.25,15557146.09,25.72
+3304,Campos dos Goytacazes,RJ,Mata Atlântica,8 - Pastagem de Médio Vigor,422552.2,1228542.94,34.39
+2602,Caruaru,PE,Caatinga,14 - Veg. sec. não-florestal,678881.39,2984970.97,22.74
+4103,Cascavel,PR,Mata Atlântica,3 - Soja + Milho 2ª Safra,1712161.29,4891231.21,35.0
+1502,Castanhal,PA,Amazônia,11 - Veg. prim. florestal,2271046.25,6673846.34,34.03
+2103,Caxias,MA,Cerrado,12 - Veg. sec. florestal,922308.21,2719768.66,33.91
+4307,Caxias do Sul,RS,Pampa,12 - Veg. sec. florestal,474010.4,1995050.71,23.76
+4205,Caçador,SC,Mata Atlântica,10 - Silvicultura,154071.48,691254.42,22.29
+4204,Chapecó,SC,Mata Atlântica,6 - Outra agropecuária,807550.74,2746540.25,29.4
+3203,Colatina,ES,Mata Atlântica,8 - Pastagem de Médio Vigor,360511.69,1237640.66,29.13
+2205,Corrente - Bom Jesus,PI,Cerrado,13 - Veg. prim. não-florestal,3622128.63,5149898.09,70.33
+5003,Corumbá,MS,Cerrado,12 - Veg. sec. florestal,1419984.19,8340210.09,17.03
+2305,Crateús,CE,Caatinga,14 - Veg. sec. não-florestal,694726.6,2131047.11,32.6
+4202,Criciúma,SC,Mata Atlântica,6 - Outra agropecuária,364560.03,979088.25,37.23
+1202,Cruzeiro do Sul,AC,Amazônia,11 - Veg. prim. florestal,7743682.97,8632062.37,89.71
+5101,Cuiabá,MT,Cerrado,13 - Veg. prim. não-florestal,3597566.22,14897831.23,24.15
+4101,Curitiba,PR,Mata Atlântica,12 - Veg. sec. florestal,830253.62,3009954.11,27.58
+5102,Cáceres,MT,Cerrado,7 - Pastagem de Baixo Vigor,1652440.65,8475168.28,19.5
+5301,Distrito Federal,DF,Cerrado,14 - Veg. sec. não-florestal,104052.74,591761.52,17.58
+3113,Divinópolis,MG,Cerrado,8 - Pastagem de Médio Vigor,793806.07,3629658.52,21.87
+5002,Dourados,MS,Cerrado,3 - Soja + Milho 2ª Safra,2114732.56,6547510.2,32.3
+2910,Feira de Santana,BA,Cerrado,14 - Veg. sec. não-florestal,1333272.55,7265550.19,18.35
+2206,Floriano,PI,Cerrado,13 - Veg. prim. não-florestal,4040894.12,6060349.86,66.68
+4201,Florianópolis,SC,Mata Atlântica,12 - Veg. sec. florestal,182055.51,595812.63,30.56
+2301,Fortaleza,CE,Caatinga,14 - Veg. sec. não-florestal,953033.71,3008297.14,31.68
+5201,Goiânia,GO,Cerrado,8 - Pastagem de Médio Vigor,1456437.24,7750049.7,18.79
+3104,Governador Valadares,MG,Cerrado,8 - Pastagem de Médio Vigor,804286.18,2685849.31,29.95
+2905,Guanambi,BA,Cerrado,13 - Veg. prim. não-florestal,2260079.08,4611236.47,49.01
+4102,Guarapuava,PR,Mata Atlântica,3 - Soja + Milho 2ª Safra,485440.57,2064671.56,23.51
+1703,Gurupi,TO,Cerrado,13 - Veg. prim. não-florestal,3266815.44,7782776.07,41.97
+2303,Iguatu,CE,Caatinga,14 - Veg. sec. não-florestal,447818.45,1404231.97,31.89
+4305,Ijuí,RS,Pampa,2 - Soja Safra Única,1605082.86,2879794.29,55.74
+2903,Ilhéus – Itabuna,BA,Cerrado,12 - Veg. sec. florestal,772360.36,4572587.22,16.89
+2105,Imperatriz,MA,Cerrado,13 - Veg. prim. não-florestal,3969148.05,12865837.01,30.85
+3105,Ipatinga,MG,Cerrado,8 - Pastagem de Médio Vigor,306676.01,1361676.76,22.52
+2907,Irecê,BA,Cerrado,13 - Veg. prim. não-florestal,3878006.96,6131997.03,63.24
+2802,Itabaiana,SE,Caatinga,9 - Pastagem de Alto Vigor,337897.69,1215708.09,27.79
+5202,Itumbiara,GO,Cerrado,3 - Soja + Milho 2ª Safra,516361.28,2278359.89,22.66
+1102,Ji-Paraná,RO,Amazônia,11 - Veg. prim. florestal,4594821.6,10258466.66,44.79
+4206,Joinville,SC,Mata Atlântica,12 - Veg. sec. florestal,354750.59,1525374.94,23.26
+2501,João Pessoa,PB,Caatinga,6 - Outra agropecuária,284451.59,929331.02,30.61
+2908,Juazeiro,BA,Cerrado,13 - Veg. prim. não-florestal,4691682.27,7337436.55,63.94
+2304,Juazeiro do Norte,CE,Caatinga,14 - Veg. sec. não-florestal,649062.77,1962652.65,33.07
+3106,Juíz de Fora,MG,Cerrado,8 - Pastagem de Médio Vigor,1148875.32,4002665.94,28.7
+4203,Lages,SC,Mata Atlântica,12 - Veg. sec. florestal,356582.25,1563998.4,22.8
+4105,Londrina,PR,Mata Atlântica,3 - Soja + Milho 2ª Safra,1128060.32,3497864.53,32.25
+5206,Luziânia - Águas Lindas de Goiás,GO,Cerrado,13 - Veg. prim. não-florestal,2494284.29,6539400.63,38.14
+1303,Lábrea,AM,Amazônia,11 - Veg. prim. florestal,35630298.51,38735384.14,91.98
+1601,Macapá,AP,Amazônia,11 - Veg. prim. florestal,4112759.87,4457231.79,92.27
+3305,Macaé - Rio das Ostras - Cabo Frio,RJ,Mata Atlântica,9 - Pastagem de Alto Vigor,97962.08,470559.17,20.82
+2701,Maceió,AL,Caatinga,5 - Cana-de-açúcar,375479.11,1260969.68,29.78
+1301,Manaus,AM,Amazônia,11 - Veg. prim. florestal,41718824.33,45260606.92,92.17
+1503,Marabá,PA,Amazônia,11 - Veg. prim. florestal,3360518.89,10732830.16,31.31
+4104,Maringá,PR,Mata Atlântica,3 - Soja + Milho 2ª Safra,1165659.16,4468125.91,26.09
+3504,Marília,SP,Mata Atlântica,6 - Outra agropecuária,524260.59,2047540.7,25.6
+3102,Montes Claros,MG,Cerrado,13 - Veg. prim. não-florestal,6163351.54,12102907.98,50.92
+2403,Mossoró,RN,Caatinga,14 - Veg. sec. não-florestal,642258.99,2404022.18,26.72
+2401,Natal,RN,Caatinga,6 - Outra agropecuária,687701.77,1727959.82,39.8
+1602,Oiapoque - Porto Grande,AP,Amazônia,11 - Veg. prim. florestal,5765077.56,6147003.61,93.79
+1701,Palmas,TO,Cerrado,13 - Veg. prim. não-florestal,3618637.63,8869469.2,40.8
+1304,Parintins,AM,Amazônia,11 - Veg. prim. florestal,9791538.63,11446127.99,85.54
+2202,Parnaíba,PI,Cerrado,13 - Veg. prim. não-florestal,1144480.15,2123752.77,53.89
+4306,Passo Fundo,RS,Pampa,2 - Soja Safra Única,2690142.03,4793267.43,56.12
+2503,Patos,PB,Caatinga,14 - Veg. sec. não-florestal,633590.37,1839047.6,34.45
+3112,Patos de Minas,MG,Cerrado,13 - Veg. prim. não-florestal,2224438.26,8331346.94,26.7
+2909,Paulo Afonso,BA,Cerrado,14 - Veg. sec. não-florestal,958935.33,4295754.78,22.32
+4302,Pelotas,RS,Pampa,6 - Outra agropecuária,1066802.07,2898771.37,36.8
+2604,Petrolina,PE,Caatinga,14 - Veg. sec. não-florestal,1056390.03,3486517.76,30.3
+3303,Petrópolis,RJ,Mata Atlântica,12 - Veg. sec. florestal,187051.05,896034.96,20.88
+2203,Picos,PI,Cerrado,13 - Veg. prim. não-florestal,2664321.4,3740062.6,71.24
+4106,Ponta Grossa,PR,Mata Atlântica,3 - Soja + Milho 2ª Safra,831485.0,3093385.54,26.88
+5205,Porangatu - Uruaçu,GO,Cerrado,13 - Veg. prim. não-florestal,1533893.4,6631859.0,23.13
+4301,Porto Alegre,RS,Pampa,6 - Outra agropecuária,745974.02,2326528.51,32.06
+1101,Porto Velho,RO,Amazônia,11 - Veg. prim. florestal,6668385.51,12319267.07,54.13
+3109,Pouso Alegre,MG,Cerrado,6 - Outra agropecuária,545017.56,2128655.5,25.6
+2104,Presidente Dutra,MA,Cerrado,14 - Veg. sec. não-florestal,761553.18,3765981.11,20.22
+3505,Presidente Prudente,SP,Mata Atlântica,5 - Cana-de-açúcar,593887.24,2487598.68,23.87
+2302,Quixadá,CE,Caatinga,14 - Veg. sec. não-florestal,834050.34,3065324.24,27.21
+2601,Recife,PE,Caatinga,5 - Cana-de-açúcar,323738.68,1295976.31,24.98
+1504,Redenção,PA,Amazônia,11 - Veg. prim. florestal,8551996.56,16571508.01,51.61
+3508,Ribeirão Preto,SP,Mata Atlântica,5 - Cana-de-açúcar,1397913.47,2747016.08,50.89
+1201,Rio Branco,AC,Amazônia,11 - Veg. prim. florestal,5798634.18,8027439.33,72.24
+5203,Rio Verde,GO,Cerrado,3 - Soja + Milho 2ª Safra,1502606.21,7168974.33,20.96
+3301,Rio de Janeiro,RJ,Mata Atlântica,12 - Veg. sec. florestal,241784.3,1005876.11,24.04
+5105,Rondonópolis,MT,Cerrado,13 - Veg. prim. não-florestal,2038716.67,8152458.96,25.01
+1402,Rorainópolis - Caracaraí,RR,Amazônia,11 - Veg. prim. florestal,7084182.44,8021224.55,88.32
+2901,Salvador,BA,Cerrado,9 - Pastagem de Alto Vigor,517906.91,1797823.33,28.81
+4308,Santa Cruz do Sul - Lajeado,RS,Pampa,6 - Outra agropecuária,430771.07,1763382.82,24.43
+2102,Santa Inês - Bacabal,MA,Cerrado,11 - Veg. prim. florestal,1593652.13,6067911.56,26.26
+4303,Santa Maria,RS,Pampa,2 - Soja Safra Única,1227054.51,3158354.34,38.85
+1505,Santarém,PA,Amazônia,11 - Veg. prim. florestal,34846226.98,41976888.95,83.01
+2902,Santo Antônio de Jesus,BA,Cerrado,6 - Outra agropecuária,282980.91,1461090.31,19.37
+2603,Serra Talhada,PE,Caatinga,14 - Veg. sec. não-florestal,685491.12,1924748.29,35.61
+5103,Sinop,MT,Cerrado,11 - Veg. prim. florestal,18203753.48,33195868.81,54.84
+2306,Sobral,CE,Caatinga,14 - Veg. sec. não-florestal,989371.4,3039570.96,32.55
+3502,Sorocaba,SP,Mata Atlântica,12 - Veg. sec. florestal,906563.98,4572014.55,19.83
+2504,Sousa - Cajazeiras,PB,Caatinga,14 - Veg. sec. não-florestal,165762.86,557428.38,29.74
+3507,São José do Rio Preto,SP,Mata Atlântica,5 - Cana-de-açúcar,1014460.46,2592220.87,39.13
+3511,São José dos Campos,SP,Mata Atlântica,12 - Veg. sec. florestal,354449.09,1660636.59,21.34
+2101,São Luís,MA,Cerrado,12 - Veg. sec. florestal,1991197.76,5395874.17,36.9
+5204,São Luís de Montes Belos - Iporá,GO,Cerrado,8 - Pastagem de Médio Vigor,640757.73,3350530.93,19.12
+3202,São Mateus,ES,Mata Atlântica,6 - Outra agropecuária,257874.34,1367600.79,18.86
+3501,São Paulo,SP,Mata Atlântica,12 - Veg. sec. florestal,306638.78,1093387.67,28.04
+2204,São Raimundo Nonato,PI,Cerrado,13 - Veg. prim. não-florestal,2010343.46,2759527.8,72.85
+1302,Tefé,AM,Amazônia,11 - Veg. prim. florestal,35294769.6,36810579.39,95.88
+2201,Teresina,PI,Cerrado,13 - Veg. prim. não-florestal,3253231.88,5383176.89,60.43
+3103,Teófilo Otoni,MG,Cerrado,13 - Veg. prim. não-florestal,1543920.54,7689355.71,20.08
+3110,Uberaba,MG,Cerrado,6 - Outra agropecuária,830915.5,3738812.12,22.22
+3111,Uberlândia,MG,Cerrado,6 - Outra agropecuária,794862.83,3563271.6,22.31
+4304,Uruguaiana,RS,Pampa,6 - Outra agropecuária,1050583.11,1920877.11,54.69
+3108,Varginha,MG,Cerrado,6 - Outra agropecuária,1048064.03,3693248.52,28.38
+3201,Vitória,ES,Mata Atlântica,6 - Outra agropecuária,272336.86,960263.52,28.36
+2904,Vitória da Conquista,BA,Cerrado,13 - Veg. prim. não-florestal,2460007.28,7037465.01,34.96
+3302,Volta Redonda - Barra Mansa,RJ,Mata Atlântica,8 - Pastagem de Médio Vigor,197007.64,790618.77,24.92
