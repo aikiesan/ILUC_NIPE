@@ -1,4 +1,4 @@
-import{r as Fe,g as Se,d as De}from"./index-B3-vTERg.js";function Ke(s,p){const[y,g]=Fe.useState({data:null,loading:!0,error:null});return Fe.useEffect(()=>{let S=!0;return g({data:null,loading:!0,error:null}),s().then(T=>S&&g({data:T,loading:!1,error:null})).catch(T=>S&&g({data:null,loading:!1,error:T})),()=>{S=!1}},p),y}var be={exports:{}};/* @license
+import{r as Fe,g as Se,d as De}from"./index-DUF0YsVC.js";function Ke(s,p){const[y,g]=Fe.useState({data:null,loading:!0,error:null});return Fe.useEffect(()=>{let S=!0;return g({data:null,loading:!0,error:null}),s().then(T=>S&&g({data:T,loading:!1,error:null})).catch(T=>S&&g({data:null,loading:!1,error:T})),()=>{S=!1}},p),y}var be={exports:{}};/* @license
 Papa Parse
 v5.5.3
 https://github.com/mholt/PapaParse

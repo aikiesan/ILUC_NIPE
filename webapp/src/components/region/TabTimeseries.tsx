@@ -100,12 +100,14 @@ export function TabTimeseries({
       // Individual LULC classes all sources
       CLASS_ORDER.forEach((c) => {
         const classObj = full.data?.classes[c] || {};
+        // Always populate pipeline_diagonal (MapBiomas col10) from canonical series data
+        row[`${c}__pipeline_diagonal`] = series.data?.[c]?.[String(y)] ?? null;
+
         Object.keys(classObj).forEach((srcKey) => {
-          let val = classObj[srcKey]?.values[idx];
-          if (srcKey === "pipeline_diagonal" && series.data) {
-            val = series.data[c]?.[String(y)] ?? null;
+          if (srcKey !== "pipeline_diagonal") {
+            const val = classObj[srcKey]?.values[idx];
+            row[`${c}__${srcKey}`] = val !== null && !isNaN(Number(val)) ? Number(val) : null;
           }
-          row[`${c}__${srcKey}`] = val !== null && !isNaN(Number(val)) ? Number(val) : null;
         });
       });
 
@@ -133,8 +135,12 @@ export function TabTimeseries({
 
   const isClassMode = mode.startsWith("class:");
   const activeClassName = isClassMode ? mode.substring(6) : "";
-  const classSources = isClassMode ? (full.data.classes[activeClassName] || {}) : {};
-  const sourceKeys = Object.keys(classSources);
+  const rawSources = isClassMode ? Object.keys(full.data.classes[activeClassName] || {}) : [];
+  const sourceKeys = isClassMode
+    ? rawSources.includes("pipeline_diagonal")
+      ? rawSources
+      : ["pipeline_diagonal", ...rawSources]
+    : [];
 
   return (
     <div className="space-y-5">
