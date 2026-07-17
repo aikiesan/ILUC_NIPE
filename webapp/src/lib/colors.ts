@@ -116,6 +116,30 @@ export const VIRIDIS: PlotlyColorscale = [
   [0.85, "#B4DE2C"], [1.0, "#FDE725"],
 ];
 
+/** Custom sequential scale for native veg (light green to dark green) */
+export const SEQ_GREEN: PlotlyColorscale = [
+  [0.0, "#F7FCF5"], [0.2, "#E5F5E0"], [0.4, "#A1D99B"],
+  [0.6, "#41AB5D"], [0.8, "#238B45"], [1.0, "#00441B"],
+];
+
+/** Custom sequential scale for pasture (light yellow/orange to dark amber) */
+export const SEQ_ORANGE: PlotlyColorscale = [
+  [0.0, "#FFF5EB"], [0.2, "#FDD0A2"], [0.4, "#FDAE6B"],
+  [0.6, "#F16913"], [0.8, "#D94801"], [1.0, "#7F2704"],
+];
+
+/** Custom sequential scale for soy (light teal to dark teal) */
+export const SEQ_TEAL: PlotlyColorscale = [
+  [0.0, "#F0FDF4"], [0.2, "#CCFBF1"], [0.4, "#5EEAD4"],
+  [0.6, "#0D9488"], [0.8, "#0F766E"], [1.0, "#115E59"],
+];
+
+/** Custom sequential scale for other agriculture (light blue to dark blue) */
+export const SEQ_BLUE: PlotlyColorscale = [
+  [0.0, "#F0F9FF"], [0.2, "#BAE6FD"], [0.4, "#38BDF8"],
+  [0.6, "#0284C7"], [0.8, "#0369A1"], [1.0, "#0C4A6E"],
+];
+
 /**
  * "loss"/pressure sequential — **Magma** (reversed: low = pale, high = near-black).
  * Perceptually uniform and colorblind-safe by design (matplotlib scientific
@@ -163,6 +187,25 @@ export function scaleForVariable(variable: string): {
   colorscale: PlotlyColorscale;
   diverging: boolean;
 } {
+  // Check if the variable is one of the 15 classes by checking prefix number
+  const prefixMatch = variable.match(/^(\d+)\s*-\s*/);
+  if (prefixMatch) {
+    const num = parseInt(prefixMatch[1], 10);
+    if (num >= 11 && num <= 14) {
+      return { colorscale: SEQ_GREEN, diverging: false };
+    }
+    if (num >= 7 && num <= 9) {
+      return { colorscale: SEQ_ORANGE, diverging: false };
+    }
+    if (num === 2 || num === 3) {
+      return { colorscale: SEQ_TEAL, diverging: false };
+    }
+    if (num === 10) {
+      return { colorscale: SEQ_GAIN, diverging: false }; // Silvicultura
+    }
+    return { colorscale: SEQ_BLUE, diverging: false }; // Other crops
+  }
+
   switch (variable) {
     case "regeneracao_ha":
       return { colorscale: SEQ_GAIN, diverging: false };

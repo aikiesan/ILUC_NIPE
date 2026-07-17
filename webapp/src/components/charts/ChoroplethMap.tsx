@@ -18,6 +18,8 @@ interface ChoroplethMapProps {
   selectedLocation?: string | null;
   center?: { lon: number; lat: number };
   zoom?: number;
+  zmin?: number;
+  zmax?: number;
 }
 
 // Carto Positron — clean light tile basemap, no API token required.
@@ -43,6 +45,8 @@ export default function ChoroplethMap({
   selectedLocation,
   center = BRAZIL_CENTER,
   zoom = BRAZIL_ZOOM,
+  zmin,
+  zmax,
 }: ChoroplethMapProps) {
   const traces: any[] = [
     {
@@ -54,6 +58,8 @@ export default function ChoroplethMap({
       featureidkey: "properties.rgint",
       colorscale: baseMode ? BASE_FILL : colorscale,
       zmid: !baseMode && diverging ? 0 : undefined,
+      zmin: !baseMode ? zmin : undefined,
+      zmax: !baseMode ? zmax : undefined,
       showscale: !baseMode,
       marker: {
         line: { color: "#FFFFFF", width: 0.5 },

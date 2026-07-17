@@ -198,8 +198,32 @@ export default function MapView() {
     if (vLower.includes("soja")) return "soja";
     if (vLower.includes("milho")) return "milho";
     if (vLower.includes("cana")) return "cana";
+    if (isClass) {
+      return `class:${variable}`;
+    }
     return "geral";
-  }, [variable]);
+  }, [variable, isClass]);
+
+  const colorRange = useMemo(() => {
+    if (baseMode || !ts.data) return undefined;
+    if (!isClass) return undefined;
+    
+    let minVal = Infinity;
+    let maxVal = -Infinity;
+    
+    for (const rId in ts.data) {
+      const classSeries = ts.data[rId]?.[variable];
+      if (!classSeries) continue;
+      for (const y in classSeries) {
+        const val = Number(classSeries[y]) || 0;
+        if (val < minVal) minVal = val;
+        if (val > maxVal) maxVal = val;
+      }
+    }
+    
+    if (minVal === Infinity) return undefined;
+    return { min: minVal, max: maxVal };
+  }, [ts.data, variable, baseMode, isClass]);
 
   const byId = useMemo(() => {
     const m = new Map<string, RegionIndicator>();
@@ -344,6 +368,8 @@ export default function MapView() {
                   baseMode={baseMode}
                   onRegionClick={(id) => setSelectedId(id)}
                   selectedLocation={selectedId}
+                  zmin={colorRange?.min}
+                  zmax={colorRange?.max}
                 />
               </Suspense>
             ) : null}

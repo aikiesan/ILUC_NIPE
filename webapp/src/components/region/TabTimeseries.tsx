@@ -11,8 +11,9 @@ import {
 } from "recharts";
 import { Slider } from "@/components/ui/slider";
 import { Select } from "@/components/ui/select";
-import { NATIVE_CLASSES, PASTURE_CLASSES } from "@/lib/classes";
+import { CLASS_ORDER, NATIVE_CLASSES, PASTURE_CLASSES } from "@/lib/classes";
 import { formatHa } from "@/lib/format";
+import { classColor } from "@/lib/colors";
 import { useAsync } from "@/lib/useAsync";
 import { loadRegionPam } from "@/lib/data";
 import type { RegionSeries } from "@/lib/types";
@@ -22,7 +23,7 @@ const SOJA_MILHO = "3 - Soja + Milho 2ª safra";
 const MILHO_1A = "4 - Milho 1ª safra";
 const CANA = "5 - Cana-de-açúcar";
 
-type ViewMode = "geral" | "soja" | "milho" | "cana";
+type ViewMode = string;
 
 function sumClasses(series: RegionSeries, classes: string[], year: string): number {
   return classes.reduce((acc, c) => acc + (Number(series[c]?.[year]) || 0), 0);
@@ -75,7 +76,7 @@ export function TabTimeseries({
         const mbPastagem = sumClasses(series, PASTURE_CLASSES, y);
         const mbVegNativa = sumClasses(series, NATIVE_CLASSES, y);
 
-        return {
+        const row: Record<string, any> = {
           ano: yearNum,
           "Soja (MapBiomas)": mbSoja,
           "Pastagem (MapBiomas)": mbPastagem,
@@ -86,6 +87,13 @@ export function TabTimeseries({
           "Milho (IBGE PAM)": pVals["milho"] ?? null,
           "Cana (IBGE PAM)": pVals["cana"] ?? null,
         };
+
+        // Add individual LULC classes
+        CLASS_ORDER.forEach((c) => {
+          row[c] = Number(series[c]?.[y]) || 0;
+        });
+
+        return row;
       }),
     [years, series, pamByYear],
   );
@@ -93,7 +101,23 @@ export function TabTimeseries({
   const [yearIdx, setYearIdx] = useState(years.length - 1);
   const selected = data[yearIdx] ?? data[data.length - 1];
 
+  const selectOptions = useMemo(() => {
+    const list = [
+      { value: "geral", label: "Visão Geral (Soja/Pastagem/Veg. nativa)" },
+      { value: "soja", label: "Comparação: Soja (MapBiomas vs IBGE PAM)" },
+      { value: "milho", label: "Comparação: Milho (MapBiomas vs IBGE PAM)" },
+      { value: "cana", label: "Comparação: Cana (MapBiomas vs IBGE PAM)" },
+    ];
+    CLASS_ORDER.forEach((c) => {
+      list.push({ value: `class:${c}`, label: `Classe: ${c}` });
+    });
+    return list;
+  }, []);
+
   if (!data.length) return null;
+
+  const isClassMode = mode.startsWith("class:");
+  const activeClassName = isClassMode ? mode.substring(6) : "";
 
   return (
     <div className="space-y-5">
@@ -102,13 +126,8 @@ export function TabTimeseries({
           <Select
             label="Visualização do Gráfico"
             value={mode}
-            onValueChange={(v) => setMode(v as ViewMode)}
-            options={[
-              { value: "geral", label: "Visão Geral (Soja/Pastagem/Veg. nativa)" },
-              { value: "soja", label: "Comparação: Soja (MapBiomas vs IBGE PAM)" },
-              { value: "milho", label: "Comparação: Milho (MapBiomas vs IBGE PAM)" },
-              { value: "cana", label: "Comparação: Cana (MapBiomas vs IBGE PAM)" },
-            ]}
+            onValueChange={(v) => setMode(v)}
+            options={selectOptions}
           />
         </div>
 
@@ -132,19 +151,19 @@ export function TabTimeseries({
           <>
             <div className="rounded border border-border bg-card p-3">
               <p className="text-xs text-muted">Veg. nativa (MapBiomas)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {formatHa(selected?.["Veg. nativa (MapBiomas)"])} ha
               </p>
             </div>
             <div className="rounded border border-border bg-card p-3">
               <p className="text-xs text-muted">Pastagem (MapBiomas)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {formatHa(selected?.["Pastagem (MapBiomas)"])} ha
               </p>
             </div>
             <div className="rounded border border-border bg-card p-3">
               <p className="text-xs text-muted">Soja (MapBiomas)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {formatHa(selected?.["Soja (MapBiomas)"])} ha
               </p>
             </div>
@@ -153,13 +172,13 @@ export function TabTimeseries({
           <>
             <div className="rounded border border-border bg-card p-3 col-span-2">
               <p className="text-xs text-muted">Soja (MapBiomas - física/dupla safra)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {formatHa(selected?.["Soja (MapBiomas)"])} ha
               </p>
             </div>
             <div className="rounded border border-border bg-card p-3">
               <p className="text-xs text-muted">Soja (IBGE PAM)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {selected?.["Soja (IBGE PAM)"] !== null ? `${formatHa(selected?.["Soja (IBGE PAM)"])} ha` : "N/D"}
               </p>
             </div>
@@ -168,32 +187,39 @@ export function TabTimeseries({
           <>
             <div className="rounded border border-border bg-card p-3 col-span-2">
               <p className="text-xs text-muted">Milho (MapBiomas - 1ª + 2ª safra)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {formatHa(selected?.["Milho (MapBiomas)"])} ha
               </p>
             </div>
             <div className="rounded border border-border bg-card p-3">
               <p className="text-xs text-muted">Milho (IBGE PAM)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {selected?.["Milho (IBGE PAM)"] !== null ? `${formatHa(selected?.["Milho (IBGE PAM)"])} ha` : "N/D"}
               </p>
             </div>
           </>
-        ) : (
+        ) : mode === "cana" ? (
           <>
             <div className="rounded border border-border bg-card p-3 col-span-2">
               <p className="text-xs text-muted">Cana (MapBiomas)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {formatHa(selected?.["Cana (MapBiomas)"])} ha
               </p>
             </div>
             <div className="rounded border border-border bg-card p-3">
               <p className="text-xs text-muted">Cana (IBGE PAM)</p>
-              <p className="text-base font-semibold text-foreground tnum">
+              <p className="text-base font-semibold text-foreground tnum font-mono">
                 {selected?.["Cana (IBGE PAM)"] !== null ? `${formatHa(selected?.["Cana (IBGE PAM)"])} ha` : "N/D"}
               </p>
             </div>
           </>
+        ) : (
+          <div className="rounded border border-border bg-card p-3 col-span-3">
+            <p className="text-xs text-muted">{activeClassName}</p>
+            <p className="text-base font-semibold text-foreground tnum font-mono">
+              {formatHa(selected?.[activeClassName])} ha
+            </p>
+          </div>
         )}
       </div>
 
@@ -236,6 +262,17 @@ export function TabTimeseries({
               <Line type="monotone" name="Cana (MapBiomas)" dataKey="Cana (MapBiomas)" stroke="#15803D" strokeWidth={2.5} dot={false} />
               <Line type="monotone" name="Cana (IBGE PAM)" dataKey="Cana (IBGE PAM)" stroke="#15803D" strokeWidth={2} strokeDasharray="5 5" connectNulls dot={false} />
             </>
+          )}
+
+          {isClassMode && (
+            <Line
+              type="monotone"
+              name={activeClassName}
+              dataKey={activeClassName}
+              stroke={classColor(activeClassName)}
+              strokeWidth={2.5}
+              dot={false}
+            />
           )}
         </LineChart>
       </ResponsiveContainer>

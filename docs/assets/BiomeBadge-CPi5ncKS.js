@@ -1,4 +1,4 @@
-import{e as t,j as r,b as i}from"./index-Dsi0XK4G.js";import{d as s}from"./colors-DUhxM9OZ.js";/**
+import{e as t,j as r,b as i}from"./index-CekMtZWG.js";import{d as s}from"./colors-C9QAB1Di.js";/**
  * @license lucide-react v0.456.0 - ISC
  *
  * This source code is licensed under the ISC license.
