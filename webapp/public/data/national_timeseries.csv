@@ -1,1021 +1,1276 @@
 ano,classe,area_ha,bioma
-2008,1 - Culturas perenes,7547.87,Amazônia
-2008,1 - Culturas perenes,351842.88,Caatinga
-2008,1 - Culturas perenes,734438.89,Cerrado
-2008,1 - Culturas perenes,537283.09,Mata Atlântica
-2008,1 - Culturas perenes,8276.84,Pampa
-2008,10 - Silvicultura,144391.4,Amazônia
-2008,10 - Silvicultura,169090.7,Caatinga
-2008,10 - Silvicultura,2277511.3,Cerrado
-2008,10 - Silvicultura,2330933.86,Mata Atlântica
-2008,10 - Silvicultura,749344.39,Pampa
-2008,11 - Veg. prim. florestal,318756576.63,Amazônia
-2008,11 - Veg. prim. florestal,23281143.81,Caatinga
-2008,11 - Veg. prim. florestal,209049036.01,Cerrado
-2008,11 - Veg. prim. florestal,17693476.15,Mata Atlântica
-2008,11 - Veg. prim. florestal,14520646.22,Pampa
-2008,15 - Outro,10496863.96,Amazônia
-2008,15 - Outro,1720857.88,Caatinga
-2008,15 - Outro,7305994.16,Cerrado
-2008,15 - Outro,3198022.29,Mata Atlântica
-2008,15 - Outro,992481.09,Pampa
-2008,2 - Soja,80791.76,Amazônia
-2008,2 - Soja,22.23,Caatinga
-2008,2 - Soja,4370126.15,Cerrado
-2008,2 - Soja,2758319.01,Mata Atlântica
-2008,2 - Soja,4965209.1,Pampa
-2008,3 - Soja + Milho 2ª safra,8116.36,Amazônia
-2008,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2008,3 - Soja + Milho 2ª safra,7844161.93,Cerrado
-2008,3 - Soja + Milho 2ª safra,2494665.54,Mata Atlântica
-2008,3 - Soja + Milho 2ª safra,0.0,Pampa
-2008,4 - Milho 1ª safra,434606.94,Amazônia
+2008,1 - Culturas perenes,3087.99,Amazônia
+2008,1 - Culturas perenes,323892.26,Caatinga
+2008,1 - Culturas perenes,719072.5,Cerrado
+2008,1 - Culturas perenes,482729.41,Mata Atlântica
+2008,1 - Culturas perenes,0.0,Pampa
+2008,10 - Silvicultura,143217.91,Amazônia
+2008,10 - Silvicultura,1932.6,Caatinga
+2008,10 - Silvicultura,2104027.84,Cerrado
+2008,10 - Silvicultura,2183252.69,Mata Atlântica
+2008,10 - Silvicultura,749828.15,Pampa
+2008,11 - Veg. prim. florestal,262418708.17,Amazônia
+2008,11 - Veg. prim. florestal,724428.54,Caatinga
+2008,11 - Veg. prim. florestal,57828862.55,Cerrado
+2008,11 - Veg. prim. florestal,8470143.9,Mata Atlântica
+2008,11 - Veg. prim. florestal,2779283.74,Pampa
+2008,12 - Veg. sec. florestal,9456657.38,Amazônia
+2008,12 - Veg. sec. florestal,724428.54,Caatinga
+2008,12 - Veg. sec. florestal,26445079.69,Cerrado
+2008,12 - Veg. sec. florestal,8470143.9,Mata Atlântica
+2008,12 - Veg. sec. florestal,2779283.74,Pampa
+2008,13 - Veg. prim. não-florestal,1202269.95,Amazônia
+2008,13 - Veg. prim. não-florestal,10959506.28,Caatinga
+2008,13 - Veg. prim. não-florestal,93372215.46,Cerrado
+2008,13 - Veg. prim. não-florestal,27266.96,Mata Atlântica
+2008,13 - Veg. prim. não-florestal,0.0,Pampa
+2008,14 - Veg. sec. não-florestal,0.0,Amazônia
+2008,14 - Veg. sec. não-florestal,10959506.28,Caatinga
+2008,14 - Veg. sec. não-florestal,8552035.83,Cerrado
+2008,14 - Veg. sec. não-florestal,8654.02,Mata Atlântica
+2008,14 - Veg. sec. não-florestal,0.0,Pampa
+2008,15 - Outro,10713783.17,Amazônia
+2008,15 - Outro,1297123.82,Caatinga
+2008,15 - Outro,6748277.93,Cerrado
+2008,15 - Outro,2731386.16,Mata Atlântica
+2008,15 - Outro,1074684.44,Pampa
+2008,2 - Soja Safra Única,80799.46,Amazônia
+2008,2 - Soja Safra Única,22.23,Caatinga
+2008,2 - Soja Safra Única,4370348.69,Cerrado
+2008,2 - Soja Safra Única,2758347.92,Mata Atlântica
+2008,2 - Soja Safra Única,4965280.92,Pampa
+2008,3 - Soja + Milho 2ª Safra,8116.76,Amazônia
+2008,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2008,3 - Soja + Milho 2ª Safra,7844385.88,Cerrado
+2008,3 - Soja + Milho 2ª Safra,2494688.56,Mata Atlântica
+2008,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2008,4 - Milho 1ª safra,427228.4,Amazônia
 2008,4 - Milho 1ª safra,1530580.0,Caatinga
-2008,4 - Milho 1ª safra,3447721.65,Cerrado
-2008,4 - Milho 1ª safra,2828993.36,Mata Atlântica
+2008,4 - Milho 1ª safra,3362000.97,Cerrado
+2008,4 - Milho 1ª safra,2797925.37,Mata Atlântica
 2008,4 - Milho 1ª safra,1385998.0,Pampa
-2008,5 - Cana-de-açúcar,50176.31,Amazônia
-2008,5 - Cana-de-açúcar,1217331.96,Caatinga
-2008,5 - Cana-de-açúcar,1376409.51,Cerrado
-2008,5 - Cana-de-açúcar,5974047.24,Mata Atlântica
-2008,5 - Cana-de-açúcar,62573.22,Pampa
-2008,6 - Outra agropecuária,456216.52,Amazônia
-2008,6 - Outra agropecuária,6211908.91,Caatinga
-2008,6 - Outra agropecuária,25903981.28,Cerrado
-2008,6 - Outra agropecuária,15301204.51,Mata Atlântica
-2008,6 - Outra agropecuária,5802661.99,Pampa
-2008,7 - Pastagem deg. média,4692599.54,Amazônia
-2008,7 - Pastagem deg. média,1841453.36,Caatinga
-2008,7 - Pastagem deg. média,20355509.82,Cerrado
-2008,7 - Pastagem deg. média,3273761.82,Mata Atlântica
-2008,7 - Pastagem deg. média,116718.84,Pampa
-2008,8 - Pastagem deg. alta,347472.67,Amazônia
-2008,8 - Pastagem deg. alta,998794.19,Caatinga
-2008,8 - Pastagem deg. alta,12014624.53,Cerrado
-2008,8 - Pastagem deg. alta,1605838.23,Mata Atlântica
-2008,8 - Pastagem deg. alta,10297.45,Pampa
-2008,9 - Pastagem deg. baixa,6740897.39,Amazônia
-2008,9 - Pastagem deg. baixa,1195357.11,Caatinga
-2008,9 - Pastagem deg. baixa,8597961.78,Cerrado
-2008,9 - Pastagem deg. baixa,2046949.38,Mata Atlântica
-2008,9 - Pastagem deg. baixa,69230.9,Pampa
-2009,1 - Culturas perenes,7437.8,Amazônia
-2009,1 - Culturas perenes,368548.42,Caatinga
-2009,1 - Culturas perenes,745267.56,Cerrado
-2009,1 - Culturas perenes,534263.08,Mata Atlântica
-2009,1 - Culturas perenes,8098.1,Pampa
-2009,10 - Silvicultura,146916.06,Amazônia
-2009,10 - Silvicultura,185823.32,Caatinga
-2009,10 - Silvicultura,2507177.92,Cerrado
-2009,10 - Silvicultura,2519339.23,Mata Atlântica
-2009,10 - Silvicultura,809055.5,Pampa
-2009,11 - Veg. prim. florestal,318152248.2,Amazônia
-2009,11 - Veg. prim. florestal,23217212.84,Caatinga
-2009,11 - Veg. prim. florestal,208870099.65,Cerrado
-2009,11 - Veg. prim. florestal,17697094.13,Mata Atlântica
-2009,11 - Veg. prim. florestal,14439185.59,Pampa
-2009,15 - Outro,10558164.58,Amazônia
-2009,15 - Outro,1753237.72,Caatinga
-2009,15 - Outro,6847902.46,Cerrado
-2009,15 - Outro,3224159.3,Mata Atlântica
-2009,15 - Outro,996818.26,Pampa
-2009,2 - Soja,95027.01,Amazônia
-2009,2 - Soja,19.17,Caatinga
-2009,2 - Soja,4345460.07,Cerrado
-2009,2 - Soja,2878743.71,Mata Atlântica
-2009,2 - Soja,5008387.41,Pampa
-2009,3 - Soja + Milho 2ª safra,14545.74,Amazônia
-2009,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2009,3 - Soja + Milho 2ª safra,8540872.14,Cerrado
-2009,3 - Soja + Milho 2ª safra,2644516.87,Mata Atlântica
-2009,3 - Soja + Milho 2ª safra,0.0,Pampa
-2009,4 - Milho 1ª safra,416386.85,Amazônia
-2009,4 - Milho 1ª safra,1549048.0,Caatinga
-2009,4 - Milho 1ª safra,3358241.81,Cerrado
-2009,4 - Milho 1ª safra,2516804.04,Mata Atlântica
-2009,4 - Milho 1ª safra,1385754.0,Pampa
-2009,5 - Cana-de-açúcar,52722.25,Amazônia
-2009,5 - Cana-de-açúcar,1235105.93,Caatinga
-2009,5 - Cana-de-açúcar,1638279.22,Cerrado
-2009,5 - Cana-de-açúcar,6362306.76,Mata Atlântica
-2009,5 - Cana-de-açúcar,68310.68,Pampa
-2009,6 - Outra agropecuária,472486.44,Amazônia
-2009,6 - Outra agropecuária,6266019.52,Caatinga
-2009,6 - Outra agropecuária,25792461.86,Cerrado
-2009,6 - Outra agropecuária,15109102.85,Mata Atlântica
-2009,6 - Outra agropecuária,5826989.21,Pampa
-2009,7 - Pastagem deg. média,4653798.29,Amazônia
-2009,7 - Pastagem deg. média,1817316.81,Caatinga
-2009,7 - Pastagem deg. média,20120211.83,Cerrado
-2009,7 - Pastagem deg. média,3134753.25,Mata Atlântica
-2009,7 - Pastagem deg. média,111188.9,Pampa
-2009,8 - Pastagem deg. alta,320705.93,Amazônia
-2009,8 - Pastagem deg. alta,907535.65,Caatinga
-2009,8 - Pastagem deg. alta,12314684.64,Cerrado
-2009,8 - Pastagem deg. alta,1430365.28,Mata Atlântica
-2009,8 - Pastagem deg. alta,10373.45,Pampa
-2009,9 - Pastagem deg. baixa,7131989.32,Amazônia
-2009,9 - Pastagem deg. baixa,1317063.94,Caatinga
-2009,9 - Pastagem deg. baixa,8505048.8,Cerrado
-2009,9 - Pastagem deg. baixa,2205272.31,Mata Atlântica
-2009,9 - Pastagem deg. baixa,63855.25,Pampa
-2010,1 - Culturas perenes,6933.67,Amazônia
-2010,1 - Culturas perenes,372638.7,Caatinga
-2010,1 - Culturas perenes,772428.91,Cerrado
-2010,1 - Culturas perenes,552699.51,Mata Atlântica
-2010,1 - Culturas perenes,7981.62,Pampa
-2010,10 - Silvicultura,151098.52,Amazônia
-2010,10 - Silvicultura,204483.96,Caatinga
-2010,10 - Silvicultura,2737737.75,Cerrado
-2010,10 - Silvicultura,2687491.38,Mata Atlântica
-2010,10 - Silvicultura,883177.65,Pampa
-2010,11 - Veg. prim. florestal,318149636.63,Amazônia
-2010,11 - Veg. prim. florestal,23230890.67,Caatinga
-2010,11 - Veg. prim. florestal,208158537.86,Cerrado
-2010,11 - Veg. prim. florestal,17702288.18,Mata Atlântica
-2010,11 - Veg. prim. florestal,14287266.67,Pampa
-2010,15 - Outro,10255759.97,Amazônia
-2010,15 - Outro,1704277.96,Caatinga
-2010,15 - Outro,6955796.81,Cerrado
-2010,15 - Outro,3238866.88,Mata Atlântica
-2010,15 - Outro,1004944.94,Pampa
-2010,2 - Soja,84891.9,Amazônia
-2010,2 - Soja,5.4,Caatinga
-2010,2 - Soja,4036453.08,Cerrado
-2010,2 - Soja,2632420.21,Mata Atlântica
-2010,2 - Soja,5129468.28,Pampa
-2010,3 - Soja + Milho 2ª safra,24587.52,Amazônia
-2010,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2010,3 - Soja + Milho 2ª safra,9548087.07,Cerrado
-2010,3 - Soja + Milho 2ª safra,2955623.81,Mata Atlântica
-2010,3 - Soja + Milho 2ª safra,0.0,Pampa
-2010,4 - Milho 1ª safra,373711.97,Amazônia
-2010,4 - Milho 1ª safra,1169685.0,Caatinga
-2010,4 - Milho 1ª safra,2949213.65,Cerrado
-2010,4 - Milho 1ª safra,2040880.78,Mata Atlântica
-2010,4 - Milho 1ª safra,1151397.0,Pampa
-2010,5 - Cana-de-açúcar,53794.37,Amazônia
-2010,5 - Cana-de-açúcar,1242366.93,Caatinga
-2010,5 - Cana-de-açúcar,1818810.92,Cerrado
-2010,5 - Cana-de-açúcar,6479019.06,Mata Atlântica
-2010,5 - Cana-de-açúcar,70782.86,Pampa
-2010,6 - Outra agropecuária,485837.91,Amazônia
-2010,6 - Outra agropecuária,6257464.52,Caatinga
-2010,6 - Outra agropecuária,25337428.42,Cerrado
-2010,6 - Outra agropecuária,14848814.91,Mata Atlântica
-2010,6 - Outra agropecuária,5855771.05,Pampa
-2010,7 - Pastagem deg. média,4677571.34,Amazônia
-2010,7 - Pastagem deg. média,1851488.87,Caatinga
-2010,7 - Pastagem deg. média,20281555.86,Cerrado
-2010,7 - Pastagem deg. média,2991688.26,Mata Atlântica
-2010,7 - Pastagem deg. média,99537.87,Pampa
-2010,8 - Pastagem deg. alta,306732.85,Amazônia
-2010,8 - Pastagem deg. alta,981660.84,Caatinga
-2010,8 - Pastagem deg. alta,11774928.25,Cerrado
-2010,8 - Pastagem deg. alta,1170636.06,Mata Atlântica
-2010,8 - Pastagem deg. alta,11081.05,Pampa
-2010,9 - Pastagem deg. baixa,7390963.5,Amazônia
-2010,9 - Pastagem deg. baixa,1160135.33,Caatinga
-2010,9 - Pastagem deg. baixa,8685811.25,Cerrado
-2010,9 - Pastagem deg. baixa,2510838.98,Mata Atlântica
-2010,9 - Pastagem deg. baixa,65789.95,Pampa
-2011,1 - Culturas perenes,6174.96,Amazônia
-2011,1 - Culturas perenes,379125.2,Caatinga
-2011,1 - Culturas perenes,818805.49,Cerrado
-2011,1 - Culturas perenes,586627.97,Mata Atlântica
-2011,1 - Culturas perenes,8240.84,Pampa
-2011,10 - Silvicultura,155427.17,Amazônia
-2011,10 - Silvicultura,217090.06,Caatinga
-2011,10 - Silvicultura,2942189.05,Cerrado
-2011,10 - Silvicultura,2834273.65,Mata Atlântica
-2011,10 - Silvicultura,915700.2,Pampa
-2011,11 - Veg. prim. florestal,317790298.42,Amazônia
-2011,11 - Veg. prim. florestal,23168369.12,Caatinga
-2011,11 - Veg. prim. florestal,206886702.69,Cerrado
-2011,11 - Veg. prim. florestal,17712604.92,Mata Atlântica
-2011,11 - Veg. prim. florestal,14135406.62,Pampa
-2011,15 - Outro,10376813.39,Amazônia
-2011,15 - Outro,1691861.34,Caatinga
-2011,15 - Outro,7544082.75,Cerrado
-2011,15 - Outro,3268134.01,Mata Atlântica
-2011,15 - Outro,1013189.17,Pampa
-2011,2 - Soja,85530.31,Amazônia
-2011,2 - Soja,4.59,Caatinga
-2011,2 - Soja,4023159.72,Cerrado
-2011,2 - Soja,2359956.2,Mata Atlântica
-2011,2 - Soja,5223571.02,Pampa
-2011,3 - Soja + Milho 2ª safra,20019.71,Amazônia
-2011,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2011,3 - Soja + Milho 2ª safra,10456799.97,Cerrado
-2011,3 - Soja + Milho 2ª safra,3651954.7,Mata Atlântica
-2011,3 - Soja + Milho 2ª safra,0.0,Pampa
-2011,4 - Milho 1ª safra,371948.35,Amazônia
-2011,4 - Milho 1ª safra,1260421.0,Caatinga
-2011,4 - Milho 1ª safra,2905956.55,Cerrado
-2011,4 - Milho 1ª safra,1849546.69,Mata Atlântica
-2011,4 - Milho 1ª safra,1100309.0,Pampa
-2011,5 - Cana-de-açúcar,55318.71,Amazônia
-2011,5 - Cana-de-açúcar,1248751.14,Caatinga
-2011,5 - Cana-de-açúcar,1983363.21,Cerrado
-2011,5 - Cana-de-açúcar,6604570.19,Mata Atlântica
-2011,5 - Cana-de-açúcar,73780.5,Pampa
-2011,6 - Outra agropecuária,503089.78,Amazônia
-2011,6 - Outra agropecuária,6263035.43,Caatinga
-2011,6 - Outra agropecuária,25516392.19,Cerrado
-2011,6 - Outra agropecuária,14944993.33,Mata Atlântica
-2011,6 - Outra agropecuária,5861788.83,Pampa
-2011,7 - Pastagem deg. média,4481449.09,Amazônia
-2011,7 - Pastagem deg. média,1825937.29,Caatinga
-2011,7 - Pastagem deg. média,20137494.59,Cerrado
-2011,7 - Pastagem deg. média,2903789.82,Mata Atlântica
-2011,7 - Pastagem deg. média,87279.93,Pampa
-2011,8 - Pastagem deg. alta,272887.4,Amazônia
-2011,8 - Pastagem deg. alta,1183046.46,Caatinga
-2011,8 - Pastagem deg. alta,11208353.42,Cerrado
-2011,8 - Pastagem deg. alta,946634.01,Mata Atlântica
-2011,8 - Pastagem deg. alta,7563.72,Pampa
-2011,9 - Pastagem deg. baixa,7964226.28,Amazônia
-2011,9 - Pastagem deg. baixa,1050677.5,Caatinga
-2011,9 - Pastagem deg. baixa,9191714.47,Cerrado
-2011,9 - Pastagem deg. baixa,2698538.35,Mata Atlântica
-2011,9 - Pastagem deg. baixa,81059.24,Pampa
-2012,1 - Culturas perenes,5817.81,Amazônia
-2012,1 - Culturas perenes,384512.14,Caatinga
-2012,1 - Culturas perenes,863802.31,Cerrado
-2012,1 - Culturas perenes,621687.92,Mata Atlântica
-2012,1 - Culturas perenes,8157.88,Pampa
-2012,10 - Silvicultura,163322.74,Amazônia
-2012,10 - Silvicultura,230364.33,Caatinga
-2012,10 - Silvicultura,3171934.04,Cerrado
-2012,10 - Silvicultura,2972786.45,Mata Atlântica
-2012,10 - Silvicultura,967042.82,Pampa
-2012,11 - Veg. prim. florestal,317463074.96,Amazônia
-2012,11 - Veg. prim. florestal,23080855.2,Caatinga
-2012,11 - Veg. prim. florestal,206599450.16,Cerrado
-2012,11 - Veg. prim. florestal,17733864.33,Mata Atlântica
-2012,11 - Veg. prim. florestal,13979768.69,Pampa
-2012,15 - Outro,10497584.21,Amazônia
-2012,15 - Outro,1623151.48,Caatinga
-2012,15 - Outro,6739434.23,Cerrado
-2012,15 - Outro,3278208.28,Mata Atlântica
-2012,15 - Outro,1015770.76,Pampa
-2012,2 - Soja,87318.45,Amazônia
-2012,2 - Soja,11.25,Caatinga
-2012,2 - Soja,3853396.42,Cerrado
-2012,2 - Soja,2361045.87,Mata Atlântica
-2012,2 - Soja,5425720.74,Pampa
-2012,3 - Soja + Milho 2ª safra,21516.12,Amazônia
-2012,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2012,3 - Soja + Milho 2ª safra,10037172.35,Cerrado
-2012,3 - Soja + Milho 2ª safra,3407018.31,Mata Atlântica
-2012,3 - Soja + Milho 2ª safra,0.0,Pampa
-2012,4 - Milho 1ª safra,376654.55,Amazônia
-2012,4 - Milho 1ª safra,894152.0,Caatinga
-2012,4 - Milho 1ª safra,3108922.83,Cerrado
-2012,4 - Milho 1ª safra,2067569.19,Mata Atlântica
-2012,4 - Milho 1ª safra,1119220.0,Pampa
-2012,5 - Cana-de-açúcar,57104.29,Amazônia
-2012,5 - Cana-de-açúcar,1256053.92,Caatinga
-2012,5 - Cana-de-açúcar,2203360.26,Cerrado
-2012,5 - Cana-de-açúcar,6767158.5,Mata Atlântica
-2012,5 - Cana-de-açúcar,76803.74,Pampa
-2012,6 - Outra agropecuária,542990.03,Amazônia
-2012,6 - Outra agropecuária,6143000.16,Caatinga
-2012,6 - Outra agropecuária,25608370.84,Cerrado
-2012,6 - Outra agropecuária,14611185.73,Mata Atlântica
-2012,6 - Outra agropecuária,5845294.64,Pampa
-2012,7 - Pastagem deg. média,4487508.7,Amazônia
-2012,7 - Pastagem deg. média,1450209.19,Caatinga
-2012,7 - Pastagem deg. média,19946690.93,Cerrado
-2012,7 - Pastagem deg. média,2760090.81,Mata Atlântica
-2012,7 - Pastagem deg. média,77725.42,Pampa
-2012,8 - Pastagem deg. alta,270799.29,Amazônia
-2012,8 - Pastagem deg. alta,2350915.79,Caatinga
-2012,8 - Pastagem deg. alta,11666377.68,Cerrado
-2012,8 - Pastagem deg. alta,899358.47,Mata Atlântica
-2012,8 - Pastagem deg. alta,5216.7,Pampa
-2012,9 - Pastagem deg. baixa,8102343.02,Amazônia
-2012,9 - Pastagem deg. baixa,791148.34,Caatinga
-2012,9 - Pastagem deg. baixa,8733060.59,Cerrado
-2012,9 - Pastagem deg. baixa,2747319.01,Mata Atlântica
-2012,9 - Pastagem deg. baixa,98470.26,Pampa
-2013,1 - Culturas perenes,7385.62,Amazônia
-2013,1 - Culturas perenes,385807.3,Caatinga
-2013,1 - Culturas perenes,938361.8,Cerrado
-2013,1 - Culturas perenes,672268.06,Mata Atlântica
-2013,1 - Culturas perenes,8943.1,Pampa
-2013,10 - Silvicultura,178275.71,Amazônia
-2013,10 - Silvicultura,251895.86,Caatinga
-2013,10 - Silvicultura,3511261.04,Cerrado
-2013,10 - Silvicultura,3075612.93,Mata Atlântica
-2013,10 - Silvicultura,1017621.64,Pampa
-2013,11 - Veg. prim. florestal,317200555.72,Amazônia
-2013,11 - Veg. prim. florestal,22991179.65,Caatinga
-2013,11 - Veg. prim. florestal,205132324.64,Cerrado
-2013,11 - Veg. prim. florestal,17748137.66,Mata Atlântica
-2013,11 - Veg. prim. florestal,13827134.23,Pampa
-2013,15 - Outro,10373690.59,Amazônia
-2013,15 - Outro,1521556.46,Caatinga
-2013,15 - Outro,6802480.87,Cerrado
-2013,15 - Outro,3299758.14,Mata Atlântica
-2013,15 - Outro,1026072.41,Pampa
-2013,2 - Soja,111436.18,Amazônia
-2013,2 - Soja,37.89,Caatinga
-2013,2 - Soja,3421059.86,Cerrado
-2013,2 - Soja,2178398.08,Mata Atlântica
-2013,2 - Soja,5759715.24,Pampa
-2013,3 - Soja + Milho 2ª safra,36023.6,Amazônia
-2013,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2013,3 - Soja + Milho 2ª safra,11159788.48,Cerrado
-2013,3 - Soja + Milho 2ª safra,3477406.04,Mata Atlântica
-2013,3 - Soja + Milho 2ª safra,0.0,Pampa
-2013,4 - Milho 1ª safra,354312.54,Amazônia
-2013,4 - Milho 1ª safra,510291.0,Caatinga
-2013,4 - Milho 1ª safra,2918935.71,Cerrado
-2013,4 - Milho 1ª safra,1905379.45,Mata Atlântica
-2013,4 - Milho 1ª safra,1033728.0,Pampa
-2013,5 - Cana-de-açúcar,59639.39,Amazônia
-2013,5 - Cana-de-açúcar,1267916.64,Caatinga
-2013,5 - Cana-de-açúcar,2511994.35,Cerrado
-2013,5 - Cana-de-açúcar,7017173.01,Mata Atlântica
-2013,5 - Cana-de-açúcar,80029.67,Pampa
-2013,6 - Outra agropecuária,602243.26,Amazônia
-2013,6 - Outra agropecuária,6108713.51,Caatinga
-2013,6 - Outra agropecuária,26632356.21,Cerrado
-2013,6 - Outra agropecuária,14645774.54,Mata Atlântica
-2013,6 - Outra agropecuária,5619437.04,Pampa
-2013,7 - Pastagem deg. média,4393441.47,Amazônia
-2013,7 - Pastagem deg. média,1343492.01,Caatinga
-2013,7 - Pastagem deg. média,19812526.93,Cerrado
-2013,7 - Pastagem deg. média,2619185.63,Mata Atlântica
-2013,7 - Pastagem deg. média,63424.14,Pampa
-2013,8 - Pastagem deg. alta,251841.11,Amazônia
-2013,8 - Pastagem deg. alta,2955247.49,Caatinga
-2013,8 - Pastagem deg. alta,11146274.27,Cerrado
-2013,8 - Pastagem deg. alta,796495.77,Mata Atlântica
-2013,8 - Pastagem deg. alta,3835.76,Pampa
-2013,9 - Pastagem deg. baixa,8502441.03,Amazônia
-2013,9 - Pastagem deg. baixa,617402.91,Caatinga
-2013,9 - Pastagem deg. baixa,9464403.68,Cerrado
-2013,9 - Pastagem deg. baixa,2985522.42,Mata Atlântica
-2013,9 - Pastagem deg. baixa,132177.72,Pampa
-2014,1 - Culturas perenes,8335.47,Amazônia
-2014,1 - Culturas perenes,371248.06,Caatinga
-2014,1 - Culturas perenes,982377.3,Cerrado
-2014,1 - Culturas perenes,710376.09,Mata Atlântica
-2014,1 - Culturas perenes,9198.33,Pampa
-2014,10 - Silvicultura,185398.69,Amazônia
-2014,10 - Silvicultura,262054.85,Caatinga
-2014,10 - Silvicultura,3695890.37,Cerrado
-2014,10 - Silvicultura,3173306.25,Mata Atlântica
-2014,10 - Silvicultura,1030642.74,Pampa
-2014,11 - Veg. prim. florestal,316810920.48,Amazônia
-2014,11 - Veg. prim. florestal,22936166.07,Caatinga
-2014,11 - Veg. prim. florestal,203381339.44,Cerrado
-2014,11 - Veg. prim. florestal,17746865.68,Mata Atlântica
-2014,11 - Veg. prim. florestal,13740875.59,Pampa
-2014,15 - Outro,10315576.61,Amazônia
-2014,15 - Outro,1492212.92,Caatinga
-2014,15 - Outro,7488100.77,Cerrado
-2014,15 - Outro,3303018.76,Mata Atlântica
-2014,15 - Outro,1038043.01,Pampa
-2014,2 - Soja,186273.69,Amazônia
-2014,2 - Soja,41.76,Caatinga
-2014,2 - Soja,3547551.81,Cerrado
-2014,2 - Soja,2166444.86,Mata Atlântica
-2014,2 - Soja,6017241.33,Pampa
-2014,3 - Soja + Milho 2ª safra,58628.64,Amazônia
-2014,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2014,3 - Soja + Milho 2ª safra,13165253.88,Cerrado
-2014,3 - Soja + Milho 2ª safra,3856913.14,Mata Atlântica
-2014,3 - Soja + Milho 2ª safra,0.0,Pampa
-2014,4 - Milho 1ª safra,329071.99,Amazônia
-2014,4 - Milho 1ª safra,823559.0,Caatinga
-2014,4 - Milho 1ª safra,2863427.13,Cerrado
-2014,4 - Milho 1ª safra,1574681.6,Mata Atlântica
-2014,4 - Milho 1ª safra,925514.0,Pampa
-2014,5 - Cana-de-açúcar,62160.18,Amazônia
-2014,5 - Cana-de-açúcar,1283835.03,Caatinga
-2014,5 - Cana-de-açúcar,2816488.31,Cerrado
-2014,5 - Cana-de-açúcar,7195363.14,Mata Atlântica
-2014,5 - Cana-de-açúcar,83207.49,Pampa
-2014,6 - Outra agropecuária,657384.3,Amazônia
-2014,6 - Outra agropecuária,5973120.22,Caatinga
-2014,6 - Outra agropecuária,25826589.32,Cerrado
-2014,6 - Outra agropecuária,14544148.96,Mata Atlântica
-2014,6 - Outra agropecuária,5437598.16,Pampa
-2014,7 - Pastagem deg. média,4433812.39,Amazônia
-2014,7 - Pastagem deg. média,1234038.95,Caatinga
-2014,7 - Pastagem deg. média,19354343.82,Cerrado
-2014,7 - Pastagem deg. média,2508023.11,Mata Atlântica
-2014,7 - Pastagem deg. média,56178.62,Pampa
-2014,8 - Pastagem deg. alta,265901.6,Amazônia
-2014,8 - Pastagem deg. alta,3556741.31,Caatinga
-2014,8 - Pastagem deg. alta,12003523.03,Cerrado
-2014,8 - Pastagem deg. alta,887683.86,Mata Atlântica
-2014,8 - Pastagem deg. alta,2472.89,Pampa
-2014,9 - Pastagem deg. baixa,8567270.2,Amazônia
-2014,9 - Pastagem deg. baixa,447616.0,Caatinga
-2014,9 - Pastagem deg. baixa,9243707.1,Cerrado
-2014,9 - Pastagem deg. baixa,3062689.32,Mata Atlântica
-2014,9 - Pastagem deg. baixa,156021.2,Pampa
-2015,1 - Culturas perenes,9775.59,Amazônia
-2015,1 - Culturas perenes,375660.9,Caatinga
-2015,1 - Culturas perenes,1027119.79,Cerrado
-2015,1 - Culturas perenes,747327.53,Mata Atlântica
-2015,1 - Culturas perenes,9537.69,Pampa
-2015,10 - Silvicultura,190526.87,Amazônia
-2015,10 - Silvicultura,270743.33,Caatinga
-2015,10 - Silvicultura,3852777.23,Cerrado
-2015,10 - Silvicultura,3232217.47,Mata Atlântica
-2015,10 - Silvicultura,1041096.64,Pampa
-2015,11 - Veg. prim. florestal,316281758.5,Amazônia
-2015,11 - Veg. prim. florestal,22867973.05,Caatinga
-2015,11 - Veg. prim. florestal,202939815.62,Cerrado
-2015,11 - Veg. prim. florestal,17755006.11,Mata Atlântica
-2015,11 - Veg. prim. florestal,13693556.53,Pampa
-2015,15 - Outro,10181275.37,Amazônia
-2015,15 - Outro,1470887.93,Caatinga
-2015,15 - Outro,6872998.03,Cerrado
-2015,15 - Outro,3328649.99,Mata Atlântica
-2015,15 - Outro,1043922.59,Pampa
-2015,2 - Soja,260275.05,Amazônia
-2015,2 - Soja,172.71,Caatinga
-2015,2 - Soja,3737690.14,Cerrado
-2015,2 - Soja,2060460.12,Mata Atlântica
-2015,2 - Soja,6255959.76,Pampa
-2015,3 - Soja + Milho 2ª safra,117426.96,Amazônia
-2015,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2015,3 - Soja + Milho 2ª safra,14136699.11,Cerrado
-2015,3 - Soja + Milho 2ª safra,4288089.84,Mata Atlântica
-2015,3 - Soja + Milho 2ª safra,0.0,Pampa
-2015,4 - Milho 1ª safra,333120.32,Amazônia
-2015,4 - Milho 1ª safra,800315.0,Caatinga
-2015,4 - Milho 1ª safra,2713218.0,Cerrado
-2015,4 - Milho 1ª safra,1380307.07,Mata Atlântica
-2015,4 - Milho 1ª safra,854793.0,Pampa
-2015,5 - Cana-de-açúcar,62849.29,Amazônia
-2015,5 - Cana-de-açúcar,1291838.7,Caatinga
-2015,5 - Cana-de-açúcar,3009036.57,Cerrado
-2015,5 - Cana-de-açúcar,7278352.82,Mata Atlântica
-2015,5 - Cana-de-açúcar,84514.09,Pampa
-2015,6 - Outra agropecuária,690796.48,Amazônia
-2015,6 - Outra agropecuária,5996754.04,Caatinga
-2015,6 - Outra agropecuária,24800583.42,Cerrado
-2015,6 - Outra agropecuária,14224837.87,Mata Atlântica
-2015,6 - Outra agropecuária,5230158.56,Pampa
-2015,7 - Pastagem deg. média,4656258.33,Amazônia
-2015,7 - Pastagem deg. média,1160838.75,Caatinga
-2015,7 - Pastagem deg. média,19261471.73,Cerrado
-2015,7 - Pastagem deg. média,2515716.28,Mata Atlântica
-2015,7 - Pastagem deg. média,52974.22,Pampa
-2015,8 - Pastagem deg. alta,289083.08,Amazônia
-2015,8 - Pastagem deg. alta,3629678.57,Caatinga
-2015,8 - Pastagem deg. alta,11925911.13,Cerrado
-2015,8 - Pastagem deg. alta,911436.83,Mata Atlântica
-2015,8 - Pastagem deg. alta,1633.69,Pampa
-2015,9 - Pastagem deg. baixa,8453281.94,Amazônia
-2015,9 - Pastagem deg. baixa,483222.26,Caatinga
-2015,9 - Pastagem deg. baixa,9355592.91,Cerrado
-2015,9 - Pastagem deg. baixa,3054510.12,Mata Atlântica
-2015,9 - Pastagem deg. baixa,171389.07,Pampa
-2016,1 - Culturas perenes,11979.24,Amazônia
-2016,1 - Culturas perenes,368408.9,Caatinga
-2016,1 - Culturas perenes,1041014.72,Cerrado
-2016,1 - Culturas perenes,760076.11,Mata Atlântica
-2016,1 - Culturas perenes,9739.14,Pampa
-2016,10 - Silvicultura,194373.24,Amazônia
-2016,10 - Silvicultura,277383.08,Caatinga
-2016,10 - Silvicultura,3980192.04,Cerrado
-2016,10 - Silvicultura,3280749.8,Mata Atlântica
-2016,10 - Silvicultura,1055070.12,Pampa
-2016,11 - Veg. prim. florestal,315837696.0,Amazônia
-2016,11 - Veg. prim. florestal,22813662.86,Caatinga
-2016,11 - Veg. prim. florestal,202191243.92,Cerrado
-2016,11 - Veg. prim. florestal,17756765.79,Mata Atlântica
-2016,11 - Veg. prim. florestal,13619890.52,Pampa
-2016,15 - Outro,9850160.55,Amazônia
-2016,15 - Outro,1471757.66,Caatinga
-2016,15 - Outro,7003189.47,Cerrado
-2016,15 - Outro,3370212.37,Mata Atlântica
-2016,15 - Outro,1048014.41,Pampa
-2016,2 - Soja,348200.92,Amazônia
-2016,2 - Soja,245.88,Caatinga
-2016,2 - Soja,4050364.67,Cerrado
-2016,2 - Soja,1903311.1,Mata Atlântica
-2016,2 - Soja,6360050.88,Pampa
-2016,3 - Soja + Milho 2ª safra,132060.23,Amazônia
-2016,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2016,3 - Soja + Milho 2ª safra,15463855.0,Cerrado
-2016,3 - Soja + Milho 2ª safra,5126278.67,Mata Atlântica
-2016,3 - Soja + Milho 2ª safra,0.0,Pampa
-2016,4 - Milho 1ª safra,286355.33,Amazônia
-2016,4 - Milho 1ª safra,818824.0,Caatinga
-2016,4 - Milho 1ª safra,2361845.84,Cerrado
-2016,4 - Milho 1ª safra,1189690.63,Mata Atlântica
-2016,4 - Milho 1ª safra,740510.0,Pampa
-2016,5 - Cana-de-açúcar,63231.67,Amazônia
-2016,5 - Cana-de-açúcar,1294382.81,Caatinga
-2016,5 - Cana-de-açúcar,3157111.62,Cerrado
-2016,5 - Cana-de-açúcar,7235447.28,Mata Atlântica
-2016,5 - Cana-de-açúcar,84632.79,Pampa
-2016,6 - Outra agropecuária,705343.34,Amazônia
-2016,6 - Outra agropecuária,6035554.12,Caatinga
-2016,6 - Outra agropecuária,24599323.57,Cerrado
-2016,6 - Outra agropecuária,13684859.42,Mata Atlântica
-2016,6 - Outra agropecuária,5211381.82,Pampa
-2016,7 - Pastagem deg. média,4904544.45,Amazônia
-2016,7 - Pastagem deg. média,1166441.65,Caatinga
-2016,7 - Pastagem deg. média,19073318.27,Cerrado
-2016,7 - Pastagem deg. média,2489197.64,Mata Atlântica
-2016,7 - Pastagem deg. média,50215.06,Pampa
-2016,8 - Pastagem deg. alta,307941.27,Amazônia
-2016,8 - Pastagem deg. alta,3514957.36,Caatinga
-2016,8 - Pastagem deg. alta,11908632.72,Cerrado
-2016,8 - Pastagem deg. alta,918701.95,Mata Atlântica
-2016,8 - Pastagem deg. alta,1223.1,Pampa
-2016,9 - Pastagem deg. baixa,8396110.78,Amazônia
-2016,9 - Pastagem deg. baixa,477396.74,Caatinga
-2016,9 - Pastagem deg. baixa,9134811.86,Cerrado
-2016,9 - Pastagem deg. baixa,2931353.64,Mata Atlântica
-2016,9 - Pastagem deg. baixa,177405.81,Pampa
-2017,1 - Culturas perenes,12805.8,Amazônia
-2017,1 - Culturas perenes,366249.53,Caatinga
-2017,1 - Culturas perenes,1044556.4,Cerrado
-2017,1 - Culturas perenes,763127.69,Mata Atlântica
-2017,1 - Culturas perenes,9647.98,Pampa
-2017,10 - Silvicultura,199877.28,Amazônia
-2017,10 - Silvicultura,282816.63,Caatinga
-2017,10 - Silvicultura,4075431.76,Cerrado
-2017,10 - Silvicultura,3308149.12,Mata Atlântica
-2017,10 - Silvicultura,1065885.48,Pampa
-2017,11 - Veg. prim. florestal,314966249.92,Amazônia
-2017,11 - Veg. prim. florestal,22798866.09,Caatinga
-2017,11 - Veg. prim. florestal,201652234.3,Cerrado
-2017,11 - Veg. prim. florestal,17764014.92,Mata Atlântica
-2017,11 - Veg. prim. florestal,13476646.16,Pampa
-2017,15 - Outro,10166020.73,Amazônia
-2017,15 - Outro,1521313.22,Caatinga
-2017,15 - Outro,6974924.38,Cerrado
-2017,15 - Outro,3390441.82,Mata Atlântica
-2017,15 - Outro,1052012.31,Pampa
-2017,2 - Soja,265851.32,Amazônia
-2017,2 - Soja,91.08,Caatinga
-2017,2 - Soja,4125400.61,Cerrado
-2017,2 - Soja,2088444.85,Mata Atlântica
-2017,2 - Soja,6540605.1,Pampa
-2017,3 - Soja + Milho 2ª safra,272214.04,Amazônia
-2017,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2017,3 - Soja + Milho 2ª safra,17217818.05,Cerrado
-2017,3 - Soja + Milho 2ª safra,5324969.63,Mata Atlântica
-2017,3 - Soja + Milho 2ª safra,0.0,Pampa
-2017,4 - Milho 1ª safra,267077.03,Amazônia
-2017,4 - Milho 1ª safra,788553.7,Caatinga
-2017,4 - Milho 1ª safra,2265899.9,Cerrado
-2017,4 - Milho 1ª safra,1261777.5,Mata Atlântica
-2017,4 - Milho 1ª safra,831221.0,Pampa
-2017,5 - Cana-de-açúcar,94747.77,Amazônia
-2017,5 - Cana-de-açúcar,1296865.55,Caatinga
-2017,5 - Cana-de-açúcar,3205545.74,Cerrado
-2017,5 - Cana-de-açúcar,7185854.99,Mata Atlântica
-2017,5 - Cana-de-açúcar,83549.82,Pampa
-2017,6 - Outra agropecuária,758125.27,Amazônia
-2017,6 - Outra agropecuária,6058455.87,Caatinga
-2017,6 - Outra agropecuária,23954777.7,Cerrado
-2017,6 - Outra agropecuária,13480393.75,Mata Atlântica
-2017,6 - Outra agropecuária,5219062.37,Pampa
-2017,7 - Pastagem deg. média,4992154.81,Amazônia
-2017,7 - Pastagem deg. média,1222977.58,Caatinga
-2017,7 - Pastagem deg. média,19032823.87,Cerrado
-2017,7 - Pastagem deg. média,2462415.63,Mata Atlântica
-2017,7 - Pastagem deg. média,50023.54,Pampa
-2017,8 - Pastagem deg. alta,286332.16,Amazônia
-2017,8 - Pastagem deg. alta,3372523.76,Caatinga
-2017,8 - Pastagem deg. alta,10994097.98,Cerrado
-2017,8 - Pastagem deg. alta,798328.7,Mata Atlântica
-2017,8 - Pastagem deg. alta,1312.44,Pampa
-2017,9 - Pastagem deg. baixa,8529475.4,Amazônia
-2017,9 - Pastagem deg. baixa,465317.64,Caatinga
-2017,9 - Pastagem deg. baixa,9680909.28,Cerrado
-2017,9 - Pastagem deg. baixa,2965139.38,Mata Atlântica
-2017,9 - Pastagem deg. baixa,174111.54,Pampa
-2018,1 - Culturas perenes,13937.53,Amazônia
-2018,1 - Culturas perenes,372720.16,Caatinga
-2018,1 - Culturas perenes,1056924.05,Cerrado
-2018,1 - Culturas perenes,755512.04,Mata Atlântica
-2018,1 - Culturas perenes,9390.64,Pampa
-2018,10 - Silvicultura,203771.32,Amazônia
-2018,10 - Silvicultura,286047.32,Caatinga
-2018,10 - Silvicultura,4135053.27,Cerrado
-2018,10 - Silvicultura,3347122.83,Mata Atlântica
-2018,10 - Silvicultura,1076754.79,Pampa
-2018,11 - Veg. prim. florestal,314581349.17,Amazônia
-2018,11 - Veg. prim. florestal,22736951.68,Caatinga
-2018,11 - Veg. prim. florestal,200580792.39,Cerrado
-2018,11 - Veg. prim. florestal,17774901.51,Mata Atlântica
-2018,11 - Veg. prim. florestal,13348588.79,Pampa
-2018,15 - Outro,10048478.77,Amazônia
-2018,15 - Outro,1597222.3,Caatinga
-2018,15 - Outro,7591755.55,Cerrado
-2018,15 - Outro,3414039.01,Mata Atlântica
-2018,15 - Outro,1057892.42,Pampa
-2018,2 - Soja,290352.09,Amazônia
-2018,2 - Soja,16.47,Caatinga
-2018,2 - Soja,4124924.19,Cerrado
-2018,2 - Soja,1879103.9,Mata Atlântica
-2018,2 - Soja,6548126.76,Pampa
-2018,3 - Soja + Milho 2ª safra,292259.04,Amazônia
-2018,3 - Soja + Milho 2ª safra,0.0,Caatinga
-2018,3 - Soja + Milho 2ª safra,17604030.87,Cerrado
-2018,3 - Soja + Milho 2ª safra,5637633.01,Mata Atlântica
-2018,3 - Soja + Milho 2ª safra,0.0,Pampa
-2018,4 - Milho 1ª safra,226114.42,Amazônia
-2018,4 - Milho 1ª safra,832367.69,Caatinga
-2018,4 - Milho 1ª safra,2174212.48,Cerrado
-2018,4 - Milho 1ª safra,1017456.19,Mata Atlântica
-2018,4 - Milho 1ª safra,706160.0,Pampa
-2018,5 - Cana-de-açúcar,93894.73,Amazônia
-2018,5 - Cana-de-açúcar,1303248.65,Caatinga
-2018,5 - Cana-de-açúcar,3214790.81,Cerrado
-2018,5 - Cana-de-açúcar,7158411.91,Mata Atlântica
-2018,5 - Cana-de-açúcar,82664.27,Pampa
-2018,6 - Outra agropecuária,791711.07,Amazônia
-2018,6 - Outra agropecuária,6071407.31,Caatinga
-2018,6 - Outra agropecuária,24179695.92,Cerrado
-2018,6 - Outra agropecuária,13390658.07,Mata Atlântica
-2018,6 - Outra agropecuária,5156689.8,Pampa
-2018,7 - Pastagem deg. média,4920799.0,Amazônia
-2018,7 - Pastagem deg. média,1543686.35,Caatinga
-2018,7 - Pastagem deg. média,19100054.85,Cerrado
-2018,7 - Pastagem deg. média,2515669.09,Mata Atlântica
-2018,7 - Pastagem deg. média,55575.61,Pampa
-2018,8 - Pastagem deg. alta,233044.81,Amazônia
-2018,8 - Pastagem deg. alta,2441991.97,Caatinga
-2018,8 - Pastagem deg. alta,9752745.03,Cerrado
-2018,8 - Pastagem deg. alta,782676.86,Mata Atlântica
-2018,8 - Pastagem deg. alta,1731.43,Pampa
-2018,9 - Pastagem deg. baixa,9103470.2,Amazônia
-2018,9 - Pastagem deg. baixa,579693.79,Caatinga
-2018,9 - Pastagem deg. baixa,10395450.3,Cerrado
-2018,9 - Pastagem deg. baixa,2803728.54,Mata Atlântica
-2018,9 - Pastagem deg. baixa,161483.64,Pampa
-2019,1 - Culturas perenes,14340.91,Amazônia
-2019,1 - Culturas perenes,393055.51,Caatinga
-2019,1 - Culturas perenes,1090788.65,Cerrado
-2019,1 - Culturas perenes,773913.2,Mata Atlântica
-2019,1 - Culturas perenes,9445.84,Pampa
-2019,10 - Silvicultura,212790.89,Amazônia
-2019,10 - Silvicultura,292225.58,Caatinga
-2019,10 - Silvicultura,4252355.46,Cerrado
-2019,10 - Silvicultura,3437188.26,Mata Atlântica
-2019,10 - Silvicultura,1091249.59,Pampa
-2019,11 - Veg. prim. florestal,313470807.21,Amazônia
-2019,11 - Veg. prim. florestal,22638040.91,Caatinga
-2019,11 - Veg. prim. florestal,200180547.43,Cerrado
-2019,11 - Veg. prim. florestal,17738973.1,Mata Atlântica
-2019,11 - Veg. prim. florestal,13102408.41,Pampa
-2019,15 - Outro,10184969.42,Amazônia
-2019,15 - Outro,1645022.04,Caatinga
-2019,15 - Outro,7082020.34,Cerrado
-2019,15 - Outro,3442258.13,Mata Atlântica
-2019,15 - Outro,1061025.59,Pampa
-2019,2 - Soja,248493.87,Amazônia
-2019,2 - Soja,0.0,Caatinga
-2019,2 - Soja,4077372.21,Cerrado
-2019,2 - Soja,2008603.96,Mata Atlântica
-2019,2 - Soja,6928960.05,Pampa
-2019,3 - Soja + Milho 2ª safra,402840.18,Amazônia
-2019,3 - Soja + Milho 2ª safra,13.95,Caatinga
-2019,3 - Soja + Milho 2ª safra,18387546.15,Cerrado
-2019,3 - Soja + Milho 2ª safra,5704044.5,Mata Atlântica
-2019,3 - Soja + Milho 2ª safra,0.0,Pampa
-2019,4 - Milho 1ª safra,201431.32,Amazônia
+2008,5 - Cana-de-açúcar,4357.26,Amazônia
+2008,5 - Cana-de-açúcar,1059659.82,Caatinga
+2008,5 - Cana-de-açúcar,1091344.24,Cerrado
+2008,5 - Cana-de-açúcar,5524455.75,Mata Atlântica
+2008,5 - Cana-de-açúcar,0.0,Pampa
+2008,6 - Outra agropecuária,217791.32,Amazônia
+2008,6 - Outra agropecuária,4572610.31,Caatinga
+2008,6 - Outra agropecuária,24136305.54,Cerrado
+2008,6 - Outra agropecuária,13822685.61,Mata Atlântica
+2008,6 - Outra agropecuária,5522774.31,Pampa
+2008,7 - Pastagem de Baixo Vigor,2825044.71,Amazônia
+2008,7 - Pastagem de Baixo Vigor,2580285.52,Caatinga
+2008,7 - Pastagem de Baixo Vigor,32964012.66,Cerrado
+2008,7 - Pastagem de Baixo Vigor,4236179.96,Mata Atlântica
+2008,7 - Pastagem de Baixo Vigor,59127.67,Pampa
+2008,8 - Pastagem de Médio Vigor,11122994.33,Amazônia
+2008,8 - Pastagem de Médio Vigor,4114390.75,Caatinga
+2008,8 - Pastagem de Médio Vigor,46017104.54,Cerrado
+2008,8 - Pastagem de Médio Vigor,7222096.82,Mata Atlântica
+2008,8 - Pastagem de Médio Vigor,229257.53,Pampa
+2008,9 - Pastagem de Alto Vigor,13277375.95,Amazônia
+2008,9 - Pastagem de Alto Vigor,2970608.68,Caatinga
+2008,9 - Pastagem de Alto Vigor,27442104.31,Cerrado
+2008,9 - Pastagem de Alto Vigor,4866750.41,Mata Atlântica
+2008,9 - Pastagem de Alto Vigor,166813.84,Pampa
+2009,1 - Culturas perenes,3087.99,Amazônia
+2009,1 - Culturas perenes,323892.26,Caatinga
+2009,1 - Culturas perenes,719072.5,Cerrado
+2009,1 - Culturas perenes,482729.41,Mata Atlântica
+2009,1 - Culturas perenes,0.0,Pampa
+2009,10 - Silvicultura,143217.91,Amazônia
+2009,10 - Silvicultura,1932.6,Caatinga
+2009,10 - Silvicultura,2104027.84,Cerrado
+2009,10 - Silvicultura,2183252.69,Mata Atlântica
+2009,10 - Silvicultura,749828.15,Pampa
+2009,11 - Veg. prim. florestal,261831235.94,Amazônia
+2009,11 - Veg. prim. florestal,723412.84,Caatinga
+2009,11 - Veg. prim. florestal,57547357.64,Cerrado
+2009,11 - Veg. prim. florestal,8465140.76,Mata Atlântica
+2009,11 - Veg. prim. florestal,2777102.87,Pampa
+2009,12 - Veg. sec. florestal,9390303.82,Amazônia
+2009,12 - Veg. sec. florestal,723506.99,Caatinga
+2009,12 - Veg. sec. florestal,26362226.02,Cerrado
+2009,12 - Veg. sec. florestal,8465531.46,Mata Atlântica
+2009,12 - Veg. sec. florestal,2777142.28,Pampa
+2009,13 - Veg. prim. não-florestal,1193413.95,Amazônia
+2009,13 - Veg. prim. não-florestal,10888722.86,Caatinga
+2009,13 - Veg. prim. não-florestal,92652881.79,Cerrado
+2009,13 - Veg. prim. não-florestal,27065.81,Mata Atlântica
+2009,13 - Veg. prim. não-florestal,0.0,Pampa
+2009,14 - Veg. sec. não-florestal,0.0,Amazônia
+2009,14 - Veg. sec. não-florestal,10888942.01,Caatinga
+2009,14 - Veg. sec. não-florestal,8489632.0,Cerrado
+2009,14 - Veg. sec. não-florestal,8863.61,Mata Atlântica
+2009,14 - Veg. sec. não-florestal,70.38,Pampa
+2009,15 - Outro,10713783.17,Amazônia
+2009,15 - Outro,1297123.82,Caatinga
+2009,15 - Outro,6748277.93,Cerrado
+2009,15 - Outro,2731386.16,Mata Atlântica
+2009,15 - Outro,1074684.44,Pampa
+2009,2 - Soja Safra Única,85955.45,Amazônia
+2009,2 - Soja Safra Única,28.08,Caatinga
+2009,2 - Soja Safra Única,4143108.01,Cerrado
+2009,2 - Soja Safra Única,2745438.21,Mata Atlântica
+2009,2 - Soja Safra Única,4970449.26,Pampa
+2009,3 - Soja + Milho 2ª Safra,12366.76,Amazônia
+2009,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2009,3 - Soja + Milho 2ª Safra,8268176.21,Cerrado
+2009,3 - Soja + Milho 2ª Safra,2540051.73,Mata Atlântica
+2009,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2009,4 - Milho 1ª safra,427228.4,Amazônia
+2009,4 - Milho 1ª safra,1530580.0,Caatinga
+2009,4 - Milho 1ª safra,3362000.97,Cerrado
+2009,4 - Milho 1ª safra,2797925.37,Mata Atlântica
+2009,4 - Milho 1ª safra,1385998.0,Pampa
+2009,5 - Cana-de-açúcar,4362.3,Amazônia
+2009,5 - Cana-de-açúcar,1061713.8,Caatinga
+2009,5 - Cana-de-açúcar,1146342.52,Cerrado
+2009,5 - Cana-de-açúcar,5689187.16,Mata Atlântica
+2009,5 - Cana-de-açúcar,0.0,Pampa
+2009,6 - Outra agropecuária,254031.8,Amazônia
+2009,6 - Outra agropecuária,4605005.1,Caatinga
+2009,6 - Outra agropecuária,24546314.13,Cerrado
+2009,6 - Outra agropecuária,13875907.47,Mata Atlântica
+2009,6 - Outra agropecuária,5527971.09,Pampa
+2009,7 - Pastagem de Baixo Vigor,2882152.39,Amazônia
+2009,7 - Pastagem de Baixo Vigor,2607493.48,Caatinga
+2009,7 - Pastagem de Baixo Vigor,33060903.07,Cerrado
+2009,7 - Pastagem de Baixo Vigor,4150450.12,Mata Atlântica
+2009,7 - Pastagem de Baixo Vigor,58255.31,Pampa
+2009,8 - Pastagem de Médio Vigor,11348425.93,Amazônia
+2009,8 - Pastagem de Médio Vigor,4164499.42,Caatinga
+2009,8 - Pastagem de Médio Vigor,46209179.06,Cerrado
+2009,8 - Pastagem de Médio Vigor,7120940.78,Mata Atlântica
+2009,8 - Pastagem de Médio Vigor,225954.2,Pampa
+2009,9 - Pastagem de Alto Vigor,13611866.96,Amazônia
+2009,9 - Pastagem de Alto Vigor,3002122.39,Caatinga
+2009,9 - Pastagem de Alto Vigor,27637678.95,Cerrado
+2009,9 - Pastagem de Alto Vigor,4812836.7,Mata Atlântica
+2009,9 - Pastagem de Alto Vigor,164876.36,Pampa
+2010,1 - Culturas perenes,3102.85,Amazônia
+2010,1 - Culturas perenes,341630.05,Caatinga
+2010,1 - Culturas perenes,730170.19,Cerrado
+2010,1 - Culturas perenes,479167.76,Mata Atlântica
+2010,1 - Culturas perenes,0.0,Pampa
+2010,10 - Silvicultura,145585.51,Amazônia
+2010,10 - Silvicultura,2088.48,Caatinga
+2010,10 - Silvicultura,2318560.57,Cerrado
+2010,10 - Silvicultura,2363306.7,Mata Atlântica
+2010,10 - Silvicultura,808729.43,Pampa
+2010,11 - Veg. prim. florestal,261426948.7,Amazônia
+2010,11 - Veg. prim. florestal,724552.85,Caatinga
+2010,11 - Veg. prim. florestal,57401212.12,Cerrado
+2010,11 - Veg. prim. florestal,8474065.81,Mata Atlântica
+2010,11 - Veg. prim. florestal,2766361.14,Pampa
+2010,12 - Veg. sec. florestal,9333414.5,Amazônia
+2010,12 - Veg. sec. florestal,724654.6,Caatinga
+2010,12 - Veg. sec. florestal,26324039.97,Cerrado
+2010,12 - Veg. sec. florestal,8474362.5,Mata Atlântica
+2010,12 - Veg. sec. florestal,2766413.43,Pampa
+2010,13 - Veg. prim. não-florestal,1196523.09,Amazônia
+2010,13 - Veg. prim. não-florestal,10880658.99,Caatinga
+2010,13 - Veg. prim. não-florestal,92274700.66,Cerrado
+2010,13 - Veg. prim. não-florestal,27460.44,Mata Atlântica
+2010,13 - Veg. prim. não-florestal,0.0,Pampa
+2010,14 - Veg. sec. não-florestal,0.0,Amazônia
+2010,14 - Veg. sec. não-florestal,10881034.65,Caatinga
+2010,14 - Veg. sec. não-florestal,8457918.52,Cerrado
+2010,14 - Veg. sec. não-florestal,8860.58,Mata Atlântica
+2010,14 - Veg. sec. não-florestal,108.27,Pampa
+2010,15 - Outro,10766585.7,Amazônia
+2010,15 - Outro,1324271.94,Caatinga
+2010,15 - Outro,6302546.85,Cerrado
+2010,15 - Outro,2758572.14,Mata Atlântica
+2010,15 - Outro,1073599.58,Pampa
+2010,2 - Soja Safra Única,87600.99,Amazônia
+2010,2 - Soja Safra Única,19.89,Caatinga
+2010,2 - Soja Safra Única,3810150.26,Cerrado
+2010,2 - Soja Safra Única,2610888.7,Mata Atlântica
+2010,2 - Soja Safra Única,5012061.3,Pampa
+2010,3 - Soja + Milho 2ª Safra,27076.83,Amazônia
+2010,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2010,3 - Soja + Milho 2ª Safra,9320170.78,Cerrado
+2010,3 - Soja + Milho 2ª Safra,2935419.71,Mata Atlântica
+2010,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2010,4 - Milho 1ª safra,391258.64,Amazônia
+2010,4 - Milho 1ª safra,1549048.0,Caatinga
+2010,4 - Milho 1ª safra,3094364.68,Cerrado
+2010,4 - Milho 1ª safra,2332424.52,Mata Atlântica
+2010,4 - Milho 1ª safra,1385754.0,Pampa
+2010,5 - Cana-de-açúcar,4358.92,Amazônia
+2010,5 - Cana-de-açúcar,1063892.7,Caatinga
+2010,5 - Cana-de-açúcar,1364904.9,Cerrado
+2010,5 - Cana-de-açúcar,5944977.46,Mata Atlântica
+2010,5 - Cana-de-açúcar,0.0,Pampa
+2010,6 - Outra agropecuária,281092.67,Amazônia
+2010,6 - Outra agropecuária,4635149.81,Caatinga
+2010,6 - Outra agropecuária,24491617.45,Cerrado
+2010,6 - Outra agropecuária,13691802.55,Mata Atlântica
+2010,6 - Outra agropecuária,5562062.02,Pampa
+2010,7 - Pastagem de Baixo Vigor,2776975.96,Amazônia
+2010,7 - Pastagem de Baixo Vigor,2472892.13,Caatinga
+2010,7 - Pastagem de Baixo Vigor,33396701.99,Cerrado
+2010,7 - Pastagem de Baixo Vigor,3828299.88,Mata Atlântica
+2010,7 - Pastagem de Baixo Vigor,57146.4,Pampa
+2010,8 - Pastagem de Médio Vigor,11315728.31,Amazônia
+2010,8 - Pastagem de Médio Vigor,4141109.59,Caatinga
+2010,8 - Pastagem de Médio Vigor,45884478.59,Cerrado
+2010,8 - Pastagem de Médio Vigor,6866180.35,Mata Atlântica
+2010,8 - Pastagem de Médio Vigor,215397.13,Pampa
+2010,9 - Pastagem de Alto Vigor,14027423.04,Amazônia
+2010,9 - Pastagem de Alto Vigor,3172848.04,Caatinga
+2010,9 - Pastagem de Alto Vigor,27294187.19,Cerrado
+2010,9 - Pastagem de Alto Vigor,4961088.44,Mata Atlântica
+2010,9 - Pastagem de Alto Vigor,154570.83,Pampa
+2011,1 - Culturas perenes,2620.9,Amazônia
+2011,1 - Culturas perenes,345326.01,Caatinga
+2011,1 - Culturas perenes,757252.06,Cerrado
+2011,1 - Culturas perenes,494982.41,Mata Atlântica
+2011,1 - Culturas perenes,0.0,Pampa
+2011,10 - Silvicultura,149539.45,Amazônia
+2011,10 - Silvicultura,2288.05,Caatinga
+2011,10 - Silvicultura,2530440.35,Cerrado
+2011,10 - Silvicultura,2523350.25,Mata Atlântica
+2011,10 - Silvicultura,882281.72,Pampa
+2011,11 - Veg. prim. florestal,260122631.05,Amazônia
+2011,11 - Veg. prim. florestal,725916.94,Caatinga
+2011,11 - Veg. prim. florestal,56671823.75,Cerrado
+2011,11 - Veg. prim. florestal,8488777.42,Mata Atlântica
+2011,11 - Veg. prim. florestal,2778723.16,Pampa
+2011,12 - Veg. sec. florestal,10343355.56,Amazônia
+2011,12 - Veg. sec. florestal,726017.02,Caatinga
+2011,12 - Veg. sec. florestal,26864142.44,Cerrado
+2011,12 - Veg. sec. florestal,8489081.61,Mata Atlântica
+2011,12 - Veg. sec. florestal,2778766.49,Pampa
+2011,13 - Veg. prim. não-florestal,1199760.93,Amazônia
+2011,13 - Veg. prim. não-florestal,10862907.52,Caatinga
+2011,13 - Veg. prim. não-florestal,91849836.2,Cerrado
+2011,13 - Veg. prim. não-florestal,27988.57,Mata Atlântica
+2011,13 - Veg. prim. não-florestal,0.0,Pampa
+2011,14 - Veg. sec. não-florestal,0.0,Amazônia
+2011,14 - Veg. sec. não-florestal,10863277.74,Caatinga
+2011,14 - Veg. sec. não-florestal,8421810.16,Cerrado
+2011,14 - Veg. sec. não-florestal,9075.76,Mata Atlântica
+2011,14 - Veg. sec. não-florestal,85.77,Pampa
+2011,15 - Outro,10435918.13,Amazônia
+2011,15 - Outro,1279283.2,Caatinga
+2011,15 - Outro,6400385.34,Cerrado
+2011,15 - Outro,2781204.04,Mata Atlântica
+2011,15 - Outro,1082363.19,Pampa
+2011,2 - Soja Safra Única,89634.08,Amazônia
+2011,2 - Soja Safra Única,5.94,Caatinga
+2011,2 - Soja Safra Única,3809480.14,Cerrado
+2011,2 - Soja Safra Única,2202309.02,Mata Atlântica
+2011,2 - Soja Safra Única,5133726.9,Pampa
+2011,3 - Soja + Milho 2ª Safra,25135.62,Amazônia
+2011,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2011,3 - Soja + Milho 2ª Safra,9939244.76,Cerrado
+2011,3 - Soja + Milho 2ª Safra,3405801.49,Mata Atlântica
+2011,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2011,4 - Milho 1ª safra,373391.26,Amazônia
+2011,4 - Milho 1ª safra,934384.0,Caatinga
+2011,4 - Milho 1ª safra,2818635.54,Cerrado
+2011,4 - Milho 1ª safra,1798333.71,Mata Atlântica
+2011,4 - Milho 1ª safra,1151397.0,Pampa
+2011,5 - Cana-de-açúcar,4332.26,Amazônia
+2011,5 - Cana-de-açúcar,1065854.45,Caatinga
+2011,5 - Cana-de-açúcar,1541064.45,Cerrado
+2011,5 - Cana-de-açúcar,6063211.35,Mata Atlântica
+2011,5 - Cana-de-açúcar,0.0,Pampa
+2011,6 - Outra agropecuária,278305.21,Amazônia
+2011,6 - Outra agropecuária,4633248.08,Caatinga
+2011,6 - Outra agropecuária,23957894.2,Cerrado
+2011,6 - Outra agropecuária,13436841.07,Mata Atlântica
+2011,6 - Outra agropecuária,5583366.64,Pampa
+2011,7 - Pastagem de Baixo Vigor,2708272.09,Amazônia
+2011,7 - Pastagem de Baixo Vigor,2639825.98,Caatinga
+2011,7 - Pastagem de Baixo Vigor,32661498.6,Cerrado
+2011,7 - Pastagem de Baixo Vigor,3383355.71,Mata Atlântica
+2011,7 - Pastagem de Baixo Vigor,55241.21,Pampa
+2011,8 - Pastagem de Médio Vigor,11362452.55,Amazônia
+2011,8 - Pastagem de Médio Vigor,4193965.87,Caatinga
+2011,8 - Pastagem de Médio Vigor,46079071.16,Cerrado
+2011,8 - Pastagem de Médio Vigor,6600532.28,Mata Atlântica
+2011,8 - Pastagem de Médio Vigor,200610.46,Pampa
+2011,9 - Pastagem de Alto Vigor,14313032.48,Amazônia
+2011,9 - Pastagem de Alto Vigor,2991900.9,Caatinga
+2011,9 - Pastagem de Alto Vigor,27678895.52,Cerrado
+2011,9 - Pastagem de Alto Vigor,5286988.37,Mata Atlântica
+2011,9 - Pastagem de Alto Vigor,155124.69,Pampa
+2012,1 - Culturas perenes,1740.41,Amazônia
+2012,1 - Culturas perenes,351236.01,Caatinga
+2012,1 - Culturas perenes,803297.47,Cerrado
+2012,1 - Culturas perenes,526012.12,Mata Atlântica
+2012,1 - Culturas perenes,0.0,Pampa
+2012,10 - Silvicultura,153283.77,Amazônia
+2012,10 - Silvicultura,2662.52,Caatinga
+2012,10 - Silvicultura,2722957.1,Cerrado
+2012,10 - Silvicultura,2664300.77,Mata Atlântica
+2012,10 - Silvicultura,913984.6,Pampa
+2012,11 - Veg. prim. florestal,259863454.91,Amazônia
+2012,11 - Veg. prim. florestal,724793.92,Caatinga
+2012,11 - Veg. prim. florestal,56484971.39,Cerrado
+2012,11 - Veg. prim. florestal,8496442.56,Mata Atlântica
+2012,11 - Veg. prim. florestal,2776246.74,Pampa
+2012,12 - Veg. sec. florestal,10322491.75,Amazônia
+2012,12 - Veg. sec. florestal,724908.89,Caatinga
+2012,12 - Veg. sec. florestal,26776506.2,Cerrado
+2012,12 - Veg. sec. florestal,8496781.32,Mata Atlântica
+2012,12 - Veg. sec. florestal,2776295.66,Pampa
+2012,13 - Veg. prim. não-florestal,1195168.14,Amazônia
+2012,13 - Veg. prim. não-florestal,10818625.95,Caatinga
+2012,13 - Veg. prim. não-florestal,91046595.72,Cerrado
+2012,13 - Veg. prim. não-florestal,28469.98,Mata Atlântica
+2012,13 - Veg. prim. não-florestal,0.0,Pampa
+2012,14 - Veg. sec. não-florestal,0.0,Amazônia
+2012,14 - Veg. sec. não-florestal,10818980.64,Caatinga
+2012,14 - Veg. sec. não-florestal,8364735.53,Cerrado
+2012,14 - Veg. sec. não-florestal,9268.05,Mata Atlântica
+2012,14 - Veg. sec. não-florestal,92.57,Pampa
+2012,15 - Outro,10521634.26,Amazônia
+2012,15 - Outro,1273602.68,Caatinga
+2012,15 - Outro,6977075.14,Cerrado
+2012,15 - Outro,2803694.49,Mata Atlântica
+2012,15 - Outro,1085574.54,Pampa
+2012,2 - Soja Safra Única,86854.48,Amazônia
+2012,2 - Soja Safra Única,8.37,Caatinga
+2012,2 - Soja Safra Única,4149985.59,Cerrado
+2012,2 - Soja Safra Única,2449285.49,Mata Atlântica
+2012,2 - Soja Safra Única,5227404.93,Pampa
+2012,3 - Soja + Milho 2ª Safra,23077.82,Amazônia
+2012,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2012,3 - Soja + Milho 2ª Safra,10556498.97,Cerrado
+2012,3 - Soja + Milho 2ª Safra,3578636.41,Mata Atlântica
+2012,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2012,4 - Milho 1ª safra,364364.07,Amazônia
+2012,4 - Milho 1ª safra,1260421.0,Caatinga
+2012,4 - Milho 1ª safra,2948408.33,Cerrado
+2012,4 - Milho 1ª safra,1891509.31,Mata Atlântica
+2012,4 - Milho 1ª safra,1100309.0,Pampa
+2012,5 - Cana-de-açúcar,4318.78,Amazônia
+2012,5 - Cana-de-açúcar,1067000.27,Caatinga
+2012,5 - Cana-de-açúcar,1735110.34,Cerrado
+2012,5 - Cana-de-açúcar,6222964.42,Mata Atlântica
+2012,5 - Cana-de-açúcar,0.0,Pampa
+2012,6 - Outra agropecuária,311705.91,Amazônia
+2012,6 - Outra agropecuária,4637823.28,Caatinga
+2012,6 - Outra agropecuária,24577637.11,Cerrado
+2012,6 - Outra agropecuária,13509086.41,Mata Atlântica
+2012,6 - Outra agropecuária,5589677.32,Pampa
+2012,7 - Pastagem de Baixo Vigor,2537280.93,Amazônia
+2012,7 - Pastagem de Baixo Vigor,2974191.78,Caatinga
+2012,7 - Pastagem de Baixo Vigor,31618457.34,Cerrado
+2012,7 - Pastagem de Baixo Vigor,3007945.52,Mata Atlântica
+2012,7 - Pastagem de Baixo Vigor,44043.34,Pampa
+2012,8 - Pastagem de Médio Vigor,11134871.67,Amazônia
+2012,8 - Pastagem de Médio Vigor,4168203.41,Caatinga
+2012,8 - Pastagem de Médio Vigor,45821678.09,Cerrado
+2012,8 - Pastagem de Médio Vigor,6372926.85,Mata Atlântica
+2012,8 - Pastagem de Médio Vigor,183972.26,Pampa
+2012,9 - Pastagem de Alto Vigor,14921374.17,Amazônia
+2012,9 - Pastagem de Alto Vigor,2801892.01,Caatinga
+2012,9 - Pastagem de Alto Vigor,28472751.17,Cerrado
+2012,9 - Pastagem de Alto Vigor,5446532.41,Mata Atlântica
+2012,9 - Pastagem de Alto Vigor,170304.07,Pampa
+2013,1 - Culturas perenes,1355.72,Amazônia
+2013,1 - Culturas perenes,355914.94,Caatinga
+2013,1 - Culturas perenes,847805.04,Cerrado
+2013,1 - Culturas perenes,555504.85,Mata Atlântica
+2013,1 - Culturas perenes,0.0,Pampa
+2013,10 - Silvicultura,160599.57,Amazônia
+2013,10 - Silvicultura,3050.45,Caatinga
+2013,10 - Silvicultura,2940975.22,Cerrado
+2013,10 - Silvicultura,2796262.51,Mata Atlântica
+2013,10 - Silvicultura,964655.24,Pampa
+2013,11 - Veg. prim. florestal,259373977.23,Amazônia
+2013,11 - Veg. prim. florestal,722009.14,Caatinga
+2013,11 - Veg. prim. florestal,54557214.11,Cerrado
+2013,11 - Veg. prim. florestal,8504148.64,Mata Atlântica
+2013,11 - Veg. prim. florestal,2760071.78,Pampa
+2013,12 - Veg. sec. florestal,10457088.45,Amazônia
+2013,12 - Veg. sec. florestal,722140.45,Caatinga
+2013,12 - Veg. sec. florestal,28443750.11,Cerrado
+2013,12 - Veg. sec. florestal,8504628.8,Mata Atlântica
+2013,12 - Veg. sec. florestal,2760116.83,Pampa
+2013,13 - Veg. prim. não-florestal,1176127.29,Amazônia
+2013,13 - Veg. prim. não-florestal,10783251.22,Caatinga
+2013,13 - Veg. prim. não-florestal,90108283.13,Cerrado
+2013,13 - Veg. prim. não-florestal,28267.6,Mata Atlântica
+2013,13 - Veg. prim. não-florestal,0.0,Pampa
+2013,14 - Veg. sec. não-florestal,0.0,Amazônia
+2013,14 - Veg. sec. não-florestal,10783692.45,Caatinga
+2013,14 - Veg. sec. não-florestal,8300148.32,Cerrado
+2013,14 - Veg. sec. não-florestal,9362.02,Mata Atlântica
+2013,14 - Veg. sec. não-florestal,146.25,Pampa
+2013,15 - Outro,10629996.28,Amazônia
+2013,15 - Outro,1207582.77,Caatinga
+2013,15 - Outro,6168172.8,Cerrado
+2013,15 - Outro,2824642.72,Mata Atlântica
+2013,15 - Outro,1093134.07,Pampa
+2013,2 - Soja Safra Única,91412.63,Amazônia
+2013,2 - Soja Safra Única,18.09,Caatinga
+2013,2 - Soja Safra Única,3314046.18,Cerrado
+2013,2 - Soja Safra Única,2207583.52,Mata Atlântica
+2013,2 - Soja Safra Única,5432116.59,Pampa
+2013,3 - Soja + Milho 2ª Safra,30854.08,Amazônia
+2013,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2013,3 - Soja + Milho 2ª Safra,10927796.91,Cerrado
+2013,3 - Soja + Milho 2ª Safra,3594265.4,Mata Atlântica
+2013,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2013,4 - Milho 1ª safra,357748.63,Amazônia
+2013,4 - Milho 1ª safra,894152.0,Caatinga
+2013,4 - Milho 1ª safra,2757705.55,Cerrado
+2013,4 - Milho 1ª safra,1962258.43,Mata Atlântica
+2013,4 - Milho 1ª safra,1119220.0,Pampa
+2013,5 - Cana-de-açúcar,4328.88,Amazônia
+2013,5 - Cana-de-açúcar,1070181.9,Caatinga
+2013,5 - Cana-de-açúcar,1974156.98,Cerrado
+2013,5 - Cana-de-açúcar,6439871.25,Mata Atlântica
+2013,5 - Cana-de-açúcar,0.0,Pampa
+2013,6 - Outra agropecuária,389479.88,Amazônia
+2013,6 - Outra agropecuária,4540969.19,Caatinga
+2013,6 - Outra agropecuária,24838007.88,Cerrado
+2013,6 - Outra agropecuária,13159029.44,Mata Atlântica
+2013,6 - Outra agropecuária,5556180.87,Pampa
+2013,7 - Pastagem de Baixo Vigor,2524339.47,Amazônia
+2013,7 - Pastagem de Baixo Vigor,4316109.96,Caatinga
+2013,7 - Pastagem de Baixo Vigor,32312093.23,Cerrado
+2013,7 - Pastagem de Baixo Vigor,2934424.12,Mata Atlântica
+2013,7 - Pastagem de Baixo Vigor,35607.78,Pampa
+2013,8 - Pastagem de Médio Vigor,11176417.88,Amazônia
+2013,8 - Pastagem de Médio Vigor,3618806.59,Caatinga
+2013,8 - Pastagem de Médio Vigor,45516681.01,Cerrado
+2013,8 - Pastagem de Médio Vigor,6096197.92,Mata Atlântica
+2013,8 - Pastagem de Médio Vigor,170817.32,Pampa
+2013,9 - Pastagem de Alto Vigor,15127420.93,Amazônia
+2013,9 - Pastagem de Alto Vigor,2262298.73,Caatinga
+2013,9 - Pastagem de Alto Vigor,27696226.57,Cerrado
+2013,9 - Pastagem de Alto Vigor,5387696.29,Mata Atlântica
+2013,9 - Pastagem de Alto Vigor,186836.64,Pampa
+2014,1 - Culturas perenes,2691.49,Amazônia
+2014,1 - Culturas perenes,355274.1,Caatinga
+2014,1 - Culturas perenes,921054.61,Cerrado
+2014,1 - Culturas perenes,601918.27,Mata Atlântica
+2014,1 - Culturas perenes,0.0,Pampa
+2014,10 - Silvicultura,174996.16,Amazônia
+2014,10 - Silvicultura,4073.9,Caatinga
+2014,10 - Silvicultura,3268992.59,Cerrado
+2014,10 - Silvicultura,2890059.35,Mata Atlântica
+2014,10 - Silvicultura,1014462.93,Pampa
+2014,11 - Veg. prim. florestal,259024197.13,Amazônia
+2014,11 - Veg. prim. florestal,722325.29,Caatinga
+2014,11 - Veg. prim. florestal,54436966.35,Cerrado
+2014,11 - Veg. prim. florestal,8516748.61,Mata Atlântica
+2014,11 - Veg. prim. florestal,2785596.8,Pampa
+2014,12 - Veg. sec. florestal,10413028.9,Amazônia
+2014,12 - Veg. sec. florestal,722454.8,Caatinga
+2014,12 - Veg. sec. florestal,28416265.66,Cerrado
+2014,12 - Veg. sec. florestal,8517059.65,Mata Atlântica
+2014,12 - Veg. sec. florestal,2785652.73,Pampa
+2014,13 - Veg. prim. não-florestal,1153518.21,Amazônia
+2014,13 - Veg. prim. não-florestal,10754001.0,Caatinga
+2014,13 - Veg. prim. não-florestal,89394990.22,Cerrado
+2014,13 - Veg. prim. não-florestal,28301.13,Mata Atlântica
+2014,13 - Veg. prim. não-florestal,0.0,Pampa
+2014,14 - Veg. sec. não-florestal,0.0,Amazônia
+2014,14 - Veg. sec. não-florestal,10754330.58,Caatinga
+2014,14 - Veg. sec. não-florestal,8247020.95,Cerrado
+2014,14 - Veg. sec. não-florestal,9254.13,Mata Atlântica
+2014,14 - Veg. sec. não-florestal,127.3,Pampa
+2014,15 - Outro,10511845.64,Amazônia
+2014,15 - Outro,1125323.11,Caatinga
+2014,15 - Outro,6258491.95,Cerrado
+2014,15 - Outro,2852395.83,Mata Atlântica
+2014,15 - Outro,1099371.75,Pampa
+2014,2 - Soja Safra Única,129629.03,Amazônia
+2014,2 - Soja Safra Única,63.45,Caatinga
+2014,2 - Soja Safra Única,3084800.01,Cerrado
+2014,2 - Soja Safra Única,2019108.34,Mata Atlântica
+2014,2 - Soja Safra Única,5767420.86,Pampa
+2014,3 - Soja + Milho 2ª Safra,45215.68,Amazônia
+2014,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2014,3 - Soja + Milho 2ª Safra,11997572.97,Cerrado
+2014,3 - Soja + Milho 2ª Safra,3680763.47,Mata Atlântica
+2014,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2014,4 - Milho 1ª safra,346463.86,Amazônia
+2014,4 - Milho 1ª safra,510291.0,Caatinga
+2014,4 - Milho 1ª safra,2624475.5,Cerrado
+2014,4 - Milho 1ª safra,1762344.52,Mata Atlântica
+2014,4 - Milho 1ª safra,1033728.0,Pampa
+2014,5 - Cana-de-açúcar,4314.4,Amazônia
+2014,5 - Cana-de-açúcar,1074896.83,Caatinga
+2014,5 - Cana-de-açúcar,2283218.19,Cerrado
+2014,5 - Cana-de-açúcar,6612088.21,Mata Atlântica
+2014,5 - Cana-de-açúcar,0.0,Pampa
+2014,6 - Outra agropecuária,486168.4,Amazônia
+2014,6 - Outra agropecuária,4501539.59,Caatinga
+2014,6 - Outra agropecuária,25686776.16,Cerrado
+2014,6 - Outra agropecuária,13161931.14,Mata Atlântica
+2014,6 - Outra agropecuária,5321829.56,Pampa
+2014,7 - Pastagem de Baixo Vigor,2421533.42,Amazônia
+2014,7 - Pastagem de Baixo Vigor,5023058.48,Caatinga
+2014,7 - Pastagem de Baixo Vigor,31228554.25,Cerrado
+2014,7 - Pastagem de Baixo Vigor,2721689.87,Mata Atlântica
+2014,7 - Pastagem de Baixo Vigor,28811.99,Pampa
+2014,8 - Pastagem de Médio Vigor,11101787.46,Amazônia
+2014,8 - Pastagem de Médio Vigor,3464458.21,Caatinga
+2014,8 - Pastagem de Médio Vigor,45256998.13,Cerrado
+2014,8 - Pastagem de Médio Vigor,5835337.56,Mata Atlântica
+2014,8 - Pastagem de Médio Vigor,151291.98,Pampa
+2014,9 - Pastagem de Alto Vigor,15578008.94,Amazônia
+2014,9 - Pastagem de Alto Vigor,1918818.36,Caatinga
+2014,9 - Pastagem de Alto Vigor,28785784.33,Cerrado
+2014,9 - Pastagem de Alto Vigor,5593561.41,Mata Atlântica
+2014,9 - Pastagem de Alto Vigor,217432.6,Pampa
+2015,1 - Culturas perenes,3305.92,Amazônia
+2015,1 - Culturas perenes,339710.33,Caatinga
+2015,1 - Culturas perenes,964095.02,Cerrado
+2015,1 - Culturas perenes,638083.08,Mata Atlântica
+2015,1 - Culturas perenes,0.0,Pampa
+2015,10 - Silvicultura,181701.98,Amazônia
+2015,10 - Silvicultura,4339.4,Caatinga
+2015,10 - Silvicultura,3446391.99,Cerrado
+2015,10 - Silvicultura,2980863.13,Mata Atlântica
+2015,10 - Silvicultura,1026874.66,Pampa
+2015,11 - Veg. prim. florestal,258581149.04,Amazônia
+2015,11 - Veg. prim. florestal,722634.82,Caatinga
+2015,11 - Veg. prim. florestal,53809172.51,Cerrado
+2015,11 - Veg. prim. florestal,8527746.81,Mata Atlântica
+2015,11 - Veg. prim. florestal,2785764.38,Pampa
+2015,12 - Veg. sec. florestal,10229486.92,Amazônia
+2015,12 - Veg. sec. florestal,722766.76,Caatinga
+2015,12 - Veg. sec. florestal,28799203.45,Cerrado
+2015,12 - Veg. sec. florestal,8528091.67,Mata Atlântica
+2015,12 - Veg. sec. florestal,2785859.37,Pampa
+2015,13 - Veg. prim. não-florestal,1139970.06,Amazônia
+2015,13 - Veg. prim. não-florestal,10720831.32,Caatinga
+2015,13 - Veg. prim. não-florestal,88698689.88,Cerrado
+2015,13 - Veg. prim. não-florestal,27967.97,Mata Atlântica
+2015,13 - Veg. prim. não-florestal,0.0,Pampa
+2015,14 - Veg. sec. não-florestal,0.0,Amazônia
+2015,14 - Veg. sec. não-florestal,10721128.46,Caatinga
+2015,14 - Veg. sec. não-florestal,8203159.93,Cerrado
+2015,14 - Veg. sec. não-florestal,9209.11,Mata Atlântica
+2015,14 - Veg. sec. não-florestal,144.05,Pampa
+2015,15 - Outro,10454736.18,Amazônia
+2015,15 - Outro,1102246.28,Caatinga
+2015,15 - Outro,6958178.06,Cerrado
+2015,15 - Outro,2866561.58,Mata Atlântica
+2015,15 - Outro,1107790.83,Pampa
+2015,2 - Soja Safra Única,189904.97,Amazônia
+2015,2 - Soja Safra Única,143.37,Caatinga
+2015,2 - Soja Safra Única,3533112.36,Cerrado
+2015,2 - Soja Safra Única,1950666.25,Mata Atlântica
+2015,2 - Soja Safra Única,6023280.96,Pampa
+2015,3 - Soja + Milho 2ª Safra,80948.23,Amazônia
+2015,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2015,3 - Soja + Milho 2ª Safra,13667257.8,Cerrado
+2015,3 - Soja + Milho 2ª Safra,4092591.38,Mata Atlântica
+2015,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2015,4 - Milho 1ª safra,308924.21,Amazônia
+2015,4 - Milho 1ª safra,823559.0,Caatinga
+2015,4 - Milho 1ª safra,2808049.89,Cerrado
+2015,4 - Milho 1ª safra,1436419.8,Mata Atlântica
+2015,4 - Milho 1ª safra,925514.0,Pampa
+2015,5 - Cana-de-açúcar,4314.87,Amazônia
+2015,5 - Cana-de-açúcar,1078130.21,Caatinga
+2015,5 - Cana-de-açúcar,2544542.22,Cerrado
+2015,5 - Cana-de-açúcar,6711433.89,Mata Atlântica
+2015,5 - Cana-de-açúcar,0.0,Pampa
+2015,6 - Outra agropecuária,562593.92,Amazônia
+2015,6 - Outra agropecuária,4482312.76,Caatinga
+2015,6 - Outra agropecuária,25077846.37,Cerrado
+2015,6 - Outra agropecuária,13141469.25,Mata Atlântica
+2015,6 - Outra agropecuária,5149913.46,Pampa
+2015,7 - Pastagem de Baixo Vigor,2503179.37,Amazônia
+2015,7 - Pastagem de Baixo Vigor,5658829.46,Caatinga
+2015,7 - Pastagem de Baixo Vigor,32041929.69,Cerrado
+2015,7 - Pastagem de Baixo Vigor,2767174.6,Mata Atlântica
+2015,7 - Pastagem de Baixo Vigor,23378.77,Pampa
+2015,8 - Pastagem de Médio Vigor,11265616.78,Amazônia
+2015,8 - Pastagem de Médio Vigor,3296418.62,Caatinga
+2015,8 - Pastagem de Médio Vigor,44582080.95,Cerrado
+2015,8 - Pastagem de Médio Vigor,5630846.78,Mata Atlântica
+2015,8 - Pastagem de Médio Vigor,137811.96,Pampa
+2015,9 - Pastagem de Alto Vigor,15774577.21,Amazônia
+2015,9 - Pastagem de Alto Vigor,1560698.33,Caatinga
+2015,9 - Pastagem de Alto Vigor,28247609.52,Cerrado
+2015,9 - Pastagem de Alto Vigor,5579924.61,Mata Atlântica
+2015,9 - Pastagem de Alto Vigor,236830.94,Pampa
+2016,1 - Culturas perenes,4376.8,Amazônia
+2016,1 - Culturas perenes,342130.02,Caatinga
+2016,1 - Culturas perenes,1007086.19,Cerrado
+2016,1 - Culturas perenes,673336.61,Mata Atlântica
+2016,1 - Culturas perenes,0.0,Pampa
+2016,10 - Silvicultura,186521.59,Amazônia
+2016,10 - Silvicultura,4569.8,Caatinga
+2016,10 - Silvicultura,3596362.93,Cerrado
+2016,10 - Silvicultura,3034749.09,Mata Atlântica
+2016,10 - Silvicultura,1037083.6,Pampa
+2016,11 - Veg. prim. florestal,257919801.37,Amazônia
+2016,11 - Veg. prim. florestal,724610.79,Caatinga
+2016,11 - Veg. prim. florestal,53672572.91,Cerrado
+2016,11 - Veg. prim. florestal,8546945.12,Mata Atlântica
+2016,11 - Veg. prim. florestal,2800623.96,Pampa
+2016,12 - Veg. sec. florestal,10150789.25,Amazônia
+2016,12 - Veg. sec. florestal,724702.9,Caatinga
+2016,12 - Veg. sec. florestal,28748478.99,Cerrado
+2016,12 - Veg. sec. florestal,8547191.77,Mata Atlântica
+2016,12 - Veg. sec. florestal,2800701.49,Pampa
+2016,13 - Veg. prim. não-florestal,1134097.38,Amazônia
+2016,13 - Veg. prim. não-florestal,10694385.63,Caatinga
+2016,13 - Veg. prim. não-florestal,88247966.63,Cerrado
+2016,13 - Veg. prim. não-florestal,28176.35,Mata Atlântica
+2016,13 - Veg. prim. não-florestal,0.0,Pampa
+2016,14 - Veg. sec. não-florestal,0.0,Amazônia
+2016,14 - Veg. sec. não-florestal,10694631.55,Caatinga
+2016,14 - Veg. sec. não-florestal,8172359.27,Cerrado
+2016,14 - Veg. sec. não-florestal,9157.15,Mata Atlântica
+2016,14 - Veg. sec. não-florestal,124.96,Pampa
+2016,15 - Outro,10322568.89,Amazônia
+2016,15 - Outro,1076623.27,Caatinga
+2016,15 - Outro,6351115.6,Cerrado
+2016,15 - Outro,2890936.95,Mata Atlântica
+2016,15 - Outro,1113777.44,Pampa
+2016,2 - Soja Safra Única,280486.95,Amazônia
+2016,2 - Soja Safra Única,270.54,Caatinga
+2016,2 - Soja Safra Única,3670764.35,Cerrado
+2016,2 - Soja Safra Única,1718177.85,Mata Atlântica
+2016,2 - Soja Safra Única,6260233.23,Pampa
+2016,3 - Soja + Milho 2ª Safra,125885.82,Amazônia
+2016,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2016,3 - Soja + Milho 2ª Safra,14599173.46,Cerrado
+2016,3 - Soja + Milho 2ª Safra,4657270.68,Mata Atlântica
+2016,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2016,4 - Milho 1ª safra,327573.19,Amazônia
+2016,4 - Milho 1ª safra,800315.0,Caatinga
+2016,4 - Milho 1ª safra,2511128.36,Cerrado
+2016,4 - Milho 1ª safra,1189327.51,Mata Atlântica
+2016,4 - Milho 1ª safra,854793.0,Pampa
+2016,5 - Cana-de-açúcar,4320.5,Amazônia
+2016,5 - Cana-de-açúcar,1080066.0,Caatinga
+2016,5 - Cana-de-açúcar,2713676.89,Cerrado
+2016,5 - Cana-de-açúcar,6783018.36,Mata Atlântica
+2016,5 - Cana-de-açúcar,0.0,Pampa
+2016,6 - Outra agropecuária,580124.48,Amazônia
+2016,6 - Outra agropecuária,4504217.06,Caatinga
+2016,6 - Outra agropecuária,23765623.73,Cerrado
+2016,6 - Outra agropecuária,12799683.3,Mata Atlântica
+2016,6 - Outra agropecuária,4946210.26,Pampa
+2016,7 - Pastagem de Baixo Vigor,2658424.15,Amazônia
+2016,7 - Pastagem de Baixo Vigor,5711875.83,Caatinga
+2016,7 - Pastagem de Baixo Vigor,31940751.46,Cerrado
+2016,7 - Pastagem de Baixo Vigor,2771357.27,Mata Atlântica
+2016,7 - Pastagem de Baixo Vigor,19445.34,Pampa
+2016,8 - Pastagem de Médio Vigor,11659859.1,Amazônia
+2016,8 - Pastagem de Médio Vigor,3194967.69,Caatinga
+2016,8 - Pastagem de Médio Vigor,44464942.29,Cerrado
+2016,8 - Pastagem de Médio Vigor,5604796.62,Mata Atlântica
+2016,8 - Pastagem de Médio Vigor,129968.96,Pampa
+2016,9 - Pastagem de Alto Vigor,15814063.33,Amazônia
+2016,9 - Pastagem de Alto Vigor,1616288.94,Caatinga
+2016,9 - Pastagem de Alto Vigor,28412253.38,Cerrado
+2016,9 - Pastagem de Alto Vigor,5513048.86,Mata Atlântica
+2016,9 - Pastagem de Alto Vigor,248653.63,Pampa
+2017,1 - Culturas perenes,6475.61,Amazônia
+2017,1 - Culturas perenes,333880.7,Caatinga
+2017,1 - Culturas perenes,1020344.67,Cerrado
+2017,1 - Culturas perenes,686259.96,Mata Atlântica
+2017,1 - Culturas perenes,0.0,Pampa
+2017,10 - Silvicultura,190275.03,Amazônia
+2017,10 - Silvicultura,4826.62,Caatinga
+2017,10 - Silvicultura,3718829.09,Cerrado
+2017,10 - Silvicultura,3079621.8,Mata Atlântica
+2017,10 - Silvicultura,1050880.82,Pampa
+2017,11 - Veg. prim. florestal,256419771.38,Amazônia
+2017,11 - Veg. prim. florestal,723938.15,Caatinga
+2017,11 - Veg. prim. florestal,52783097.34,Cerrado
+2017,11 - Veg. prim. florestal,8555271.29,Mata Atlântica
+2017,11 - Veg. prim. florestal,2813287.39,Pampa
+2017,12 - Veg. sec. florestal,11103391.0,Amazônia
+2017,12 - Veg. sec. florestal,724020.59,Caatinga
+2017,12 - Veg. sec. florestal,29472013.56,Cerrado
+2017,12 - Veg. sec. florestal,8555469.83,Mata Atlântica
+2017,12 - Veg. sec. florestal,2813334.59,Pampa
+2017,13 - Veg. prim. não-florestal,1129654.44,Amazônia
+2017,13 - Veg. prim. não-florestal,10655058.29,Caatinga
+2017,13 - Veg. prim. não-florestal,87894990.36,Cerrado
+2017,13 - Veg. prim. não-florestal,28948.43,Mata Atlântica
+2017,13 - Veg. prim. não-florestal,0.0,Pampa
+2017,14 - Veg. sec. não-florestal,0.0,Amazônia
+2017,14 - Veg. sec. não-florestal,10655262.09,Caatinga
+2017,14 - Veg. sec. não-florestal,8157566.2,Cerrado
+2017,14 - Veg. sec. não-florestal,9265.77,Mata Atlântica
+2017,14 - Veg. sec. não-florestal,98.37,Pampa
+2017,15 - Outro,9996249.16,Amazônia
+2017,15 - Outro,1075487.49,Caatinga
+2017,15 - Outro,6479520.15,Cerrado
+2017,15 - Outro,2932270.74,Mata Atlântica
+2017,15 - Outro,1117838.59,Pampa
+2017,2 - Soja Safra Única,246981.17,Amazônia
+2017,2 - Soja Safra Única,259.83,Caatinga
+2017,2 - Soja Safra Única,3786817.53,Cerrado
+2017,2 - Soja Safra Única,1966980.63,Mata Atlântica
+2017,2 - Soja Safra Única,6364679.31,Pampa
+2017,3 - Soja + Milho 2ª Safra,252588.04,Amazônia
+2017,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2017,3 - Soja + Milho 2ª Safra,16153930.41,Cerrado
+2017,3 - Soja + Milho 2ª Safra,5087062.68,Mata Atlântica
+2017,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2017,4 - Milho 1ª safra,211949.3,Amazônia
+2017,4 - Milho 1ª safra,714687.45,Caatinga
+2017,4 - Milho 1ª safra,2264636.27,Cerrado
+2017,4 - Milho 1ª safra,1206492.21,Mata Atlântica
+2017,4 - Milho 1ª safra,740510.0,Pampa
+2017,5 - Cana-de-açúcar,27355.7,Amazônia
+2017,5 - Cana-de-açúcar,1081664.99,Caatinga
+2017,5 - Cana-de-açúcar,2886481.87,Cerrado
+2017,5 - Cana-de-açúcar,6751666.29,Mata Atlântica
+2017,5 - Cana-de-açúcar,0.0,Pampa
+2017,6 - Outra agropecuária,604449.29,Amazônia
+2017,6 - Outra agropecuária,4577058.89,Caatinga
+2017,6 - Outra agropecuária,23500305.26,Cerrado
+2017,6 - Outra agropecuária,12290806.58,Mata Atlântica
+2017,6 - Outra agropecuária,4932745.16,Pampa
+2017,7 - Pastagem de Baixo Vigor,2771989.58,Amazônia
+2017,7 - Pastagem de Baixo Vigor,5617503.03,Caatinga
+2017,7 - Pastagem de Baixo Vigor,32032835.47,Cerrado
+2017,7 - Pastagem de Baixo Vigor,2814657.57,Mata Atlântica
+2017,7 - Pastagem de Baixo Vigor,17106.52,Pampa
+2017,8 - Pastagem de Médio Vigor,12004387.67,Amazônia
+2017,8 - Pastagem de Médio Vigor,3223276.89,Caatinga
+2017,8 - Pastagem de Médio Vigor,44149615.52,Cerrado
+2017,8 - Pastagem de Médio Vigor,5560400.01,Mata Atlântica
+2017,8 - Pastagem de Médio Vigor,123442.34,Pampa
+2017,9 - Pastagem de Alto Vigor,15785945.78,Amazônia
+2017,9 - Pastagem de Alto Vigor,1623544.38,Caatinga
+2017,9 - Pastagem de Alto Vigor,28006625.28,Cerrado
+2017,9 - Pastagem de Alto Vigor,5334632.79,Mata Atlântica
+2017,9 - Pastagem de Alto Vigor,251584.47,Pampa
+2018,1 - Culturas perenes,7334.25,Amazônia
+2018,1 - Culturas perenes,331171.3,Caatinga
+2018,1 - Culturas perenes,1023573.93,Cerrado
+2018,1 - Culturas perenes,689849.24,Mata Atlântica
+2018,1 - Culturas perenes,0.0,Pampa
+2018,10 - Silvicultura,195775.0,Amazônia
+2018,10 - Silvicultura,5312.67,Caatinga
+2018,10 - Silvicultura,3810368.61,Cerrado
+2018,10 - Silvicultura,3103981.2,Mata Atlântica
+2018,10 - Silvicultura,1061548.44,Pampa
+2018,11 - Veg. prim. florestal,255886109.12,Amazônia
+2018,11 - Veg. prim. florestal,728275.34,Caatinga
+2018,11 - Veg. prim. florestal,52634764.38,Cerrado
+2018,11 - Veg. prim. florestal,8564211.07,Mata Atlântica
+2018,11 - Veg. prim. florestal,2832044.42,Pampa
+2018,12 - Veg. sec. florestal,11045462.47,Amazônia
+2018,12 - Veg. sec. florestal,728389.51,Caatinga
+2018,12 - Veg. sec. florestal,29415057.01,Cerrado
+2018,12 - Veg. sec. florestal,8564415.36,Mata Atlântica
+2018,12 - Veg. sec. florestal,2832084.74,Pampa
+2018,13 - Veg. prim. não-florestal,1124407.89,Amazônia
+2018,13 - Veg. prim. não-florestal,10631560.32,Caatinga
+2018,13 - Veg. prim. não-florestal,87536107.75,Cerrado
+2018,13 - Veg. prim. não-florestal,29827.56,Mata Atlântica
+2018,13 - Veg. prim. não-florestal,0.0,Pampa
+2018,14 - Veg. sec. não-florestal,0.0,Amazônia
+2018,14 - Veg. sec. não-florestal,10631835.9,Caatinga
+2018,14 - Veg. sec. não-florestal,8137419.62,Cerrado
+2018,14 - Veg. sec. não-florestal,9550.37,Mata Atlântica
+2018,14 - Veg. sec. não-florestal,74.47,Pampa
+2018,15 - Outro,10310572.54,Amazônia
+2018,15 - Outro,1112999.29,Caatinga
+2018,15 - Outro,6437631.42,Cerrado
+2018,15 - Outro,2945723.39,Mata Atlântica
+2018,15 - Outro,1121835.54,Pampa
+2018,2 - Soja Safra Única,277265.32,Amazônia
+2018,2 - Soja Safra Única,91.71,Caatinga
+2018,2 - Soja Safra Única,4164556.26,Cerrado
+2018,2 - Soja Safra Única,1828049.44,Mata Atlântica
+2018,2 - Soja Safra Única,6546215.61,Pampa
+2018,3 - Soja + Milho 2ª Safra,281716.85,Amazônia
+2018,3 - Soja + Milho 2ª Safra,0.0,Caatinga
+2018,3 - Soja + Milho 2ª Safra,17567879.82,Cerrado
+2018,3 - Soja + Milho 2ª Safra,5604832.4,Mata Atlântica
+2018,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2018,4 - Milho 1ª safra,264626.74,Amazônia
+2018,4 - Milho 1ª safra,808263.05,Caatinga
+2018,4 - Milho 1ª safra,2237560.83,Cerrado
+2018,4 - Milho 1ª safra,1115589.82,Mata Atlântica
+2018,4 - Milho 1ª safra,831221.0,Pampa
+2018,5 - Cana-de-açúcar,35850.42,Amazônia
+2018,5 - Cana-de-açúcar,1086143.9,Caatinga
+2018,5 - Cana-de-açúcar,2908927.89,Cerrado
+2018,5 - Cana-de-açúcar,6701126.1,Mata Atlântica
+2018,5 - Cana-de-açúcar,0.0,Pampa
+2018,6 - Outra agropecuária,650859.84,Amazônia
+2018,6 - Outra agropecuária,4586132.78,Caatinga
+2018,6 - Outra agropecuária,22726976.13,Cerrado
+2018,6 - Outra agropecuária,12094214.46,Mata Atlântica
+2018,6 - Outra agropecuária,4936172.21,Pampa
+2018,7 - Pastagem de Baixo Vigor,2719089.67,Amazônia
+2018,7 - Pastagem de Baixo Vigor,5488366.18,Caatinga
+2018,7 - Pastagem de Baixo Vigor,30612252.13,Cerrado
+2018,7 - Pastagem de Baixo Vigor,2628852.5,Mata Atlântica
+2018,7 - Pastagem de Baixo Vigor,17644.86,Pampa
+2018,8 - Pastagem de Médio Vigor,12174005.56,Amazônia
+2018,8 - Pastagem de Médio Vigor,3320895.05,Caatinga
+2018,8 - Pastagem de Médio Vigor,43995478.94,Cerrado
+2018,8 - Pastagem de Médio Vigor,5506422.01,Mata Atlântica
+2018,8 - Pastagem de Médio Vigor,123643.92,Pampa
+2018,9 - Pastagem de Alto Vigor,16053164.64,Amazônia
+2018,9 - Pastagem de Alto Vigor,1609308.86,Caatinga
+2018,9 - Pastagem de Alto Vigor,28822715.13,Cerrado
+2018,9 - Pastagem de Alto Vigor,5386869.72,Mata Atlântica
+2018,9 - Pastagem de Alto Vigor,248615.34,Pampa
+2019,1 - Culturas perenes,8586.35,Amazônia
+2019,1 - Culturas perenes,337615.76,Caatinga
+2019,1 - Culturas perenes,1035834.53,Cerrado
+2019,1 - Culturas perenes,681689.96,Mata Atlântica
+2019,1 - Culturas perenes,0.0,Pampa
+2019,10 - Silvicultura,199766.67,Amazônia
+2019,10 - Silvicultura,5482.7,Caatinga
+2019,10 - Silvicultura,3865291.01,Cerrado
+2019,10 - Silvicultura,3140004.7,Mata Atlântica
+2019,10 - Silvicultura,1072371.4,Pampa
+2019,11 - Veg. prim. florestal,254651866.67,Amazônia
+2019,11 - Veg. prim. florestal,728975.18,Caatinga
+2019,11 - Veg. prim. florestal,52345255.35,Cerrado
+2019,11 - Veg. prim. florestal,8561220.95,Mata Atlântica
+2019,11 - Veg. prim. florestal,2827585.42,Pampa
+2019,12 - Veg. sec. florestal,11277477.61,Amazônia
+2019,12 - Veg. sec. florestal,729089.3,Caatinga
+2019,12 - Veg. sec. florestal,29332982.24,Cerrado
+2019,12 - Veg. sec. florestal,8561430.47,Mata Atlântica
+2019,12 - Veg. sec. florestal,2827630.55,Pampa
+2019,13 - Veg. prim. não-florestal,1118457.27,Amazônia
+2019,13 - Veg. prim. não-florestal,10590827.85,Caatinga
+2019,13 - Veg. prim. não-florestal,85639012.0,Cerrado
+2019,13 - Veg. prim. não-florestal,30237.19,Mata Atlântica
+2019,13 - Veg. prim. não-florestal,0.0,Pampa
+2019,14 - Veg. sec. não-florestal,0.0,Amazônia
+2019,14 - Veg. sec. não-florestal,10591150.27,Caatinga
+2019,14 - Veg. sec. não-florestal,9574021.62,Cerrado
+2019,14 - Veg. sec. não-florestal,9667.15,Mata Atlântica
+2019,14 - Veg. sec. não-florestal,93.87,Pampa
+2019,15 - Outro,10184179.29,Amazônia
+2019,15 - Outro,1174306.16,Caatinga
+2019,15 - Outro,7053997.4,Cerrado
+2019,15 - Outro,2963880.19,Mata Atlântica
+2019,15 - Outro,1124469.61,Pampa
+2019,2 - Soja Safra Única,237021.0,Amazônia
+2019,2 - Soja Safra Única,0.0,Caatinga
+2019,2 - Soja Safra Única,3906753.05,Cerrado
+2019,2 - Soja Safra Única,1919287.07,Mata Atlântica
+2019,2 - Soja Safra Única,6554081.7,Pampa
+2019,3 - Soja + Milho 2ª Safra,367801.32,Amazônia
+2019,3 - Soja + Milho 2ª Safra,17.64,Caatinga
+2019,3 - Soja + Milho 2ª Safra,18253623.76,Cerrado
+2019,3 - Soja + Milho 2ª Safra,5617231.12,Mata Atlântica
+2019,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2019,4 - Milho 1ª safra,181079.85,Amazônia
 2019,4 - Milho 1ª safra,0.0,Caatinga
-2019,4 - Milho 1ª safra,2079203.49,Cerrado
-2019,4 - Milho 1ª safra,1072457.82,Mata Atlântica
-2019,4 - Milho 1ª safra,763097.0,Pampa
-2019,5 - Cana-de-açúcar,92111.53,Amazônia
-2019,5 - Cana-de-açúcar,1278634.65,Caatinga
-2019,5 - Cana-de-açúcar,3203252.14,Cerrado
-2019,5 - Cana-de-açúcar,7060478.63,Mata Atlântica
-2019,5 - Cana-de-açúcar,80816.75,Pampa
-2019,6 - Outra agropecuária,804042.63,Amazônia
-2019,6 - Outra agropecuária,6171539.5,Caatinga
-2019,6 - Outra agropecuária,24841430.01,Cerrado
-2019,6 - Outra agropecuária,13511823.3,Mata Atlântica
-2019,6 - Outra agropecuária,5380995.56,Pampa
-2019,7 - Pastagem deg. média,5023180.3,Amazônia
-2019,7 - Pastagem deg. média,1832478.0,Caatinga
-2019,7 - Pastagem deg. média,19276024.37,Cerrado
-2019,7 - Pastagem deg. média,2418746.59,Mata Atlântica
-2019,7 - Pastagem deg. média,64886.85,Pampa
-2019,8 - Pastagem deg. alta,218137.22,Amazônia
-2019,8 - Pastagem deg. alta,1712391.77,Caatinga
-2019,8 - Pastagem deg. alta,8379295.23,Cerrado
-2019,8 - Pastagem deg. alta,918492.3,Mata Atlântica
-2019,8 - Pastagem deg. alta,2208.77,Pampa
-2019,9 - Pastagem deg. baixa,9706982.75,Amazônia
-2019,9 - Pastagem deg. baixa,779746.23,Caatinga
-2019,9 - Pastagem deg. baixa,11288986.41,Cerrado
-2019,9 - Pastagem deg. baixa,2624392.86,Mata Atlântica
-2019,9 - Pastagem deg. baixa,142982.68,Pampa
-2020,1 - Culturas perenes,15193.44,Amazônia
-2020,1 - Culturas perenes,401602.14,Caatinga
-2020,1 - Culturas perenes,1145508.88,Cerrado
-2020,1 - Culturas perenes,786425.04,Mata Atlântica
-2020,1 - Culturas perenes,9458.06,Pampa
-2020,10 - Silvicultura,214497.82,Amazônia
-2020,10 - Silvicultura,296847.64,Caatinga
-2020,10 - Silvicultura,4298416.75,Cerrado
-2020,10 - Silvicultura,3486320.87,Mata Atlântica
-2020,10 - Silvicultura,1115949.38,Pampa
-2020,11 - Veg. prim. florestal,312534955.82,Amazônia
-2020,11 - Veg. prim. florestal,22522402.39,Caatinga
-2020,11 - Veg. prim. florestal,199289223.05,Cerrado
-2020,11 - Veg. prim. florestal,17724695.95,Mata Atlântica
-2020,11 - Veg. prim. florestal,12935891.05,Pampa
-2020,15 - Outro,10138184.08,Amazônia
-2020,15 - Outro,1719731.91,Caatinga
-2020,15 - Outro,6916669.15,Cerrado
-2020,15 - Outro,3473786.03,Mata Atlântica
-2020,15 - Outro,1060276.8,Pampa
-2020,2 - Soja,295558.09,Amazônia
-2020,2 - Soja,0.0,Caatinga
-2020,2 - Soja,4850677.21,Cerrado
-2020,2 - Soja,2073174.24,Mata Atlântica
-2020,2 - Soja,7006561.56,Pampa
-2020,3 - Soja + Milho 2ª safra,412794.47,Amazônia
-2020,3 - Soja + Milho 2ª safra,18.45,Caatinga
-2020,3 - Soja + Milho 2ª safra,18412268.72,Cerrado
-2020,3 - Soja + Milho 2ª safra,6117948.87,Mata Atlântica
-2020,3 - Soja + Milho 2ª safra,0.0,Pampa
-2020,4 - Milho 1ª safra,244516.39,Amazônia
+2019,4 - Milho 1ª safra,2030308.74,Cerrado
+2019,4 - Milho 1ª safra,1038855.59,Mata Atlântica
+2019,4 - Milho 1ª safra,706160.0,Pampa
+2019,5 - Cana-de-açúcar,35323.57,Amazônia
+2019,5 - Cana-de-açúcar,1091392.46,Caatinga
+2019,5 - Cana-de-açúcar,2917182.35,Cerrado
+2019,5 - Cana-de-açúcar,6664404.95,Mata Atlântica
+2019,5 - Cana-de-açúcar,0.0,Pampa
+2019,6 - Outra agropecuária,669433.48,Amazônia
+2019,6 - Outra agropecuária,4598103.9,Caatinga
+2019,6 - Outra agropecuária,22977056.69,Cerrado
+2019,6 - Outra agropecuária,12007917.01,Mata Atlântica
+2019,6 - Outra agropecuária,4869758.07,Pampa
+2019,7 - Pastagem de Baixo Vigor,2534611.44,Amazônia
+2019,7 - Pastagem de Baixo Vigor,4634412.26,Caatinga
+2019,7 - Pastagem de Baixo Vigor,28795745.11,Cerrado
+2019,7 - Pastagem de Baixo Vigor,2578690.79,Mata Atlântica
+2019,7 - Pastagem de Baixo Vigor,20574.72,Pampa
+2019,8 - Pastagem de Médio Vigor,12302167.76,Amazônia
+2019,8 - Pastagem de Médio Vigor,3841380.08,Caatinga
+2019,8 - Pastagem de Médio Vigor,44056104.01,Cerrado
+2019,8 - Pastagem de Médio Vigor,5564389.61,Mata Atlântica
+2019,8 - Pastagem de Médio Vigor,134314.9,Pampa
+2019,9 - Pastagem de Alto Vigor,17019067.57,Amazônia
+2019,9 - Pastagem de Alto Vigor,1933800.71,Caatinga
+2019,9 - Pastagem de Alto Vigor,30036214.24,Cerrado
+2019,9 - Pastagem de Alto Vigor,5239205.18,Mata Atlântica
+2019,9 - Pastagem de Alto Vigor,240447.44,Pampa
+2020,1 - Culturas perenes,8801.58,Amazônia
+2020,1 - Culturas perenes,356991.32,Caatinga
+2020,1 - Culturas perenes,1068680.22,Cerrado
+2020,1 - Culturas perenes,697592.83,Mata Atlântica
+2020,1 - Culturas perenes,0.0,Pampa
+2020,10 - Silvicultura,208700.44,Amazônia
+2020,10 - Silvicultura,5770.94,Caatinga
+2020,10 - Silvicultura,3974872.03,Cerrado
+2020,10 - Silvicultura,3226466.61,Mata Atlântica
+2020,10 - Silvicultura,1086360.24,Pampa
+2020,11 - Veg. prim. florestal,253729708.23,Amazônia
+2020,11 - Veg. prim. florestal,726751.73,Caatinga
+2020,11 - Veg. prim. florestal,52036309.74,Cerrado
+2020,11 - Veg. prim. florestal,8557083.71,Mata Atlântica
+2020,11 - Veg. prim. florestal,2817859.9,Pampa
+2020,12 - Veg. sec. florestal,11207205.33,Amazônia
+2020,12 - Veg. sec. florestal,726860.99,Caatinga
+2020,12 - Veg. sec. florestal,29186438.2,Cerrado
+2020,12 - Veg. sec. florestal,8557315.45,Mata Atlântica
+2020,12 - Veg. sec. florestal,2817905.04,Pampa
+2020,13 - Veg. prim. não-florestal,1116193.23,Amazônia
+2020,13 - Veg. prim. não-florestal,10532433.64,Caatinga
+2020,13 - Veg. prim. não-florestal,85052336.27,Cerrado
+2020,13 - Veg. prim. não-florestal,30269.55,Mata Atlântica
+2020,13 - Veg. prim. não-florestal,0.0,Pampa
+2020,14 - Veg. sec. não-florestal,0.0,Amazônia
+2020,14 - Veg. sec. não-florestal,10532890.44,Caatinga
+2020,14 - Veg. sec. não-florestal,9515286.85,Cerrado
+2020,14 - Veg. sec. não-florestal,9656.82,Mata Atlântica
+2020,14 - Veg. sec. não-florestal,103.91,Pampa
+2020,15 - Outro,10314728.21,Amazônia
+2020,15 - Outro,1215168.82,Caatinga
+2020,15 - Outro,6541747.88,Cerrado
+2020,15 - Outro,2984521.6,Mata Atlântica
+2020,15 - Outro,1121564.59,Pampa
+2020,2 - Soja Safra Única,280455.22,Amazônia
+2020,2 - Soja Safra Única,0.0,Caatinga
+2020,2 - Soja Safra Única,4749314.23,Cerrado
+2020,2 - Soja Safra Única,1962954.56,Mata Atlântica
+2020,2 - Soja Safra Única,6930893.07,Pampa
+2020,3 - Soja + Milho 2ª Safra,388177.28,Amazônia
+2020,3 - Soja + Milho 2ª Safra,14.67,Caatinga
+2020,3 - Soja + Milho 2ª Safra,17927568.17,Cerrado
+2020,3 - Soja + Milho 2ª Safra,5770292.29,Mata Atlântica
+2020,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2020,4 - Milho 1ª safra,204208.07,Amazônia
 2020,4 - Milho 1ª safra,0.0,Caatinga
-2020,4 - Milho 1ª safra,2381712.45,Cerrado
-2020,4 - Milho 1ª safra,1035535.88,Mata Atlântica
-2020,4 - Milho 1ª safra,751573.0,Pampa
-2020,5 - Cana-de-açúcar,91263.88,Amazônia
-2020,5 - Cana-de-açúcar,1256623.96,Caatinga
-2020,5 - Cana-de-açúcar,3330274.16,Cerrado
-2020,5 - Cana-de-açúcar,7024818.82,Mata Atlântica
-2020,5 - Cana-de-açúcar,80376.84,Pampa
-2020,6 - Outra agropecuária,788791.36,Amazônia
-2020,6 - Outra agropecuária,6330699.58,Caatinga
-2020,6 - Outra agropecuária,26366506.09,Cerrado
-2020,6 - Outra agropecuária,13610508.07,Mata Atlântica
-2020,6 - Outra agropecuária,5454872.49,Pampa
-2020,7 - Pastagem deg. média,5301701.97,Amazônia
-2020,7 - Pastagem deg. média,2019865.89,Caatinga
-2020,7 - Pastagem deg. média,19412622.71,Cerrado
-2020,7 - Pastagem deg. média,2387710.31,Mata Atlântica
-2020,7 - Pastagem deg. média,75391.77,Pampa
-2020,8 - Pastagem deg. alta,242080.12,Amazônia
-2020,8 - Pastagem deg. alta,1023346.65,Caatinga
-2020,8 - Pastagem deg. alta,7812331.43,Cerrado
-2020,8 - Pastagem deg. alta,929728.94,Mata Atlântica
-2020,8 - Pastagem deg. alta,3211.39,Pampa
-2020,9 - Pastagem deg. baixa,9850055.69,Amazônia
-2020,9 - Pastagem deg. baixa,1194832.35,Caatinga
-2020,9 - Pastagem deg. baixa,11704297.45,Cerrado
-2020,9 - Pastagem deg. baixa,2474564.73,Mata Atlântica
-2020,9 - Pastagem deg. baixa,120525.92,Pampa
-2021,1 - Culturas perenes,15288.02,Amazônia
-2021,1 - Culturas perenes,401572.82,Caatinga
-2021,1 - Culturas perenes,1149959.41,Cerrado
-2021,1 - Culturas perenes,790509.19,Mata Atlântica
-2021,1 - Culturas perenes,9520.63,Pampa
-2021,10 - Silvicultura,219708.27,Amazônia
-2021,10 - Silvicultura,304359.1,Caatinga
-2021,10 - Silvicultura,4373900.03,Cerrado
-2021,10 - Silvicultura,3513468.53,Mata Atlântica
-2021,10 - Silvicultura,1144141.55,Pampa
-2021,11 - Veg. prim. florestal,310975189.03,Amazônia
-2021,11 - Veg. prim. florestal,22366697.43,Caatinga
-2021,11 - Veg. prim. florestal,198143346.75,Cerrado
-2021,11 - Veg. prim. florestal,17707846.93,Mata Atlântica
-2021,11 - Veg. prim. florestal,12639183.34,Pampa
-2021,15 - Outro,10444837.19,Amazônia
-2021,15 - Outro,1712620.09,Caatinga
-2021,15 - Outro,6775854.33,Cerrado
-2021,15 - Outro,3504856.37,Mata Atlântica
-2021,15 - Outro,1062907.48,Pampa
-2021,2 - Soja,392303.11,Amazônia
-2021,2 - Soja,0.0,Caatinga
-2021,2 - Soja,4682162.61,Cerrado
-2021,2 - Soja,2053620.49,Mata Atlântica
-2021,2 - Soja,7031803.59,Pampa
-2021,3 - Soja + Milho 2ª safra,614802.56,Amazônia
-2021,3 - Soja + Milho 2ª safra,15.93,Caatinga
-2021,3 - Soja + Milho 2ª safra,19486331.91,Cerrado
-2021,3 - Soja + Milho 2ª safra,6223034.84,Mata Atlântica
-2021,3 - Soja + Milho 2ª safra,0.0,Pampa
-2021,4 - Milho 1ª safra,221817.24,Amazônia
+2020,4 - Milho 1ª safra,2337106.51,Cerrado
+2020,4 - Milho 1ª safra,1041262.35,Mata Atlântica
+2020,4 - Milho 1ª safra,763097.0,Pampa
+2020,5 - Cana-de-açúcar,35156.71,Amazônia
+2020,5 - Cana-de-açúcar,1070821.19,Caatinga
+2020,5 - Cana-de-açúcar,2934508.63,Cerrado
+2020,5 - Cana-de-açúcar,6577961.78,Mata Atlântica
+2020,5 - Cana-de-açúcar,0.0,Pampa
+2020,6 - Outra agropecuária,629017.71,Amazônia
+2020,6 - Outra agropecuária,4631083.97,Caatinga
+2020,6 - Outra agropecuária,23493249.06,Cerrado
+2020,6 - Outra agropecuária,12108071.62,Mata Atlântica
+2020,6 - Outra agropecuária,5084846.51,Pampa
+2020,7 - Pastagem de Baixo Vigor,2495236.26,Amazônia
+2020,7 - Pastagem de Baixo Vigor,3783394.46,Caatinga
+2020,7 - Pastagem de Baixo Vigor,26741435.89,Cerrado
+2020,7 - Pastagem de Baixo Vigor,2714344.76,Mata Atlântica
+2020,7 - Pastagem de Baixo Vigor,24414.55,Pampa
+2020,8 - Pastagem de Médio Vigor,12576475.43,Amazônia
+2020,8 - Pastagem de Médio Vigor,4233129.58,Caatinga
+2020,8 - Pastagem de Médio Vigor,44174335.19,Cerrado
+2020,8 - Pastagem de Médio Vigor,5427129.29,Mata Atlântica
+2020,8 - Pastagem de Médio Vigor,150200.07,Pampa
+2020,9 - Pastagem de Alto Vigor,17790057.88,Amazônia
+2020,9 - Pastagem de Alto Vigor,2395487.76,Caatinga
+2020,9 - Pastagem de Alto Vigor,31443180.66,Cerrado
+2020,9 - Pastagem de Alto Vigor,5002081.67,Mata Atlântica
+2020,9 - Pastagem de Alto Vigor,227791.49,Pampa
+2021,1 - Culturas perenes,9621.28,Amazônia
+2021,1 - Culturas perenes,364875.33,Caatinga
+2021,1 - Culturas perenes,1121484.81,Cerrado
+2021,1 - Culturas perenes,709091.3,Mata Atlântica
+2021,1 - Culturas perenes,0.0,Pampa
+2021,10 - Silvicultura,210396.59,Amazônia
+2021,10 - Silvicultura,6085.72,Caatinga
+2021,10 - Silvicultura,4017373.9,Cerrado
+2021,10 - Silvicultura,3272592.86,Mata Atlântica
+2021,10 - Silvicultura,1110702.98,Pampa
+2021,11 - Veg. prim. florestal,252846639.93,Amazônia
+2021,11 - Veg. prim. florestal,724528.98,Caatinga
+2021,11 - Veg. prim. florestal,51981183.28,Cerrado
+2021,11 - Veg. prim. florestal,8553564.95,Mata Atlântica
+2021,11 - Veg. prim. florestal,2799091.21,Pampa
+2021,12 - Veg. sec. florestal,10818106.08,Amazônia
+2021,12 - Veg. sec. florestal,724629.33,Caatinga
+2021,12 - Veg. sec. florestal,28755798.39,Cerrado
+2021,12 - Veg. sec. florestal,8553869.09,Mata Atlântica
+2021,12 - Veg. sec. florestal,2799126.72,Pampa
+2021,13 - Veg. prim. não-florestal,1105456.05,Amazônia
+2021,13 - Veg. prim. não-florestal,10464921.0,Caatinga
+2021,13 - Veg. prim. não-florestal,84657165.77,Cerrado
+2021,13 - Veg. prim. não-florestal,31264.27,Mata Atlântica
+2021,13 - Veg. prim. não-florestal,0.0,Pampa
+2021,14 - Veg. sec. não-florestal,0.0,Amazônia
+2021,14 - Veg. sec. não-florestal,10465460.1,Caatinga
+2021,14 - Veg. sec. não-florestal,9266592.93,Cerrado
+2021,14 - Veg. sec. não-florestal,8650.87,Mata Atlântica
+2021,14 - Veg. sec. não-florestal,128.75,Pampa
+2021,15 - Outro,10260247.58,Amazônia
+2021,15 - Outro,1285194.36,Caatinga
+2021,15 - Outro,6341691.44,Cerrado
+2021,15 - Outro,3010646.0,Mata Atlântica
+2021,15 - Outro,1119239.71,Pampa
+2021,2 - Soja Safra Única,248451.57,Amazônia
+2021,2 - Soja Safra Única,0.0,Caatinga
+2021,2 - Soja Safra Única,4572685.42,Cerrado
+2021,2 - Soja Safra Única,2029345.14,Mata Atlântica
+2021,2 - Soja Safra Única,7008565.5,Pampa
+2021,3 - Soja + Milho 2ª Safra,463170.78,Amazônia
+2021,3 - Soja + Milho 2ª Safra,18.45,Caatinga
+2021,3 - Soja + Milho 2ª Safra,18733342.52,Cerrado
+2021,3 - Soja + Milho 2ª Safra,6166187.07,Mata Atlântica
+2021,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2021,4 - Milho 1ª safra,195794.68,Amazônia
 2021,4 - Milho 1ª safra,0.0,Caatinga
-2021,4 - Milho 1ª safra,2391225.9,Cerrado
-2021,4 - Milho 1ª safra,982984.01,Mata Atlântica
-2021,4 - Milho 1ª safra,780142.0,Pampa
-2021,5 - Cana-de-açúcar,86168.63,Amazônia
-2021,5 - Cana-de-açúcar,1231022.7,Caatinga
-2021,5 - Cana-de-açúcar,3294279.05,Cerrado
-2021,5 - Cana-de-açúcar,7004250.43,Mata Atlântica
-2021,5 - Cana-de-açúcar,80418.64,Pampa
-2021,6 - Outra agropecuária,568600.01,Amazônia
-2021,6 - Outra agropecuária,6533312.88,Caatinga
-2021,6 - Outra agropecuária,27492993.3,Cerrado
-2021,6 - Outra agropecuária,13863739.17,Mata Atlântica
-2021,6 - Outra agropecuária,5663616.65,Pampa
-2021,7 - Pastagem deg. média,5784296.0,Amazônia
-2021,7 - Pastagem deg. média,2061049.91,Caatinga
-2021,7 - Pastagem deg. média,19521407.95,Cerrado
-2021,7 - Pastagem deg. média,2371667.1,Mata Atlântica
-2021,7 - Pastagem deg. média,78641.61,Pampa
-2021,8 - Pastagem deg. alta,288842.75,Amazônia
-2021,8 - Pastagem deg. alta,850935.79,Caatinga
-2021,8 - Pastagem deg. alta,7645571.2,Cerrado
-2021,8 - Pastagem deg. alta,786298.42,Mata Atlântica
-2021,8 - Pastagem deg. alta,3620.25,Pampa
-2021,9 - Pastagem deg. baixa,9661266.03,Amazônia
-2021,9 - Pastagem deg. baixa,1345459.63,Caatinga
-2021,9 - Pastagem deg. baixa,11356258.0,Cerrado
-2021,9 - Pastagem deg. baixa,2442210.06,Mata Atlântica
-2021,9 - Pastagem deg. baixa,118372.13,Pampa
-2022,1 - Culturas perenes,14695.19,Amazônia
-2022,1 - Culturas perenes,400383.8,Caatinga
-2022,1 - Culturas perenes,1135909.68,Cerrado
-2022,1 - Culturas perenes,786671.12,Mata Atlântica
-2022,1 - Culturas perenes,9421.5,Pampa
-2022,10 - Silvicultura,220352.54,Amazônia
-2022,10 - Silvicultura,307367.02,Caatinga
-2022,10 - Silvicultura,4385672.91,Cerrado
-2022,10 - Silvicultura,3541078.73,Mata Atlântica
-2022,10 - Silvicultura,1168508.97,Pampa
-2022,11 - Veg. prim. florestal,308674462.02,Amazônia
-2022,11 - Veg. prim. florestal,22155229.25,Caatinga
-2022,11 - Veg. prim. florestal,196257511.08,Cerrado
-2022,11 - Veg. prim. florestal,17706110.51,Mata Atlântica
-2022,11 - Veg. prim. florestal,12480877.67,Pampa
-2022,15 - Outro,11370611.14,Amazônia
-2022,15 - Outro,1808848.7,Caatinga
-2022,15 - Outro,7142115.57,Cerrado
-2022,15 - Outro,3600234.25,Mata Atlântica
-2022,15 - Outro,1061778.85,Pampa
-2022,2 - Soja,387549.56,Amazônia
-2022,2 - Soja,0.0,Caatinga
-2022,2 - Soja,4650684.96,Cerrado
-2022,2 - Soja,2165591.21,Mata Atlântica
-2022,2 - Soja,7123313.52,Pampa
-2022,3 - Soja + Milho 2ª safra,668657.32,Amazônia
-2022,3 - Soja + Milho 2ª safra,32.58,Caatinga
-2022,3 - Soja + Milho 2ª safra,20641356.69,Cerrado
-2022,3 - Soja + Milho 2ª safra,6240387.82,Mata Atlântica
-2022,3 - Soja + Milho 2ª safra,0.0,Pampa
-2022,4 - Milho 1ª safra,229478.71,Amazônia
+2021,4 - Milho 1ª safra,2253980.06,Cerrado
+2021,4 - Milho 1ª safra,1014954.8,Mata Atlântica
+2021,4 - Milho 1ª safra,751573.0,Pampa
+2021,5 - Cana-de-açúcar,35082.11,Amazônia
+2021,5 - Cana-de-açúcar,1046811.23,Caatinga
+2021,5 - Cana-de-açúcar,3024719.41,Cerrado
+2021,5 - Cana-de-açúcar,6520093.4,Mata Atlântica
+2021,5 - Cana-de-açúcar,0.0,Pampa
+2021,6 - Outra agropecuária,596947.75,Amazônia
+2021,6 - Outra agropecuária,4706299.52,Caatinga
+2021,6 - Outra agropecuária,24933862.39,Cerrado
+2021,6 - Outra agropecuária,12167397.41,Mata Atlântica
+2021,6 - Outra agropecuária,5146785.42,Pampa
+2021,7 - Pastagem de Baixo Vigor,2666420.96,Amazônia
+2021,7 - Pastagem de Baixo Vigor,2767546.43,Caatinga
+2021,7 - Pastagem de Baixo Vigor,25672363.01,Cerrado
+2021,7 - Pastagem de Baixo Vigor,2710820.61,Mata Atlântica
+2021,7 - Pastagem de Baixo Vigor,31231.5,Pampa
+2021,8 - Pastagem de Médio Vigor,13176679.64,Amazônia
+2021,8 - Pastagem de Médio Vigor,4493354.95,Caatinga
+2021,8 - Pastagem de Médio Vigor,44164720.34,Cerrado
+2021,8 - Pastagem de Médio Vigor,5343176.49,Mata Atlântica
+2021,8 - Pastagem de Médio Vigor,167377.71,Pampa
+2021,9 - Pastagem de Alto Vigor,18236394.08,Amazônia
+2021,9 - Pastagem de Alto Vigor,3174633.09,Caatinga
+2021,9 - Pastagem de Alto Vigor,32013790.23,Cerrado
+2021,9 - Pastagem de Alto Vigor,4793966.13,Mata Atlântica
+2021,9 - Pastagem de Alto Vigor,210862.17,Pampa
+2022,1 - Culturas perenes,9563.31,Amazônia
+2022,1 - Culturas perenes,364804.0,Caatinga
+2022,1 - Culturas perenes,1125608.68,Cerrado
+2022,1 - Culturas perenes,712814.99,Mata Atlântica
+2022,1 - Culturas perenes,0.0,Pampa
+2022,10 - Silvicultura,215492.13,Amazônia
+2022,10 - Silvicultura,7350.89,Caatinga
+2022,10 - Silvicultura,4088682.92,Cerrado
+2022,10 - Silvicultura,3295540.06,Mata Atlântica
+2022,10 - Silvicultura,1138762.12,Pampa
+2022,11 - Veg. prim. florestal,251653018.47,Amazônia
+2022,11 - Veg. prim. florestal,721169.84,Caatinga
+2022,11 - Veg. prim. florestal,51569290.74,Cerrado
+2022,11 - Veg. prim. florestal,8539499.36,Mata Atlântica
+2022,11 - Veg. prim. florestal,2787803.17,Pampa
+2022,12 - Veg. sec. florestal,10720526.25,Amazônia
+2022,12 - Veg. sec. florestal,721300.25,Caatinga
+2022,12 - Veg. sec. florestal,28578113.87,Cerrado
+2022,12 - Veg. sec. florestal,8539872.7,Mata Atlântica
+2022,12 - Veg. sec. florestal,2787854.24,Pampa
+2022,13 - Veg. prim. não-florestal,1095820.02,Amazônia
+2022,13 - Veg. prim. não-florestal,10364155.02,Caatinga
+2022,13 - Veg. prim. não-florestal,83752298.95,Cerrado
+2022,13 - Veg. prim. não-florestal,31204.31,Mata Atlântica
+2022,13 - Veg. prim. não-florestal,0.0,Pampa
+2022,14 - Veg. sec. não-florestal,0.0,Amazônia
+2022,14 - Veg. sec. não-florestal,10364613.44,Caatinga
+2022,14 - Veg. sec. não-florestal,9174473.88,Cerrado
+2022,14 - Veg. sec. não-florestal,8694.43,Mata Atlântica
+2022,14 - Veg. sec. não-florestal,160.38,Pampa
+2022,15 - Outro,10567056.21,Amazônia
+2022,15 - Outro,1276224.5,Caatinga
+2022,15 - Outro,6179632.5,Cerrado
+2022,15 - Outro,3037763.79,Mata Atlântica
+2022,15 - Outro,1122294.52,Pampa
+2022,2 - Soja Safra Única,367693.49,Amazônia
+2022,2 - Soja Safra Única,0.0,Caatinga
+2022,2 - Soja Safra Única,4333733.59,Cerrado
+2022,2 - Soja Safra Única,2111189.53,Mata Atlântica
+2022,2 - Soja Safra Única,7033356.72,Pampa
+2022,3 - Soja + Milho 2ª Safra,641402.17,Amazônia
+2022,3 - Soja + Milho 2ª Safra,25.2,Caatinga
+2022,3 - Soja + Milho 2ª Safra,19860973.16,Cerrado
+2022,3 - Soja + Milho 2ª Safra,6167788.7,Mata Atlântica
+2022,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2022,4 - Milho 1ª safra,204232.92,Amazônia
 2022,4 - Milho 1ª safra,0.0,Caatinga
-2022,4 - Milho 1ª safra,2437637.68,Cerrado
-2022,4 - Milho 1ª safra,1097682.85,Mata Atlântica
-2022,4 - Milho 1ª safra,784000.0,Pampa
-2022,5 - Cana-de-açúcar,84763.51,Amazônia
-2022,5 - Cana-de-açúcar,1184770.18,Caatinga
-2022,5 - Cana-de-açúcar,3316599.29,Cerrado
-2022,5 - Cana-de-açúcar,7032305.29,Mata Atlântica
-2022,5 - Cana-de-açúcar,81211.77,Pampa
-2022,6 - Outra agropecuária,550855.21,Amazônia
-2022,6 - Outra agropecuária,6746025.99,Caatinga
-2022,6 - Outra agropecuária,28470626.7,Cerrado
-2022,6 - Outra agropecuária,14020947.05,Mata Atlântica
-2022,6 - Outra agropecuária,5719124.86,Pampa
-2022,7 - Pastagem deg. média,6368175.02,Amazônia
-2022,7 - Pastagem deg. média,2030569.58,Caatinga
-2022,7 - Pastagem deg. média,19144408.96,Cerrado
-2022,7 - Pastagem deg. média,2280936.4,Mata Atlântica
-2022,7 - Pastagem deg. média,73583.15,Pampa
-2022,8 - Pastagem deg. alta,411184.56,Amazônia
-2022,8 - Pastagem deg. alta,563681.22,Caatinga
-2022,8 - Pastagem deg. alta,7329588.33,Cerrado
-2022,8 - Pastagem deg. alta,517961.88,Mata Atlântica
-2022,8 - Pastagem deg. alta,3452.66,Pampa
-2022,9 - Pastagem deg. baixa,9010840.36,Amazônia
-2022,9 - Pastagem deg. baixa,1634413.64,Caatinga
-2022,9 - Pastagem deg. baixa,11340627.46,Cerrado
-2022,9 - Pastagem deg. baixa,2631519.28,Mata Atlântica
-2022,9 - Pastagem deg. baixa,129702.78,Pampa
-2023,1 - Culturas perenes,14670.61,Amazônia
-2023,1 - Culturas perenes,400198.79,Caatinga
-2023,1 - Culturas perenes,1138478.84,Cerrado
-2023,1 - Culturas perenes,785915.19,Mata Atlântica
-2023,1 - Culturas perenes,9422.65,Pampa
-2023,10 - Silvicultura,220564.75,Amazônia
-2023,10 - Silvicultura,307908.6,Caatinga
-2023,10 - Silvicultura,4391477.45,Cerrado
-2023,10 - Silvicultura,3545830.77,Mata Atlântica
-2023,10 - Silvicultura,1170672.97,Pampa
-2023,11 - Veg. prim. florestal,307905099.47,Amazônia
-2023,11 - Veg. prim. florestal,21891950.22,Caatinga
-2023,11 - Veg. prim. florestal,194045427.21,Cerrado
-2023,11 - Veg. prim. florestal,17718593.84,Mata Atlântica
-2023,11 - Veg. prim. florestal,12372365.61,Pampa
-2023,15 - Outro,10917371.26,Amazônia
-2023,15 - Outro,1838253.45,Caatinga
-2023,15 - Outro,7315292.76,Cerrado
-2023,15 - Outro,3645325.27,Mata Atlântica
-2023,15 - Outro,1057989.02,Pampa
-2023,2 - Soja,364084.34,Amazônia
-2023,2 - Soja,0.0,Caatinga
-2023,2 - Soja,4701865.68,Cerrado
-2023,2 - Soja,2195144.52,Mata Atlântica
-2023,2 - Soja,7270594.92,Pampa
-2023,3 - Soja + Milho 2ª safra,709160.53,Amazônia
-2023,3 - Soja + Milho 2ª safra,31.95,Caatinga
-2023,3 - Soja + Milho 2ª safra,20886025.68,Cerrado
-2023,3 - Soja + Milho 2ª safra,6374054.19,Mata Atlântica
-2023,3 - Soja + Milho 2ª safra,0.0,Pampa
-2023,4 - Milho 1ª safra,241166.81,Amazônia
+2022,4 - Milho 1ª safra,2229515.98,Cerrado
+2022,4 - Milho 1ª safra,1010698.65,Mata Atlântica
+2022,4 - Milho 1ª safra,780142.0,Pampa
+2022,5 - Cana-de-açúcar,30567.98,Amazônia
+2022,5 - Cana-de-açúcar,1022026.18,Caatinga
+2022,5 - Cana-de-açúcar,2991205.27,Cerrado
+2022,5 - Cana-de-açúcar,6499705.99,Mata Atlântica
+2022,5 - Cana-de-açúcar,0.0,Pampa
+2022,6 - Outra agropecuária,360252.78,Amazônia
+2022,6 - Outra agropecuária,4845821.62,Caatinga
+2022,6 - Outra agropecuária,26051357.33,Cerrado
+2022,6 - Outra agropecuária,12377647.62,Mata Atlântica
+2022,6 - Outra agropecuária,5361723.37,Pampa
+2022,7 - Pastagem de Baixo Vigor,2988068.77,Amazônia
+2022,7 - Pastagem de Baixo Vigor,2477127.34,Caatinga
+2022,7 - Pastagem de Baixo Vigor,25566026.45,Cerrado
+2022,7 - Pastagem de Baixo Vigor,2531401.31,Mata Atlântica
+2022,7 - Pastagem de Baixo Vigor,33775.25,Pampa
+2022,8 - Pastagem de Médio Vigor,14068098.06,Amazônia
+2022,8 - Pastagem de Médio Vigor,4557987.12,Caatinga
+2022,8 - Pastagem de Médio Vigor,44195132.76,Cerrado
+2022,8 - Pastagem de Médio Vigor,5247643.46,Mata Atlântica
+2022,8 - Pastagem de Médio Vigor,173586.77,Pampa
+2022,9 - Pastagem de Alto Vigor,18316910.53,Amazônia
+2022,9 - Pastagem de Alto Vigor,3432044.93,Caatinga
+2022,9 - Pastagem de Alto Vigor,31509134.53,Cerrado
+2022,9 - Pastagem de Alto Vigor,4702191.05,Mata Atlântica
+2022,9 - Pastagem de Alto Vigor,211195.85,Pampa
+2023,1 - Culturas perenes,9066.88,Amazônia
+2023,1 - Culturas perenes,364023.76,Caatinga
+2023,1 - Culturas perenes,1111865.63,Cerrado
+2023,1 - Culturas perenes,709377.99,Mata Atlântica
+2023,1 - Culturas perenes,0.0,Pampa
+2023,10 - Silvicultura,216115.03,Amazônia
+2023,10 - Silvicultura,7446.02,Caatinga
+2023,10 - Silvicultura,4096499.47,Cerrado
+2023,10 - Silvicultura,3321839.54,Mata Atlântica
+2023,10 - Silvicultura,1162230.93,Pampa
+2023,11 - Veg. prim. florestal,251034276.38,Amazônia
+2023,11 - Veg. prim. florestal,718475.83,Caatinga
+2023,11 - Veg. prim. florestal,51325584.18,Cerrado
+2023,11 - Veg. prim. florestal,8561328.08,Mata Atlântica
+2023,11 - Veg. prim. florestal,2797489.01,Pampa
+2023,12 - Veg. sec. florestal,10333752.7,Amazônia
+2023,12 - Veg. sec. florestal,718662.22,Caatinga
+2023,12 - Veg. sec. florestal,28185631.69,Cerrado
+2023,12 - Veg. sec. florestal,8561949.85,Mata Atlântica
+2023,12 - Veg. sec. florestal,2797528.79,Pampa
+2023,13 - Veg. prim. não-florestal,1080595.35,Amazônia
+2023,13 - Veg. prim. não-florestal,10228755.96,Caatinga
+2023,13 - Veg. prim. não-florestal,84104739.54,Cerrado
+2023,13 - Veg. prim. não-florestal,27872.97,Mata Atlântica
+2023,13 - Veg. prim. não-florestal,0.0,Pampa
+2023,14 - Veg. sec. não-florestal,0.0,Amazônia
+2023,14 - Veg. sec. não-florestal,10229283.5,Caatinga
+2023,14 - Veg. sec. não-florestal,7594680.4,Cerrado
+2023,14 - Veg. sec. não-florestal,12035.22,Mata Atlântica
+2023,14 - Veg. sec. não-florestal,169.97,Pampa
+2023,15 - Outro,11496225.42,Amazônia
+2023,15 - Outro,1344891.41,Caatinga
+2023,15 - Outro,6499350.68,Cerrado
+2023,15 - Outro,3102512.65,Mata Atlântica
+2023,15 - Outro,1116287.03,Pampa
+2023,2 - Soja Safra Única,360313.29,Amazônia
+2023,2 - Soja Safra Única,0.0,Caatinga
+2023,2 - Soja Safra Única,4643438.65,Cerrado
+2023,2 - Soja Safra Única,2144630.93,Mata Atlântica
+2023,2 - Soja Safra Única,7124678.1,Pampa
+2023,3 - Soja + Milho 2ª Safra,702939.51,Amazônia
+2023,3 - Soja + Milho 2ª Safra,32.58,Caatinga
+2023,3 - Soja + Milho 2ª Safra,20690499.8,Cerrado
+2023,3 - Soja + Milho 2ª Safra,6264173.92,Mata Atlântica
+2023,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2023,4 - Milho 1ª safra,206954.05,Amazônia
 2023,4 - Milho 1ª safra,0.0,Caatinga
-2023,4 - Milho 1ª safra,2457860.99,Cerrado
-2023,4 - Milho 1ª safra,1042940.89,Mata Atlântica
-2023,4 - Milho 1ª safra,822596.0,Pampa
-2023,5 - Cana-de-açúcar,84584.39,Amazônia
-2023,5 - Cana-de-açúcar,1102084.42,Caatinga
-2023,5 - Cana-de-açúcar,3212249.98,Cerrado
-2023,5 - Cana-de-açúcar,6961393.5,Mata Atlântica
-2023,5 - Cana-de-açúcar,80894.77,Pampa
-2023,6 - Outra agropecuária,579182.45,Amazônia
-2023,6 - Outra agropecuária,7136173.83,Caatinga
-2023,6 - Outra agropecuária,30930461.69,Cerrado
-2023,6 - Outra agropecuária,14381602.18,Mata Atlântica
-2023,6 - Outra agropecuária,5683401.45,Pampa
-2023,7 - Pastagem deg. média,6392625.1,Amazônia
-2023,7 - Pastagem deg. média,1901655.74,Caatinga
-2023,7 - Pastagem deg. média,18885864.79,Cerrado
-2023,7 - Pastagem deg. média,2188891.33,Mata Atlântica
-2023,7 - Pastagem deg. média,75739.61,Pampa
-2023,8 - Pastagem deg. alta,464076.79,Amazônia
-2023,8 - Pastagem deg. alta,552640.42,Caatinga
-2023,8 - Pastagem deg. alta,8150610.47,Cerrado
-2023,8 - Pastagem deg. alta,599986.67,Mata Atlântica
-2023,8 - Pastagem deg. alta,3433.2,Pampa
-2023,9 - Pastagem deg. baixa,9625832.74,Amazônia
-2023,9 - Pastagem deg. baixa,1795420.38,Caatinga
-2023,9 - Pastagem deg. baixa,10328044.92,Cerrado
-2023,9 - Pastagem deg. baixa,2331806.29,Mata Atlântica
-2023,9 - Pastagem deg. baixa,128723.04,Pampa
-2024,1 - Culturas perenes,14670.61,Amazônia
-2024,1 - Culturas perenes,400198.79,Caatinga
-2024,1 - Culturas perenes,1138478.84,Cerrado
-2024,1 - Culturas perenes,785915.19,Mata Atlântica
-2024,1 - Culturas perenes,9422.65,Pampa
-2024,10 - Silvicultura,220564.75,Amazônia
-2024,10 - Silvicultura,307908.6,Caatinga
-2024,10 - Silvicultura,4391477.45,Cerrado
-2024,10 - Silvicultura,3545830.77,Mata Atlântica
-2024,10 - Silvicultura,1170672.97,Pampa
-2024,11 - Veg. prim. florestal,307555575.67,Amazônia
-2024,11 - Veg. prim. florestal,21550630.33,Caatinga
-2024,11 - Veg. prim. florestal,192890920.02,Cerrado
-2024,11 - Veg. prim. florestal,17725666.2,Mata Atlântica
-2024,11 - Veg. prim. florestal,12149055.66,Pampa
-2024,15 - Outro,10917371.26,Amazônia
-2024,15 - Outro,1838253.45,Caatinga
-2024,15 - Outro,7315292.76,Cerrado
-2024,15 - Outro,3645325.27,Mata Atlântica
-2024,15 - Outro,1057989.02,Pampa
-2024,2 - Soja,364346.13,Amazônia
-2024,2 - Soja,0.0,Caatinga
-2024,2 - Soja,4706908.29,Cerrado
-2024,2 - Soja,2196266.17,Mata Atlântica
-2024,2 - Soja,7271163.0,Pampa
-2024,3 - Soja + Milho 2ª safra,710722.77,Amazônia
-2024,3 - Soja + Milho 2ª safra,32.49,Caatinga
-2024,3 - Soja + Milho 2ª safra,20916951.03,Cerrado
-2024,3 - Soja + Milho 2ª safra,6377285.84,Mata Atlântica
-2024,3 - Soja + Milho 2ª safra,0.0,Pampa
-2024,4 - Milho 1ª safra,241166.81,Amazônia
+2023,4 - Milho 1ª safra,2417869.36,Cerrado
+2023,4 - Milho 1ª safra,1087137.37,Mata Atlântica
+2023,4 - Milho 1ª safra,784000.0,Pampa
+2023,5 - Cana-de-açúcar,31772.33,Amazônia
+2023,5 - Cana-de-açúcar,974528.27,Caatinga
+2023,5 - Cana-de-açúcar,2996257.78,Cerrado
+2023,5 - Cana-de-açúcar,6515149.12,Mata Atlântica
+2023,5 - Cana-de-açúcar,0.0,Pampa
+2023,6 - Outra agropecuária,332185.12,Amazônia
+2023,6 - Outra agropecuária,4967981.82,Caatinga
+2023,6 - Outra agropecuária,26926991.4,Cerrado
+2023,6 - Outra agropecuária,12485183.61,Mata Atlântica
+2023,6 - Outra agropecuária,5423737.89,Pampa
+2023,7 - Pastagem de Baixo Vigor,3658690.17,Amazônia
+2023,7 - Pastagem de Baixo Vigor,2065251.26,Caatinga
+2023,7 - Pastagem de Baixo Vigor,25203192.44,Cerrado
+2023,7 - Pastagem de Baixo Vigor,2080760.49,Mata Atlântica
+2023,7 - Pastagem de Baixo Vigor,33751.41,Pampa
+2023,8 - Pastagem de Médio Vigor,15026566.7,Amazônia
+2023,8 - Pastagem de Médio Vigor,4564853.92,Caatinga
+2023,8 - Pastagem de Médio Vigor,43642213.83,Cerrado
+2023,8 - Pastagem de Médio Vigor,5012306.12,Mata Atlântica
+2023,8 - Pastagem de Médio Vigor,168149.02,Pampa
+2023,9 - Pastagem de Alto Vigor,17870033.59,Amazônia
+2023,9 - Pastagem de Alto Vigor,3859469.16,Caatinga
+2023,9 - Pastagem de Alto Vigor,31778772.15,Cerrado
+2023,9 - Pastagem de Alto Vigor,4931064.61,Mata Atlântica
+2023,9 - Pastagem de Alto Vigor,223611.56,Pampa
+2024,1 - Culturas perenes,9048.21,Amazônia
+2024,1 - Culturas perenes,363865.64,Caatinga
+2024,1 - Culturas perenes,1114448.5,Cerrado
+2024,1 - Culturas perenes,708755.68,Mata Atlântica
+2024,1 - Culturas perenes,0.0,Pampa
+2024,10 - Silvicultura,216320.5,Amazônia
+2024,10 - Silvicultura,7477.15,Caatinga
+2024,10 - Silvicultura,4102028.55,Cerrado
+2024,10 - Silvicultura,3326301.27,Mata Atlântica
+2024,10 - Silvicultura,1164375.99,Pampa
+2024,11 - Veg. prim. florestal,250535380.24,Amazônia
+2024,11 - Veg. prim. florestal,709083.63,Caatinga
+2024,11 - Veg. prim. florestal,51125133.77,Cerrado
+2024,11 - Veg. prim. florestal,8594302.61,Mata Atlântica
+2024,11 - Veg. prim. florestal,2782788.23,Pampa
+2024,12 - Veg. sec. florestal,10290480.83,Amazônia
+2024,12 - Veg. sec. florestal,709620.21,Caatinga
+2024,12 - Veg. sec. florestal,28103733.79,Cerrado
+2024,12 - Veg. sec. florestal,8596747.2,Mata Atlântica
+2024,12 - Veg. sec. florestal,2782848.4,Pampa
+2024,13 - Veg. prim. não-florestal,1044079.92,Amazônia
+2024,13 - Veg. prim. não-florestal,9973669.41,Caatinga
+2024,13 - Veg. prim. não-florestal,83097073.44,Cerrado
+2024,13 - Veg. prim. não-florestal,27352.31,Mata Atlântica
+2024,13 - Veg. prim. não-florestal,0.0,Pampa
+2024,14 - Veg. sec. não-florestal,0.0,Amazônia
+2024,14 - Veg. sec. não-florestal,9974680.47,Caatinga
+2024,14 - Veg. sec. não-florestal,7490876.88,Cerrado
+2024,14 - Veg. sec. não-florestal,13659.93,Mata Atlântica
+2024,14 - Veg. sec. não-florestal,1436.13,Pampa
+2024,15 - Outro,11038050.88,Amazônia
+2024,15 - Outro,1385527.41,Caatinga
+2024,15 - Outro,6694650.4,Cerrado
+2024,15 - Outro,3150751.69,Mata Atlântica
+2024,15 - Outro,1111467.29,Pampa
+2024,2 - Soja Safra Única,340373.64,Amazônia
+2024,2 - Soja Safra Única,0.0,Caatinga
+2024,2 - Soja Safra Única,4832424.0,Cerrado
+2024,2 - Soja Safra Única,2008883.42,Mata Atlântica
+2024,2 - Soja Safra Única,7271184.51,Pampa
+2024,3 - Soja + Milho 2ª Safra,734916.57,Amazônia
+2024,3 - Soja + Milho 2ª Safra,32.49,Caatinga
+2024,3 - Soja + Milho 2ª Safra,20792136.96,Cerrado
+2024,3 - Soja + Milho 2ª Safra,6564710.53,Mata Atlântica
+2024,3 - Soja + Milho 2ª Safra,0.0,Pampa
+2024,4 - Milho 1ª safra,225130.4,Amazônia
 2024,4 - Milho 1ª safra,0.0,Caatinga
-2024,4 - Milho 1ª safra,2457860.99,Cerrado
-2024,4 - Milho 1ª safra,1042940.89,Mata Atlântica
+2024,4 - Milho 1ª safra,2529703.39,Cerrado
+2024,4 - Milho 1ª safra,954430.0,Mata Atlântica
 2024,4 - Milho 1ª safra,822596.0,Pampa
-2024,5 - Cana-de-açúcar,84593.3,Amazônia
-2024,5 - Cana-de-açúcar,1105566.16,Caatinga
-2024,5 - Cana-de-açúcar,3222250.42,Cerrado
-2024,5 - Cana-de-açúcar,6971357.22,Mata Atlântica
-2024,5 - Cana-de-açúcar,80894.77,Pampa
-2024,6 - Outra agropecuária,582799.01,Amazônia
-2024,6 - Outra agropecuária,7138145.91,Caatinga
-2024,6 - Outra agropecuária,31015000.85,Cerrado
-2024,6 - Outra agropecuária,14384479.39,Mata Atlântica
-2024,6 - Outra agropecuária,5683762.98,Pampa
-2024,7 - Pastagem deg. média,6399665.93,Amazônia
-2024,7 - Pastagem deg. média,1993589.97,Caatinga
-2024,7 - Pastagem deg. média,19159203.03,Cerrado
-2024,7 - Pastagem deg. média,2181185.63,Mata Atlântica
-2024,7 - Pastagem deg. média,75674.53,Pampa
-2024,8 - Pastagem deg. alta,464443.1,Amazônia
-2024,8 - Pastagem deg. alta,590048.05,Caatinga
-2024,8 - Pastagem deg. alta,8327971.15,Cerrado
-2024,8 - Pastagem deg. alta,596030.19,Mata Atlântica
-2024,8 - Pastagem deg. alta,3422.91,Pampa
-2024,9 - Pastagem deg. baixa,9669010.1,Amazônia
-2024,9 - Pastagem deg. baixa,1886259.92,Caatinga
-2024,9 - Pastagem deg. baixa,10571611.4,Cerrado
-2024,9 - Pastagem deg. baixa,2325641.54,Mata Atlântica
-2024,9 - Pastagem deg. baixa,128682.66,Pampa
+2024,5 - Cana-de-açúcar,31611.56,Amazônia
+2024,5 - Cana-de-açúcar,900506.2,Caatinga
+2024,5 - Cana-de-açúcar,2905057.99,Cerrado
+2024,5 - Cana-de-açúcar,6459829.81,Mata Atlântica
+2024,5 - Cana-de-açúcar,0.0,Pampa
+2024,6 - Outra agropecuária,333999.89,Amazônia
+2024,6 - Outra agropecuária,5222296.24,Caatinga
+2024,6 - Outra agropecuária,29185023.23,Cerrado
+2024,6 - Outra agropecuária,12749218.1,Mata Atlântica
+2024,6 - Outra agropecuária,5370601.28,Pampa
+2024,7 - Pastagem de Baixo Vigor,3851357.93,Amazônia
+2024,7 - Pastagem de Baixo Vigor,1988928.39,Caatinga
+2024,7 - Pastagem de Baixo Vigor,26437519.24,Cerrado
+2024,7 - Pastagem de Baixo Vigor,2189909.35,Mata Atlântica
+2024,7 - Pastagem de Baixo Vigor,34390.23,Pampa
+2024,8 - Pastagem de Médio Vigor,15043480.05,Amazônia
+2024,8 - Pastagem de Médio Vigor,4425392.09,Caatinga
+2024,8 - Pastagem de Médio Vigor,42945897.48,Cerrado
+2024,8 - Pastagem de Médio Vigor,4826415.47,Mata Atlântica
+2024,8 - Pastagem de Médio Vigor,170915.24,Pampa
+2024,9 - Pastagem de Alto Vigor,18458226.53,Amazônia
+2024,9 - Pastagem de Alto Vigor,4058343.76,Caatinga
+2024,9 - Pastagem de Alto Vigor,29638240.97,Cerrado
+2024,9 - Pastagem de Alto Vigor,4481313.15,Mata Atlântica
+2024,9 - Pastagem de Alto Vigor,223423.29,Pampa

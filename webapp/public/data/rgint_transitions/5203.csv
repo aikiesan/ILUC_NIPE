@@ -1,1248 +1,1073 @@
 ano_par,origem_id,destino_id,area_ha
-2008,1 - Culturas perenes,1 - Culturas perenes,386.98
-2008,2 - Soja,2 - Soja,769084.67
-2008,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,329911.9
-2008,4 - Milho 1ª safra,4 - Milho 1ª safra,291595.27
-2008,5 - Cana-de-açúcar,5 - Cana-de-açúcar,115789.98
-2008,6 - Outra agropecuária,6 - Outra agropecuária,845259.91
-2008,7 - Pastagem deg. média,7 - Pastagem deg. média,1551846.48
-2008,8 - Pastagem deg. alta,8 - Pastagem deg. alta,1256319.51
-2008,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,490720.74
-2008,10 - Silvicultura,10 - Silvicultura,20785.51
-2008,11 - Veg. prim. florestal,11 - Veg. prim. florestal,646855.2
-2008,12 - Veg. sec. florestal,12 - Veg. sec. florestal,45602.68
-2008,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,874103.03
-2008,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,61623.43
-2008,15 - Outro,15 - Outro,89121.54
-2009,1 - Culturas perenes,1 - Culturas perenes,386.98
-2009,2 - Soja,2 - Soja,769074.6
-2009,2 - Soja,12 - Veg. sec. florestal,8.03
-2009,2 - Soja,14 - Veg. sec. não-florestal,2.04
-2009,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,329907.57
-2009,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,3.45
-2009,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.88
-2009,4 - Milho 1ª safra,4 - Milho 1ª safra,291595.27
-2009,5 - Cana-de-açúcar,5 - Cana-de-açúcar,115789.98
-2009,6 - Outra agropecuária,6 - Outra agropecuária,845259.91
-2009,7 - Pastagem deg. média,2 - Soja,4202.99
-2009,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,1802.94
-2009,7 - Pastagem deg. média,5 - Cana-de-açúcar,2463.02
-2009,7 - Pastagem deg. média,6 - Outra agropecuária,4216.63
-2009,7 - Pastagem deg. média,7 - Pastagem deg. média,723926.9
-2009,7 - Pastagem deg. média,8 - Pastagem deg. alta,586065.38
-2009,7 - Pastagem deg. média,9 - Pastagem deg. baixa,228918.23
-2009,7 - Pastagem deg. média,12 - Veg. sec. florestal,199.64
-2009,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,50.74
-2009,8 - Pastagem deg. alta,2 - Soja,3402.59
-2009,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,1459.6
-2009,8 - Pastagem deg. alta,5 - Cana-de-açúcar,1993.97
-2009,8 - Pastagem deg. alta,6 - Outra agropecuária,3413.64
-2009,8 - Pastagem deg. alta,7 - Pastagem deg. média,586065.38
-2009,8 - Pastagem deg. alta,8 - Pastagem deg. alta,474457.61
-2009,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,185324.03
-2009,8 - Pastagem deg. alta,12 - Veg. sec. florestal,161.62
-2009,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,41.08
-2009,9 - Pastagem deg. baixa,2 - Soja,1329.06
-2009,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,570.12
-2009,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,778.85
-2009,9 - Pastagem deg. baixa,6 - Outra agropecuária,1333.37
-2009,9 - Pastagem deg. baixa,7 - Pastagem deg. média,228918.23
-2009,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,185324.03
-2009,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,72387.91
-2009,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,63.13
-2009,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,16.05
-2009,10 - Silvicultura,10 - Silvicultura,20785.51
-2009,11 - Veg. prim. florestal,2 - Soja,43.39
-2009,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,18.61
-2009,11 - Veg. prim. florestal,5 - Cana-de-açúcar,11.4
-2009,11 - Veg. prim. florestal,6 - Outra agropecuária,99.95
-2009,11 - Veg. prim. florestal,7 - Pastagem deg. média,354.35
-2009,11 - Veg. prim. florestal,8 - Pastagem deg. alta,286.87
-2009,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,112.05
-2009,11 - Veg. prim. florestal,11 - Veg. prim. florestal,645900.83
-2009,11 - Veg. prim. florestal,12 - Veg. sec. florestal,22.13
-2009,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,5.62
-2009,12 - Veg. sec. florestal,2 - Soja,3.06
-2009,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,1.31
-2009,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.8
-2009,12 - Veg. sec. florestal,6 - Outra agropecuária,7.05
-2009,12 - Veg. sec. florestal,7 - Pastagem deg. média,24.98
-2009,12 - Veg. sec. florestal,8 - Pastagem deg. alta,20.22
-2009,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,7.9
-2009,12 - Veg. sec. florestal,12 - Veg. sec. florestal,45536.95
-2009,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.4
-2009,13 - Veg. prim. não-florestal,2 - Soja,44.62
-2009,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,19.14
-2009,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.9
-2009,13 - Veg. prim. não-florestal,6 - Outra agropecuária,66.68
-2009,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,4539.95
-2009,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,3675.38
-2009,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1435.61
-2009,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,5.62
-2009,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,864311.69
-2009,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,1.43
-2009,14 - Veg. sec. não-florestal,2 - Soja,3.15
-2009,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,1.35
-2009,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.2
-2009,14 - Veg. sec. não-florestal,6 - Outra agropecuária,4.7
-2009,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,320.06
-2009,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,259.11
-2009,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,101.21
-2009,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.4
-2009,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,60933.25
-2009,15 - Outro,15 - Outro,89121.54
-2010,1 - Culturas perenes,1 - Culturas perenes,455.53
-2010,2 - Soja,2 - Soja,676504.75
-2010,2 - Soja,12 - Veg. sec. florestal,6.25
-2010,2 - Soja,14 - Veg. sec. não-florestal,1.59
-2010,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,466070.09
-2010,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,4.3
-2010,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,1.09
-2010,4 - Milho 1ª safra,4 - Milho 1ª safra,273136.07
-2010,5 - Cana-de-açúcar,5 - Cana-de-açúcar,151434.83
-2010,6 - Outra agropecuária,6 - Outra agropecuária,841017.37
-2010,7 - Pastagem deg. média,2 - Soja,5316.54
-2010,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,3662.77
-2010,7 - Pastagem deg. média,5 - Cana-de-açúcar,2499.81
-2010,7 - Pastagem deg. média,6 - Outra agropecuária,4384.0
-2010,7 - Pastagem deg. média,7 - Pastagem deg. média,722333.45
-2010,7 - Pastagem deg. média,8 - Pastagem deg. alta,565827.88
-2010,7 - Pastagem deg. média,9 - Pastagem deg. baixa,234384.78
-2010,7 - Pastagem deg. média,12 - Veg. sec. florestal,113.26
-2010,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,28.75
-2010,8 - Pastagem deg. alta,2 - Soja,4164.62
-2010,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,2869.17
-2010,8 - Pastagem deg. alta,5 - Cana-de-açúcar,1958.18
-2010,8 - Pastagem deg. alta,6 - Outra agropecuária,3434.13
-2010,8 - Pastagem deg. alta,7 - Pastagem deg. média,565827.88
-2010,8 - Pastagem deg. alta,8 - Pastagem deg. alta,443231.85
-2010,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,183601.41
-2010,8 - Pastagem deg. alta,12 - Veg. sec. florestal,88.72
-2010,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,22.52
-2010,9 - Pastagem deg. baixa,2 - Soja,1725.13
-2010,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,1188.51
-2010,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,811.15
-2010,9 - Pastagem deg. baixa,6 - Outra agropecuária,1422.53
-2010,9 - Pastagem deg. baixa,7 - Pastagem deg. média,234384.78
-2010,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,183601.41
-2010,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,76053.83
-2010,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,36.75
-2010,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,9.33
-2010,10 - Silvicultura,10 - Silvicultura,21795.78
-2010,11 - Veg. prim. florestal,2 - Soja,66.46
-2010,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,45.79
-2010,11 - Veg. prim. florestal,5 - Cana-de-açúcar,4.43
-2010,11 - Veg. prim. florestal,6 - Outra agropecuária,102.52
-2010,11 - Veg. prim. florestal,7 - Pastagem deg. média,337.32
-2010,11 - Veg. prim. florestal,8 - Pastagem deg. alta,264.23
-2010,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,109.45
-2010,11 - Veg. prim. florestal,11 - Veg. prim. florestal,648141.05
-2010,11 - Veg. prim. florestal,12 - Veg. sec. florestal,18.4
-2010,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,4.67
-2010,12 - Veg. sec. florestal,2 - Soja,4.69
-2010,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,3.23
-2010,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.31
-2010,12 - Veg. sec. florestal,6 - Outra agropecuária,7.23
-2010,12 - Veg. sec. florestal,7 - Pastagem deg. média,23.78
-2010,12 - Veg. sec. florestal,8 - Pastagem deg. alta,18.63
-2010,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,7.72
-2010,12 - Veg. sec. florestal,12 - Veg. sec. florestal,45694.62
-2010,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.33
-2010,13 - Veg. prim. não-florestal,2 - Soja,65.21
-2010,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,44.92
-2010,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.12
-2010,13 - Veg. prim. não-florestal,6 - Outra agropecuária,48.39
-2010,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,4197.15
-2010,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,3287.77
-2010,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1361.9
-2010,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,4.67
-2010,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,855188.0
-2010,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,1.19
-2010,14 - Veg. sec. não-florestal,2 - Soja,4.6
-2010,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,3.17
-2010,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.08
-2010,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.41
-2010,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,295.9
-2010,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,231.78
-2010,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,96.01
-2010,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.33
-2010,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,60290.03
-2010,15 - Outro,15 - Outro,89043.83
-2011,1 - Culturas perenes,1 - Culturas perenes,465.64
-2011,2 - Soja,2 - Soja,568978.57
-2011,2 - Soja,12 - Veg. sec. florestal,4.61
-2011,2 - Soja,14 - Veg. sec. não-florestal,1.16
-2011,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,655048.25
-2011,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,5.31
-2011,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,1.34
-2011,4 - Milho 1ª safra,4 - Milho 1ª safra,227837.46
-2011,5 - Cana-de-açúcar,5 - Cana-de-açúcar,191403.19
-2011,6 - Outra agropecuária,6 - Outra agropecuária,764383.6
-2011,7 - Pastagem deg. média,2 - Soja,2382.53
-2011,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,2742.93
-2011,7 - Pastagem deg. média,5 - Cana-de-açúcar,2528.67
-2011,7 - Pastagem deg. média,6 - Outra agropecuária,2058.78
-2011,7 - Pastagem deg. média,7 - Pastagem deg. média,760289.08
-2011,7 - Pastagem deg. média,8 - Pastagem deg. alta,524351.06
-2011,7 - Pastagem deg. média,9 - Pastagem deg. baixa,267390.13
-2011,7 - Pastagem deg. média,12 - Veg. sec. florestal,107.88
-2011,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,27.2
-2011,8 - Pastagem deg. alta,2 - Soja,1643.16
-2011,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,1891.73
-2011,8 - Pastagem deg. alta,5 - Cana-de-açúcar,1743.96
-2011,8 - Pastagem deg. alta,6 - Outra agropecuária,1419.89
-2011,8 - Pastagem deg. alta,7 - Pastagem deg. média,524351.06
-2011,8 - Pastagem deg. alta,8 - Pastagem deg. alta,361630.91
-2011,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,184411.82
-2011,8 - Pastagem deg. alta,12 - Veg. sec. florestal,74.4
-2011,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,18.76
-2011,9 - Pastagem deg. baixa,2 - Soja,837.92
-2011,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,964.68
-2011,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,889.32
-2011,9 - Pastagem deg. baixa,6 - Outra agropecuária,724.06
-2011,9 - Pastagem deg. baixa,7 - Pastagem deg. média,267390.13
-2011,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,184411.82
-2011,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,94039.86
-2011,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,37.94
-2011,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,9.57
-2011,10 - Silvicultura,10 - Silvicultura,24838.18
-2011,11 - Veg. prim. florestal,2 - Soja,35.89
-2011,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,41.32
-2011,11 - Veg. prim. florestal,5 - Cana-de-açúcar,2.75
-2011,11 - Veg. prim. florestal,6 - Outra agropecuária,80.23
-2011,11 - Veg. prim. florestal,7 - Pastagem deg. média,356.21
-2011,11 - Veg. prim. florestal,8 - Pastagem deg. alta,245.67
-2011,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,125.28
-2011,11 - Veg. prim. florestal,11 - Veg. prim. florestal,656523.75
-2011,11 - Veg. prim. florestal,12 - Veg. sec. florestal,33.46
-2011,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,8.44
-2011,12 - Veg. sec. florestal,2 - Soja,2.53
-2011,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,2.91
-2011,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.19
-2011,12 - Veg. sec. florestal,6 - Outra agropecuária,5.66
-2011,12 - Veg. sec. florestal,7 - Pastagem deg. média,25.11
-2011,12 - Veg. sec. florestal,8 - Pastagem deg. alta,17.32
-2011,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,8.83
-2011,12 - Veg. sec. florestal,12 - Veg. sec. florestal,46286.66
-2011,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.59
-2011,13 - Veg. prim. não-florestal,2 - Soja,28.9
-2011,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,33.28
-2011,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,0.69
-2011,13 - Veg. prim. não-florestal,6 - Outra agropecuária,74.04
-2011,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,4276.81
-2011,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2949.6
-2011,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1504.14
-2011,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,8.44
-2011,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,853339.45
-2011,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,2.13
-2011,14 - Veg. sec. não-florestal,2 - Soja,2.04
-2011,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,2.35
-2011,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.05
-2011,14 - Veg. sec. não-florestal,6 - Outra agropecuária,5.22
-2011,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,301.51
-2011,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,207.94
-2011,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,106.04
-2011,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.59
-2011,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,60159.77
-2011,15 - Outro,15 - Outro,101192.32
-2012,1 - Culturas perenes,1 - Culturas perenes,488.66
-2012,2 - Soja,2 - Soja,548011.79
-2012,2 - Soja,12 - Veg. sec. florestal,2.68
-2012,2 - Soja,14 - Veg. sec. não-florestal,0.67
-2012,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,748380.34
-2012,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,3.65
-2012,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.92
-2012,4 - Milho 1ª safra,4 - Milho 1ª safra,247997.55
-2012,5 - Cana-de-açúcar,5 - Cana-de-açúcar,233049.87
-2012,6 - Outra agropecuária,6 - Outra agropecuária,779243.7
-2012,7 - Pastagem deg. média,2 - Soja,2486.48
-2012,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,3395.61
-2012,7 - Pastagem deg. média,5 - Cana-de-açúcar,7029.49
-2012,7 - Pastagem deg. média,6 - Outra agropecuária,5339.55
-2012,7 - Pastagem deg. média,7 - Pastagem deg. média,744524.81
-2012,7 - Pastagem deg. média,8 - Pastagem deg. alta,484778.0
-2012,7 - Pastagem deg. média,9 - Pastagem deg. baixa,285752.68
-2012,7 - Pastagem deg. média,12 - Veg. sec. florestal,109.53
-2012,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,27.49
-2012,8 - Pastagem deg. alta,2 - Soja,1619.01
-2012,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,2210.96
-2012,8 - Pastagem deg. alta,5 - Cana-de-açúcar,4577.07
-2012,8 - Pastagem deg. alta,6 - Outra agropecuária,3476.71
-2012,8 - Pastagem deg. alta,7 - Pastagem deg. média,484778.0
-2012,8 - Pastagem deg. alta,8 - Pastagem deg. alta,315650.61
-2012,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,186060.44
-2012,8 - Pastagem deg. alta,12 - Veg. sec. florestal,71.32
-2012,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,17.9
-2012,9 - Pastagem deg. baixa,2 - Soja,954.33
-2012,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,1303.25
-2012,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,2697.96
-2012,9 - Pastagem deg. baixa,6 - Outra agropecuária,2049.35
-2012,9 - Pastagem deg. baixa,7 - Pastagem deg. média,285752.68
-2012,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,186060.44
-2012,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,109673.44
-2012,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,42.04
-2012,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,10.55
-2012,10 - Silvicultura,10 - Silvicultura,27537.64
-2012,11 - Veg. prim. florestal,2 - Soja,39.46
-2012,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,53.89
-2012,11 - Veg. prim. florestal,5 - Cana-de-açúcar,9.07
-2012,11 - Veg. prim. florestal,6 - Outra agropecuária,133.14
-2012,11 - Veg. prim. florestal,7 - Pastagem deg. média,329.97
-2012,11 - Veg. prim. florestal,8 - Pastagem deg. alta,214.85
-2012,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,126.64
-2012,11 - Veg. prim. florestal,11 - Veg. prim. florestal,661001.74
-2012,11 - Veg. prim. florestal,12 - Veg. sec. florestal,15.96
-2012,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,4.0
-2012,12 - Veg. sec. florestal,2 - Soja,2.78
-2012,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,3.8
-2012,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.64
-2012,12 - Veg. sec. florestal,6 - Outra agropecuária,9.39
-2012,12 - Veg. sec. florestal,7 - Pastagem deg. média,23.26
-2012,12 - Veg. sec. florestal,8 - Pastagem deg. alta,15.15
-2012,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,8.93
-2012,12 - Veg. sec. florestal,12 - Veg. sec. florestal,46601.12
-2012,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.28
-2012,13 - Veg. prim. não-florestal,2 - Soja,40.0
-2012,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,54.63
-2012,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.28
-2012,13 - Veg. prim. não-florestal,6 - Outra agropecuária,77.63
-2012,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,4482.68
-2012,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2918.78
-2012,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1720.48
-2012,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,4.0
-2012,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,848623.62
-2012,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,1.0
-2012,14 - Veg. sec. não-florestal,2 - Soja,2.82
-2012,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,3.85
-2012,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.16
-2012,14 - Veg. sec. não-florestal,6 - Outra agropecuária,5.47
-2012,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,316.02
-2012,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,205.77
-2012,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,121.29
-2012,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.28
-2012,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,59827.23
-2012,15 - Outro,15 - Outro,102877.57
-2013,1 - Culturas perenes,1 - Culturas perenes,559.95
-2013,2 - Soja,2 - Soja,549006.4
-2013,2 - Soja,12 - Veg. sec. florestal,6.09
-2013,2 - Soja,14 - Veg. sec. não-florestal,1.52
-2013,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,697157.36
-2013,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,7.74
-2013,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,1.93
-2013,4 - Milho 1ª safra,4 - Milho 1ª safra,321243.73
-2013,5 - Cana-de-açúcar,5 - Cana-de-açúcar,276971.57
-2013,6 - Outra agropecuária,6 - Outra agropecuária,718643.13
-2013,7 - Pastagem deg. média,2 - Soja,2897.15
-2013,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,3678.95
-2013,7 - Pastagem deg. média,5 - Cana-de-açúcar,8741.1
-2013,7 - Pastagem deg. média,6 - Outra agropecuária,4239.83
-2013,7 - Pastagem deg. média,7 - Pastagem deg. média,748967.67
-2013,7 - Pastagem deg. média,8 - Pastagem deg. alta,440302.74
-2013,7 - Pastagem deg. média,9 - Pastagem deg. baixa,315731.55
-2013,7 - Pastagem deg. média,12 - Veg. sec. florestal,99.92
-2013,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,24.95
-2013,8 - Pastagem deg. alta,2 - Soja,1703.17
-2013,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,2162.78
-2013,8 - Pastagem deg. alta,5 - Cana-de-açúcar,5138.71
-2013,8 - Pastagem deg. alta,6 - Outra agropecuária,2492.51
-2013,8 - Pastagem deg. alta,7 - Pastagem deg. média,440302.74
-2013,8 - Pastagem deg. alta,8 - Pastagem deg. alta,258844.96
-2013,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,185612.11
-2013,8 - Pastagem deg. alta,12 - Veg. sec. florestal,58.74
-2013,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,14.67
-2013,9 - Pastagem deg. baixa,2 - Soja,1221.31
-2013,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,1550.88
-2013,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,3684.86
-2013,9 - Pastagem deg. baixa,6 - Outra agropecuária,1787.33
-2013,9 - Pastagem deg. baixa,7 - Pastagem deg. média,315731.55
-2013,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,185612.11
-2013,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,133098.42
-2013,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,42.12
-2013,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,10.52
-2013,10 - Silvicultura,10 - Silvicultura,32491.67
-2013,11 - Veg. prim. florestal,2 - Soja,45.97
-2013,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,58.37
-2013,11 - Veg. prim. florestal,5 - Cana-de-açúcar,10.56
-2013,11 - Veg. prim. florestal,6 - Outra agropecuária,90.62
-2013,11 - Veg. prim. florestal,7 - Pastagem deg. média,442.8
-2013,11 - Veg. prim. florestal,8 - Pastagem deg. alta,260.31
-2013,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,186.66
-2013,11 - Veg. prim. florestal,11 - Veg. prim. florestal,665587.71
-2013,11 - Veg. prim. florestal,12 - Veg. sec. florestal,20.94
-2013,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,5.23
-2013,12 - Veg. sec. florestal,2 - Soja,3.24
-2013,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,4.12
-2013,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.74
-2013,12 - Veg. sec. florestal,6 - Outra agropecuária,6.39
-2013,12 - Veg. sec. florestal,7 - Pastagem deg. média,31.22
-2013,12 - Veg. sec. florestal,8 - Pastagem deg. alta,18.35
-2013,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,13.16
-2013,12 - Veg. sec. florestal,12 - Veg. sec. florestal,46924.78
-2013,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.37
-2013,13 - Veg. prim. não-florestal,2 - Soja,37.59
-2013,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,47.74
-2013,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.64
-2013,13 - Veg. prim. não-florestal,6 - Outra agropecuária,76.01
-2013,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,3982.06
-2013,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2340.97
-2013,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1678.66
-2013,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,5.23
-2013,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,849171.48
-2013,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,1.31
-2013,14 - Veg. sec. não-florestal,2 - Soja,2.65
-2013,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,3.37
-2013,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.19
-2013,14 - Veg. sec. não-florestal,6 - Outra agropecuária,5.36
-2013,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,280.73
-2013,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,165.04
-2013,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,118.34
-2013,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.37
-2013,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,59865.87
-2013,15 - Outro,15 - Outro,102926.81
-2014,1 - Culturas perenes,1 - Culturas perenes,531.08
-2014,2 - Soja,2 - Soja,383924.17
-2014,2 - Soja,12 - Veg. sec. florestal,5.29
-2014,2 - Soja,14 - Veg. sec. não-florestal,1.32
-2014,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,853979.3
-2014,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,11.78
-2014,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,2.94
-2014,4 - Milho 1ª safra,4 - Milho 1ª safra,237459.18
-2014,5 - Cana-de-açúcar,5 - Cana-de-açúcar,351808.28
-2014,6 - Outra agropecuária,6 - Outra agropecuária,760249.76
-2014,7 - Pastagem deg. média,2 - Soja,6490.79
-2014,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,14437.75
-2014,7 - Pastagem deg. média,5 - Cana-de-açúcar,8728.85
-2014,7 - Pastagem deg. média,6 - Outra agropecuária,2970.27
-2014,7 - Pastagem deg. média,7 - Pastagem deg. média,765281.66
-2014,7 - Pastagem deg. média,8 - Pastagem deg. alta,381759.66
-2014,7 - Pastagem deg. média,9 - Pastagem deg. baixa,356438.08
-2014,7 - Pastagem deg. média,12 - Veg. sec. florestal,93.64
-2014,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,23.36
-2014,8 - Pastagem deg. alta,2 - Soja,3237.92
-2014,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,7202.25
-2014,8 - Pastagem deg. alta,5 - Cana-de-açúcar,4354.37
-2014,8 - Pastagem deg. alta,6 - Outra agropecuária,1481.71
-2014,8 - Pastagem deg. alta,7 - Pastagem deg. média,381759.66
-2014,8 - Pastagem deg. alta,8 - Pastagem deg. alta,190440.26
-2014,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,177808.63
-2014,8 - Pastagem deg. alta,12 - Veg. sec. florestal,46.71
-2014,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,11.65
-2014,9 - Pastagem deg. baixa,2 - Soja,3023.16
-2014,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,6724.54
-2014,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,4065.56
-2014,9 - Pastagem deg. baixa,6 - Outra agropecuária,1383.43
-2014,9 - Pastagem deg. baixa,7 - Pastagem deg. média,356438.08
-2014,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,177808.63
-2014,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,166014.83
-2014,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,43.61
-2014,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,10.88
-2014,10 - Silvicultura,10 - Silvicultura,37050.6
-2014,11 - Veg. prim. florestal,2 - Soja,51.25
-2014,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,114.0
-2014,11 - Veg. prim. florestal,5 - Cana-de-açúcar,4.58
-2014,11 - Veg. prim. florestal,6 - Outra agropecuária,71.26
-2014,11 - Veg. prim. florestal,7 - Pastagem deg. média,261.39
-2014,11 - Veg. prim. florestal,8 - Pastagem deg. alta,130.4
-2014,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,121.75
-2014,11 - Veg. prim. florestal,11 - Veg. prim. florestal,669527.14
-2014,11 - Veg. prim. florestal,12 - Veg. sec. florestal,37.48
-2014,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,9.35
-2014,12 - Veg. sec. florestal,2 - Soja,3.61
-2014,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,8.04
-2014,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.32
-2014,12 - Veg. sec. florestal,6 - Outra agropecuária,5.02
-2014,12 - Veg. sec. florestal,7 - Pastagem deg. média,18.43
-2014,12 - Veg. sec. florestal,8 - Pastagem deg. alta,9.19
-2014,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,8.58
-2014,12 - Veg. sec. florestal,12 - Veg. sec. florestal,47203.67
-2014,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.66
-2014,13 - Veg. prim. não-florestal,2 - Soja,89.13
-2014,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,198.26
-2014,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.14
-2014,13 - Veg. prim. não-florestal,6 - Outra agropecuária,75.45
-2014,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,4180.47
-2014,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2085.42
-2014,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1947.1
-2014,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,9.35
-2014,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,844083.61
-2014,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,2.33
-2014,14 - Veg. sec. não-florestal,2 - Soja,6.28
-2014,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,13.98
-2014,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.08
-2014,14 - Veg. sec. não-florestal,6 - Outra agropecuária,5.32
-2014,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,294.72
-2014,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,147.02
-2014,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,137.27
-2014,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.66
-2014,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,59507.26
-2014,15 - Outro,15 - Outro,101117.65
-2015,1 - Culturas perenes,1 - Culturas perenes,574.32
-2015,2 - Soja,2 - Soja,320608.38
-2015,2 - Soja,12 - Veg. sec. florestal,5.77
-2015,2 - Soja,14 - Veg. sec. não-florestal,1.44
-2015,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1059587.88
-2015,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,19.08
-2015,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,4.75
-2015,4 - Milho 1ª safra,4 - Milho 1ª safra,190975.28
-2015,5 - Cana-de-açúcar,5 - Cana-de-açúcar,416996.92
-2015,6 - Outra agropecuária,6 - Outra agropecuária,663961.15
-2015,7 - Pastagem deg. média,2 - Soja,1603.67
-2015,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,5300.01
-2015,7 - Pastagem deg. média,5 - Cana-de-açúcar,4774.15
-2015,7 - Pastagem deg. média,6 - Outra agropecuária,7837.28
-2015,7 - Pastagem deg. média,7 - Pastagem deg. média,762471.42
-2015,7 - Pastagem deg. média,8 - Pastagem deg. alta,362551.41
-2015,7 - Pastagem deg. média,9 - Pastagem deg. baixa,365765.44
-2015,7 - Pastagem deg. média,12 - Veg. sec. florestal,137.31
-2015,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,34.2
-2015,8 - Pastagem deg. alta,2 - Soja,762.54
-2015,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,2520.13
-2015,8 - Pastagem deg. alta,5 - Cana-de-açúcar,2270.08
-2015,8 - Pastagem deg. alta,6 - Outra agropecuária,3726.59
-2015,8 - Pastagem deg. alta,7 - Pastagem deg. média,362551.41
-2015,8 - Pastagem deg. alta,8 - Pastagem deg. alta,172391.41
-2015,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,173919.67
-2015,8 - Pastagem deg. alta,12 - Veg. sec. florestal,65.29
-2015,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,16.26
-2015,9 - Pastagem deg. baixa,2 - Soja,769.3
-2015,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,2542.47
-2015,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,2290.21
-2015,9 - Pastagem deg. baixa,6 - Outra agropecuária,3759.62
-2015,9 - Pastagem deg. baixa,7 - Pastagem deg. média,365765.44
-2015,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,173919.67
-2015,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,175461.47
-2015,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,65.87
-2015,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,16.41
-2015,10 - Silvicultura,10 - Silvicultura,40797.73
-2015,11 - Veg. prim. florestal,2 - Soja,17.46
-2015,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,57.72
-2015,11 - Veg. prim. florestal,5 - Cana-de-açúcar,7.07
-2015,11 - Veg. prim. florestal,6 - Outra agropecuária,271.99
-2015,11 - Veg. prim. florestal,7 - Pastagem deg. média,393.72
-2015,11 - Veg. prim. florestal,8 - Pastagem deg. alta,187.21
-2015,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,188.87
-2015,11 - Veg. prim. florestal,11 - Veg. prim. florestal,675384.64
-2015,11 - Veg. prim. florestal,12 - Veg. sec. florestal,9.97
-2015,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.48
-2015,12 - Veg. sec. florestal,2 - Soja,1.23
-2015,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,4.07
-2015,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.5
-2015,12 - Veg. sec. florestal,6 - Outra agropecuária,19.17
-2015,12 - Veg. sec. florestal,7 - Pastagem deg. média,27.76
-2015,12 - Veg. sec. florestal,8 - Pastagem deg. alta,13.2
-2015,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,13.32
-2015,12 - Veg. sec. florestal,12 - Veg. sec. florestal,47614.68
-2015,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.18
-2015,13 - Veg. prim. não-florestal,2 - Soja,44.93
-2015,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,148.5
-2015,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.76
-2015,13 - Veg. prim. não-florestal,6 - Outra agropecuária,317.87
-2015,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,4813.44
-2015,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2288.77
-2015,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,2309.06
-2015,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.48
-2015,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,838386.35
-2015,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.62
-2015,14 - Veg. sec. não-florestal,2 - Soja,3.17
-2015,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,10.47
-2015,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.12
-2015,14 - Veg. sec. não-florestal,6 - Outra agropecuária,22.41
-2015,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,339.34
-2015,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,161.36
-2015,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,162.79
-2015,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.18
-2015,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,59105.48
-2015,15 - Outro,15 - Outro,100220.14
-2016,1 - Culturas perenes,1 - Culturas perenes,598.78
-2016,2 - Soja,2 - Soja,178876.64
-2016,2 - Soja,12 - Veg. sec. florestal,2.35
-2016,2 - Soja,14 - Veg. sec. não-florestal,0.58
-2016,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,793054.24
-2016,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,10.41
-2016,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,2.59
-2016,4 - Milho 1ª safra,4 - Milho 1ª safra,157497.18
-2016,5 - Cana-de-açúcar,5 - Cana-de-açúcar,465321.1
-2016,6 - Outra agropecuária,6 - Outra agropecuária,606546.31
-2016,7 - Pastagem deg. média,2 - Soja,1294.02
-2016,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,5737.09
-2016,7 - Pastagem deg. média,5 - Cana-de-açúcar,3149.98
-2016,7 - Pastagem deg. média,6 - Outra agropecuária,2615.99
-2016,7 - Pastagem deg. média,7 - Pastagem deg. média,737591.46
-2016,7 - Pastagem deg. média,8 - Pastagem deg. alta,375722.02
-2016,7 - Pastagem deg. média,9 - Pastagem deg. baixa,350729.08
-2016,7 - Pastagem deg. média,12 - Veg. sec. florestal,169.09
-2016,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,42.07
-2016,8 - Pastagem deg. alta,2 - Soja,659.16
-2016,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,2922.42
-2016,8 - Pastagem deg. alta,5 - Cana-de-açúcar,1604.57
-2016,8 - Pastagem deg. alta,6 - Outra agropecuária,1332.56
-2016,8 - Pastagem deg. alta,7 - Pastagem deg. média,375722.02
-2016,8 - Pastagem deg. alta,8 - Pastagem deg. alta,191389.19
-2016,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,178658.03
-2016,8 - Pastagem deg. alta,12 - Veg. sec. florestal,86.13
-2016,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,21.43
-2016,9 - Pastagem deg. baixa,2 - Soja,615.32
-2016,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,2728.02
-2016,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,1497.84
-2016,9 - Pastagem deg. baixa,6 - Outra agropecuária,1243.92
-2016,9 - Pastagem deg. baixa,7 - Pastagem deg. média,350729.08
-2016,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,178658.03
-2016,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,166773.74
-2016,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,80.4
-2016,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,20.01
-2016,10 - Silvicultura,10 - Silvicultura,43982.92
-2016,11 - Veg. prim. florestal,2 - Soja,8.12
-2016,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,35.98
-2016,11 - Veg. prim. florestal,5 - Cana-de-açúcar,4.04
-2016,11 - Veg. prim. florestal,6 - Outra agropecuária,97.82
-2016,11 - Veg. prim. florestal,7 - Pastagem deg. média,450.24
-2016,11 - Veg. prim. florestal,8 - Pastagem deg. alta,229.35
-2016,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,214.09
-2016,11 - Veg. prim. florestal,11 - Veg. prim. florestal,678254.59
-2016,11 - Veg. prim. florestal,12 - Veg. sec. florestal,20.0
-2016,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,4.98
-2016,12 - Veg. sec. florestal,2 - Soja,0.57
-2016,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,2.54
-2016,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.28
-2016,12 - Veg. sec. florestal,6 - Outra agropecuária,6.9
-2016,12 - Veg. sec. florestal,7 - Pastagem deg. média,31.74
-2016,12 - Veg. sec. florestal,8 - Pastagem deg. alta,16.17
-2016,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,15.09
-2016,12 - Veg. sec. florestal,12 - Veg. sec. florestal,47817.71
-2016,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.35
-2016,13 - Veg. prim. não-florestal,2 - Soja,30.95
-2016,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,137.24
-2016,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.01
-2016,13 - Veg. prim. não-florestal,6 - Outra agropecuária,91.18
-2016,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,5141.85
-2016,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2619.21
-2016,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,2444.98
-2016,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,4.98
-2016,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,832281.44
-2016,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,1.24
-2016,14 - Veg. sec. não-florestal,2 - Soja,2.18
-2016,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,9.67
-2016,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.07
-2016,14 - Veg. sec. não-florestal,6 - Outra agropecuária,6.43
-2016,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,362.5
-2016,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,184.65
-2016,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,172.37
-2016,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.35
-2016,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,58675.14
-2016,15 - Outro,15 - Outro,100601.59
-2017,1 - Culturas perenes,1 - Culturas perenes,648.02
-2017,2 - Soja,2 - Soja,161789.53
-2017,2 - Soja,12 - Veg. sec. florestal,1.08
-2017,2 - Soja,14 - Veg. sec. não-florestal,0.27
-2017,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,837763.52
-2017,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,5.62
-2017,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,1.4
-2017,4 - Milho 1ª safra,4 - Milho 1ª safra,143021.96
-2017,5 - Cana-de-açúcar,5 - Cana-de-açúcar,512433.67
-2017,6 - Outra agropecuária,6 - Outra agropecuária,987725.34
-2017,7 - Pastagem deg. média,2 - Soja,1870.36
-2017,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,9684.91
-2017,7 - Pastagem deg. média,5 - Cana-de-açúcar,2462.7
-2017,7 - Pastagem deg. média,6 - Outra agropecuária,1166.1
-2017,7 - Pastagem deg. média,7 - Pastagem deg. média,712858.7
-2017,7 - Pastagem deg. média,8 - Pastagem deg. alta,377815.74
-2017,7 - Pastagem deg. média,9 - Pastagem deg. baixa,339375.8
-2017,7 - Pastagem deg. média,12 - Veg. sec. florestal,182.46
-2017,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,45.41
-2017,8 - Pastagem deg. alta,2 - Soja,991.29
-2017,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,5133.01
-2017,8 - Pastagem deg. alta,5 - Cana-de-açúcar,1305.23
-2017,8 - Pastagem deg. alta,6 - Outra agropecuária,618.03
-2017,8 - Pastagem deg. alta,7 - Pastagem deg. média,377815.74
-2017,8 - Pastagem deg. alta,8 - Pastagem deg. alta,200242.67
-2017,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,179869.47
-2017,8 - Pastagem deg. alta,12 - Veg. sec. florestal,96.7
-2017,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,24.07
-2017,9 - Pastagem deg. baixa,2 - Soja,890.43
-2017,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,4610.76
-2017,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,1172.44
-2017,9 - Pastagem deg. baixa,6 - Outra agropecuária,555.15
-2017,9 - Pastagem deg. baixa,7 - Pastagem deg. média,339375.8
-2017,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,179869.47
-2017,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,161569.09
-2017,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,86.86
-2017,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,21.62
-2017,10 - Silvicultura,10 - Silvicultura,45509.03
-2017,11 - Veg. prim. florestal,2 - Soja,51.91
-2017,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,268.8
-2017,11 - Veg. prim. florestal,5 - Cana-de-açúcar,11.51
-2017,11 - Veg. prim. florestal,6 - Outra agropecuária,46.32
-2017,11 - Veg. prim. florestal,7 - Pastagem deg. média,405.91
-2017,11 - Veg. prim. florestal,8 - Pastagem deg. alta,215.13
-2017,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,193.25
-2017,11 - Veg. prim. florestal,11 - Veg. prim. florestal,680780.32
-2017,11 - Veg. prim. florestal,12 - Veg. sec. florestal,47.22
-2017,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,11.75
-2017,12 - Veg. sec. florestal,2 - Soja,3.66
-2017,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,18.95
-2017,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.81
-2017,12 - Veg. sec. florestal,6 - Outra agropecuária,3.27
-2017,12 - Veg. sec. florestal,7 - Pastagem deg. média,28.62
-2017,12 - Veg. sec. florestal,8 - Pastagem deg. alta,15.17
-2017,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,13.62
-2017,12 - Veg. sec. florestal,12 - Veg. sec. florestal,47997.69
-2017,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.83
-2017,13 - Veg. prim. não-florestal,2 - Soja,56.26
-2017,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,291.33
-2017,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.86
-2017,13 - Veg. prim. não-florestal,6 - Outra agropecuária,83.24
-2017,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,5273.94
-2017,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2795.19
-2017,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,2510.8
-2017,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,11.75
-2017,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,825715.51
-2017,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,2.92
-2017,14 - Veg. sec. não-florestal,2 - Soja,3.97
-2017,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,20.54
-2017,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.2
-2017,14 - Veg. sec. não-florestal,6 - Outra agropecuária,5.87
-2017,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,371.81
-2017,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,197.06
-2017,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,177.01
-2017,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.83
-2017,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,58212.37
-2017,15 - Outro,15 - Outro,102457.55
-2018,1 - Culturas perenes,1 - Culturas perenes,664.91
-2018,2 - Soja,2 - Soja,260967.69
-2018,2 - Soja,12 - Veg. sec. florestal,1.23
-2018,2 - Soja,14 - Veg. sec. não-florestal,0.31
-2018,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1265542.74
-2018,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,5.97
-2018,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,1.49
-2018,4 - Milho 1ª safra,4 - Milho 1ª safra,164519.64
-2018,5 - Cana-de-açúcar,5 - Cana-de-açúcar,506944.75
-2018,6 - Outra agropecuária,6 - Outra agropecuária,548299.72
-2018,7 - Pastagem deg. média,2 - Soja,1062.33
-2018,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,5151.68
-2018,7 - Pastagem deg. média,5 - Cana-de-açúcar,1934.78
-2018,7 - Pastagem deg. média,6 - Outra agropecuária,241.78
-2018,7 - Pastagem deg. média,7 - Pastagem deg. média,695833.01
-2018,7 - Pastagem deg. média,8 - Pastagem deg. alta,363353.39
-2018,7 - Pastagem deg. média,9 - Pastagem deg. baixa,345973.94
-2018,7 - Pastagem deg. média,12 - Veg. sec. florestal,171.58
-2018,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,42.7
-2018,8 - Pastagem deg. alta,2 - Soja,554.73
-2018,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,2690.13
-2018,8 - Pastagem deg. alta,5 - Cana-de-açúcar,1010.31
-2018,8 - Pastagem deg. alta,6 - Outra agropecuária,126.25
-2018,8 - Pastagem deg. alta,7 - Pastagem deg. média,363353.39
-2018,8 - Pastagem deg. alta,8 - Pastagem deg. alta,189737.6
-2018,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,180662.32
-2018,8 - Pastagem deg. alta,12 - Veg. sec. florestal,89.6
-2018,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,22.3
-2018,9 - Pastagem deg. baixa,2 - Soja,528.2
-2018,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,2561.46
-2018,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,961.99
-2018,9 - Pastagem deg. baixa,6 - Outra agropecuária,120.22
-2018,9 - Pastagem deg. baixa,7 - Pastagem deg. média,345973.94
-2018,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,180662.32
-2018,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,172021.11
-2018,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,85.31
-2018,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,21.23
-2018,10 - Silvicultura,10 - Silvicultura,46000.28
-2018,11 - Veg. prim. florestal,2 - Soja,16.2
-2018,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,78.58
-2018,11 - Veg. prim. florestal,5 - Cana-de-açúcar,9.16
-2018,11 - Veg. prim. florestal,6 - Outra agropecuária,22.89
-2018,11 - Veg. prim. florestal,7 - Pastagem deg. média,464.65
-2018,11 - Veg. prim. florestal,8 - Pastagem deg. alta,242.63
-2018,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,231.03
-2018,11 - Veg. prim. florestal,11 - Veg. prim. florestal,682538.68
-2018,11 - Veg. prim. florestal,12 - Veg. sec. florestal,18.92
-2018,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,4.71
-2018,12 - Veg. sec. florestal,2 - Soja,1.14
-2018,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,5.54
-2018,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.65
-2018,12 - Veg. sec. florestal,6 - Outra agropecuária,1.61
-2018,12 - Veg. sec. florestal,7 - Pastagem deg. média,32.76
-2018,12 - Veg. sec. florestal,8 - Pastagem deg. alta,17.11
-2018,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,16.29
-2018,12 - Veg. sec. florestal,12 - Veg. sec. florestal,48119.66
-2018,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.33
-2018,13 - Veg. prim. não-florestal,2 - Soja,38.77
-2018,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,188.02
-2018,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.28
-2018,13 - Veg. prim. não-florestal,6 - Outra agropecuária,17.13
-2018,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,4394.02
-2018,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,2294.49
-2018,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,2184.75
-2018,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,4.71
-2018,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,821001.23
-2018,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,1.17
-2018,14 - Veg. sec. não-florestal,2 - Soja,2.73
-2018,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,13.26
-2018,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.16
-2018,14 - Veg. sec. não-florestal,6 - Outra agropecuária,1.21
-2018,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,309.77
-2018,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,161.76
-2018,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,154.02
-2018,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.33
-2018,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,57879.89
-2018,15 - Outro,15 - Outro,102672.94
-2019,1 - Culturas perenes,1 - Culturas perenes,711.39
-2019,2 - Soja,2 - Soja,223339.49
-2019,2 - Soja,12 - Veg. sec. florestal,1.5
-2019,2 - Soja,14 - Veg. sec. não-florestal,0.37
-2019,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1282898.71
-2019,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,8.6
-2019,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,2.13
-2019,4 - Milho 1ª safra,4 - Milho 1ª safra,130826.44
-2019,5 - Cana-de-açúcar,5 - Cana-de-açúcar,513000.63
-2019,6 - Outra agropecuária,6 - Outra agropecuária,529432.3
-2019,7 - Pastagem deg. média,2 - Soja,1733.86
-2019,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,9959.57
-2019,7 - Pastagem deg. média,5 - Cana-de-açúcar,2015.2
-2019,7 - Pastagem deg. média,6 - Outra agropecuária,133.07
-2019,7 - Pastagem deg. média,7 - Pastagem deg. média,652834.93
-2019,7 - Pastagem deg. média,8 - Pastagem deg. alta,378433.34
-2019,7 - Pastagem deg. média,9 - Pastagem deg. baixa,319850.1
-2019,7 - Pastagem deg. média,12 - Veg. sec. florestal,95.77
-2019,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,23.77
-2019,8 - Pastagem deg. alta,2 - Soja,1005.08
-2019,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,5773.33
-2019,8 - Pastagem deg. alta,5 - Cana-de-açúcar,1168.16
-2019,8 - Pastagem deg. alta,6 - Outra agropecuária,77.14
-2019,8 - Pastagem deg. alta,7 - Pastagem deg. média,378433.34
-2019,8 - Pastagem deg. alta,8 - Pastagem deg. alta,219369.07
-2019,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,185409.72
-2019,8 - Pastagem deg. alta,12 - Veg. sec. florestal,55.52
-2019,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,13.78
-2019,9 - Pastagem deg. baixa,2 - Soja,849.49
-2019,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,4879.59
-2019,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,987.33
-2019,9 - Pastagem deg. baixa,6 - Outra agropecuária,65.2
-2019,9 - Pastagem deg. baixa,7 - Pastagem deg. média,319850.1
-2019,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,185409.72
-2019,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,156707.43
-2019,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,46.92
-2019,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,11.65
-2019,10 - Silvicultura,10 - Silvicultura,45692.39
-2019,11 - Veg. prim. florestal,2 - Soja,31.22
-2019,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,179.33
-2019,11 - Veg. prim. florestal,5 - Cana-de-açúcar,10.1
-2019,11 - Veg. prim. florestal,6 - Outra agropecuária,4.18
-2019,11 - Veg. prim. florestal,7 - Pastagem deg. média,504.31
-2019,11 - Veg. prim. florestal,8 - Pastagem deg. alta,292.34
-2019,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,247.08
-2019,11 - Veg. prim. florestal,11 - Veg. prim. florestal,684463.23
-2019,11 - Veg. prim. florestal,12 - Veg. sec. florestal,8.85
-2019,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.2
-2019,12 - Veg. sec. florestal,2 - Soja,2.2
-2019,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,12.64
-2019,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.71
-2019,12 - Veg. sec. florestal,6 - Outra agropecuária,0.29
-2019,12 - Veg. sec. florestal,7 - Pastagem deg. média,35.55
-2019,12 - Veg. sec. florestal,8 - Pastagem deg. alta,20.61
-2019,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,17.42
-2019,12 - Veg. sec. florestal,12 - Veg. sec. florestal,48254.63
-2019,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.15
-2019,13 - Veg. prim. não-florestal,2 - Soja,43.02
-2019,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,247.09
-2019,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.51
-2019,13 - Veg. prim. não-florestal,6 - Outra agropecuária,10.87
-2019,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,3349.78
-2019,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,1941.79
-2019,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1641.19
-2019,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.2
-2019,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,818447.39
-2019,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.55
-2019,14 - Veg. sec. não-florestal,2 - Soja,3.03
-2019,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,17.42
-2019,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.18
-2019,14 - Veg. sec. não-florestal,6 - Outra agropecuária,0.77
-2019,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,236.16
-2019,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,136.89
-2019,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,115.7
-2019,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.15
-2019,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,57699.8
-2019,15 - Outro,15 - Outro,103884.01
-2020,1 - Culturas perenes,1 - Culturas perenes,731.27
-2020,2 - Soja,2 - Soja,228172.37
-2020,2 - Soja,12 - Veg. sec. florestal,2.27
-2020,2 - Soja,14 - Veg. sec. não-florestal,0.56
-2020,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1215771.25
-2020,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,12.09
-2020,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,2.99
-2020,4 - Milho 1ª safra,4 - Milho 1ª safra,152134.02
-2020,5 - Cana-de-açúcar,5 - Cana-de-açúcar,518273.52
-2020,6 - Outra agropecuária,6 - Outra agropecuária,551515.6
-2020,7 - Pastagem deg. média,2 - Soja,592.85
-2020,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,3158.88
-2020,7 - Pastagem deg. média,5 - Cana-de-açúcar,3955.23
-2020,7 - Pastagem deg. média,6 - Outra agropecuária,166.74
-2020,7 - Pastagem deg. média,7 - Pastagem deg. média,621273.91
-2020,7 - Pastagem deg. média,8 - Pastagem deg. alta,376704.16
-2020,7 - Pastagem deg. média,9 - Pastagem deg. baixa,306856.08
-2020,7 - Pastagem deg. média,12 - Veg. sec. florestal,67.06
-2020,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,16.59
-2020,8 - Pastagem deg. alta,2 - Soja,359.47
-2020,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,1915.36
-2020,8 - Pastagem deg. alta,5 - Cana-de-açúcar,2398.22
-2020,8 - Pastagem deg. alta,6 - Outra agropecuária,101.1
-2020,8 - Pastagem deg. alta,7 - Pastagem deg. média,376704.16
-2020,8 - Pastagem deg. alta,8 - Pastagem deg. alta,228411.37
-2020,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,186059.58
-2020,8 - Pastagem deg. alta,12 - Veg. sec. florestal,40.66
-2020,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,10.06
-2020,9 - Pastagem deg. baixa,2 - Soja,292.82
-2020,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,1560.22
-2020,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,1953.55
-2020,9 - Pastagem deg. baixa,6 - Outra agropecuária,82.35
-2020,9 - Pastagem deg. baixa,7 - Pastagem deg. média,306856.08
-2020,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,186059.58
-2020,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,151560.61
-2020,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,33.12
-2020,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,8.19
-2020,10 - Silvicultura,10 - Silvicultura,45686.99
-2020,11 - Veg. prim. florestal,2 - Soja,4.62
-2020,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,24.63
-2020,11 - Veg. prim. florestal,5 - Cana-de-açúcar,11.05
-2020,11 - Veg. prim. florestal,6 - Outra agropecuária,16.38
-2020,11 - Veg. prim. florestal,7 - Pastagem deg. média,351.35
-2020,11 - Veg. prim. florestal,8 - Pastagem deg. alta,213.04
-2020,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,173.54
-2020,11 - Veg. prim. florestal,11 - Veg. prim. florestal,686287.39
-2020,11 - Veg. prim. florestal,12 - Veg. sec. florestal,11.83
-2020,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.93
-2020,12 - Veg. sec. florestal,2 - Soja,0.33
-2020,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,1.74
-2020,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.78
-2020,12 - Veg. sec. florestal,6 - Outra agropecuária,1.15
-2020,12 - Veg. sec. florestal,7 - Pastagem deg. média,24.77
-2020,12 - Veg. sec. florestal,8 - Pastagem deg. alta,15.02
-2020,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,12.23
-2020,12 - Veg. sec. florestal,12 - Veg. sec. florestal,48383.44
-2020,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.21
-2020,13 - Veg. prim. não-florestal,2 - Soja,22.13
-2020,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,117.94
-2020,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,2.73
-2020,13 - Veg. prim. não-florestal,6 - Outra agropecuária,26.67
-2020,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,2970.57
-2020,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,1801.18
-2020,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1467.21
-2020,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.93
-2020,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,819280.52
-2020,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.72
-2020,14 - Veg. sec. não-florestal,2 - Soja,1.56
-2020,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,8.31
-2020,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.19
-2020,14 - Veg. sec. não-florestal,6 - Outra agropecuária,1.88
-2020,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,209.42
-2020,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,126.98
-2020,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,103.44
-2020,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.21
-2020,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,57758.55
-2020,15 - Outro,15 - Outro,104584.32
-2021,1 - Culturas perenes,1 - Culturas perenes,749.6
-2021,2 - Soja,2 - Soja,213865.75
-2021,2 - Soja,12 - Veg. sec. florestal,0.62
-2021,2 - Soja,14 - Veg. sec. não-florestal,0.15
-2021,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1257038.27
-2021,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,3.64
-2021,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.9
-2021,4 - Milho 1ª safra,4 - Milho 1ª safra,144920.59
-2021,5 - Cana-de-açúcar,5 - Cana-de-açúcar,563375.63
-2021,6 - Outra agropecuária,6 - Outra agropecuária,687596.23
-2021,7 - Pastagem deg. média,2 - Soja,137.97
-2021,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,810.97
-2021,7 - Pastagem deg. média,5 - Cana-de-açúcar,878.49
-2021,7 - Pastagem deg. média,6 - Outra agropecuária,303.68
-2021,7 - Pastagem deg. média,7 - Pastagem deg. média,620543.84
-2021,7 - Pastagem deg. média,8 - Pastagem deg. alta,366799.72
-2021,7 - Pastagem deg. média,9 - Pastagem deg. baixa,300913.09
-2021,7 - Pastagem deg. média,12 - Veg. sec. florestal,83.5
-2021,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,20.59
-2021,8 - Pastagem deg. alta,2 - Soja,81.56
-2021,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,479.36
-2021,8 - Pastagem deg. alta,5 - Cana-de-açúcar,519.27
-2021,8 - Pastagem deg. alta,6 - Outra agropecuária,179.51
-2021,8 - Pastagem deg. alta,7 - Pastagem deg. média,366799.72
-2021,8 - Pastagem deg. alta,8 - Pastagem deg. alta,216813.11
-2021,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,177867.91
-2021,8 - Pastagem deg. alta,12 - Veg. sec. florestal,49.36
-2021,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,12.17
-2021,9 - Pastagem deg. baixa,2 - Soja,66.91
-2021,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,393.25
-2021,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,426.0
-2021,9 - Pastagem deg. baixa,6 - Outra agropecuária,147.26
-2021,9 - Pastagem deg. baixa,7 - Pastagem deg. média,300913.09
-2021,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,177867.91
-2021,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,145918.27
-2021,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,40.49
-2021,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,9.98
-2021,10 - Silvicultura,10 - Silvicultura,45695.07
-2021,11 - Veg. prim. florestal,2 - Soja,3.57
-2021,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,20.96
-2021,11 - Veg. prim. florestal,5 - Cana-de-açúcar,4.13
-2021,11 - Veg. prim. florestal,6 - Outra agropecuária,18.36
-2021,11 - Veg. prim. florestal,7 - Pastagem deg. média,355.21
-2021,11 - Veg. prim. florestal,8 - Pastagem deg. alta,209.96
-2021,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,172.25
-2021,11 - Veg. prim. florestal,11 - Veg. prim. florestal,690428.51
-2021,11 - Veg. prim. florestal,12 - Veg. sec. florestal,8.7
-2021,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.14
-2021,12 - Veg. sec. florestal,2 - Soja,0.23
-2021,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,1.38
-2021,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.27
-2021,12 - Veg. sec. florestal,6 - Outra agropecuária,1.21
-2021,12 - Veg. sec. florestal,7 - Pastagem deg. média,23.35
-2021,12 - Veg. sec. florestal,8 - Pastagem deg. alta,13.8
-2021,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,11.32
-2021,12 - Veg. sec. florestal,12 - Veg. sec. florestal,45392.45
-2021,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.14
-2021,13 - Veg. prim. não-florestal,2 - Soja,4.91
-2021,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,28.84
-2021,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.02
-2021,13 - Veg. prim. não-florestal,6 - Outra agropecuária,28.51
-2021,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,3198.09
-2021,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,1890.37
-2021,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1550.81
-2021,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.14
-2021,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,822454.93
-2021,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.53
-2021,14 - Veg. sec. não-florestal,2 - Soja,0.32
-2021,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,1.9
-2021,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.07
-2021,14 - Veg. sec. não-florestal,6 - Outra agropecuária,1.87
-2021,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,210.26
-2021,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,124.28
-2021,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,101.96
-2021,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.14
-2021,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,54071.92
-2021,15 - Outro,15 - Outro,104870.29
-2022,1 - Culturas perenes,1 - Culturas perenes,734.63
-2022,2 - Soja,2 - Soja,152786.15
-2022,2 - Soja,12 - Veg. sec. florestal,0.68
-2022,2 - Soja,14 - Veg. sec. não-florestal,0.17
-2022,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1391025.52
-2022,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,6.18
-2022,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,1.52
-2022,4 - Milho 1ª safra,4 - Milho 1ª safra,105119.6
-2022,5 - Cana-de-açúcar,5 - Cana-de-açúcar,557127.45
-2022,6 - Outra agropecuária,6 - Outra agropecuária,692528.5
-2022,7 - Pastagem deg. média,2 - Soja,45.98
-2022,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,418.64
-2022,7 - Pastagem deg. média,5 - Cana-de-açúcar,1119.17
-2022,7 - Pastagem deg. média,6 - Outra agropecuária,1462.85
-2022,7 - Pastagem deg. média,7 - Pastagem deg. média,635339.65
-2022,7 - Pastagem deg. média,8 - Pastagem deg. alta,334426.86
-2022,7 - Pastagem deg. média,9 - Pastagem deg. baixa,312490.55
-2022,7 - Pastagem deg. média,12 - Veg. sec. florestal,93.36
-2022,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,22.99
-2022,8 - Pastagem deg. alta,2 - Soja,24.2
-2022,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,220.36
-2022,8 - Pastagem deg. alta,5 - Cana-de-açúcar,589.1
-2022,8 - Pastagem deg. alta,6 - Outra agropecuária,770.01
-2022,8 - Pastagem deg. alta,7 - Pastagem deg. média,334426.86
-2022,8 - Pastagem deg. alta,8 - Pastagem deg. alta,176033.91
-2022,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,164487.19
-2022,8 - Pastagem deg. alta,12 - Veg. sec. florestal,49.14
-2022,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,12.1
-2022,9 - Pastagem deg. baixa,2 - Soja,22.62
-2022,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,205.91
-2022,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,550.46
-2022,9 - Pastagem deg. baixa,6 - Outra agropecuária,719.5
-2022,9 - Pastagem deg. baixa,7 - Pastagem deg. média,312490.55
-2022,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,164487.19
-2022,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,153697.86
-2022,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,45.92
-2022,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,11.31
-2022,10 - Silvicultura,10 - Silvicultura,46457.24
-2022,11 - Veg. prim. florestal,2 - Soja,1.64
-2022,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,14.95
-2022,11 - Veg. prim. florestal,5 - Cana-de-açúcar,5.06
-2022,11 - Veg. prim. florestal,6 - Outra agropecuária,51.68
-2022,11 - Veg. prim. florestal,7 - Pastagem deg. média,354.09
-2022,11 - Veg. prim. florestal,8 - Pastagem deg. alta,186.39
-2022,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,174.16
-2022,11 - Veg. prim. florestal,11 - Veg. prim. florestal,690410.14
-2022,11 - Veg. prim. florestal,12 - Veg. sec. florestal,11.21
-2022,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.76
-2022,12 - Veg. sec. florestal,2 - Soja,0.12
-2022,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,1.05
-2022,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.36
-2022,12 - Veg. sec. florestal,6 - Outra agropecuária,3.64
-2022,12 - Veg. sec. florestal,7 - Pastagem deg. média,24.96
-2022,12 - Veg. sec. florestal,8 - Pastagem deg. alta,13.14
-2022,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,12.28
-2022,12 - Veg. sec. florestal,12 - Veg. sec. florestal,48674.05
-2022,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.19
-2022,13 - Veg. prim. não-florestal,2 - Soja,2.28
-2022,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,20.8
-2022,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.25
-2022,13 - Veg. prim. não-florestal,6 - Outra agropecuária,16.84
-2022,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,3000.29
-2022,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,1579.28
-2022,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1475.69
-2022,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.76
-2022,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,816697.91
-2022,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.68
-2022,14 - Veg. sec. não-florestal,2 - Soja,0.16
-2022,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,1.47
-2022,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.09
-2022,14 - Veg. sec. não-florestal,6 - Outra agropecuária,1.19
-2022,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,211.52
-2022,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,111.34
-2022,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,104.03
-2022,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.19
-2022,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,57576.47
-2022,15 - Outro,15 - Outro,103887.57
-2023,1 - Culturas perenes,1 - Culturas perenes,651.27
-2023,2 - Soja,2 - Soja,150676.44
-2023,2 - Soja,12 - Veg. sec. florestal,0.42
-2023,2 - Soja,14 - Veg. sec. não-florestal,0.1
-2023,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1459782.93
-2023,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,4.06
-2023,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,1.0
-2023,4 - Milho 1ª safra,4 - Milho 1ª safra,99902.73
-2023,5 - Cana-de-açúcar,5 - Cana-de-açúcar,558376.6
-2023,6 - Outra agropecuária,6 - Outra agropecuária,721064.66
-2023,7 - Pastagem deg. média,2 - Soja,31.27
-2023,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,302.95
-2023,7 - Pastagem deg. média,5 - Cana-de-açúcar,408.63
-2023,7 - Pastagem deg. média,6 - Outra agropecuária,439.99
-2023,7 - Pastagem deg. média,7 - Pastagem deg. média,621092.09
-2023,7 - Pastagem deg. média,8 - Pastagem deg. alta,303224.19
-2023,7 - Pastagem deg. média,9 - Pastagem deg. baixa,318185.18
-2023,7 - Pastagem deg. média,12 - Veg. sec. florestal,176.21
-2023,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,43.24
-2023,8 - Pastagem deg. alta,2 - Soja,15.27
-2023,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,147.9
-2023,8 - Pastagem deg. alta,5 - Cana-de-açúcar,199.5
-2023,8 - Pastagem deg. alta,6 - Outra agropecuária,214.81
-2023,8 - Pastagem deg. alta,7 - Pastagem deg. média,303224.19
-2023,8 - Pastagem deg. alta,8 - Pastagem deg. alta,148037.48
-2023,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,155341.61
-2023,8 - Pastagem deg. alta,12 - Veg. sec. florestal,86.03
-2023,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,21.11
-2023,9 - Pastagem deg. baixa,2 - Soja,16.02
-2023,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,155.2
-2023,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,209.34
-2023,9 - Pastagem deg. baixa,6 - Outra agropecuária,225.41
-2023,9 - Pastagem deg. baixa,7 - Pastagem deg. média,318185.18
-2023,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,155341.61
-2023,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,163006.12
-2023,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,90.27
-2023,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,22.15
-2023,10 - Silvicultura,10 - Silvicultura,46318.61
-2023,11 - Veg. prim. florestal,2 - Soja,1.55
-2023,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,14.99
-2023,11 - Veg. prim. florestal,5 - Cana-de-açúcar,4.92
-2023,11 - Veg. prim. florestal,6 - Outra agropecuária,140.25
-2023,11 - Veg. prim. florestal,7 - Pastagem deg. média,254.95
-2023,11 - Veg. prim. florestal,8 - Pastagem deg. alta,124.47
-2023,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,130.61
-2023,11 - Veg. prim. florestal,11 - Veg. prim. florestal,673115.59
-2023,11 - Veg. prim. florestal,12 - Veg. sec. florestal,9.17
-2023,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.25
-2023,12 - Veg. sec. florestal,2 - Soja,0.16
-2023,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,1.52
-2023,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.5
-2023,12 - Veg. sec. florestal,6 - Outra agropecuária,14.18
-2023,12 - Veg. sec. florestal,7 - Pastagem deg. média,25.77
-2023,12 - Veg. sec. florestal,8 - Pastagem deg. alta,12.58
-2023,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,13.2
-2023,12 - Veg. sec. florestal,12 - Veg. sec. florestal,68050.5
-2023,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.23
-2023,13 - Veg. prim. não-florestal,2 - Soja,2.47
-2023,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,23.91
-2023,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,1.21
-2023,13 - Veg. prim. não-florestal,6 - Outra agropecuária,96.46
-2023,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,3105.13
-2023,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,1515.96
-2023,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1590.76
-2023,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,2.25
-2023,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,786382.83
-2023,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.55
-2023,14 - Veg. sec. não-florestal,2 - Soja,0.25
-2023,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,2.42
-2023,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.12
-2023,14 - Veg. sec. não-florestal,6 - Outra agropecuária,9.75
-2023,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,313.92
-2023,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,153.26
-2023,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,160.82
-2023,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.23
-2023,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,79500.53
-2023,15 - Outro,15 - Outro,105495.1
-2024,1 - Culturas perenes,1 - Culturas perenes,649.6
-2024,2 - Soja,2 - Soja,143995.21
-2024,2 - Soja,12 - Veg. sec. florestal,0.14
-2024,2 - Soja,14 - Veg. sec. não-florestal,0.03
-2024,3 - Soja + Milho 2ª safra,3 - Soja + Milho 2ª safra,1495500.5
-2024,3 - Soja + Milho 2ª safra,12 - Veg. sec. florestal,1.45
-2024,3 - Soja + Milho 2ª safra,14 - Veg. sec. não-florestal,0.36
-2024,4 - Milho 1ª safra,4 - Milho 1ª safra,106869.58
-2024,5 - Cana-de-açúcar,5 - Cana-de-açúcar,533499.82
-2024,6 - Outra agropecuária,6 - Outra agropecuária,819456.13
-2024,7 - Pastagem deg. média,2 - Soja,158.78
-2024,7 - Pastagem deg. média,3 - Soja + Milho 2ª safra,1649.08
-2024,7 - Pastagem deg. média,5 - Cana-de-açúcar,510.1
-2024,7 - Pastagem deg. média,6 - Outra agropecuária,59.27
-2024,7 - Pastagem deg. média,7 - Pastagem deg. média,581082.29
-2024,7 - Pastagem deg. média,8 - Pastagem deg. alta,309772.57
-2024,7 - Pastagem deg. média,9 - Pastagem deg. baixa,278233.1
-2024,7 - Pastagem deg. média,12 - Veg. sec. florestal,134.33
-2024,7 - Pastagem deg. média,14 - Veg. sec. não-florestal,32.98
-2024,8 - Pastagem deg. alta,2 - Soja,84.65
-2024,8 - Pastagem deg. alta,3 - Soja + Milho 2ª safra,879.12
-2024,8 - Pastagem deg. alta,5 - Cana-de-açúcar,271.93
-2024,8 - Pastagem deg. alta,6 - Outra agropecuária,31.6
-2024,8 - Pastagem deg. alta,7 - Pastagem deg. média,309772.57
-2024,8 - Pastagem deg. alta,8 - Pastagem deg. alta,165138.48
-2024,8 - Pastagem deg. alta,9 - Pastagem deg. baixa,148324.92
-2024,8 - Pastagem deg. alta,12 - Veg. sec. florestal,71.61
-2024,8 - Pastagem deg. alta,14 - Veg. sec. não-florestal,17.58
-2024,9 - Pastagem deg. baixa,2 - Soja,76.03
-2024,9 - Pastagem deg. baixa,3 - Soja + Milho 2ª safra,789.61
-2024,9 - Pastagem deg. baixa,5 - Cana-de-açúcar,244.24
-2024,9 - Pastagem deg. baixa,6 - Outra agropecuária,28.38
-2024,9 - Pastagem deg. baixa,7 - Pastagem deg. média,278233.1
-2024,9 - Pastagem deg. baixa,8 - Pastagem deg. alta,148324.92
-2024,9 - Pastagem deg. baixa,9 - Pastagem deg. baixa,133223.23
-2024,9 - Pastagem deg. baixa,12 - Veg. sec. florestal,64.32
-2024,9 - Pastagem deg. baixa,14 - Veg. sec. não-florestal,15.79
-2024,10 - Silvicultura,10 - Silvicultura,46361.55
-2024,11 - Veg. prim. florestal,2 - Soja,2.4
-2024,11 - Veg. prim. florestal,3 - Soja + Milho 2ª safra,24.88
-2024,11 - Veg. prim. florestal,5 - Cana-de-açúcar,2.23
-2024,11 - Veg. prim. florestal,6 - Outra agropecuária,0.95
-2024,11 - Veg. prim. florestal,7 - Pastagem deg. média,169.3
-2024,11 - Veg. prim. florestal,8 - Pastagem deg. alta,90.25
-2024,11 - Veg. prim. florestal,9 - Pastagem deg. baixa,81.06
-2024,11 - Veg. prim. florestal,11 - Veg. prim. florestal,693523.63
-2024,11 - Veg. prim. florestal,12 - Veg. sec. florestal,2.22
-2024,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.55
-2024,12 - Veg. sec. florestal,2 - Soja,0.17
-2024,12 - Veg. sec. florestal,3 - Soja + Milho 2ª safra,1.75
-2024,12 - Veg. sec. florestal,5 - Cana-de-açúcar,0.16
-2024,12 - Veg. sec. florestal,6 - Outra agropecuária,0.07
-2024,12 - Veg. sec. florestal,7 - Pastagem deg. média,11.94
-2024,12 - Veg. sec. florestal,8 - Pastagem deg. alta,6.36
-2024,12 - Veg. sec. florestal,9 - Pastagem deg. baixa,5.71
-2024,12 - Veg. sec. florestal,12 - Veg. sec. florestal,48892.91
-2024,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.04
-2024,13 - Veg. prim. não-florestal,2 - Soja,3.45
-2024,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª safra,35.86
-2024,13 - Veg. prim. não-florestal,5 - Cana-de-açúcar,0.55
-2024,13 - Veg. prim. não-florestal,6 - Outra agropecuária,3.34
-2024,13 - Veg. prim. não-florestal,7 - Pastagem deg. média,3235.51
-2024,13 - Veg. prim. não-florestal,8 - Pastagem deg. alta,1724.84
-2024,13 - Veg. prim. não-florestal,9 - Pastagem deg. baixa,1549.22
-2024,13 - Veg. prim. não-florestal,12 - Veg. sec. florestal,0.55
-2024,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,804629.05
-2024,13 - Veg. prim. não-florestal,14 - Veg. sec. não-florestal,0.13
-2024,14 - Veg. sec. não-florestal,2 - Soja,0.24
-2024,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª safra,2.53
-2024,14 - Veg. sec. não-florestal,5 - Cana-de-açúcar,0.04
-2024,14 - Veg. sec. não-florestal,6 - Outra agropecuária,0.24
-2024,14 - Veg. sec. não-florestal,7 - Pastagem deg. média,228.1
-2024,14 - Veg. sec. não-florestal,8 - Pastagem deg. alta,121.6
-2024,14 - Veg. sec. não-florestal,9 - Pastagem deg. baixa,109.22
-2024,14 - Veg. sec. não-florestal,12 - Veg. sec. florestal,0.04
-2024,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,56725.59
-2024,15 - Outro,15 - Outro,107864.88
+2008,1 - Culturas perenes,1 - Culturas perenes,4.09
+2008,2 - Soja Safra Única,2 - Soja Safra Única,455359.77
+2008,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,313714.82
+2008,2 - Soja Safra Única,12 - Veg. sec. florestal,8.9
+2008,2 - Soja Safra Única,14 - Veg. sec. não-florestal,1.17
+2008,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,195334.29
+2008,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,134573.29
+2008,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,3.82
+2008,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.5
+2008,4 - Milho 1ª safra,4 - Milho 1ª safra,246674.56
+2008,5 - Cana-de-açúcar,5 - Cana-de-açúcar,92859.95
+2008,6 - Outra agropecuária,6 - Outra agropecuária,826139.11
+2008,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,2878.85
+2008,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,1983.35
+2008,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,1993.97
+2008,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,3413.64
+2008,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,1245847.01
+2008,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,179.11
+2008,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,23.59
+2008,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,3556.04
+2008,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,2449.89
+2008,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,2463.02
+2008,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,4216.63
+2008,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1538910.5
+2008,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,221.24
+2008,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,29.14
+2008,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,1124.48
+2008,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,774.7
+2008,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,778.85
+2008,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,1333.37
+2008,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,486630.17
+2008,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,69.96
+2008,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,9.21
+2008,10 - Silvicultura,10 - Silvicultura,11226.93
+2008,11 - Veg. prim. florestal,2 - Soja Safra Única,24.65
+2008,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,16.98
+2008,11 - Veg. prim. florestal,5 - Cana-de-açúcar,7.65
+2008,11 - Veg. prim. florestal,6 - Outra agropecuária,67.09
+2008,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,187.92
+2008,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,239.9
+2008,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,77.84
+2008,11 - Veg. prim. florestal,11 - Veg. prim. florestal,433610.05
+2008,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.17
+2008,12 - Veg. sec. florestal,2 - Soja Safra Única,24.65
+2008,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,16.98
+2008,12 - Veg. sec. florestal,5 - Cana-de-açúcar,7.65
+2008,12 - Veg. sec. florestal,6 - Outra agropecuária,67.09
+2008,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,187.92
+2008,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,239.9
+2008,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,77.84
+2008,12 - Veg. sec. florestal,12 - Veg. sec. florestal,433610.05
+2008,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,2.17
+2008,13 - Veg. prim. não-florestal,2 - Soja Safra Única,28.42
+2008,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,19.58
+2008,13 - Veg. prim. não-florestal,6 - Outra agropecuária,41.28
+2008,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,3515.45
+2008,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4487.8
+2008,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1456.22
+2008,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,700135.04
+2008,14 - Veg. sec. não-florestal,2 - Soja Safra Única,2.0
+2008,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,1.38
+2008,14 - Veg. sec. não-florestal,6 - Outra agropecuária,2.91
+2008,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,247.84
+2008,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,316.39
+2008,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,102.66
+2008,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,49358.86
+2008,15 - Outro,15 - Outro,90148.01
+2009,1 - Culturas perenes,1 - Culturas perenes,3.92
+2009,2 - Soja Safra Única,2 - Soja Safra Única,314467.54
+2009,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,362037.21
+2009,2 - Soja Safra Única,12 - Veg. sec. florestal,6.92
+2009,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.91
+2009,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,216648.76
+2009,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,249421.33
+2009,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,4.77
+2009,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.63
+2009,4 - Milho 1ª safra,4 - Milho 1ª safra,214509.15
+2009,5 - Cana-de-açúcar,5 - Cana-de-açúcar,128087.99
+2009,6 - Outra agropecuária,6 - Outra agropecuária,821922.35
+2009,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,3269.6
+2009,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,3764.19
+2009,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,1958.18
+2009,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,3434.13
+2009,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,1192661.15
+2009,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,98.3
+2009,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,12.95
+2009,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,4173.96
+2009,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,4805.35
+2009,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,2499.81
+2009,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,4384.0
+2009,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1522546.1
+2009,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,125.49
+2009,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,16.53
+2009,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,1354.38
+2009,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,1559.25
+2009,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,811.15
+2009,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,1422.53
+2009,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,494040.02
+2009,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,40.72
+2009,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,5.36
+2009,10 - Silvicultura,10 - Silvicultura,12146.47
+2009,11 - Veg. prim. florestal,2 - Soja Safra Única,35.02
+2009,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,40.31
+2009,11 - Veg. prim. florestal,5 - Cana-de-açúcar,2.97
+2009,11 - Veg. prim. florestal,6 - Outra agropecuária,68.81
+2009,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,161.21
+2009,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,233.75
+2009,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,82.21
+2009,11 - Veg. prim. florestal,11 - Veg. prim. florestal,435004.42
+2009,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.8
+2009,12 - Veg. sec. florestal,2 - Soja Safra Única,35.02
+2009,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,40.31
+2009,12 - Veg. sec. florestal,5 - Cana-de-açúcar,2.97
+2009,12 - Veg. sec. florestal,6 - Outra agropecuária,68.81
+2009,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,161.21
+2009,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,233.75
+2009,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,82.21
+2009,12 - Veg. sec. florestal,12 - Veg. sec. florestal,435004.42
+2009,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,1.8
+2009,13 - Veg. prim. não-florestal,2 - Soja Safra Única,37.95
+2009,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,43.69
+2009,13 - Veg. prim. não-florestal,6 - Outra agropecuária,22.36
+2009,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,2927.9
+2009,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4245.35
+2009,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1493.07
+2009,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,690641.28
+2009,14 - Veg. sec. não-florestal,2 - Soja Safra Única,2.68
+2009,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,3.08
+2009,14 - Veg. sec. não-florestal,6 - Outra agropecuária,1.58
+2009,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,206.41
+2009,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,299.29
+2009,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,105.26
+2009,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,48689.55
+2009,15 - Outro,15 - Outro,90270.81
+2010,1 - Culturas perenes,1 - Culturas perenes,4.01
+2010,2 - Soja Safra Única,2 - Soja Safra Única,240519.02
+2010,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,328459.55
+2010,2 - Soja Safra Única,12 - Veg. sec. florestal,5.1
+2010,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.67
+2010,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,276902.46
+2010,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,378145.79
+2010,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,5.87
+2010,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.77
+2010,4 - Milho 1ª safra,4 - Milho 1ª safra,207329.22
+2010,5 - Cana-de-açúcar,5 - Cana-de-açúcar,167849.2
+2010,6 - Outra agropecuária,6 - Outra agropecuária,745456.11
+2010,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,1494.27
+2010,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,2040.62
+2010,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,1743.96
+2010,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,1419.89
+2010,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,1070393.79
+2010,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,82.32
+2010,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,10.84
+2010,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,2166.64
+2010,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,2958.82
+2010,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,2528.67
+2010,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,2058.78
+2010,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1552030.27
+2010,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,119.36
+2010,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,15.72
+2010,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,762.0
+2010,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,1040.6
+2010,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,889.32
+2010,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,724.06
+2010,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,545841.81
+2010,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,41.98
+2010,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,5.53
+2010,10 - Silvicultura,10 - Silvicultura,15132.18
+2010,11 - Veg. prim. florestal,2 - Soja Safra Única,21.88
+2010,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,29.87
+2010,11 - Veg. prim. florestal,5 - Cana-de-açúcar,1.84
+2010,11 - Veg. prim. florestal,6 - Outra agropecuária,53.77
+2010,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,155.94
+2010,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,239.49
+2010,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,91.92
+2010,11 - Veg. prim. florestal,11 - Veg. prim. florestal,440041.83
+2010,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,3.27
+2010,12 - Veg. sec. florestal,2 - Soja Safra Única,21.88
+2010,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,29.87
+2010,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.84
+2010,12 - Veg. sec. florestal,6 - Outra agropecuária,53.77
+2010,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,155.94
+2010,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,239.49
+2010,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,91.92
+2010,12 - Veg. sec. florestal,12 - Veg. sec. florestal,440041.83
+2010,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,3.27
+2010,13 - Veg. prim. não-florestal,2 - Soja Safra Única,18.05
+2010,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,24.66
+2010,13 - Veg. prim. não-florestal,6 - Outra agropecuária,53.81
+2010,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,2734.88
+2010,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4200.24
+2010,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1612.07
+2010,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,687784.9
+2010,14 - Veg. sec. não-florestal,2 - Soja Safra Única,1.27
+2010,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,1.74
+2010,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.79
+2010,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,192.81
+2010,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,296.11
+2010,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,113.65
+2010,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,48488.18
+2010,15 - Outro,15 - Outro,102491.26
+2011,1 - Culturas perenes,1 - Culturas perenes,8.11
+2011,2 - Soja Safra Única,2 - Soja Safra Única,241430.53
+2011,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,306581.26
+2011,2 - Soja Safra Única,12 - Veg. sec. florestal,2.96
+2011,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.39
+2011,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,329704.34
+2011,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,418676.0
+2011,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,4.04
+2011,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.53
+2011,4 - Milho 1ª safra,4 - Milho 1ª safra,258721.47
+2011,5 - Cana-de-açúcar,5 - Cana-de-açúcar,209288.7
+2011,6 - Outra agropecuária,6 - Outra agropecuária,760848.36
+2011,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,1687.32
+2011,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,2142.65
+2011,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,4577.07
+2011,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,3476.71
+2011,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,986489.04
+2011,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,78.83
+2011,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,10.38
+2011,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,2591.4
+2011,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,3290.69
+2011,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,7029.49
+2011,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,5339.55
+2011,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1515055.49
+2011,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,121.07
+2011,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,15.95
+2011,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,994.59
+2011,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,1262.99
+2011,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,2697.96
+2011,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,2049.35
+2011,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,581486.56
+2011,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,46.47
+2011,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,6.12
+2011,10 - Silvicultura,10 - Silvicultura,17763.45
+2011,11 - Veg. prim. florestal,2 - Soja Safra Única,27.54
+2011,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,34.97
+2011,11 - Veg. prim. florestal,5 - Cana-de-açúcar,6.08
+2011,11 - Veg. prim. florestal,6 - Outra agropecuária,89.14
+2011,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,131.53
+2011,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,223.74
+2011,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,94.32
+2011,11 - Veg. prim. florestal,11 - Veg. prim. florestal,442599.18
+2011,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.56
+2011,12 - Veg. sec. florestal,2 - Soja Safra Única,27.54
+2011,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,34.97
+2011,12 - Veg. sec. florestal,5 - Cana-de-açúcar,6.08
+2011,12 - Veg. sec. florestal,6 - Outra agropecuária,89.14
+2011,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,131.53
+2011,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,223.74
+2011,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,94.32
+2011,12 - Veg. sec. florestal,12 - Veg. sec. florestal,442599.18
+2011,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,1.56
+2011,13 - Veg. prim. não-florestal,2 - Soja Safra Única,31.37
+2011,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,39.84
+2011,13 - Veg. prim. não-florestal,6 - Outra agropecuária,44.22
+2011,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,2619.41
+2011,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4455.7
+2011,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1878.32
+2011,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,682744.89
+2011,14 - Veg. sec. não-florestal,2 - Soja Safra Única,2.21
+2011,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,2.81
+2011,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.12
+2011,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,184.67
+2011,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,314.12
+2011,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,132.42
+2011,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,48132.87
+2011,15 - Outro,15 - Outro,103818.4
+2012,1 - Culturas perenes,1 - Culturas perenes,41.13
+2012,2 - Soja Safra Única,2 - Soja Safra Única,170269.2
+2012,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,378737.21
+2012,2 - Soja Safra Única,12 - Veg. sec. florestal,6.73
+2012,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.89
+2012,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,216216.83
+2012,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,480940.53
+2012,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,8.54
+2012,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,1.13
+2012,4 - Milho 1ª safra,4 - Milho 1ª safra,226044.56
+2012,5 - Cana-de-açúcar,5 - Cana-de-açúcar,252736.95
+2012,6 - Outra agropecuária,6 - Outra agropecuária,700780.99
+2012,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,1198.99
+2012,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,2666.97
+2012,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,5138.71
+2012,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,2492.51
+2012,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,884759.81
+2012,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,64.87
+2012,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,8.54
+2012,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,2039.52
+2012,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,4536.59
+2012,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,8741.1
+2012,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,4239.83
+2012,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1505001.97
+2012,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,110.34
+2012,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,14.53
+2012,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,859.77
+2012,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,1912.42
+2012,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,3684.86
+2012,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,1787.33
+2012,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,634442.08
+2012,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,46.51
+2012,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,6.13
+2012,10 - Silvicultura,10 - Silvicultura,22854.4
+2012,11 - Veg. prim. florestal,2 - Soja Safra Única,21.65
+2012,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,48.15
+2012,11 - Veg. prim. florestal,5 - Cana-de-açúcar,7.07
+2012,11 - Veg. prim. florestal,6 - Outra agropecuária,60.62
+2012,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,151.12
+2012,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,302.95
+2012,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,141.1
+2012,11 - Veg. prim. florestal,11 - Veg. prim. florestal,445229.0
+2012,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,2.04
+2012,12 - Veg. sec. florestal,2 - Soja Safra Única,21.65
+2012,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,48.15
+2012,12 - Veg. sec. florestal,5 - Cana-de-açúcar,7.07
+2012,12 - Veg. sec. florestal,6 - Outra agropecuária,60.62
+2012,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,151.12
+2012,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,302.95
+2012,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,141.1
+2012,12 - Veg. sec. florestal,12 - Veg. sec. florestal,445229.0
+2012,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,2.04
+2012,13 - Veg. prim. não-florestal,2 - Soja Safra Única,18.38
+2012,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,40.89
+2012,13 - Veg. prim. não-florestal,6 - Outra agropecuária,53.39
+2012,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1975.36
+2012,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,3959.83
+2012,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1844.33
+2012,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,682972.31
+2012,14 - Veg. sec. não-florestal,2 - Soja Safra Única,1.3
+2012,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,2.88
+2012,14 - Veg. sec. não-florestal,6 - Outra agropecuária,3.76
+2012,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,139.26
+2012,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,279.16
+2012,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,130.02
+2012,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,48148.9
+2012,15 - Outro,15 - Outro,103608.6
+2013,1 - Culturas perenes,1 - Culturas perenes,67.93
+2013,2 - Soja Safra Única,2 - Soja Safra Única,89182.47
+2013,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,294741.7
+2013,2 - Soja Safra Única,12 - Veg. sec. florestal,5.85
+2013,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.77
+2013,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,198372.45
+2013,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,655606.85
+2013,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,13.0
+2013,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,1.71
+2013,4 - Milho 1ª safra,4 - Milho 1ª safra,177630.8
+2013,5 - Cana-de-açúcar,5 - Cana-de-açúcar,327669.55
+2013,6 - Outra agropecuária,6 - Outra agropecuária,742357.32
+2013,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,2425.17
+2013,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,8015.01
+2013,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,4354.37
+2013,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,1481.71
+2013,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,750008.56
+2013,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,51.57
+2013,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,6.79
+2013,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,4861.53
+2013,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,16067.01
+2013,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,8728.85
+2013,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,2970.27
+2013,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1503479.4
+2013,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,103.38
+2013,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,13.62
+2013,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,2264.31
+2013,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,7483.38
+2013,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,4065.55
+2013,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,1383.43
+2013,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,700261.55
+2013,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,48.15
+2013,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,6.34
+2013,10 - Silvicultura,10 - Silvicultura,27458.4
+2013,11 - Veg. prim. florestal,2 - Soja Safra Única,25.67
+2013,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,84.85
+2013,11 - Veg. prim. florestal,5 - Cana-de-açúcar,3.06
+2013,11 - Veg. prim. florestal,6 - Outra agropecuária,47.66
+2013,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,83.52
+2013,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,175.65
+2013,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,84.26
+2013,11 - Veg. prim. florestal,11 - Veg. prim. florestal,447791.44
+2013,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,3.65
+2013,12 - Veg. sec. florestal,2 - Soja Safra Única,25.67
+2013,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,84.85
+2013,12 - Veg. sec. florestal,5 - Cana-de-açúcar,3.06
+2013,12 - Veg. sec. florestal,6 - Outra agropecuária,47.66
+2013,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,83.52
+2013,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,175.65
+2013,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,84.26
+2013,12 - Veg. sec. florestal,12 - Veg. sec. florestal,447791.44
+2013,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,3.65
+2013,13 - Veg. prim. não-florestal,2 - Soja Safra Única,57.18
+2013,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,188.98
+2013,13 - Veg. prim. não-florestal,6 - Outra agropecuária,57.67
+2013,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1966.2
+2013,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4135.05
+2013,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1983.63
+2013,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,677059.29
+2013,14 - Veg. sec. não-florestal,2 - Soja Safra Única,4.03
+2013,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,13.32
+2013,14 - Veg. sec. não-florestal,6 - Outra agropecuária,4.07
+2013,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,138.62
+2013,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,291.52
+2013,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,139.84
+2013,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,47732.04
+2013,15 - Outro,15 - Outro,102150.92
+2014,1 - Culturas perenes,1 - Culturas perenes,103.09
+2014,2 - Soja Safra Única,2 - Soja Safra Única,59005.58
+2014,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,261602.79
+2014,2 - Soja Safra Única,12 - Veg. sec. florestal,6.37
+2014,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.84
+2014,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,195009.26
+2014,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,864578.62
+2014,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,21.06
+2014,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,2.77
+2014,4 - Milho 1ª safra,4 - Milho 1ª safra,151272.84
+2014,5 - Cana-de-açúcar,5 - Cana-de-açúcar,392724.29
+2014,6 - Outra agropecuária,6 - Outra agropecuária,646958.51
+2014,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,604.15
+2014,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,2678.52
+2014,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,2270.08
+2014,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,3726.59
+2014,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,708862.49
+2014,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,72.06
+2014,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,9.49
+2014,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,1270.57
+2014,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,5633.11
+2014,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,4774.15
+2014,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,7837.28
+2014,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1490788.27
+2014,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,151.55
+2014,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,19.96
+2014,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,609.51
+2014,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,2702.26
+2014,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,2290.21
+2014,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,3759.62
+2014,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,715146.57
+2014,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,72.7
+2014,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,9.58
+2014,10 - Silvicultura,10 - Silvicultura,31230.37
+2014,11 - Veg. prim. florestal,2 - Soja Safra Única,9.25
+2014,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,41.01
+2014,11 - Veg. prim. florestal,5 - Cana-de-açúcar,4.72
+2014,11 - Veg. prim. florestal,6 - Outra agropecuária,181.84
+2014,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,132.08
+2014,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,259.29
+2014,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,123.29
+2014,11 - Veg. prim. florestal,11 - Veg. prim. florestal,451552.12
+2014,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.97
+2014,12 - Veg. sec. florestal,2 - Soja Safra Única,9.25
+2014,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,41.01
+2014,12 - Veg. sec. florestal,5 - Cana-de-açúcar,4.72
+2014,12 - Veg. sec. florestal,6 - Outra agropecuária,181.84
+2014,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,132.08
+2014,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,259.29
+2014,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,123.29
+2014,12 - Veg. sec. florestal,12 - Veg. sec. florestal,451552.12
+2014,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.97
+2014,13 - Veg. prim. não-florestal,2 - Soja Safra Única,32.15
+2014,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,142.55
+2014,13 - Veg. prim. não-florestal,6 - Outra agropecuária,250.12
+2014,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,2366.04
+2014,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4644.84
+2014,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,2208.65
+2014,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,670155.56
+2014,14 - Veg. sec. não-florestal,2 - Soja Safra Única,2.27
+2014,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,10.05
+2014,14 - Veg. sec. não-florestal,6 - Outra agropecuária,17.63
+2014,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,166.8
+2014,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,327.46
+2014,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,155.71
+2014,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,47245.33
+2014,15 - Outro,15 - Outro,101628.29
+2015,1 - Culturas perenes,1 - Culturas perenes,122.21
+2015,2 - Soja Safra Única,2 - Soja Safra Única,28953.31
+2015,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,149923.33
+2015,2 - Soja Safra Única,12 - Veg. sec. florestal,2.59
+2015,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.34
+2015,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,128365.24
+2015,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,664689.0
+2015,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,11.49
+2015,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,1.51
+2015,4 - Milho 1ª safra,4 - Milho 1ª safra,138633.93
+2015,5 - Cana-de-açúcar,5 - Cana-de-açúcar,440822.31
+2015,6 - Outra agropecuária,6 - Outra agropecuária,588931.21
+2015,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,579.72
+2015,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,3001.86
+2015,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,1604.57
+2015,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,1332.56
+2015,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,745769.24
+2015,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,95.04
+2015,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,12.52
+2015,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,1138.07
+2015,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,5893.04
+2015,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,3149.98
+2015,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,2615.99
+2015,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1464042.56
+2015,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,186.58
+2015,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,24.58
+2015,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,541.16
+2015,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,2802.18
+2015,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,1497.84
+2015,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,1243.92
+2015,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,696160.85
+2015,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,88.72
+2015,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,11.69
+2015,10 - Silvicultura,10 - Silvicultura,34365.97
+2015,11 - Veg. prim. florestal,2 - Soja Safra Única,4.77
+2015,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,24.7
+2015,11 - Veg. prim. florestal,5 - Cana-de-açúcar,2.7
+2015,11 - Veg. prim. florestal,6 - Outra agropecuária,65.39
+2015,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,157.82
+2015,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,297.78
+2015,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,141.77
+2015,11 - Veg. prim. florestal,11 - Veg. prim. florestal,453386.92
+2015,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.94
+2015,12 - Veg. sec. florestal,2 - Soja Safra Única,4.77
+2015,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,24.7
+2015,12 - Veg. sec. florestal,5 - Cana-de-açúcar,2.7
+2015,12 - Veg. sec. florestal,6 - Outra agropecuária,65.39
+2015,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,157.82
+2015,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,297.78
+2015,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,141.77
+2015,12 - Veg. sec. florestal,12 - Veg. sec. florestal,453386.92
+2015,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,1.94
+2015,13 - Veg. prim. não-florestal,2 - Soja Safra Única,25.45
+2015,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,131.77
+2015,13 - Veg. prim. não-florestal,6 - Outra agropecuária,66.84
+2015,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,2637.66
+2015,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4976.71
+2015,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,2369.3
+2015,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,663506.48
+2015,14 - Veg. sec. não-florestal,2 - Soja Safra Única,1.79
+2015,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,9.29
+2015,14 - Veg. sec. não-florestal,6 - Outra agropecuária,4.71
+2015,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,185.95
+2015,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,350.85
+2015,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,167.03
+2015,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,46776.58
+2015,15 - Outro,15 - Outro,102472.68
+2016,1 - Culturas perenes,1 - Culturas perenes,135.5
+2016,2 - Soja Safra Única,2 - Soja Safra Única,27659.06
+2016,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,134130.47
+2016,2 - Soja Safra Única,12 - Veg. sec. florestal,1.2
+2016,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.16
+2016,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,143221.56
+2016,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,694541.96
+2016,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,6.2
+2016,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.82
+2016,4 - Milho 1ª safra,4 - Milho 1ª safra,151096.45
+2016,5 - Cana-de-açúcar,5 - Cana-de-açúcar,487828.24
+2016,6 - Outra agropecuária,6 - Outra agropecuária,969303.58
+2016,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,1046.99
+2016,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,5077.31
+2016,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,1305.23
+2016,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,618.03
+2016,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,757927.88
+2016,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,106.71
+2016,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,14.06
+2016,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,1975.45
+2016,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,9579.81
+2016,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,2462.7
+2016,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,1166.1
+2016,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1430050.24
+2016,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,201.34
+2016,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,26.52
+2016,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,940.47
+2016,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,4560.73
+2016,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,1172.44
+2016,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,555.15
+2016,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,680814.36
+2016,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,95.85
+2016,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,12.63
+2016,10 - Silvicultura,10 - Silvicultura,35879.66
+2016,11 - Veg. prim. florestal,2 - Soja Safra Única,36.65
+2016,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,177.73
+2016,11 - Veg. prim. florestal,5 - Cana-de-açúcar,7.7
+2016,11 - Veg. prim. florestal,6 - Outra agropecuária,30.96
+2016,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,140.75
+2016,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,269.55
+2016,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,134.02
+2016,11 - Veg. prim. florestal,11 - Veg. prim. florestal,455106.56
+2016,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,4.59
+2016,12 - Veg. sec. florestal,2 - Soja Safra Única,36.65
+2016,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,177.73
+2016,12 - Veg. sec. florestal,5 - Cana-de-açúcar,7.7
+2016,12 - Veg. sec. florestal,6 - Outra agropecuária,30.96
+2016,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,140.75
+2016,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,269.55
+2016,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,134.02
+2016,12 - Veg. sec. florestal,12 - Veg. sec. florestal,455106.56
+2016,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,4.59
+2016,13 - Veg. prim. não-florestal,2 - Soja Safra Única,45.78
+2016,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,221.99
+2016,13 - Veg. prim. não-florestal,6 - Outra agropecuária,71.71
+2016,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,2683.41
+2016,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,5138.82
+2016,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,2555.06
+2016,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,656291.01
+2016,14 - Veg. sec. não-florestal,2 - Soja Safra Única,3.23
+2016,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,15.65
+2016,14 - Veg. sec. não-florestal,6 - Outra agropecuária,5.06
+2016,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,189.18
+2016,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,362.28
+2016,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,180.13
+2016,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,46267.89
+2016,15 - Outro,15 - Outro,104398.99
+2017,1 - Culturas perenes,1 - Culturas perenes,130.3
+2017,2 - Soja Safra Única,2 - Soja Safra Única,38695.33
+2017,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,222272.36
+2017,2 - Soja Safra Única,12 - Veg. sec. florestal,1.36
+2017,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.18
+2017,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,187650.04
+2017,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,1077892.69
+2017,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,6.59
+2017,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.87
+2017,4 - Milho 1ª safra,4 - Milho 1ª safra,142427.06
+2017,5 - Cana-de-açúcar,5 - Cana-de-açúcar,482420.94
+2017,6 - Outra agropecuária,6 - Outra agropecuária,529301.98
+2017,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,481.14
+2017,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,2763.72
+2017,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,1010.31
+2017,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,126.25
+2017,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,733753.32
+2017,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,98.87
+2017,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,13.02
+2017,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,921.39
+2017,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,5292.62
+2017,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,1934.78
+2017,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,241.78
+2017,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1405160.35
+2017,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,189.34
+2017,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,24.94
+2017,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,458.12
+2017,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,2631.53
+2017,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,961.99
+2017,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,120.22
+2017,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,698657.37
+2017,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,94.14
+2017,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,12.4
+2017,10 - Silvicultura,10 - Silvicultura,36375.97
+2017,11 - Veg. prim. florestal,2 - Soja Safra Única,9.39
+2017,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,53.97
+2017,11 - Veg. prim. florestal,5 - Cana-de-açúcar,6.12
+2017,11 - Veg. prim. florestal,6 - Outra agropecuária,15.3
+2017,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,175.67
+2017,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,303.06
+2017,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,148.48
+2017,11 - Veg. prim. florestal,11 - Veg. prim. florestal,456258.56
+2017,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.84
+2017,12 - Veg. sec. florestal,2 - Soja Safra Única,9.39
+2017,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,53.97
+2017,12 - Veg. sec. florestal,5 - Cana-de-açúcar,6.12
+2017,12 - Veg. sec. florestal,6 - Outra agropecuária,15.3
+2017,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,175.67
+2017,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,303.06
+2017,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,148.48
+2017,12 - Veg. sec. florestal,12 - Veg. sec. florestal,456258.56
+2017,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,1.84
+2017,13 - Veg. prim. não-florestal,2 - Soja Safra Única,30.13
+2017,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,173.07
+2017,13 - Veg. prim. não-florestal,6 - Outra agropecuária,11.43
+2017,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,2419.9
+2017,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,4174.57
+2017,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,2045.29
+2017,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,651143.81
+2017,14 - Veg. sec. não-florestal,2 - Soja Safra Única,2.12
+2017,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,12.2
+2017,14 - Veg. sec. não-florestal,6 - Outra agropecuária,0.81
+2017,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,170.6
+2017,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,294.3
+2017,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,144.19
+2017,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,45905.02
+2017,15 - Outro,15 - Outro,104905.23
+2018,1 - Culturas perenes,1 - Culturas perenes,122.02
+2018,2 - Soja Safra Única,2 - Soja Safra Única,35292.17
+2018,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,188047.32
+2018,2 - Soja Safra Única,12 - Veg. sec. florestal,1.65
+2018,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.22
+2018,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,202724.01
+2018,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,1080174.71
+2018,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,9.48
+2018,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,1.25
+2018,4 - Milho 1ª safra,4 - Milho 1ª safra,139405.77
+2018,5 - Cana-de-açúcar,5 - Cana-de-açúcar,488325.59
+2018,6 - Outra agropecuária,6 - Outra agropecuária,510433.51
+2018,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,1071.13
+2018,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,5707.28
+2018,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,1168.16
+2018,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,77.14
+2018,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,783212.12
+2018,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,61.23
+2018,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,8.06
+2018,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,1847.8
+2018,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,9845.63
+2018,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,2015.2
+2018,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,133.07
+2018,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1351118.37
+2018,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,105.63
+2018,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,13.91
+2018,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,905.31
+2018,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,4823.77
+2018,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,987.33
+2018,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,65.2
+2018,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,661967.25
+2018,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,51.75
+2018,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,6.82
+2018,10 - Silvicultura,10 - Silvicultura,36055.07
+2018,11 - Veg. prim. florestal,2 - Soja Safra Única,22.23
+2018,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,118.44
+2018,11 - Veg. prim. florestal,5 - Cana-de-açúcar,6.75
+2018,11 - Veg. prim. florestal,6 - Outra agropecuária,2.79
+2018,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,201.32
+2018,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,332.02
+2018,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,163.99
+2018,11 - Veg. prim. florestal,11 - Veg. prim. florestal,457295.31
+2018,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.86
+2018,12 - Veg. sec. florestal,2 - Soja Safra Única,22.23
+2018,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,118.44
+2018,12 - Veg. sec. florestal,5 - Cana-de-açúcar,6.75
+2018,12 - Veg. sec. florestal,6 - Outra agropecuária,2.79
+2018,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,201.32
+2018,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,332.02
+2018,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,163.99
+2018,12 - Veg. sec. florestal,12 - Veg. sec. florestal,457295.31
+2018,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.86
+2018,13 - Veg. prim. não-florestal,2 - Soja Safra Única,37.58
+2018,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,200.26
+2018,13 - Veg. prim. não-florestal,6 - Outra agropecuária,9.84
+2018,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1926.69
+2018,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,3177.57
+2018,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1569.45
+2018,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,648563.7
+2018,14 - Veg. sec. não-florestal,2 - Soja Safra Única,2.65
+2018,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,14.12
+2018,14 - Veg. sec. não-florestal,6 - Outra agropecuária,0.69
+2018,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,135.83
+2018,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,224.02
+2018,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,110.64
+2018,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,45723.12
+2018,15 - Outro,15 - Outro,106156.75
+2019,1 - Culturas perenes,1 - Culturas perenes,120.57
+2019,2 - Soja Safra Única,2 - Soja Safra Única,33175.69
+2019,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,194996.68
+2019,2 - Soja Safra Única,12 - Veg. sec. florestal,2.52
+2019,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.31
+2019,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,176770.09
+2019,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,1039001.17
+2019,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,13.42
+2019,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,1.66
+2019,4 - Milho 1ª safra,4 - Milho 1ª safra,139598.75
+2019,5 - Cana-de-açúcar,5 - Cana-de-açúcar,493637.47
+2019,6 - Outra agropecuária,6 - Outra agropecuária,532589.87
+2019,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,330.75
+2019,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,1944.07
+2019,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,2398.22
+2019,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,101.1
+2019,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,791175.11
+2019,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,45.15
+2019,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,5.57
+2019,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,545.49
+2019,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,3206.24
+2019,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,3955.23
+2019,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,166.74
+2019,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1304834.14
+2019,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,74.46
+2019,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,9.19
+2019,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,269.43
+2019,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,1583.61
+2019,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,1953.55
+2019,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,82.35
+2019,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,644476.26
+2019,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,36.78
+2019,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,4.54
+2019,10 - Silvicultura,10 - Silvicultura,36028.34
+2019,11 - Veg. prim. florestal,2 - Soja Safra Única,2.84
+2019,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,16.69
+2019,11 - Veg. prim. florestal,5 - Cana-de-açúcar,7.38
+2019,11 - Veg. prim. florestal,6 - Outra agropecuária,10.94
+2019,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,140.27
+2019,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,237.31
+2019,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,115.08
+2019,11 - Veg. prim. florestal,11 - Veg. prim. florestal,458192.07
+2019,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.08
+2019,12 - Veg. sec. florestal,2 - Soja Safra Única,2.84
+2019,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,16.69
+2019,12 - Veg. sec. florestal,5 - Cana-de-açúcar,7.38
+2019,12 - Veg. sec. florestal,6 - Outra agropecuária,10.94
+2019,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,140.27
+2019,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,237.31
+2019,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,115.08
+2019,12 - Veg. sec. florestal,12 - Veg. sec. florestal,458192.07
+2019,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,1.08
+2019,13 - Veg. prim. não-florestal,2 - Soja Safra Única,19.31
+2019,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,113.52
+2019,13 - Veg. prim. não-florestal,6 - Outra agropecuária,22.62
+2019,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1724.43
+2019,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,2917.35
+2019,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1414.67
+2019,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,649549.79
+2019,14 - Veg. sec. não-florestal,2 - Soja Safra Única,1.36
+2019,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,8.0
+2019,14 - Veg. sec. não-florestal,6 - Outra agropecuária,1.59
+2019,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,121.57
+2019,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,205.67
+2019,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,99.73
+2019,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,45792.64
+2019,15 - Outro,15 - Outro,106252.15
+2020,1 - Culturas perenes,1 - Culturas perenes,119.71
+2020,2 - Soja Safra Única,2 - Soja Safra Única,21165.62
+2020,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,192700.14
+2020,2 - Soja Safra Única,12 - Veg. sec. florestal,0.69
+2020,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.08
+2020,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,124405.09
+2020,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,1132633.18
+2020,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,4.04
+2020,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.5
+2020,4 - Milho 1ª safra,4 - Milho 1ª safra,98675.28
+2020,5 - Cana-de-açúcar,5 - Cana-de-açúcar,538611.92
+2020,6 - Outra agropecuária,6 - Outra agropecuária,669515.56
+2020,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,55.51
+2020,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,505.4
+2020,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,519.27
+2020,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,179.51
+2020,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,761480.75
+2020,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,54.77
+2020,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,6.76
+2020,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,93.91
+2020,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,855.03
+2020,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,878.49
+2020,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,303.68
+2020,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1288256.65
+2020,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,92.66
+2020,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,11.43
+2020,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,45.54
+2020,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,414.62
+2020,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,426.0
+2020,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,147.26
+2020,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,624699.27
+2020,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,44.93
+2020,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,5.54
+2020,10 - Silvicultura,10 - Silvicultura,36036.34
+2020,11 - Veg. prim. florestal,2 - Soja Safra Única,1.61
+2020,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,14.68
+2020,11 - Veg. prim. florestal,5 - Cana-de-açúcar,2.75
+2020,11 - Veg. prim. florestal,6 - Outra agropecuária,12.2
+2020,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,127.75
+2020,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,242.7
+2020,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,119.37
+2020,11 - Veg. prim. florestal,11 - Veg. prim. florestal,458616.57
+2020,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.79
+2020,12 - Veg. sec. florestal,2 - Soja Safra Única,1.61
+2020,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,14.68
+2020,12 - Veg. sec. florestal,5 - Cana-de-açúcar,2.75
+2020,12 - Veg. sec. florestal,6 - Outra agropecuária,12.2
+2020,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,127.75
+2020,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,242.7
+2020,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,119.37
+2020,12 - Veg. sec. florestal,12 - Veg. sec. florestal,458616.57
+2020,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.79
+2020,13 - Veg. prim. não-florestal,2 - Soja Safra Única,2.74
+2020,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,24.96
+2020,13 - Veg. prim. não-florestal,6 - Outra agropecuária,23.98
+2020,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1684.18
+2020,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,3199.59
+2020,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1573.71
+2020,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,652245.34
+2020,14 - Veg. sec. não-florestal,2 - Soja Safra Única,0.18
+2020,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,1.64
+2020,14 - Veg. sec. não-florestal,6 - Outra agropecuária,1.58
+2020,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,110.73
+2020,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,210.36
+2020,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,103.46
+2020,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,42881.54
+2020,15 - Outro,15 - Outro,105628.2
+2021,1 - Culturas perenes,1 - Culturas perenes,107.17
+2021,2 - Soja Safra Única,2 - Soja Safra Única,14294.85
+2021,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,138491.3
+2021,2 - Soja Safra Única,12 - Veg. sec. florestal,0.71
+2021,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.13
+2021,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,130145.96
+2021,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,1260879.56
+2021,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,6.51
+2021,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,1.2
+2021,4 - Milho 1ª safra,4 - Milho 1ª safra,99843.98
+2021,5 - Cana-de-açúcar,5 - Cana-de-açúcar,532255.57
+2021,6 - Outra agropecuária,6 - Outra agropecuária,675495.08
+2021,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,22.88
+2021,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,221.68
+2021,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,589.1
+2021,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,770.01
+2021,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,674947.95
+2021,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,51.74
+2021,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,9.5
+2021,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,43.47
+2021,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,421.15
+2021,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,1119.17
+2021,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,1462.85
+2021,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1282257.06
+2021,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,98.3
+2021,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,18.05
+2021,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,21.38
+2021,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,207.14
+2021,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,550.46
+2021,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,719.5
+2021,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,630675.6
+2021,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,48.35
+2021,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,8.88
+2021,10 - Silvicultura,10 - Silvicultura,36806.68
+2021,11 - Veg. prim. florestal,2 - Soja Safra Única,1.04
+2021,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,10.03
+2021,11 - Veg. prim. florestal,5 - Cana-de-açúcar,3.38
+2021,11 - Veg. prim. florestal,6 - Outra agropecuária,34.47
+2021,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,116.33
+2021,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,238.28
+2021,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,122.07
+2021,11 - Veg. prim. florestal,11 - Veg. prim. florestal,460531.39
+2021,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.45
+2021,12 - Veg. sec. florestal,2 - Soja Safra Única,1.04
+2021,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,10.03
+2021,12 - Veg. sec. florestal,5 - Cana-de-açúcar,3.38
+2021,12 - Veg. sec. florestal,6 - Outra agropecuária,34.47
+2021,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,116.33
+2021,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,238.28
+2021,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,122.07
+2021,12 - Veg. sec. florestal,12 - Veg. sec. florestal,460531.39
+2021,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,1.45
+2021,13 - Veg. prim. não-florestal,2 - Soja Safra Única,1.79
+2021,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,17.3
+2021,13 - Veg. prim. não-florestal,6 - Outra agropecuária,4.14
+2021,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1441.21
+2021,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,2952.01
+2021,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1512.31
+2021,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,649602.87
+2021,14 - Veg. sec. não-florestal,2 - Soja Safra Única,0.12
+2021,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,1.14
+2021,14 - Veg. sec. não-florestal,6 - Outra agropecuária,0.27
+2021,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,94.75
+2021,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,194.08
+2021,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,99.43
+2021,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,42707.82
+2021,15 - Outro,15 - Outro,104599.11
+2022,1 - Culturas perenes,1 - Culturas perenes,107.08
+2022,2 - Soja Safra Única,2 - Soja Safra Única,13233.76
+2022,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,137442.69
+2022,2 - Soja Safra Única,12 - Veg. sec. florestal,0.44
+2022,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.08
+2022,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,128211.22
+2022,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,1331571.7
+2022,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,4.27
+2022,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.78
+2022,4 - Milho 1ª safra,4 - Milho 1ª safra,93964.64
+2022,5 - Cana-de-açúcar,5 - Cana-de-açúcar,533335.42
+2022,6 - Outra agropecuária,6 - Outra agropecuária,704541.73
+2022,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,14.33
+2022,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,148.84
+2022,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,199.5
+2022,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,214.81
+2022,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,606603.28
+2022,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,90.52
+2022,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,16.62
+2022,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,29.35
+2022,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,304.87
+2022,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,408.63
+2022,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,439.99
+2022,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1242501.46
+2022,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,185.41
+2022,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,34.05
+2022,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,15.04
+2022,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,156.18
+2022,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,209.34
+2022,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,225.41
+2022,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,636532.9
+2022,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,94.98
+2022,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,17.44
+2022,10 - Silvicultura,10 - Silvicultura,36669.56
+2022,11 - Veg. prim. florestal,2 - Soja Safra Única,1.0
+2022,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,10.34
+2022,11 - Veg. prim. florestal,5 - Cana-de-açúcar,3.38
+2022,11 - Veg. prim. florestal,6 - Outra agropecuária,96.17
+2022,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,92.66
+2022,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,173.81
+2022,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,83.22
+2022,11 - Veg. prim. florestal,11 - Veg. prim. florestal,461527.11
+2022,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,1.21
+2022,12 - Veg. sec. florestal,2 - Soja Safra Única,1.0
+2022,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,10.34
+2022,12 - Veg. sec. florestal,5 - Cana-de-açúcar,3.38
+2022,12 - Veg. sec. florestal,6 - Outra agropecuária,96.17
+2022,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,92.66
+2022,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,173.81
+2022,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,83.22
+2022,12 - Veg. sec. florestal,12 - Veg. sec. florestal,461527.11
+2022,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,1.21
+2022,13 - Veg. prim. não-florestal,2 - Soja Safra Única,1.96
+2022,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,20.35
+2022,13 - Veg. prim. não-florestal,6 - Outra agropecuária,62.04
+2022,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1612.79
+2022,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,3025.32
+2022,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1448.58
+2022,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,621205.8
+2022,14 - Veg. sec. não-florestal,2 - Soja Safra Única,0.2
+2022,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,2.06
+2022,14 - Veg. sec. não-florestal,6 - Outra agropecuária,6.27
+2022,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,163.05
+2022,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,305.85
+2022,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,146.45
+2022,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,62801.67
+2022,15 - Outro,15 - Outro,105762.59
+2023,1 - Culturas perenes,1 - Culturas perenes,106.91
+2023,2 - Soja Safra Única,2 - Soja Safra Única,12320.71
+2023,2 - Soja Safra Única,3 - Soja + Milho 2ª Safra,131674.5
+2023,2 - Soja Safra Única,12 - Veg. sec. florestal,0.15
+2023,2 - Soja Safra Única,14 - Veg. sec. não-florestal,0.02
+2023,3 - Soja + Milho 2ª Safra,2 - Soja Safra Única,127960.02
+2023,3 - Soja + Milho 2ª Safra,3 - Soja + Milho 2ª Safra,1367540.48
+2023,3 - Soja + Milho 2ª Safra,12 - Veg. sec. florestal,1.55
+2023,3 - Soja + Milho 2ª Safra,14 - Veg. sec. não-florestal,0.26
+2023,4 - Milho 1ª safra,4 - Milho 1ª safra,104644.11
+2023,5 - Cana-de-açúcar,5 - Cana-de-açúcar,508607.7
+2023,6 - Outra agropecuária,6 - Outra agropecuária,802472.89
+2023,7 - Pastagem de Baixo Vigor,2 - Soja Safra Única,82.46
+2023,7 - Pastagem de Baixo Vigor,3 - Soja + Milho 2ª Safra,881.3
+2023,7 - Pastagem de Baixo Vigor,5 - Cana-de-açúcar,271.93
+2023,7 - Pastagem de Baixo Vigor,6 - Outra agropecuária,31.6
+2023,7 - Pastagem de Baixo Vigor,7 - Pastagem de Baixo Vigor,623235.96
+2023,7 - Pastagem de Baixo Vigor,12 - Veg. sec. florestal,76.57
+2023,7 - Pastagem de Baixo Vigor,14 - Veg. sec. não-florestal,12.62
+2023,8 - Pastagem de Médio Vigor,2 - Soja Safra Única,154.69
+2023,8 - Pastagem de Médio Vigor,3 - Soja + Milho 2ª Safra,1653.17
+2023,8 - Pastagem de Médio Vigor,5 - Cana-de-açúcar,510.1
+2023,8 - Pastagem de Médio Vigor,6 - Outra agropecuária,59.27
+2023,8 - Pastagem de Médio Vigor,8 - Pastagem de Médio Vigor,1169087.97
+2023,8 - Pastagem de Médio Vigor,12 - Veg. sec. florestal,143.63
+2023,8 - Pastagem de Médio Vigor,14 - Veg. sec. não-florestal,23.67
+2023,9 - Pastagem de Alto Vigor,2 - Soja Safra Única,74.07
+2023,9 - Pastagem de Alto Vigor,3 - Soja + Milho 2ª Safra,791.57
+2023,9 - Pastagem de Alto Vigor,5 - Cana-de-açúcar,244.24
+2023,9 - Pastagem de Alto Vigor,6 - Outra agropecuária,28.38
+2023,9 - Pastagem de Alto Vigor,9 - Pastagem de Alto Vigor,559781.25
+2023,9 - Pastagem de Alto Vigor,12 - Veg. sec. florestal,68.77
+2023,9 - Pastagem de Alto Vigor,14 - Veg. sec. não-florestal,11.33
+2023,10 - Silvicultura,10 - Silvicultura,36706.91
+2023,11 - Veg. prim. florestal,2 - Soja Safra Única,1.56
+2023,11 - Veg. prim. florestal,3 - Soja + Milho 2ª Safra,16.62
+2023,11 - Veg. prim. florestal,5 - Cana-de-açúcar,1.49
+2023,11 - Veg. prim. florestal,6 - Outra agropecuária,0.63
+2023,11 - Veg. prim. florestal,7 - Pastagem de Baixo Vigor,60.17
+2023,11 - Veg. prim. florestal,8 - Pastagem de Médio Vigor,112.86
+2023,11 - Veg. prim. florestal,9 - Pastagem de Alto Vigor,54.04
+2023,11 - Veg. prim. florestal,11 - Veg. prim. florestal,462335.32
+2023,11 - Veg. prim. florestal,14 - Veg. sec. não-florestal,0.26
+2023,12 - Veg. sec. florestal,2 - Soja Safra Única,1.56
+2023,12 - Veg. sec. florestal,3 - Soja + Milho 2ª Safra,16.62
+2023,12 - Veg. sec. florestal,5 - Cana-de-açúcar,1.49
+2023,12 - Veg. sec. florestal,6 - Outra agropecuária,0.63
+2023,12 - Veg. sec. florestal,7 - Pastagem de Baixo Vigor,60.17
+2023,12 - Veg. sec. florestal,8 - Pastagem de Médio Vigor,112.86
+2023,12 - Veg. sec. florestal,9 - Pastagem de Alto Vigor,54.04
+2023,12 - Veg. sec. florestal,12 - Veg. sec. florestal,462335.32
+2023,12 - Veg. sec. florestal,14 - Veg. sec. não-florestal,0.26
+2023,13 - Veg. prim. não-florestal,2 - Soja Safra Única,2.71
+2023,13 - Veg. prim. não-florestal,3 - Soja + Milho 2ª Safra,29.0
+2023,13 - Veg. prim. não-florestal,6 - Outra agropecuária,3.02
+2023,13 - Veg. prim. não-florestal,7 - Pastagem de Baixo Vigor,1655.37
+2023,13 - Veg. prim. não-florestal,8 - Pastagem de Médio Vigor,3105.19
+2023,13 - Veg. prim. não-florestal,9 - Pastagem de Alto Vigor,1486.82
+2023,13 - Veg. prim. não-florestal,13 - Veg. prim. não-florestal,616752.13
+2023,14 - Veg. sec. não-florestal,2 - Soja Safra Única,0.27
+2023,14 - Veg. sec. não-florestal,3 - Soja + Milho 2ª Safra,2.93
+2023,14 - Veg. sec. não-florestal,6 - Outra agropecuária,0.31
+2023,14 - Veg. sec. não-florestal,7 - Pastagem de Baixo Vigor,167.35
+2023,14 - Veg. sec. não-florestal,8 - Pastagem de Médio Vigor,313.92
+2023,14 - Veg. sec. não-florestal,9 - Pastagem de Alto Vigor,150.31
+2023,14 - Veg. sec. não-florestal,14 - Veg. sec. não-florestal,62351.42
+2023,15 - Outro,15 - Outro,108526.89

@@ -2,14 +2,14 @@
 
 export const CLASS_ORDER = [
   "1 - Culturas perenes",
-  "2 - Soja",
-  "3 - Soja + Milho 2ª safra",
+  "2 - Soja Safra Única",
+  "3 - Soja + Milho 2ª Safra",
   "4 - Milho 1ª safra",
   "5 - Cana-de-açúcar",
   "6 - Outra agropecuária",
-  "7 - Pastagem deg. média",
-  "8 - Pastagem deg. alta",
-  "9 - Pastagem deg. baixa",
+  "7 - Pastagem de Baixo Vigor",
+  "8 - Pastagem de Médio Vigor",
+  "9 - Pastagem de Alto Vigor",
   "10 - Silvicultura",
   "11 - Veg. prim. florestal",
   "12 - Veg. sec. florestal",
@@ -29,9 +29,9 @@ export const NATIVE_CLASSES: LulcClass[] = [
 ];
 
 export const PASTURE_CLASSES: LulcClass[] = [
-  "7 - Pastagem deg. média",
-  "8 - Pastagem deg. alta",
-  "9 - Pastagem deg. baixa",
+  "7 - Pastagem de Baixo Vigor",
+  "8 - Pastagem de Médio Vigor",
+  "9 - Pastagem de Alto Vigor",
 ];
 
 /** Short labels for charts where the full name is too long. */
@@ -60,14 +60,14 @@ export interface ClassMeta {
 
 export const CLASS_META: ClassMeta[] = [
   { code: 1, name: "Culturas perenes", group: "Agropecuária", mapbiomas: "46, 47, 48", sources: "PAM/SIDRA", allocation: "Diagonal" },
-  { code: 2, name: "Soja", group: "Agropecuária", mapbiomas: "39", sources: "PAM × CONAB × Serasa (HARVEX)", allocation: "Completa" },
-  { code: 3, name: "Soja + Milho 2ª safra", group: "Agropecuária", mapbiomas: "39 (split por pct_2a)", sources: "CONAB por UF/ano", allocation: "Completa" },
+  { code: 2, name: "Soja Safra Única", group: "Agropecuária", mapbiomas: "39", sources: "PAM × CONAB × Serasa (HARVEX)", allocation: "Completa" },
+  { code: 3, name: "Soja + Milho 2ª Safra", group: "Agropecuária", mapbiomas: "39 (split por pct_2a)", sources: "CONAB por UF/ano", allocation: "Completa" },
   { code: 4, name: "Milho 1ª safra", group: "Agropecuária", mapbiomas: "—", sources: "PAM/SIDRA × CONAB (1 − pct_2a)", allocation: "Diagonal" },
   { code: 5, name: "Cana-de-açúcar", group: "Agropecuária", mapbiomas: "20", sources: "PAM/SIDRA", allocation: "Diagonal" },
   { code: 6, name: "Outra agropecuária", group: "Agropecuária", mapbiomas: "40, 41, 62, 21", sources: "PAM/SIDRA", allocation: "Diagonal" },
-  { code: 7, name: "Pastagem deg. média", group: "Pastagem", mapbiomas: "15 (fração)", sources: "LAPIG — vigor Intermediário", allocation: "Proporcional" },
-  { code: 8, name: "Pastagem deg. alta", group: "Pastagem", mapbiomas: "15 (fração)", sources: "LAPIG — vigor Severo", allocation: "Proporcional" },
-  { code: 9, name: "Pastagem deg. baixa", group: "Pastagem", mapbiomas: "15 (fração)", sources: "LAPIG — vigor Ausente", allocation: "Proporcional" },
+  { code: 7, name: "Pastagem de Baixo Vigor", group: "Pastagem", mapbiomas: "15 (fração)", sources: "LAPIG — vigor Severo", allocation: "Proporcional" },
+  { code: 8, name: "Pastagem de Médio Vigor", group: "Pastagem", mapbiomas: "15 (fração)", sources: "LAPIG — vigor Intermediário", allocation: "Proporcional" },
+  { code: 9, name: "Pastagem de Alto Vigor", group: "Pastagem", mapbiomas: "15 (fração)", sources: "LAPIG — vigor Ausente", allocation: "Proporcional" },
   { code: 10, name: "Silvicultura", group: "Floresta plantada", mapbiomas: "9", sources: "—", allocation: "Diagonal" },
   { code: 11, name: "Veg. prim. florestal", group: "Vegetação nativa", mapbiomas: "3, 4, 6", sources: "TerraClass pct_primária × MB", allocation: "Proporcional" },
   { code: 12, name: "Veg. sec. florestal", group: "Vegetação nativa", mapbiomas: "3, 4, 6 (fração)", sources: "TerraClass pct_secundária × MB", allocation: "Proporcional" },
